@@ -53,48 +53,60 @@
         // TCP specific events
         // *******************************
 
-        tcp.emitter.on('connectionTimeout', function(ip, port) {
-            var id = spark.getIdByIp(ip);
-            log.server(spark.id(id), ip + ':' + port, 'Connection timeout');
-        });
+        if (config.log('tcp')) {
 
-        tcp.emitter.on('connectionClosed', function(ip, port) {
-            var id = spark.getIdByIp(ip);
-            log.server(spark.id(id), ip + ':' + port, 'Connection closed');
-        });
+            tcp.emitter.on('connectionTimeout', function(ip, port) {
+                var id = spark.getIdByIp(ip);
+                log.server(spark.id(id), ip + ':' + port, 'Connection timeout');
+            });
 
-        tcp.emitter.on('connectionError', function(ip, port, error) {
-            var id = spark.getIdByIp(ip);
-            log.server(spark.id(id), ip + ':' + port, 'Connection Error', error);
-        });
+            tcp.emitter.on('connectionClosed', function(ip, port) {
+                var id = spark.getIdByIp(ip);
+                log.server(spark.id(id), ip + ':' + port, 'Connection closed');
+            });
+
+            tcp.emitter.on('connectionError', function(ip, port, error) {
+                var id = spark.getIdByIp(ip);
+                log.server(spark.id(id), ip + ':' + port, 'Connection Error', error);
+            });
+
+        }
 
         // *******************************
         // Spark Core specific events
         // *******************************
 
-        spark.emitter.on('connecting', function(id) {
-            log.server(spark.id(id), 'Attemping connection');
-        });
+        if (config.log('spark')) {
 
-        spark.emitter.on('connected', function(id, ip, port) {
-            log.core(spark.id(id), ip + ':' + port, 'Connected');
-        });
+            spark.emitter.on('connecting', function(id) {
+                log.server(spark.id(id), 'Attemping connection');
+            });
 
-        spark.emitter.on('timedOut', function(id){
-            log.core(spark.id(id), 'Timed out');
-        });
+            spark.emitter.on('connected', function(id, ip, port) {
+                log.core(spark.id(id), ip + ':' + port, 'Connected');
+            });
 
-        spark.emitter.on('startRetry', function(id){
-            log.core(spark.id(id), 'Starting retry');
-        });
+            spark.emitter.on('timedOut', function(id){
+                log.core(spark.id(id), 'Timed out');
+            });
 
-        spark.emitter.on('stopRetry', function(id){
-            log.core(spark.id(id), 'Stoping retry');
-        });
+            spark.emitter.on('startRetry', function(id){
+                log.core(spark.id(id), 'Starting retry');
+            });
 
-        spark.emitter.on('destroyed', function(id){
-            log.core(spark.id(id), 'Destroyed');
-        });
+            spark.emitter.on('stopRetry', function(id){
+                log.core(spark.id(id), 'Stoping retry');
+            });
+
+            spark.emitter.on('setType', function(id, type){
+                log.core(spark.id(id), 'Is', type);
+            });
+
+            spark.emitter.on('destroyed', function(id){
+                log.core(spark.id(id), 'Destroyed');
+            });
+
+        }
 
     }
 

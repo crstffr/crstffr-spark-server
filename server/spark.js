@@ -48,6 +48,14 @@
 
     });
 
+    emitter.on('getType', function(id){
+        tcp.emitter.once('messageReceived', function(data){
+            if (data.who == id) {
+                Spark.setType(id, data.what);
+            }
+        });
+    });
+
     var Spark = {
 
         emitter: emitter,
@@ -114,6 +122,20 @@
             sparks[id].ip = ip;
             sparks[id].socket = socket;
             emitter.emit('connected', id, ip, port);
+            this.getType(id);
+        },
+
+        getType: function(id) {
+            this.init(id);
+            if (sparks[id].type === undefined) {
+                sparks[id].run('type', server);
+                emitter.emit('getType', id);
+            }
+        },
+
+        setType: function(id, type) {
+            sparks[id].type = type;
+            emitter.emit('setType', id, type);
         },
 
         reconnect: function(ip) {
