@@ -1,2 +1,2 @@
-crstffr-mask-server
-===================
+# MASK Server
+### Music and Sensor Kit Server
