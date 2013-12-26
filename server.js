@@ -70,6 +70,16 @@
                 log.server(spark.id(id), ip + ':' + port, 'Connection Error', error);
             });
 
+            if (config.log('keepAlive')) {
+
+                tcp.emitter.on('keepAlive', function(ip, port, char, sent) {
+                    var id = spark.getIdByIp(ip);
+                    var dir = (sent) ? 'sent' : 'received';
+                    log.server(spark.id(id), ip + ':' + port, 'Keep Alive', char, dir);
+                });
+
+            }
+
         }
 
         // *******************************

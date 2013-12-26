@@ -30,9 +30,9 @@
 
             create: function(conn) {
 
-                var buffer = '';
                 var socket = conn;
                 var timeout= 20000;
+                var buffer, interval;
                 var ip = socket.remoteAddress;
                 var port = socket.remotePort;
 
@@ -54,6 +54,34 @@
                     socket.destroy();
                 });
 
+                var keepAlive = {
+                    start: function() {
+                        if (config.tcp.keepAlive) {
+                            clearInterval(interval);
+                            interval = setInterval(function(){
+                                socket.write(ENQ);
+                                //var event = 'keepAliveSent:' 
+ ip 
+ ':' 
+ port;
+                                emitter.emit('keepAlive', ip, port, 'ENQ', true);
+                            }, config.tcp.heartbeat);
+                        }
+                    },
+                    stop: function() {
+                        clearInterval(interval);
+                    },
+                    timeout: function() {
+
+                    }
+                };
+
+                emitter.on('keepAlive', function(ip, port, char, send){
+                    if (send) {
+
+                    }
+                });
+
                 // When the socket connection naturally closes, after
                 // about 60 seconds or so, go ahead and trigger the
                 // Core to reconnect.  This keeps the TCP session
@@ -61,6 +89,7 @@
 
                 socket.on('close', function(){
                     emitter.emit('connectionClosed', ip, port);
+                    clearInterval(keepAlive);
                 });
 
                 socket.on('timeout', function(){
@@ -84,15 +113,16 @@
                     // KeepAlive bit, respond with ACK
                     // and return out to avoid parsing.
                     if (first === ENQ) {
-                        emitter.emit('ENQ');
+                        emitter.emit('keepAlive', ip, port, 'ENQ', false);
                         socket.write(ACK);
+                        emitter.emit('keepAlive', ip, port, 'ACK', true);
                         buffer = '';
                         return;
                     }
 
                     // KeepAlive bit in the other direction
                     if (first === ACK) {
-                        emitter.emit('ACK');
+                        emitter.emit('keepAlive', ip, port, 'ACK', false);
                         buffer = '';
                         return;
                     }
@@ -100,21 +130,29 @@
                     // New message, reset buffer.
                     if (first === STX) {
                         buffer = '';
+                        keepAlive.stop();
                     }
 
                     // Append data to our buffer.
-                    buffer += data;
+                    buffer 
+= data;
 
-                    // Strip out our control codes and parse
-                    // the message if this is the end.
+                    // End of the broadcasted message
                     if (last === EOT) {
+
                         buffer = buffer.replace(STX ,'').replace(EOT ,'');
                         emitter.emit('bufferComplete', buffer);
+
+                        // @todo: make this a request method
                         this.parse(buffer);
+
+                        keepAlive.start();
                         buffer = '';
                     }
 
                 }.bind(this));
+
+
 
             }
 

@@ -7,7 +7,9 @@
             return this.logLevel.indexOf(who) > -1;
         },
         tcp: {
-            port: 5000
+            port: 5000,
+            keepAlive: true,
+            heartbeat: 5000,
         },
         logger: {
             firebase: {
