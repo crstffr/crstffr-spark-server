@@ -60,10 +60,7 @@
                             clearInterval(interval);
                             interval = setInterval(function(){
                                 socket.write(ENQ);
-                                //var event = 'keepAliveSent:' 
- ip 
- ':' 
- port;
+                                //var event = 'keepAliveSent:' + ip + ':' + port;
                                 emitter.emit('keepAlive', ip, port, 'ENQ', true);
                             }, config.tcp.heartbeat);
                         }
@@ -134,8 +131,7 @@
                     }
 
                     // Append data to our buffer.
-                    buffer 
-= data;
+                    buffer += data;
 
                     // End of the broadcasted message
                     if (last === EOT) {
