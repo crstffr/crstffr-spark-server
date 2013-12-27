@@ -1,11 +1,11 @@
 (function(undefined) {
 
+    var util  = require('./util');
     var moment = require('moment');
-    var utils  = require('./utils.js');
 
     function _log(str, args) {
         str = moment().format('hh:mm:ssA') + ' ' + str;
-        console.log.apply(console, utils.prependArgs(str, args));
+        console.log.apply(console, util.prependArgs(str, args));
     }
 
     module.exports = {
@@ -28,6 +28,10 @@
 
         core: function() {
             _log('CORE   -', arguments);
+        },
+
+        tcp: function() {
+            _log('TCP    -', arguments);
         }
 
     };

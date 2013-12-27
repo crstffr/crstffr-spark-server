@@ -1,11 +1,32 @@
 
 (function(undefined){
 
-    var log = require('./server/log.js');
-    var tcp = require('./server/tcp.js');
-    var spark = require('./server/spark.js');
-    var config = require('./server/config.js');
-    var request = require('./server/request.js');
+    var log = require('./server/log');
+    var spark = require('./server/spark');
+    var utils = require('./server/util');
+    var config = require('./server/config');
+    var tcpServer = require('./server/tcp/server');
+
+    var server = new tcpServer();
+    var core = new spark(config.spark.cores[0]);
+
+    log.server('*****************************************************');
+    log.server('Ready and awaiting connections on', server.ip + ':' + server.port);
+    log.server('*****************************************************');
+
+    core.connect(server.ip);
+
+    server.on('newConnection', function(conn) {
+
+        log.server('Connection made', conn.ip + ":" + conn.port);
+
+        conn.on('message', function(message) {
+            log.tcp('Message', message);
+        });
+
+    });
+
+    /*
 
     // ***********************************************************
     // Display server banner when the TCP server is started
@@ -119,5 +140,7 @@
         }
 
     }
+
+    */
 
 }).call(this);

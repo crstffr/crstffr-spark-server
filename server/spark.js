@@ -1,12 +1,43 @@
 (function(undefined){
 
-    var log = require('./log.js');
-    var tcp = require('./tcp.js');
-    var sparky = require('sparky');
-    var events = require('events');
-    var config = require('./config.js');
-    var utils  = require('./utils.js');
-    var emitter = new events.EventEmitter;
+    var Q       = require('q');
+    var log     = require('./log');
+    var util    = require('./util');
+    var sparky  = require('sparky');
+    var config  = require('./config');
+    var emitter = require('events').EventEmitter;
+
+    function Spark(id) {
+
+        this.id = id;
+        this.ip = '';
+        this.port = 0;
+        this.connectDefer = {};
+
+        this.core = new sparky({
+            token: config.spark.token,
+            deviceId: this.id,
+            debug: false
+        });
+
+    }
+
+    util.inherits(Spark, emitter, {
+
+        connect: function(ip) {
+            this.connectDefer = Q.defer();
+            log.server('Asking core to connect');
+            this.core.run('connect', ip);
+            return this.connectDefer;
+        },
+
+        handshake: function() {
+
+        }
+
+    });
+
+/*
 
     var sparks  = {};
     var busy    = false;
@@ -190,6 +221,8 @@
         }
 
     }
+
+*/
 
     module.exports = Spark;
 

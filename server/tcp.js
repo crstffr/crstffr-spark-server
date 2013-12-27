@@ -4,8 +4,8 @@
     var log     = require('./log.js');
     var utils   = require('./utils.js');
     var config  = require('./config.js');
-    var events  = require('events');
     var emitter = new events.EventEmitter;
+    var events  = require('events');
 
     // These are control codes that I use for
     // various parts of the communication.
@@ -60,10 +60,7 @@
                             clearInterval(interval);
                             interval = setInterval(function(){
                                 socket.write(ENQ);
-                                //var event = 'keepAliveSent:' 
- ip 
- ':' 
- port;
+                                var event = 'keepAliveSent:' + ip + ':' + port;
                                 emitter.emit('keepAlive', ip, port, 'ENQ', true);
                             }, config.tcp.heartbeat);
                         }
@@ -75,12 +72,6 @@
 
                     }
                 };
-
-                emitter.on('keepAlive', function(ip, port, char, send){
-                    if (send) {
-
-                    }
-                });
 
                 // When the socket connection naturally closes, after
                 // about 60 seconds or so, go ahead and trigger the
@@ -134,8 +125,7 @@
                     }
 
                     // Append data to our buffer.
-                    buffer 
-= data;
+                    buffer += data;
 
                     // End of the broadcasted message
                     if (last === EOT) {
