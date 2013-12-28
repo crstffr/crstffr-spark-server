@@ -3,28 +3,43 @@
 
     var log = require('./server/log');
     var spark = require('./server/spark');
-    var utils = require('./server/util');
     var config = require('./server/config');
+    var devices = require('./server/devices');
     var tcpServer = require('./server/tcp/server');
 
     var server = new tcpServer();
-    var core = new spark(config.spark.cores[0]);
 
     log.server('*****************************************************');
     log.server('Ready and awaiting connections on', server.ip + ':' + server.port);
     log.server('*****************************************************');
 
-    core.connect(server.ip);
-
     server.on('newConnection', function(conn) {
 
-        log.server('Connection made', conn.ip + ":" + conn.port);
+        log.tcp('Connection on', conn.toString());
 
-        conn.on('message', function(message) {
-            log.tcp('Message', message);
+        conn.on('unclaimedMessage', function(message) {
+            log.tcp('Complete Message', message);
+        });
+
+        conn.on('identifying', function(){
+            log.tcp('Identifying Connection', conn.toString());
+        });
+
+        conn.on('identified', function(device){
+            log.tcp('Connection Identifed', conn.toString(), device.id);
+        });
+
+        conn.on('unidentified', function(error){
+            log.tcp('Connection Not Identifed (' +  error + ')');
+        });
+
+        conn.on('close', function(){
+            log.tcp('Connection Closed');
         });
 
     });
+
+    devices.connectAll(server.ip);
 
     /*
 

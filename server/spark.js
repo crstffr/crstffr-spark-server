@@ -10,9 +10,8 @@
     function Spark(id) {
 
         this.id = id;
-        this.ip = '';
-        this.port = 0;
-        this.connectDefer = {};
+        this.sid = id.substr(id.length - 5);
+        this.connection = '';
 
         this.core = new sparky({
             token: config.spark.token,
@@ -25,14 +24,12 @@
     util.inherits(Spark, emitter, {
 
         connect: function(ip) {
-            this.connectDefer = Q.defer();
-            log.server('Asking core to connect');
+            log.server('Asking Core', this.sid,'to connect');
             this.core.run('connect', ip);
-            return this.connectDefer;
         },
 
-        handshake: function() {
-
+        identify: function(connection) {
+            this.connection = connection;
         }
 
     });

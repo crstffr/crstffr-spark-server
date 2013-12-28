@@ -4,6 +4,7 @@
     var util = require('util');
     var xtend = require('xtend');
     var moment = require('moment');
+    var microtime = require('microtime');
 
     function Util() {}
 
@@ -12,6 +13,8 @@
         __proto__: util,
 
         extend: xtend,
+
+        noop: function(){},
 
         inherits : function(sub, sup, proto) {
             util.inherits(sub, sup);
@@ -24,6 +27,10 @@
 
         now: function() {
             return moment().unix();
+        },
+
+        micronow: function() {
+            return microtime.now();
         },
 
         getIP: function() {

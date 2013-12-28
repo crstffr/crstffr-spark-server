@@ -17,14 +17,13 @@
         this.connections = {};
 
         this.server = this.create();
-        this.server.on('connection', this.connection.bind(this));
+        this.server.on('connection', this._onConnection.bind(this));
 
     };
 
     util.inherits(TCPServer, emitter, {
 
         create: function() {
-            log.server('Creating server');
             return net.createServer().listen(this.port);
         },
 
@@ -33,10 +32,11 @@
             delete this.instance;
         },
 
-        connection: function(socket) {
+        _onConnection: function(socket) {
             var conn = new tcpConn(socket);
             this.connections[conn.ip] = conn;
             this.emit('newConnection', conn);
+            conn.identify();
         },
 
         onEnd: function() {

@@ -1,8 +1,10 @@
 (function(undefined){
 
+    var Q       = require('q');
     var log     = require('../log');
     var hex     = require('../hex');
     var util    = require('../util');
+    var config  = require('../config');
     var constant= require('../constant');
     var emitter = require('events').EventEmitter;
 
@@ -17,36 +19,42 @@
 
         emitter.call(this);
 
-        this.type = 0;
+        this._buffer = '';
+        this._deferred = Q.defer();
+
         this.data = {};
-        this.buffer = '';
-        this.string = '';
+        this.finished = false;
+        this.whenComplete = this._deferred.promise;
 
     };
 
     util.inherits(TCPMessage, emitter, {
 
         trim: function(string) {
-            return string.replace(hex.BEL ,'')
+            return string.replace(hex.STX ,'')
                          .replace(hex.EOT ,'');
         },
 
-        strip: function(string) {
-            return string.replace(hex.SOH ,'')
-                         .replace(hex.STX ,'')
-                         .replace(hex.ETX ,'')
-                         .replace(hex.BEL ,'')
-                         .replace(hex.EOT ,'');
+        wait: function() {
+            log.tcp('Waiting for a message for', config.tcp.msgTimeout / 1000, 'seconds');
+            this._timeout = setTimeout(this.timeout.bind(this), config.tcp.msgTimeout);
+            return this;
+        },
+
+        timeout: function() {
+            this._deferred.reject('timeout');
+            this.finished = true;
         },
 
         append: function(data) {
 
-            this.buffer += data;
+            this._buffer += data;
 
             if (data[data.length-1] === hex.EOT) {
-                this.data = this.parse(this.buffer);
-                log.local(this.data);
-                this.emit('complete', this.data);
+                clearTimeout(this._timeout);
+                this.data = this.parse(this._buffer);
+                this._deferred.resolve(this.data);
+                this.finished = true;
             }
 
         },
@@ -55,7 +63,7 @@
 
             // Messages are formatted as such
             //
-            // [BEL] <MSG_TYPE> [STX] <WHO_OR_COMMAND> [ETX] <DID_WHAT> [EOT]
+            // [STX] <WHO> [ETX] <DID_WHAT> [EOT]
             //
 
             string = this.trim(string);
@@ -64,20 +72,14 @@
             var ETX = string.indexOf(hex.ETX);
 
             var type  = string[0];
-            var part1 = string.substr(STX+1,ETX);
+            var part1 = string.substr(0,ETX);
             var part2 = string.substr(ETX+1);
 
-            var data  = {};
-
-            switch (type) {
-                case constant.TCP_MESSAGE_TYPE_ACTION:
-                    data = {
-                        who:  part1,
-                        what: part2,
-                        when: util.now()
-                    }
-                    break;
-            }
+            var data  = {
+                who:part1,
+                what:part2,
+                when:util.now()
+            };
 
             return data;
 
