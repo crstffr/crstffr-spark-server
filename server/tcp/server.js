@@ -14,8 +14,6 @@
 
         this.ip = util.getIP();
         this.port = config.tcp.port;
-        this.connections = {};
-
         this.server = this.create();
         this.server.on('connection', this._onConnection.bind(this));
 
@@ -29,14 +27,11 @@
 
         destroy: function() {
             this.server.close();
-            delete this.instance;
         },
 
         _onConnection: function(socket) {
             var conn = new tcpConn(socket);
-            this.connections[conn.ip] = conn;
             this.emit('newConnection', conn);
-            conn.identify();
         },
 
         onEnd: function() {

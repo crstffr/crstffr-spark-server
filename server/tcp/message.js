@@ -8,13 +8,6 @@
     var constant= require('../constant');
     var emitter = require('events').EventEmitter;
 
-    /*
-    var H1 = hex.BEL;
-    var H2 = hex.STX;
-    var H3 = hex.STX;
-    var H4 = hex.EOT;
-    */
-
     var TCPMessage = function() {
 
         emitter.call(this);
@@ -23,6 +16,7 @@
         this._deferred = Q.defer();
 
         this.data = {};
+        this.uid = util.uid();
         this.finished = false;
         this.whenComplete = this._deferred.promise;
 
@@ -36,7 +30,7 @@
         },
 
         wait: function() {
-            log.tcp('Waiting for a message for', config.tcp.msgTimeout / 1000, 'seconds');
+            // log.tcp('Waiting for a message for', config.tcp.msgTimeout / 1000, 'seconds');
             this._timeout = setTimeout(this.timeout.bind(this), config.tcp.msgTimeout);
             return this;
         },
@@ -49,6 +43,17 @@
         append: function(data) {
 
             this._buffer += data;
+
+
+            // Keep alive response bit, consider
+            // it a complete message all by itself
+            // without parsing anything.
+
+            if (data === hex.ACK) {
+                clearTimeout(this._timeout);
+                this._deferred.resolve(data);
+                this.finished = true;
+            }
 
             if (data[data.length-1] === hex.EOT) {
                 clearTimeout(this._timeout);
@@ -71,14 +76,13 @@
             var STX = string.indexOf(hex.STX);
             var ETX = string.indexOf(hex.ETX);
 
-            var type  = string[0];
             var part1 = string.substr(0,ETX);
             var part2 = string.substr(ETX+1);
 
             var data  = {
-                who:part1,
-                what:part2,
-                when:util.now()
+                who:  part1,
+                what: part2,
+                when: util.now()
             };
 
             return data;

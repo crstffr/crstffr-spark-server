@@ -22,6 +22,10 @@
             _log('LOCAL  -', arguments);
         },
 
+        device: function() {
+            _log('DEVICE -', arguments);
+        },
+
         music: function() {
             _log('MUSIC  -', arguments);
         },

@@ -16,6 +16,10 @@
 
         noop: function(){},
 
+        uid: function() {
+            return this.micronow() + ":" + Math.floor(Math.random()*1000);
+        },
+
         inherits : function(sub, sup, proto) {
             util.inherits(sub, sup);
             if (typeof proto !== 'undefined') {

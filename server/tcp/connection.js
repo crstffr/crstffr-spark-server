@@ -13,19 +13,33 @@
 
         emitter.call(this);
 
+        this.uid = util.uid();
         this.ip = socket.remoteAddress;
         this.port = socket.remotePort;
-        this.device = {id: '', type: ''};
         this.socket = socket;
+        this.interval = false;
+        this.messages = {};
 
+        // this is populated with the device ID/type when
+        // the connection has been identified and the
+        // device type has been determined.  Otherwise,
+        // this stays false as the connection is pretty
+        // much worthless.
+
+        this.device = {id: false, type: false};
+
+        socket.setNoDelay(true);
         socket.setEncoding('utf8');
+        socket.on('data', this._onData.bind(this));
+        socket.on('close', this._onClose.bind(this));
 
+        // this is the Node socket timeout function, hence
+        // the reversed timeout and function params.
         socket.setTimeout(config.tcp.connTimeout, function(){
             socket.destroy();
         });
 
-        socket.on('data', this._onData.bind(this));
-        socket.on('close', this._onClose.bind(this));
+        this.keepAliveStart();
 
     };
 
@@ -35,89 +49,125 @@
             return this.ip + ':' + this.port;
         },
 
+        setIdentity: function(id, type) {
+            this.device = {id: id, type: type};
+        },
+
+        destroy: function() {
+            if (this.socket) {
+                this.socket.destroy();
+                this.socket.removeAllListeners();
+                delete this.socket;
+            }
+        },
+
         identify: function() {
             this.emit('identifying');
-            this.send(hex.BEL).then(function(data){
-                this.device = {
-                    id: data.who,
-                    type: data.what
-                };
-                devices.associate(this.device, this.socket);
+
+            this.socket.write(hex.BEL);
+
+            return this.waitForIt().then(function(msg){
+
+                this.setIdentity(msg.who, msg.what);
                 this.emit('identified', this.device);
+                return this.device;
+
             }.bind(this), function(error){
+
                 this.emit('unidentified', error);
                 this.socket.destroy();
+
             }.bind(this));
+
+        },
+
+        keepAliveStart: function() {
+            if (config.tcp.keepAlive) {
+                this.interval = setInterval(this.keepAliveExec.bind(this), config.tcp.heartbeat);
+            }
+        },
+
+        keepAliveStop: function(){
+            clearInterval(this.interval);
+        },
+
+        keepAliveExec: function() {
+            if (!this.device.id) { return; }
+
+            log.tcp('.');
+
+            this.socket.write(hex.ENQ);
+
+            this.waitForIt().then(function(msg){
+
+                if (msg !== hex.ACK) {
+                    this.keepAliveError('Response != ACK');
+                    log.tcp('Response was:', msg);
+                }
+
+            }.bind(this), function(error){
+                this.keepAliveError(error);
+            }.bind(this));
+
+        },
+
+        keepAliveError: function(error) {
+            log.tcp('KeepAlive Error:', error);
+            this.keepAliveStop();
+            this.socket.destroy();
         },
 
         _onData: function(data) {
 
             switch (data[0]) {
 
-                case hex.ENQ:
-                    socket.write(ACK);
-                    this.emit('ENQ');
-                    return;
-                    break;
-
-                case hex.ACK:
-                    this.emit('ACK');
-                    return;
-                    break;
-
                 case hex.STX:
                     if (!this.message || this.message.finished) {
-                        this._newUnclaimedMessage();
+                        this.keepAliveStop();
+                        this.waitForIt().then(function(data) {
+                            this.emit('unclaimedMessage', data);
+                            this.keepAliveStart();
+                        }.bind(this));
                     }
                     break;
+
             }
 
             this.message.append(data);
 
         },
 
-        _newUnclaimedMessage: function() {
-            log.tcp('New Unclaimed Message');
-            delete this.message;
-            this.message = new message();
-            this.message.whenComplete.then(function(data){
-                this.emit('unclaimedMessage', data);
-            }.bind(this));
-        },
 
-        send: function(what) {
+        waitForIt: function() {
 
             var defer = Q.defer();
             var output = defer;
 
+            // There is not a message currently being buffered,
+            // so go ahead and create a new one from scratch,
+            // returning the whenComplete promise for callback.
+
             if (!this.message || this.message.finished) {
                 this.message = new message();
-                output = this.message.wait().whenComplete;
-            } else {
-
-                log.tcp("Message in progress, cannot create new claimed message");
-
-                this.message.whenComplete.then(function(){
-
-                    log.tcp("Message completed, creating new claimed message");
-
-                    this.message = new message();
-
-                    this.message.whenComplete(function(data){
-                        defer.resolve(data);
-                    }, function(error) {
-                        defer.reject(error);
-                    })
-
-                }.bind(this));
-
-                output = defer.promise;
-
+                return this.message.wait().whenComplete;
             }
 
-            this.socket.write(what);
+            // Otherwise there's a message in progress and we
+            // don't want to screw it up, so let's bind the
+            // creation of our new message onto the completion
+            // of the current message.
 
-            return output;
+            this.message.whenComplete.then(function(){
+                this.message = new message();
+                this.message.whenComplete(function(data){
+                    defer.resolve(data);
+                }, function(error) {
+                    defer.reject(error);
+                })
+            }.bind(this));
+
+            return defer.promise;
+
         },
 
         _onClose: function() {

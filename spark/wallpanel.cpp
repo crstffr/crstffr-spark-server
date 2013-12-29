@@ -88,6 +88,25 @@ char QuadEncoder::tick()
   }
 }
 
+
+// ******************************
+// Definitions
+// ******************************
+
+String DEVICE_TYPE_PANEL = "1";
+String DEVICE_TYPE_MUSIC = "2";
+String DEVICE_TYPE_POWER = "3";
+
+String INPUT_BTN1 = "1";
+String INPUT_BTN2 = "2";
+String INPUT_BTN3 = "3";
+String INPUT_BTN4 = "4";
+String INPUT_KNOB = "5";
+String SENSOR_TEMP = "6";
+String SENSOR_LIGHT = "7";
+String SENSOR_MOTION = "8";
+
+
 // ******************************
 // Core Setup
 // ******************************
@@ -141,28 +160,28 @@ void loop()
     encoderVal =qe.tick();
     
     if (encoderVal == '>') {
-        tcpAction("ENCODER","UP");
+        tcpAction(INPUT_KNOB,"U");
     } else if (encoderVal == '<') {
-        tcpAction("ENCODER","DOWN");
+        tcpAction(INPUT_KNOB,"D");
     }
 
     if (!btn1Down && btn1Val == HIGH) {
         btn1Down = true;
-        tcpAction("BTN1","PRESSED");
+        tcpAction(INPUT_BTN1, HIGH);
     } else if (btn1Val == LOW) {
         btn1Down = false;
     }
     
     if (!btn2Down && btn2Val == HIGH) {
         btn2Down = true;
-        tcpAction("BTN2","PRESSED");
+        tcpAction(INPUT_BTN1, HIGH);
     } else if (btn2Val == LOW) {
         btn2Down = false;
     }
     
     if (!btn3Down && btn3Val == HIGH) {
         btn3Down = true;
-        tcpAction("PIR","MOTION");
+        tcpAction(SENSOR_MOTION, HIGH);
     } else if (btn3Val == LOW) {
         btn3Down = false;
     }
