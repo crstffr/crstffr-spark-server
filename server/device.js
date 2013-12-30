@@ -137,18 +137,11 @@
                         return;
                     }
 
-                    this.log('Connection failed, attempt', this.retries++);
-
-                    if (this.retries < config.tcp.connRetries) {
-                        this.log('Trying again in', util.msReadable(config.tcp.retryEvery));
-                    } else {
-                        this.log('Last attempt');
-                    }
+                    this.log('Attempt', ++this.retries, 'failed');
 
                     this.connect();
 
-
-                }.bind(this), config.tcp.retryEvery);
+                }.bind(this), config.tcp.connTimeout);
             }
         },
 

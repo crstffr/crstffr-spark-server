@@ -6,7 +6,7 @@
     var spark = require('./server/spark');
     var config = require('./server/config');
     var device = require('./server/device');
-    var devices = require('./server/devices');
+    var devices = require('./server/controllers/devices');
     var tcpServer = require('./server/tcp/server');
 
     var server = new tcpServer();
@@ -16,7 +16,6 @@
     log.server('*****************************************************');
     log.server('Log Level:', config.logLevel);
     log.server('TCP Connection Retries:', config.tcp.connRetries);
-    log.server('TCP Connection Retry Every:', util.msReadable(config.tcp.retryEvery));
     log.server('TCP Connection Timeout:', util.msReadable(config.tcp.connTimeout));
     log.server('TCP Message Timeout:', util.msReadable(config.tcp.msgTimeout));
     log.server('TCP KeepAlive Every:', util.msReadable(config.tcp.heartbeat));
@@ -32,7 +31,7 @@
         conn.log('Connected');
 
         conn.on('unclaimedMessage', function(message) {
-            log.device('Message', message);
+            devices.getByIP(conn.ip).log(message);
         });
 
         conn.on('identifying', function(){
@@ -60,29 +59,37 @@
         // the connection has been identified, then
         // associate it with the corresponding device.
 
-        if (!devices.getByIP(conn.ip)) {
-            conn.identify().then(function(data) {
-                devices.getByID(data.id).set({
+        if (config.tcp.requireID) {
+
+            if (!devices.getByIP(conn.ip)) {
+                conn.identify().then(function(data) {
+                    devices.getByID(data.id).set({
+                        ip: conn.ip,
+                        port: conn.port,
+                        type: data.type
+                    }).isConnected(true);
+                });
+            } else {
+                var dev = devices.getByIP(conn.ip).set({
                     ip: conn.ip,
-                    port: conn.port,
-                    type: data.type
+                    port: conn.port
                 }).isConnected(true);
-            });
-        } else {
-            var dev = devices.getByIP(conn.ip).set({
-                ip: conn.ip,
-                port: conn.port
-            }).isConnected(true);
-            conn.log('Trusted Connection Resumed');
-            conn.setIdentity(dev.id, dev.type);
+                conn.log('Trusted Connection Resumed');
+                conn.setIdentity(dev.id, dev.type);
+            }
+
         }
 
-        // Reconnect
+        // When a connection closes, check to see if
+        // it's associated with a device, and if so,
+        // then go ahead and see if it wants to
+        // reconnect.
+
         conn.on('close', function() {
             if (dev = devices.get(conn.device.id, conn.ip)) {
                 dev.reconnect();
             } else {
-                conn.log('Closed Unknown Connection');
+                conn.log('Cannot reconnect unidentified device');
             }
         });
 

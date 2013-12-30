@@ -30,7 +30,6 @@
         },
 
         wait: function() {
-            // log.tcp('Waiting for a message for', config.tcp.msgTimeout / 1000, 'seconds');
             this._timeout = setTimeout(this.timeout.bind(this), config.tcp.msgTimeout);
             return this;
         },
@@ -43,7 +42,6 @@
         append: function(data) {
 
             this._buffer += data;
-
 
             // Keep alive response bit, consider
             // it a complete message all by itself

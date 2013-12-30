@@ -28,7 +28,7 @@
 
         this.device = {id: false, type: false};
 
-        socket.setNoDelay(true);
+        socket.setNoDelay(false);
         socket.setEncoding('utf8');
         socket.on('data', this._onData.bind(this));
         socket.on('close', this._onClose.bind(this));
@@ -171,6 +171,8 @@
             // don't want to screw it up, so let's bind the
             // creation of our new message onto the completion
             // of the current message.
+
+            this.log('Must wait for current message');
 
             this.message.whenComplete.then(function(){
                 this.message = new message();

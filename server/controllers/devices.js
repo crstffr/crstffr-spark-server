@@ -1,9 +1,9 @@
 (function(undefined){
 
-    var log     = require('./log');
-    var util    = require('./util');
-    var device  = require('./device');
-    var config  = require('./config');
+    var log     = require('../log');
+    var util    = require('../util');
+    var device  = require('../device');
+    var config  = require('../config');
     var emitter = require('events').EventEmitter;
 
     var Devices = function() {
@@ -11,7 +11,6 @@
         this.container = {};
         this.timeout = false;
         this.init();
-
     };
 
     util.inherits(Devices, emitter, {
@@ -52,7 +51,6 @@
             }
             return false;
         }
-
 
     });
 
