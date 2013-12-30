@@ -17,6 +17,10 @@
 
         noop: function(){},
 
+        isNumber: function(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        },
+
         debug: function(who) {
             var level = config.logLevel;
             var pos = level.indexOf(who);

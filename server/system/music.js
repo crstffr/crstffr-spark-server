@@ -16,24 +16,28 @@
 
     util.inherits(Music, emitter, {
 
-        playPause: function() {
+        log: function() {
+            log.music.apply(log, arguments);
+        },
 
+        playPause: function() {
+            this.log('Play/Pause');
         },
 
         skipForward: function() {
-
+            this.log('Skip Forward');
         },
 
         skipBackward: function() {
-
+            this.log('Skip Backward');
         },
 
         volumeUp: function() {
-
+            this.log('Global Volume Up');
         },
 
         volumeDown: function() {
-
+            this.log('Global Volume Down');
         },
 
         loadPlaylist: function() {

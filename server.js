@@ -33,11 +33,11 @@
         conn.log('Connected');
 
         conn.on('identifying', function(){
-            conn.log('Identifying...');
+            //conn.log('Identifying...');
         });
 
         conn.on('identified', function(data){
-            conn.log('Identified as', data.id);
+            //conn.log('Is', data.id);
         });
 
         conn.on('unidentified', function(error){
@@ -64,18 +64,23 @@
         if (config.tcp.requireID) {
 
             if (!devices.getByIP(conn.ip)) {
+
                 conn.identify().then(function(data) {
-                    devices.getByID(data.id).set({
-                        ip: conn.ip,
-                        port: conn.port,
-                        type: data.type
-                    }).isConnected(true);
+
+                    devices.getByID(data.id)
+                           .setIP(conn.ip)
+                           .setPort(conn.port)
+                           .setType(data.type)
+                           .isConnected(true);
+
                 });
+
             } else {
-                var dev = devices.getByIP(conn.ip).set({
-                    ip: conn.ip,
-                    port: conn.port
-                }).isConnected(true);
+
+                var dev = devices.getByIP(conn.ip)
+                                 .setPort(conn.port)
+                                 .isConnected(true);
+
                 conn.log('Trusted Connection Resumed');
                 conn.setIdentity(dev.id, dev.type);
             }
@@ -84,7 +89,6 @@
 
         conn.on('signalReceived', function(signal) {
             if (dev = devices.getByID(conn.device.id)) {
-                dev.log(dev);
                 dev.dispatch(signal);
             }
         });

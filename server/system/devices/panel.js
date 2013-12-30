@@ -14,14 +14,7 @@
         this.is = "PANEL";
         this.components = constant.DEVICE_PANEL;
 
-    }
-
-    util.inherits(Panel, emitter, {
-
-        dispatch: function(signal){
-
-            log.device('dispatch here');
-            this.log('dispatch also here');
+        this.dispatch = function(signal) {
 
             switch (signal.who) {
 
@@ -36,10 +29,10 @@
                 case this.components.KNOB:
                     switch (signal.what) {
                         case constant.ACTION_UP:
-                            this.log('KNOB UP');
+                            music.volumeUp();
                             break;
                         case constant.ACTION_DOWN:
-                            this.log('KNOB DOWN');
+                            music.volumeDown();
                             break;
                     }
                     break;
@@ -47,6 +40,12 @@
             }
 
         }
+
+
+    }
+
+    util.inherits(Panel, emitter, {
+
 
     });
 

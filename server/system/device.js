@@ -32,6 +32,10 @@
 
     util.inherits(Device, emitter, {
 
+        // ***********************************************
+        // Informational Methods
+        // ***********************************************
+
         log: function() {
             log.device.apply(log, util.prependArgs(this.toString(), arguments));
         },
@@ -44,10 +48,21 @@
             return this.ip + ':' + this.port;
         },
 
-        connect: function() {
-            this.log('Connecting...');
-            this.core.run('connect', util.getIP());
-            this.startRetry();
+        dispatch: function(signal) {
+            log.local('Dispatch', signal);
+        },
+
+        // ***********************************************
+        // Public Setters
+        // ***********************************************
+
+        setIP: function(ip) {
+            this.ip = ip;
+            return this;
+        },
+
+        setPort: function(port) {
+            this.port = port;
             return this;
         },
 
@@ -57,39 +72,6 @@
                 this.log('Connected on', this.ipString());
                 this.stopRetry();
             }
-            return this;
-        },
-
-        disconnect: function() {
-            this.log('Disconnecting...');
-            this.isConnected(false);
-            return this;
-        },
-
-        reconnect: function() {
-            this.disconnect();
-            this.connect();
-            return this;
-        },
-
-        set: function(data) {
-            for(var key in data) {
-                if (data.hasOwnProperty(key)) {
-                    this[key] = data[key];
-                }
-            }
-            return this;
-        },
-
-        setInfo: function(ip, port, type) {
-            this.setIP(ip, port);
-            this.setType(type);
-            return this;
-        },
-
-        setIP: function(ip, port) {
-            this.ip = ip;
-            this.port = port;
             return this;
         },
 
@@ -115,31 +97,50 @@
             }
 
             this.log('Identified as', this.is);
-
             return this;
 
         },
 
+        // ***********************************************
+        // Connection Handling
+        // ***********************************************
+
+        connect: function() {
+            this.log('Connecting...');
+            this.core.run('connect', util.getIP());
+            this.startRetry();
+            return this;
+        },
+
+        disconnect: function() {
+            this.log('Disconnecting...');
+            this.isConnected(false);
+            return this;
+        },
+
+        reconnect: function() {
+            this.disconnect();
+            this.connect();
+            return this;
+        },
+
+        // ***********************************************
+        // Connection Retry Handling
+        // ***********************************************
+
         startRetry: function() {
             if (!this.retry && config.tcp.connRetries > 0) {
                 this.retry = setInterval(function(){
-
                     var tooManyTries = this.retries >= config.tcp.connRetries;
-
                     if (tooManyTries) {
                         this.log('Too many tries, giving up');
-                        stop = true;
                     }
-
                     if (tooManyTries || this.conn) {
                         this.stopRetry();
                         return;
                     }
-
                     this.log('Attempt', ++this.retries, 'failed');
-
                     this.connect();
-
                 }.bind(this), config.tcp.connTimeout);
             }
         },
