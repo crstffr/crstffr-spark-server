@@ -30,7 +30,6 @@
 
     }
 
-
     util.inherits(Device, emitter, {
 
         log: function() {

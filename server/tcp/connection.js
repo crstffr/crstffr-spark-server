@@ -139,7 +139,7 @@
                     if (!this.message || this.message.finished) {
                         this.keepAliveStop();
                         this.waitForIt().then(function(data) {
-                            this.emit('unclaimedMessage', data);
+                            this.emit('signalReceived', data);
                             this.keepAliveStart();
                         }.bind(this));
                     }
@@ -171,7 +171,7 @@
             // creation of our new message onto the completion
             // of the current message.
 
-            this.log('Must wait for current message');
+            this.log('Uncool state - Must wait for current message');
 
             this.message.whenComplete.then(function(){
                 this.message = new message();

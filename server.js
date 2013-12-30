@@ -5,10 +5,13 @@
     var util = require('./server/util');
     var spark = require('./server/spark');
     var config = require('./server/config');
+    var router = require('./server/router.js');
+    var user = require('./server/system/user.js');
     var devices = require('./server/controllers/devices');
     var tcpServer = require('./server/tcp/server');
 
     var server = new tcpServer();
+    var user   = new user(config.thisUser);
 
     log.server('*****************************************************');
     log.server('Ready and awaiting connections on', server.ip + ':' + server.port);
@@ -29,10 +32,6 @@
 
         conn.log('Connected');
 
-        conn.on('unclaimedMessage', function(message) {
-            devices.getByIP(conn.ip).log(message);
-        });
-
         conn.on('identifying', function(){
             conn.log('Identifying...');
         });
@@ -43,6 +42,10 @@
 
         conn.on('unidentified', function(error){
             conn.log('Not Identifed (',error,')');
+        });
+
+        conn.on('signalReceived', function(message) {
+            devices.getByIP(conn.ip).log(message);
         });
 
         conn.on('close', function(){
@@ -78,6 +81,13 @@
             }
 
         }
+
+        conn.on('signalReceived', function(signal) {
+            if (dev = devices.getByID(conn.device.id)) {
+                dev.log(dev);
+                dev.dispatch(signal);
+            }
+        });
 
         // When a connection closes, check to see if
         // it's associated with a device, and if so,
