@@ -36,6 +36,12 @@
             }
         },
 
+        spotify: function() {
+            if (util.debug('spotify')) {
+                _log('SPOTIFY-', arguments);
+            }
+        },
+
         core: function() {
             if (util.debug('core')) {
                 _log('CORE   -', arguments);

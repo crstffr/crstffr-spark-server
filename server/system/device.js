@@ -48,10 +48,6 @@
             return this.ip + ':' + this.port;
         },
 
-        dispatch: function(signal) {
-            log.local('Dispatch', signal);
-        },
-
         // ***********************************************
         // Public Setters
         // ***********************************************

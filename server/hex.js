@@ -22,7 +22,19 @@
         'SI':  '\x0F',
         'DLE': '\x10',
         'SUB': '\x1A',
-        'x80': '\x80'
+        'x80': '\x80',
+
+        concat: function() {
+            var out = '';
+            for (var i = 0; i < arguments.length; i++) {
+                out += this[arguments[i]];
+            }
+            return out;
+        },
+
+        strip: function(str) {
+            return str.replace(/[\x00-\x1f]/g, '');
+        }
 
     }
 

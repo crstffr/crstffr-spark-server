@@ -45,7 +45,7 @@
         });
 
         conn.on('signalReceived', function(message) {
-            devices.getByIP(conn.ip).log(message);
+            //devices.getByIP(conn.ip).log(message);
         });
 
         conn.on('close', function(){

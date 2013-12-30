@@ -1,185 +1,171 @@
+(function(undefined) {
 
-var request = require('request');
+    var q = require('q');
+    var hex = require('../hex');
+    var log = require('../log');
+    var util = require('../util');
+    var config = require('../config');
+    var request = require('request');
 
-function Spotimote(config) {
+    function Spotimote(config) {
 
-    config = config || {};
-    this.config = config;
-    this.noop = function(){};
+        this.timeout = 60;
+        this.heartbeat = 30000;
+        this.interval = {};
 
-    this.timeout = 60;
-    this.heartbeat = 30000;
-    this.interval = {};
-    this.server = {
-        ip:     config.server,
-        port:   config.port || 5116,
-        path:   config.path || '/clear',
-        conn:   0,  // last time it was connected
-        hash:   ''  // unique connection reference
-    };
+        this.server = {
+            ip: config.server,
+            port: config.port || 5116,
+            path: config.path || '/clear',
+            conn: 0,  // last time it was connected
+            token: '' // unique connection reference
+        };
 
-    // Hexadecimal control characters, used in the
-    // communication messages to the Spotimote server.
+        this.connect();
+        this.keepAlive();
 
-    this.ctrl = {
-        "BS":  "\x08",
-        "RS":  "\x1E",
-        "EM":  "\x19",
-        "SI":  "\x0F",
-        "DLE": "\x10",
-        "NUL": "\x00",
-        "SUB": "\x1A",
-        "BEL": "\x07",
-        "EOT": "\x04",
-        "ETX": "\x03",
-        "STX": "\x02",
-        "SOH": "\x01",
-        "DC2": "\x12",
-        "x80": "\x80"
     }
 
-    this._connect();
-    this._keepAlive();
+    Spotimote.prototype = {
 
-}
+        log: function() {
+            log.spotify.apply(log, arguments);
+        },
 
-Spotimote.prototype = {
+        // ***********************************************
+        // Public Methods
+        // ***********************************************
 
-    _log: function () {
-        if (this.config.debug) {
-            var args = Array.prototype.slice.call(arguments, 0);
-            args.unshift("Spotimote: ");
-            console.log.apply(console, args);
-        }
-    },
+        playPause: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Play Pause...');
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB', 'SI');
+                var string = prefix + 'actionPlayPause"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('PlayPause complete');
+                    defer.resolve(body);
+                });
+            }.bind(this));
+            return defer.promise;
+        },
 
-    _codes: function() {
-        var out = "";
-        var key, code;
-        for (var i=0; i<arguments.length; i++) {
-            out += this.ctrl[arguments[i]];
-        }
-        return out;
-    },
+        skipForward: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Skip Forward...');
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
+                var string = prefix + '\n' + 'actionNext"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('Skip Foward complete');
+                    defer.resolve(body);
+                });
+            }.bind(this));
+            return defer.promise;
+        },
 
-    _now: function() {
-        return new Date().getTime() / 1000;
-    },
+        wait: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
 
-    _bind: function(callback) {
-        callback = callback || this.noop;
-        return callback.bind(this);
-    },
+                if (util.debug('keepAlive')) { this.log('KeepAlive'); }
 
-    _stripHex: function(str) {
-        return str.replace(/[\x00-\x1f]/g, '');
-    },
+                var prefix = hex.concat('BS', 'x80', 'ETX', 'DLE', 'NUL', 'SUB', 'EOT');
+                var suffix = hex.concat('STX', 'BS', 'RS');
+                var string = prefix + 'wait"' + this.server.token + '*' + suffix;
+                this.send(string).then(function(body) {
+                    defer.resolve(body);
+                });
+            }.bind(this));
+            return defer.promise;
+        },
 
-    _checkHash: function(hash) {
-        return (hash.length > 10 && hash[0] === '$');
-    },
+        // ***********************************************
+        // Private Utilities
+        // ***********************************************
 
-    _keepAlive: function() {
-        this.interval = setInterval(this.wait.bind(this), this.heartbeat);
-    },
+        validToken: function(token) {
+            return (token.length > 10 && token[0] === '$');
+        },
 
-    _timedOut: function() {
-        return (this.server.conn + this.timeout < this._now());
-    },
+        // ***********************************************
+        // Spotimote Communication
+        // ***********************************************
 
-    _send: function(str, callback) {
-        callback = this._bind(callback);
-        var url = 'http://' + this.server.ip + ':' + this.server.port + this.server.path;
-        var req = request.post(url, {body: str}, function(err, res, body){
-            res.setEncoding('utf8');
-            this.server.conn = this._now();
-            // @TODO: Error handling for when the server is unavailable
-            callback(body);
-        }.bind(this)).end();
-    },
+        send: function(str) {
+            var defer = q.defer();
+            var url = 'http://' + this.server.ip + ':' + this.server.port + this.server.path;
+            var req = request.post(url, {body: str}, function(err, response, body) {
+                response.setEncoding('utf8');
+                this.server.conn = util.now();
+                defer.resolve(body);
+            }.bind(this)).end();
+            return defer.promise;
+        },
 
-    _connect: function(callback) {
+        connect: function() {
+        
+            var defer = q.defer();
+            
+            if (!this.timedOut()) {
+                defer.resolve();
+                return defer.promise;
+            }
 
-        callback = this._bind(callback);
-
-        if (this._timedOut()) {
-
-            this._log("Connecting...");
-
-            var prefix = this._codes('BS', 'x80', 'ETX', 'DLE', 'NUL', 'SUB', 'BEL');
-            var suffix = this._codes('STX', 'BS', 'SOH');
+            var prefix = hex.concat('BS', 'x80', 'ETX', 'DLE', 'NUL', 'SUB', 'BEL');
+            var suffix = hex.concat('STX', 'BS', 'SOH');
             var string = prefix + 'connect*' + suffix;
 
-            this._send(string, function(body){
+            this.send(string).then(function(body) {
 
-                // Check if the connection responded with a hash
+                // Check if the connection responded with a token
                 // that we can parse out and save for later use.
 
-                if (body.indexOf('$') > -1) {
+                if (body.indexOf('$') < 0) {
 
-                    // The connection reference hash starts directly after a
+                    this.log('No token', body);
+                    defer.reject();
+
+                } else {
+
+                    // The connection reference token starts directly after a
                     // cariage return line feed, with some hex garbage after.
                     // Split by newline and check for a value.  If it's not
                     // there then fail out.
 
-                    var parts = body.split("\n");
-                    var hash = this._stripHex(parts[1]);
+                    var parts = body.split('\n');
+                    var token = hex.strip(parts[1]);
 
-                    if (this._checkHash(hash)) {
-                        this._log("Success: ", hash);
-                        this.server.conn = this._now();
-                        this.server.hash = hash;
-                        callback();
+                    if (this.validToken(token)) {
+                        this.log('Valid Token:', token);
+                        this.server.conn = util.now();
+                        this.server.token = token;
+                        defer.resolve();
                     } else {
-                        this._log("Invalid hash: ", hash);
+                        this.log('Invalid token:', token);
                     }
-
-                } else {
-
-                    this._log("No hash: ", body);
 
                 }
 
-            });
+            }.bind(this));
 
-        } else {
-            callback();
+            return defer.promise;
+        },
+
+        // ***********************************************
+        // KeepAlive Handling
+        // ***********************************************
+
+        keepAlive: function() {
+            this.interval = setInterval(this.wait.bind(this), this.heartbeat);
+        },
+
+        timedOut: function() {
+            return (this.server.conn + this.timeout < util.now());
         }
-    },
-
-    playPause: function(){
-
-        this._connect(function(){
-
-            this._log("PlayPause...");
-            var prefix = this._codes('BS', 'x80', 'SOH', 'DLE', 'SOH', 'SUB', 'SI');
-            var string = prefix + 'actionPlayPause"' + this.server.hash;
-            this._send(string, function(body){
-                this._log("PlayPause complete");
-            });
-
-        });
-    },
-
-    wait: function(callback) {
-
-        callback = this._bind(callback);
-
-        this._connect(function(){
-
-            this._log("KeepAlive");
-            var prefix = this._codes('BS', 'x80', 'ETX', 'DLE', 'NUL', 'SUB', 'EOT');
-            var suffix = this._codes('STX', 'BS', 'RS');
-            var string = prefix + 'wait"' + this.server.hash + '*' + suffix;
-            this._send(string, function(body){
-                callback(body);
-            });
-
-        });
 
     }
 
-};
+    module.exports = Spotimote;
 
-module.exports = Spotimote;
-
+}).call(this);

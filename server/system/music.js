@@ -1,8 +1,8 @@
-(function(undefined){
+(function(undefined) {
 
-    var log     = require('../log');
-    var util    = require('../util');
-    var config  = require('../config');
+    var log = require('../log');
+    var util = require('../util');
+    var config = require('../config');
     var constant = require('../constant');
     var spotimote = require('../lib/spotimote');
     var emitter = require('events').EventEmitter;
@@ -21,11 +21,11 @@
         },
 
         playPause: function() {
-            this.log('Play/Pause');
+            this.spotify.playPause();
         },
 
         skipForward: function() {
-            this.log('Skip Forward');
+            this.spotify.skipForward();
         },
 
         skipBackward: function() {
