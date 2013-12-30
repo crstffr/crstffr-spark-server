@@ -45,6 +45,11 @@
 
     util.inherits(TCPConnection, emitter, {
 
+        log: function() {
+            var str = this.toString();
+            log.tcp.apply(log, util.prependArgs(str, arguments));
+        },
+
         toString: function() {
             return this.ip + ':' + this.port;
         },
@@ -63,10 +68,8 @@
 
         identify: function() {
             this.emit('identifying');
-
             this.socket.write(hex.BEL);
-
-            return this.waitForIt().then(function(msg){
+            return this.waitForIt().then(function(msg) {
 
                 this.setIdentity(msg.who, msg.what);
                 this.emit('identified', this.device);
@@ -83,7 +86,10 @@
 
         keepAliveStart: function() {
             if (config.tcp.keepAlive) {
-                this.interval = setInterval(this.keepAliveExec.bind(this), config.tcp.heartbeat);
+                this.interval = setInterval(
+                    this.keepAliveExec.bind(this),
+                    config.tcp.heartbeat
+                );
             }
         },
 
@@ -92,27 +98,36 @@
         },
 
         keepAliveExec: function() {
-            if (!this.device.id) { return; }
 
-            log.tcp('.');
+            if (!this.device.id) { return; }
+            if (!this.socket || this.socket.destroyed) {
+                this.keepAliveStop();
+                return;
+            }
 
             this.socket.write(hex.ENQ);
-
+            log.tcpKeepAlive(this.toString(), '< ENQ');
             this.waitForIt().then(function(msg){
-
                 if (msg !== hex.ACK) {
                     this.keepAliveError('Response != ACK');
-                    log.tcp('Response was:', msg);
+                    log.tcpKeepAlive(
+                        this.toString(),
+                        'Response was:', msg
+                    );
+                } else {
+                    log.tcpKeepAlive(this.toString(), '> ACK');
                 }
-
             }.bind(this), function(error){
                 this.keepAliveError(error);
             }.bind(this));
-
         },
 
         keepAliveError: function(error) {
-            log.tcp('KeepAlive Error:', error);
+            log.tcpKeepAlive(
+                this.toString(),
+                'KeepAlive Error:',
+                error
+            );
             this.keepAliveStop();
             this.socket.destroy();
         },

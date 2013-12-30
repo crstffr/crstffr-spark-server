@@ -81,8 +81,7 @@
 
             var data  = {
                 who:  part1,
-                what: part2,
-                when: util.now()
+                what: part2
             };
 
             return data;

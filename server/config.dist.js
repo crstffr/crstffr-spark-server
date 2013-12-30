@@ -2,14 +2,14 @@
 
     module.exports = {
         debug: true,
-        logLevel: 'spark',
-        log: function(who){
-            return this.logLevel.indexOf(who) > -1;
-        },
+        logLevel: 'spark,tcp,keepAlive',
+
         tcp: {
             port: 5000,
+            msgTimeout: 1200,
+            connTimeout: 11000,
             keepAlive: true,
-            heartbeat: 5000,
+            heartbeat: 10000
         },
         logger: {
             firebase: {
@@ -20,12 +20,21 @@
         spark: {
             token: '<token>',
             cores: [
-                '<coreid>'
+                '<core1>',
+                '<core2>',
+                '<etc>'
             ]
         },
         spotimote: {
-            server: '<ipaddress>',
+            server: '192.168.0.114',
             debug: false
+        },
+
+
+        // Helper to parse the logLevel string
+        // @todo - find a better place for this
+        log: function(who){
+            return this.logLevel.indexOf(who) > -1;
         }
     };
 

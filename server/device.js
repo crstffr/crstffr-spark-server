@@ -20,31 +20,71 @@
         this.ip     = false;
         this.port   = false;
         this.conn   = false;
-        this.sid    = id.substr(id.length - 5);
+        this.retry  = false;
+        this.retries= 0;
         this.core = new sparky({
+            debug: config.spark.debug,
             token: config.spark.token,
-            deviceId: this.id,
-            debug: false
+            deviceId: this.id
         });
 
     }
 
+
     util.inherits(Device, emitter, {
 
-        toString: function() {
-            return this.sid;
+        log: function() {
+            log.device.apply(log, util.prependArgs(this.toString(), arguments));
         },
 
-        connect: function(){
+        toString: function() {
+            return this.id.substr(this.id.length - 17);
+        },
+
+        ipString: function() {
+            return this.ip + ':' + this.port;
+        },
+
+        connect: function() {
+            this.log('Connecting...');
             this.core.run('connect', util.getIP());
+            this.startRetry();
+            return this;
+        },
+
+        isConnected: function(bool) {
+            this.conn = bool;
+            if (bool === true) {
+                this.log('Connected on', this.ipString());
+                this.stopRetry();
+            }
             return this;
         },
 
         disconnect: function() {
-            if (this.conn) {
-                this.conn.removeAllListeners();
-                this.conn = false;
+            this.log('Disconnecting...');
+            this.isConnected(false);
+            return this;
+        },
+
+        reconnect: function() {
+            this.disconnect();
+            this.connect();
+            return this;
+        },
+
+        set: function(data) {
+            for(var key in data) {
+                if (data.hasOwnProperty(key)) {
+                    this[key] = data[key];
+                }
             }
+            return this;
+        },
+
+        setInfo: function(ip, port, type) {
+            this.setIP(ip, port);
+            this.setType(type);
             return this;
         },
 
@@ -75,8 +115,47 @@
                     break;
             }
 
+            this.log('Identified as', this.is);
+
             return this;
 
+        },
+
+        startRetry: function() {
+            if (!this.retry && config.tcp.connRetries > 0) {
+                this.retry = setInterval(function(){
+
+                    var tooManyTries = this.retries >= config.tcp.connRetries;
+
+                    if (tooManyTries) {
+                        this.log('Too many tries, giving up');
+                        stop = true;
+                    }
+
+                    if (tooManyTries || this.conn) {
+                        this.stopRetry();
+                        return;
+                    }
+
+                    this.log('Connection failed, attempt', this.retries++);
+
+                    if (this.retries < config.tcp.connRetries) {
+                        this.log('Trying again in', util.msReadable(config.tcp.retryEvery));
+                    } else {
+                        this.log('Last attempt');
+                    }
+
+                    this.connect();
+
+
+                }.bind(this), config.tcp.retryEvery);
+            }
+        },
+
+        stopRetry: function() {
+            clearInterval(this.retry);
+            this.retries = 0;
+            this.retry = false;
         }
 
     });

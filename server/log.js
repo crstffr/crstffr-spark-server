@@ -11,7 +11,9 @@
     module.exports = {
 
         server: function() {
-            _log('SERVER -', arguments);
+            if (util.debug('server')) {
+                _log('SERVER -', arguments);
+            }
         },
 
         remote: function() {
@@ -23,19 +25,33 @@
         },
 
         device: function() {
-            _log('DEVICE -', arguments);
+            if (util.debug('device')) {
+                _log('DEVICE -', arguments);
+            }
         },
 
         music: function() {
-            _log('MUSIC  -', arguments);
+            if (util.debug('music')) {
+                _log('MUSIC  -', arguments);
+            }
         },
 
         core: function() {
-            _log('CORE   -', arguments);
+            if (util.debug('core')) {
+                _log('CORE   -', arguments);
+            }
         },
 
         tcp: function() {
-            _log('TCP    -', arguments);
+            if (util.debug('tcp')) {
+                _log('TCP    -', arguments);
+            }
+        },
+
+        tcpKeepAlive: function() {
+            if (util.debug('keepAlive')) {
+                _log('TCP    -', arguments);
+            }
         }
 
     };

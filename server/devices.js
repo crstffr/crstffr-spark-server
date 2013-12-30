@@ -7,9 +7,9 @@
     var emitter = require('events').EventEmitter;
 
     var Devices = function() {
-
         emitter.call(this);
         this.container = {};
+        this.timeout = false;
         this.init();
 
     };
@@ -26,20 +26,16 @@
             }
         },
 
-        connect: function(id) {
-            this.container[id].connect();
-        },
-
-        disconnect: function(id) {
-            this.container[id].disconnect();
-        },
-
         connectAll: function(ip) {
             for(var id in this.container) {
                 if (this.container.hasOwnProperty(id)) {
-                    this.connect(id);
+                    this.getByID(id).connect();
                 }
             }
+        },
+
+        get: function(id, ip) {
+            return this.getByID(id) || this.getByIP(ip);
         },
 
         getByID: function(id) {
