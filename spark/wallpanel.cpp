@@ -1,3 +1,6 @@
+// ******************************
+// Rotary Encoder Class
+// ******************************
 
 class QuadEncoder
 {
@@ -15,7 +18,7 @@ class QuadEncoder
     int _pos;
     int _oldPos;
     int _turn;
-    int _turnCount;
+    int _turnCount;  
 };
 
 QuadEncoder::QuadEncoder(int pin1, int pin2)
@@ -37,17 +40,14 @@ QuadEncoder::QuadEncoder(int pin1, int pin2)
 }
 
 char QuadEncoder::tick()
-{
+{  
   _moved = false;
   _val1 = digitalRead(_inputPin1);
   _val2 = digitalRead(_inputPin2);
-    // Detect changes
   if ( _val1 != _oldVal1 || _val2 != _oldVal2) {
     _oldVal1=_val1;
     _oldVal2=_val2;
-
-      //for each pair there's a position out of four
-    if ( _val1 == 1 ) {// stationary position
+    if ( _val1 == 1 ) {
       if (_val2 == 1)
         _pos = 0;
       else if (_val2 == 0)
@@ -58,7 +58,6 @@ char QuadEncoder::tick()
       else if (_val2 == 0)
         _pos = 2;
     }
-
     _turn = _pos-_oldPos;
     _oldPos = _pos;
     if (abs(_turn) != 2) {
@@ -67,7 +66,6 @@ char QuadEncoder::tick()
       else if (_turn == -1 || _turn == 3)
         _turnCount--;
     }
-
     if (_pos==0){
       if (_turnCount>0){
         _turnCount=0;
@@ -91,9 +89,39 @@ char QuadEncoder::tick()
 }
 
 
-int btn1 = D6;
+// ******************************
+// Definitions
+// ******************************
+
+String DEVICE_TYPE_PANEL = "1";
+String DEVICE_TYPE_MUSIC = "2";
+String DEVICE_TYPE_POWER = "3";
+
+String INPUT_BTN1 = "1";
+String INPUT_BTN2 = "2";
+String INPUT_BTN3 = "3";
+String INPUT_BTN4 = "4";
+String INPUT_KNOB = "5";
+String SENSOR_TEMP = "6";
+String SENSOR_LIGHT = "7";
+String SENSOR_MOTION = "8";
+
+
+// ******************************
+// Core Setup
+// ******************************
+
+int btn1 = D7;
+int btn2 = D6;
+int btn3 = D2;
+
 int btn1Val = LOW;
+int btn2Val = LOW;
+int btn3Val = LOW;
+
 bool btn1Down = false;
+bool btn2Down = false;
+bool btn3Down = false;
 
 int encoderPin1 = D0;
 int encoderPin2 = D1;
@@ -102,22 +130,17 @@ String encoderStr;
 int encoderVal = 0;
 QuadEncoder qe(D0,D1);
 
-
-// ******************************
-// Core Setup
-// ******************************
-
 void setup()
 {
-
     Serial.begin(9600);
-
+    
     pinMode(btn1, INPUT_PULLDOWN);
-
-    pinMode(encoderPin1, INPUT_PULLUP);
+    pinMode(btn2, INPUT_PULLDOWN);
+    pinMode(btn3, INPUT_PULLDOWN);
+    
+    pinMode(encoderPin1, INPUT_PULLUP); 
     pinMode(encoderPin2, INPUT_PULLUP);
 
-    Spark.function("type", deviceType);
     Spark.function("connect", tcpConnect);
     Spark.function("disconnect", tcpDisconnect);
 }
@@ -130,37 +153,45 @@ void loop()
 {
 
     btn1Val = digitalRead(btn1);
-
+    btn2Val = digitalRead(btn2);
+    btn3Val = digitalRead(btn3);
+    
+    
     encoderVal =qe.tick();
-
+    
     if (encoderVal == '>') {
-        tcpSend("ENCODER UP");
+        tcpAction(INPUT_KNOB,"U");
     } else if (encoderVal == '<') {
-        tcpSend("ENCODER DOWN");
+        tcpAction(INPUT_KNOB,"D");
     }
 
     if (!btn1Down && btn1Val == HIGH) {
-
         btn1Down = true;
-
-        tcpSend("BTN1PRESSED");
-
-
+        tcpAction(INPUT_BTN1, HIGH);
     } else if (btn1Val == LOW) {
         btn1Down = false;
     }
-
-    tcpKeepAlive();
+    
+    if (!btn2Down && btn2Val == HIGH) {
+        btn2Down = true;
+        tcpAction(INPUT_BTN1, HIGH);
+    } else if (btn2Val == LOW) {
+        btn2Down = false;
+    }
+    
+    if (!btn3Down && btn3Val == HIGH) {
+        btn3Down = true;
+        tcpAction(SENSOR_MOTION, HIGH);
+    } else if (btn3Val == LOW) {
+        btn3Down = false;
+    }
+    
+    tcpRead();
 
 }
 
 void updateEncoder() {
     encoderStr = String(digitalRead(encoderPin1)) + " " + String(digitalRead(encoderPin2));
-}
-
-int deviceType(String param) {
-    tcpSend("DEVICETYPE:WALLPANEL");
-    return 1;
 }
 
 // ******************************
@@ -174,6 +205,7 @@ char ETX = '\x03';
 char EOT = '\x04';
 char ENQ = '\x05';
 char ACK = '\x06';
+char BEL = '\x07';
 int  tcpPort = 5000;
 
 int tcpConnect(String ip) {
@@ -186,38 +218,40 @@ int tcpConnect(String ip) {
     }
 }
 
+int tcpIdentify() {
+    return tcpAction(Spark.deviceID(), "W");
+}
+
 int tcpDisconnect(String param) {
     tcp.flush();
     tcp.stop();
     return 1;
 }
 
-int tcpSend(String message) {
+int tcpAction(String who, String what) {
     if (tcp.connected()) {
-        tcp.print(STX + Spark.deviceID() + ETX + message + EOT);
-        delay(100);
+        tcp.print(STX + who + ETX + what + EOT);
         return 1;
     } else {
         return -1;
     }
 }
 
-void tcpKeepAlive() {
-     if (tcp.available()) {
+void tcpRead() {
+    if (tcp.available()) {
         char read = tcp.read();
         if (read == ENQ) {
             tcp.print(ACK);
+        } else if (read == BEL) {
+            tcpIdentify();
         }
     }
+    
 }
 
 // ******************************
 // Utility Methods
 // ******************************
-
-int myIP() {
-    return 1;
-}
 
 void ipArrayFromString(byte ipArray[], String ipString) {
   int dot1   = ipString.indexOf('.');
@@ -228,3 +262,11 @@ void ipArrayFromString(byte ipArray[], String ipString) {
   ipArray[2] = ipString.substring(dot2 + 1, dot1).toInt();
   ipArray[3] = ipString.substring(dot1 + 1).toInt();
 }
+
+
+
+
+
+
+
+

@@ -1,123 +1,100 @@
 
 (function(undefined){
 
-    var log = require('./server/log.js');
-    var tcp = require('./server/tcp.js');
-    var spark = require('./server/spark.js');
-    var config = require('./server/config.js');
-    var request = require('./server/request.js');
+    var log = require('./server/log');
+    var util = require('./server/util');
+    var spark = require('./server/spark');
+    var config = require('./server/config');
+    var devices = require('./server/controllers/devices');
+    var tcpServer = require('./server/tcp/server');
 
-    // ***********************************************************
-    // Display server banner when the TCP server is started
-    // ***********************************************************
+    var server = new tcpServer();
 
-    tcp.emitter.on('serverStarted', function(ip, port) {
-        log.server('*****************************************************');
-        log.server('Ready and awaiting connections on', ip + ':' + port);
-        log.server('*****************************************************');
-    });
+    log.server('*****************************************************');
+    log.server('Ready and awaiting connections on', server.ip + ':' + server.port);
+    log.server('*****************************************************');
+    log.server('Log Level:', config.logLevel);
+    log.server('TCP Connection Retries:', config.tcp.connRetries);
+    log.server('TCP Connection Timeout:', util.msReadable(config.tcp.connTimeout));
+    log.server('TCP Message Timeout:', util.msReadable(config.tcp.msgTimeout));
+    log.server('TCP KeepAlive Every:', util.msReadable(config.tcp.heartbeat));
+    log.server('TCP KeepAlive Enabled:', config.tcp.keepAlive);
+    log.server('*****************************************************');
 
-    // ***********************************************************
-    // Setup module interactions based upon TCP activity
-    // ***********************************************************
+    server.on('newConnection', function _newConnection(conn) {
 
-    tcp.emitter.on('serverStarted', function() {
+        // ***********************************************
+        // Logging
+        // ***********************************************
 
-        spark.connectAll();
+        conn.log('Connected');
 
-    }).on('connectionClosed', function(ip){
+        conn.on('unclaimedMessage', function(message) {
+            devices.getByIP(conn.ip).log(message);
+        });
 
-        spark.reconnect(ip);
+        conn.on('identifying', function(){
+            conn.log('Identifying...');
+        });
 
-    }).on('messageReceived', function(data){
+        conn.on('identified', function(data){
+            conn.log('Identified as', data.id);
+        });
 
-        request.process(data);
+        conn.on('unidentified', function(error){
+            conn.log('Not Identifed (',error,')');
+        });
 
-    });
+        conn.on('close', function(){
+            conn.log('Closed');
+        });
 
-    // ***********************************************************
-    // Kick off the server
-    // ***********************************************************
+        // ***********************************************
+        // Logic
+        // ***********************************************
 
-    setTimeout(function(){
-        tcp.createServer();
-    }, 200);
+        // Do we already know who this IP belongs to?
+        // If not, then lets identify it, and once
+        // the connection has been identified, then
+        // associate it with the corresponding device.
 
-    // ***********************************************************
-    // Everything below is just debug console logging
-    // ***********************************************************
+        if (config.tcp.requireID) {
 
-    if (config.debug) {
-
-        // *******************************
-        // TCP specific events
-        // *******************************
-
-        if (config.log('tcp')) {
-
-            tcp.emitter.on('connectionTimeout', function(ip, port) {
-                var id = spark.getIdByIp(ip);
-                log.server(spark.id(id), ip + ':' + port, 'Connection timeout');
-            });
-
-            tcp.emitter.on('connectionClosed', function(ip, port) {
-                var id = spark.getIdByIp(ip);
-                log.server(spark.id(id), ip + ':' + port, 'Connection closed');
-            });
-
-            tcp.emitter.on('connectionError', function(ip, port, error) {
-                var id = spark.getIdByIp(ip);
-                log.server(spark.id(id), ip + ':' + port, 'Connection Error', error);
-            });
-
-            if (config.log('keepAlive')) {
-
-                tcp.emitter.on('keepAlive', function(ip, port, char, sent) {
-                    var id = spark.getIdByIp(ip);
-                    var dir = (sent) ? 'sent' : 'received';
-                    log.server(spark.id(id), ip + ':' + port, 'Keep Alive', char, dir);
+            if (!devices.getByIP(conn.ip)) {
+                conn.identify().then(function(data) {
+                    devices.getByID(data.id).set({
+                        ip: conn.ip,
+                        port: conn.port,
+                        type: data.type
+                    }).isConnected(true);
                 });
-
+            } else {
+                var dev = devices.getByIP(conn.ip).set({
+                    ip: conn.ip,
+                    port: conn.port
+                }).isConnected(true);
+                conn.log('Trusted Connection Resumed');
+                conn.setIdentity(dev.id, dev.type);
             }
 
         }
 
-        // *******************************
-        // Spark Core specific events
-        // *******************************
+        // When a connection closes, check to see if
+        // it's associated with a device, and if so,
+        // then go ahead and see if it wants to
+        // reconnect.
 
-        if (config.log('spark')) {
+        conn.on('close', function() {
+            if (dev = devices.get(conn.device.id, conn.ip)) {
+                dev.reconnect();
+            } else {
+                conn.log('Cannot reconnect unidentified device');
+            }
+        });
 
-            spark.emitter.on('connecting', function(id) {
-                log.server(spark.id(id), 'Attemping connection');
-            });
 
-            spark.emitter.on('connected', function(id, ip, port) {
-                log.core(spark.id(id), ip + ':' + port, 'Connected');
-            });
+    });
 
-            spark.emitter.on('timedOut', function(id){
-                log.core(spark.id(id), 'Timed out');
-            });
-
-            spark.emitter.on('startRetry', function(id){
-                log.core(spark.id(id), 'Starting retry');
-            });
-
-            spark.emitter.on('stopRetry', function(id){
-                log.core(spark.id(id), 'Stoping retry');
-            });
-
-            spark.emitter.on('setType', function(id, type){
-                log.core(spark.id(id), 'Is', type);
-            });
-
-            spark.emitter.on('destroyed', function(id){
-                log.core(spark.id(id), 'Destroyed');
-            });
-
-        }
-
-    }
+    devices.connectAll(server.ip);
 
 }).call(this);

@@ -2,7 +2,6 @@
 (function(undefined){
 
     var log = require('./log.js');
-    var spark = require('./spark.js');
     var config = require('./config.js');
     var spotimote = require('./spotimote.js');
     var spotify = new spotimote(config.spotimote);
