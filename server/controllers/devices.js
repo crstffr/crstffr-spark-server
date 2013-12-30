@@ -2,8 +2,8 @@
 
     var log     = require('../log');
     var util    = require('../util');
-    var device  = require('../device');
     var config  = require('../config');
+    var device  = require('../system/device');
     var emitter = require('events').EventEmitter;
 
     var Devices = function() {

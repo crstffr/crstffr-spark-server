@@ -5,9 +5,8 @@
     var hex     = require('../hex');
     var util    = require('../util');
     var config  = require('../config');
-    var devices = require('../devices');
-    var emitter = require('events').EventEmitter;
     var message = require('./message');
+    var emitter = require('events').EventEmitter;
 
     var TCPConnection = function(socket) {
 

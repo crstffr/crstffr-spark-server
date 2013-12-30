@@ -1,14 +1,14 @@
 (function(undefined){
 
-    var log      = require('./log');
-    var util     = require('./util');
+    var log      = require('../log');
+    var util     = require('../util');
+    var config   = require('../config');
+    var constant = require('../constant');
     var sparky   = require('sparky');
-    var config   = require('./config');
-    var constant = require('./constant');
 
-    var panel   = require('./device/panel');
-    var music   = require('./device/music');
-    var power   = require('./device/power');
+    var panel   = require('./devices/panel');
+    var music   = require('./devices/music');
+    var power   = require('./devices/power');
     var emitter = require('events').EventEmitter;
 
     var Device = function(id) {

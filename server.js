@@ -5,7 +5,6 @@
     var util = require('./server/util');
     var spark = require('./server/spark');
     var config = require('./server/config');
-    var device = require('./server/device');
     var devices = require('./server/controllers/devices');
     var tcpServer = require('./server/tcp/server');
 
