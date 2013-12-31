@@ -27,16 +27,23 @@
 
         this.device = {id: false, type: false};
 
+        // Setup our socket
+
         socket.setNoDelay(false);
         socket.setEncoding('utf8');
-        socket.on('data', this._onData.bind(this));
-        socket.on('close', this._onClose.bind(this));
+        socket.on('data', this.onData.bind(this));
+        socket.on('close', this.onClose.bind(this));
 
-        // this is the Node socket timeout function, hence
-        // the reversed timeout and function params.
+        // Set the socket timeout so that it closes
+        // the connection, otherwise it would just
+        // hang there like some kind of idiot.
+
         socket.setTimeout(config.tcp.connTimeout, function(){
             socket.destroy();
         });
+
+        // Make sure the connection stays alive
+        // by sending it data regularly.
 
         this.keepAliveStart();
 
@@ -44,26 +51,21 @@
 
     util.inherits(TCPConnection, emitter, {
 
+        // ***********************************************
+        // Informational Utilities
+        // ***********************************************
+
         log: function() {
-            var str = this.toString();
-            log.tcp.apply(log, util.prependArgs(str, arguments));
+            log.tcp.apply(log, util.prependArgs(this.toString(), arguments));
         },
 
         toString: function() {
             return this.ip + ':' + this.port;
         },
 
-        setIdentity: function(id, type) {
-            this.device = {id: id, type: type};
-        },
-
-        destroy: function() {
-            if (this.socket) {
-                this.socket.destroy();
-                this.socket.removeAllListeners();
-                delete this.socket;
-            }
-        },
+        // ***********************************************
+        // Connection Identification
+        // ***********************************************
 
         identify: function() {
             this.emit('identifying');
@@ -82,6 +84,42 @@
             }.bind(this));
 
         },
+
+        setIdentity: function(id, type) {
+            this.device = {id: id, type: type};
+        },
+
+        // ***********************************************
+        // Connection Socket Handling
+        // ***********************************************
+
+        onData: function(data) {
+
+            switch (data[0]) {
+
+                case hex.STX:
+                    if (!this.message || this.message.finished) {
+                        this.keepAliveStop();
+                        this.waitForIt().then(function(data) {
+                            this.emit('signalReceived', data);
+                            this.keepAliveStart();
+                        }.bind(this));
+                    }
+                    break;
+
+            }
+
+            this.message.append(data);
+
+        },
+
+        onClose: function() {
+            this.emit('close');
+        },
+
+        // ***********************************************
+        // KeepAlive Handling
+        // ***********************************************
 
         keepAliveStart: function() {
             if (config.tcp.keepAlive) {
@@ -131,25 +169,6 @@
             this.socket.destroy();
         },
 
-        _onData: function(data) {
-
-            switch (data[0]) {
-
-                case hex.STX:
-                    if (!this.message || this.message.finished) {
-                        this.keepAliveStop();
-                        this.waitForIt().then(function(data) {
-                            this.emit('signalReceived', data);
-                            this.keepAliveStart();
-                        }.bind(this));
-                    }
-                    break;
-
-            }
-
-            this.message.append(data);
-
-        },
 
 
         waitForIt: function() {
@@ -186,8 +205,12 @@
 
         },
 
-        _onClose: function() {
-            this.emit('close');
+        destroy: function() {
+            if (this.socket) {
+                this.socket.destroy();
+                this.socket.removeAllListeners();
+                delete this.socket;
+            }
         }
 
     });

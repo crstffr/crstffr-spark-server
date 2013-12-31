@@ -43,7 +43,7 @@
                 var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB', 'SI');
                 var string = prefix + 'actionPlayPause"' + this.server.token;
                 this.send(string).then(function(body) {
-                    this.log('PlayPause complete');
+                    this.log('PlayPause complete'); // @todo: doesn't make it this far
                     defer.resolve(body);
                 });
             }.bind(this));
@@ -57,7 +57,7 @@
                 var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
                 var string = prefix + '\n' + 'actionNext"' + this.server.token;
                 this.send(string).then(function(body) {
-                    this.log('Skip Foward complete');
+                    this.log('Skip Foward complete'); // @todo: doesn't make it this far
                     defer.resolve(body);
                 });
             }.bind(this));
@@ -67,14 +67,12 @@
         wait: function() {
             var defer = q.defer();
             this.connect().then(function() {
-
                 if (util.debug('keepAlive')) { this.log('KeepAlive'); }
-
                 var prefix = hex.concat('BS', 'x80', 'ETX', 'DLE', 'NUL', 'SUB', 'EOT');
                 var suffix = hex.concat('STX', 'BS', 'RS');
                 var string = prefix + 'wait"' + this.server.token + '*' + suffix;
                 this.send(string).then(function(body) {
-                    defer.resolve(body);
+                    defer.resolve(body); // @todo: doesn't make it this far
                 });
             }.bind(this));
             return defer.promise;

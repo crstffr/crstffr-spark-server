@@ -8,6 +8,7 @@ module.exports = {
     ACTION_DOWN:    3,
     ACTION_ON:      4,
     ACTION_OFF:     5,
+    ACTION_HOLD:    6,
 
     DEVICE_TYPE_PANEL: 1,
     DEVICE_TYPE_MUSIC: 2,
@@ -27,7 +28,12 @@ module.exports = {
     DEVICE_MUSIC: {
         POWER:  1,
         VOLUME: 2
-    }
+    },
+
+    SYSTEM_USER: 'user',
+    SYSTEM_HOME: 'home',
+    SYSTEM_ROOM: 'room',
+    SYSTEM_DEVICE: 'device'
 
 };
 

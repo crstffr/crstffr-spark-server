@@ -11,11 +11,15 @@
     var power   = require('./devices/power');
     var emitter = require('events').EventEmitter;
 
-    var Device = function(id) {
+    var Device = function(id, device, room) {
 
         emitter.call(this);
 
         this.id     = id;
+        this.room   = room.toUpperCase();
+        this.name   = device.name.toUpperCase();
+        this.type   = device.type;
+
         this.is     = false;
         this.ip     = false;
         this.port   = false;
@@ -27,6 +31,8 @@
             token: config.spark.token,
             deviceId: this.id
         });
+
+        this.inherit(device.type);
 
     }
 
@@ -41,7 +47,8 @@
         },
 
         toString: function() {
-            return this.id.substr(this.id.length - 17);
+            return this.is + ' in ' + this.room;
+            //return this.id.substr(this.id.length - 17);
         },
 
         ipString: function() {
@@ -49,30 +56,10 @@
         },
 
         // ***********************************************
-        // Public Setters
+        // Object Inherit from Device Type
         // ***********************************************
 
-        setIP: function(ip) {
-            this.ip = ip;
-            return this;
-        },
-
-        setPort: function(port) {
-            this.port = port;
-            return this;
-        },
-
-        isConnected: function(bool) {
-            this.conn = bool;
-            if (bool === true) {
-                this.log('Connected on', this.ipString());
-                this.stopRetry();
-            }
-            return this;
-        },
-
-        setType: function(type) {
-            this.type = type;
+        inherit: function() {
 
             // Depending on the device type, inherit
             // some device specific methods
@@ -92,9 +79,29 @@
                     break;
             }
 
-            this.log('Identified as', this.is);
-            return this;
+        },
 
+        // ***********************************************
+        // Public Setters
+        // ***********************************************
+
+        setIP: function(ip) {
+            this.ip = ip;
+            return this;
+        },
+
+        setPort: function(port) {
+            this.port = port;
+            return this;
+        },
+
+        isConnected: function(bool) {
+            this.conn = bool;
+            if (bool === true) {
+                this.log('Connected');
+                this.stopRetry();
+            }
+            return this;
         },
 
         // ***********************************************

@@ -10,18 +10,27 @@
     var Router = function() {
 
         emitter.call(this);
-        this.routes = {
-
-
-
-
-        }
-
     }
 
     util.inherits(Router, emitter, {
 
-        route: function(deviceID, event) {
+        route: function(device, signal) {
+
+            var who, what;
+            device.log('said', signal);
+            //log.server('Router heard signal', signal);
+
+            switch(device.type) {
+
+                case constant.DEVICE_TYPE_PANEL:
+
+
+
+                    break;
+
+            }
+
+
 
 
 
@@ -29,6 +38,6 @@
 
     });
 
-    module.exports = new Router();
+    module.exports = Router;
 
 }).call(this);

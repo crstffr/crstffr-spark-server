@@ -1,3 +1,4 @@
+/*
 (function(undefined){
 
     var log     = require('../log');
@@ -10,7 +11,7 @@
         emitter.call(this);
         this.container = {};
         this.timeout = false;
-        this.init();
+        // this.init();
     };
 
     util.inherits(Devices, emitter, {
@@ -57,3 +58,4 @@
     module.exports = new Devices();
 
 }).call(this);
+*/
