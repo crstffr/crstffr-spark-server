@@ -10,7 +10,7 @@
     var Panel = function() {
 
         emitter.call(this);
-        this.is = "PANEL";
+        this.is = 'PANEL';
         this.components = constant.DEVICE_PANEL;
 
         this.dispatch = function(signal) {
@@ -40,13 +40,7 @@
 
         }
 
-
     }
-
-    util.inherits(Panel, emitter, {
-
-
-    });
 
     module.exports = Panel;
 

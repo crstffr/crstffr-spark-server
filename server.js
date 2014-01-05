@@ -1,12 +1,11 @@
 
 (function(undefined){
 
-    var log = require('./server/log');
-    var util = require('./server/util');
-    var config = require('./server/config');
-    var tcp = require('./server/tcp/server');
-    var user = require('./server/system/user');
-    var router = require('./server/router');
+    var util    = require('./server/util');
+    var tcp     = require('./server/tcp/server');
+    var user    = require('./server/system/user');
+    var router  = require('./server/router');
+    var config  = require('./server/config');
 
     // ***********************************************
     // Let's start some shit!
@@ -15,20 +14,21 @@
     var user = new user(config.thisUser);
     var devices = user.deviceManager();
     var server = new tcp(devices);
-    var router = new router();
+    var router = new router(user);
+
+    // ***********************************************
+    // In a moment, let's connect ALL the things!
+    // ***********************************************
 
     setTimeout(function(){
         devices.connectAll();
     }.bind(this), 250);
 
-    //server.log('Device test', user.deviceManager());
-    //server.log('Device test', user.deviceManager().getByID('48ff6b065067555039091087'));
-
     // ***********************************************
-    // We got this!
+    // I hear you man, and let me respond.
     // ***********************************************
 
-    server.on('signalReceived', router.route);
+    server.on('signalReceived', router.parseSignal);
 
     // ***********************************************
     // Logging

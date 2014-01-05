@@ -94,9 +94,13 @@
             var defer = q.defer();
             var url = 'http://' + this.server.ip + ':' + this.server.port + this.server.path;
             var req = request.post(url, {body: str}, function(err, response, body) {
-                response.setEncoding('utf8');
-                this.server.conn = util.now();
-                defer.resolve(body);
+                if (err) {
+                    defer.reject(err.code);
+                } else {
+                    response.setEncoding('utf8');
+                    this.server.conn = util.now();
+                    defer.resolve(body);
+                }
             }.bind(this)).end();
             return defer.promise;
         },
@@ -144,6 +148,10 @@
                     }
 
                 }
+
+            }.bind(this), function(error){
+
+                this.log('Unable to connect', error);
 
             }.bind(this));
 

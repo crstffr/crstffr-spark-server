@@ -47,8 +47,7 @@
         },
 
         toString: function() {
-            return this.is + ' in ' + this.room;
-            //return this.id.substr(this.id.length - 17);
+            return this.room + ' ' + this.type;
         },
 
         ipString: function() {
@@ -64,7 +63,7 @@
             // Depending on the device type, inherit
             // some device specific methods
 
-            switch (parseInt(this.type)) {
+            switch (this.type) {
                 case constant.DEVICE_TYPE_PANEL:
                     panel.call(this);
                     util.inherits(this, panel);
@@ -102,6 +101,32 @@
                 this.stopRetry();
             }
             return this;
+        },
+
+        // ***********************************************
+        // Public Getter
+        // ***********************************************
+
+        component: function(id) {
+            for(var comp in this.components) {
+                if (this.components.hasOwnProperty(comp)) {
+                    if (this.components[comp] == id) {
+                        return comp;
+                    }
+                }
+            }
+            return false;
+        },
+
+        action: function(id) {
+            for(var action in constant.ACTIONS) {
+                if (constant.ACTIONS.hasOwnProperty(action)) {
+                    if (constant.ACTIONS[action] == id) {
+                        return action;
+                    }
+                }
+            }
+            return false;
         },
 
         // ***********************************************

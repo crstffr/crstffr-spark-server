@@ -25,10 +25,6 @@
 
     util.inherits(Room, emitter, {
 
-        device: function(id) {
-            return this.device[id];
-        },
-
         volumeUp: function() {
             // volume up on local music device
         },

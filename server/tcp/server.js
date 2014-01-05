@@ -46,7 +46,6 @@
                 var device;
                 if (device = this.devices.getByID(conn.device.id)) {
                     this.emit('signalReceived', device, signal);
-                    device.dispatch(signal); // @todo: refactor into router
                 }
             }.bind(this));
 

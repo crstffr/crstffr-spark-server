@@ -3,6 +3,7 @@
     var log     = require('../log');
     var room    = require('./room');
     var util    = require('../util');
+    var music   = require('./music');
     var config  = require('../config');
     var emitter = require('events').EventEmitter;
 
@@ -14,6 +15,7 @@
         this.user = user;
         this.name = home.name;
         this.rooms = {};
+        this.state = {};
 
         for(var _id in home.rooms) {
             if (home.rooms.hasOwnProperty(_id)) {
@@ -32,10 +34,26 @@
             return this.rooms[id];
         },
 
+        enable: function(what) {
+            this.state[what] = true;
+        },
+
+        disable: function(what) {
+            this.state[what] = false;
+        },
+
+        check: function(what) {
+            return this.state[what];
+        },
+
         // Globally adjust music in all rooms
         // and devices in the home
 
         music: {
+
+
+
+
 
             powerOn: function() {
                 // turn all music players on
@@ -54,11 +72,11 @@
             },
 
             playPause: function() {
-                // pause spotify
+                music.playPause();
             },
 
             skipForward: function() {
-                // skip track on spotify
+                music.skipForward();
             }
 
         }

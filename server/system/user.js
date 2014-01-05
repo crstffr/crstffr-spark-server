@@ -89,9 +89,33 @@
             return false;
         },
 
+        deviceByType: function(type, room) {
+            var output, device;
+            room = room || false;
+            for (var id in this.devices) {
+                if (this.devices.hasOwnProperty(id)) {
+                    device = this.devices[id];
+                    if (device.type == type) {
+                        if (!room || (room && device.room)) {
+                            output[id] = device;
+                        }
+                    }
+                }
+            }
+            return output;
+        },
+
         deviceManager: function() {
 
             var deviceManager = function() {};
+
+            deviceManager.prototype.connectAll = function() {
+                for (var id in this.devices) {
+                    if (this.devices.hasOwnProperty(id)) {
+                        this.devices[id].connect();
+                    }
+                }
+            }.bind(this);
 
             deviceManager.prototype.get = function(id, ip) {
                 return this.device(id) || this.deviceByIP(ip);
@@ -105,13 +129,17 @@
                 return this.deviceByIP(ip);
             }.bind(this);
 
-            deviceManager.prototype.connectAll = function() {
-                for (var id in this.devices) {
-                    if (this.devices.hasOwnProperty(id)) {
-                        this.devices[id].connect();
-                    }
-                }
-            }.bind(this)
+            deviceManager.prototype.getByType = function(type, room) {
+                return this.deviceByType(type, room);
+            }.bind(this);
+
+            deviceManager.prototype.execute = function(command, type, room) {
+
+                var device = this.deviceByType(type, room);
+                this.log('Exec', command, type, room, device);
+
+
+             }.bind(this)
 
             return new deviceManager();
 
