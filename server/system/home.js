@@ -7,11 +7,10 @@
     var config  = require('../config');
     var emitter = require('events').EventEmitter;
 
-    var Home = function(id, home, user) {
+    var Home = function(home, user) {
 
         emitter.call(this);
 
-        this.id = id;
         this.user = user;
         this.name = home.name;
         this.rooms = {};
@@ -19,7 +18,8 @@
 
         for(var _id in home.rooms) {
             if (home.rooms.hasOwnProperty(_id)) {
-                this.rooms[_id] = new room(_id, home.rooms[_id], id);
+                var _uid = _id.toUpperCase();
+                this.rooms[_uid] = new room(_uid, home.rooms[_id]);
             }
         }
 
@@ -28,32 +28,26 @@
     util.inherits(Home, emitter, {
 
         room: function(id) {
-            if (!this._rooms[id]) {
-                throw 'Room does not exist: ' + id;
-            }
-            return this.rooms[id];
+            id = id.toUpperCase();
+            return this.rooms[id] || false;
         },
 
-        enable: function(what) {
-            this.state[what] = true;
+        set: function(key, val) {
+            this.state[key] = val;
         },
 
-        disable: function(what) {
-            this.state[what] = false;
+        get: function(key) {
+            return this.state[key];
         },
 
-        check: function(what) {
-            return this.state[what];
+        check: function(key, val) {
+            return this.state[key] == val;
         },
 
         // Globally adjust music in all rooms
         // and devices in the home
 
         music: {
-
-
-
-
 
             powerOn: function() {
                 // turn all music players on

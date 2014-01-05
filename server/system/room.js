@@ -6,24 +6,36 @@
     var device  = require('./device');
     var emitter = require('events').EventEmitter;
 
-    var Room = function(id, room, home) {
+    var Room = function(id, room) {
 
         emitter.call(this);
 
         this.id = id;
-        this.home = home;
         this.name = room.name;
         this.devices = {};
+        this.state = {};
 
         for(var _id in room.devices) {
             if (room.devices.hasOwnProperty(_id)) {
-                this.devices[_id] = new device(_id, room.devices[_id], id);
+                this.devices[_id] = new device(_id, room.devices[_id], this.id);
             }
         }
 
     }
 
     util.inherits(Room, emitter, {
+
+        set: function(key, val) {
+            this.state[key] = val;
+        },
+
+        get: function(key) {
+            return this.state[key];
+        },
+
+        check: function(key, val) {
+            return this.state[key] == val;
+        },
 
         volumeUp: function() {
             // volume up on local music device

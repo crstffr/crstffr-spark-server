@@ -17,6 +17,12 @@
     var router = new router(user);
 
     // ***********************************************
+    // Setup some stateful defaults
+    // ***********************************************
+
+    user.home.set('MOTION', 'DISABLED');
+
+    // ***********************************************
     // In a moment, let's connect ALL the things!
     // ***********************************************
 
@@ -28,7 +34,23 @@
     // I hear you man, and let me respond.
     // ***********************************************
 
-    server.on('signalReceived', router.parseSignal);
+    server.on('signalReceived', function(device, signal){
+        router.parseSignal(device, signal);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // ***********************************************
     // Logging

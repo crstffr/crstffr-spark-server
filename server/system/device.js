@@ -16,7 +16,7 @@
         emitter.call(this);
 
         this.id     = id;
-        this.room   = room.toUpperCase();
+        this.room   = room;
         this.name   = device.name.toUpperCase();
         this.type   = device.type;
 
@@ -107,7 +107,7 @@
         // Public Getter
         // ***********************************************
 
-        component: function(id) {
+        getComponent: function(id) {
             for(var comp in this.components) {
                 if (this.components.hasOwnProperty(comp)) {
                     if (this.components[comp] == id) {
@@ -118,7 +118,7 @@
             return false;
         },
 
-        action: function(id) {
+        getAction: function(id) {
             for(var action in constant.ACTIONS) {
                 if (constant.ACTIONS.hasOwnProperty(action)) {
                     if (constant.ACTIONS[action] == id) {

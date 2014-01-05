@@ -8,55 +8,34 @@
     var constant = require('../constant');
     var emitter = require('events').EventEmitter;
 
-    var User = function(id) {
+    var User = function(username) {
 
         emitter.call(this);
 
-        if (!data.users[id]) {
-            throw "Invalid User: " + id;
+        if (!data.users[username]) {
+            throw "Invalid User: " + username;
         }
 
-        this.id = id;
-        this.data = data.users[id];
-        this.name = this.data.name;
-        this.homes = {};
+        this.name = username;
+        this.data = data.users[username];
+        this.home = {};
         this.rooms = {};
         this.devices = {};
 
-        this.initHomes();
+        this.initHome();
     }
 
     util.inherits(User, emitter, {
 
-        initHomes: function() {
-            for(var _id in this.data.homes) {
-                if (this.data.homes.hasOwnProperty(_id)) {
-                    this.homes[_id] = new home(_id, this.data.homes[_id], this.id);
-                }
-            }
-            this.rooms = this.getAllRooms();
+        initHome: function() {
+            this.home = new home(this.data.home, this.name);
+            this.rooms = this.home.rooms;
             this.devices = this.getAllDevices();
-        },
-
-        getAllRooms: function() {
-            var all = {};
-            var homes = this.homes;
-            for(var hid in homes) {
-                if (homes.hasOwnProperty(hid)) {
-                    var rooms = homes[hid].rooms;
-                    for(var rid in rooms) {
-                        if (rooms.hasOwnProperty(rid)) {
-                            all[rid] = rooms[rid];
-                        }
-                    }
-                }
-            }
-            return all;
         },
 
         getAllDevices: function() {
             var all = {};
-            var rooms = this.getAllRooms();
+            var rooms = this.home.rooms;
             for(var rid in rooms) {
                 if (rooms.hasOwnProperty(rid)) {
                     var devices = rooms[rid].devices;
@@ -134,11 +113,8 @@
             }.bind(this);
 
             deviceManager.prototype.execute = function(command, type, room) {
-
                 var device = this.deviceByType(type, room);
                 this.log('Exec', command, type, room, device);
-
-
              }.bind(this)
 
             return new deviceManager();
