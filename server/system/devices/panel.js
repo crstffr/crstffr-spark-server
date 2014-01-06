@@ -4,7 +4,7 @@
     var util    = require('../../util');
     var config  = require('../../config');
     var constant = require('../../constant');
-    var music   = require('../music');
+    var music   = require('../audio');
     var emitter = require('events').EventEmitter;
 
     var Panel = function() {

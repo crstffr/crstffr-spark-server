@@ -20,8 +20,8 @@
                                 }
                                 /*
                                 ,'48ff6b065067555017201587': {
-                                    name: 'Music Player 1',
-                                    type: constant.DEVICE_TYPE_MUSIC
+                                    name: 'Stereo 1',
+                                    type: constant.DEVICE_TYPE_AUDIO
                                 }*/
                             }
                         },

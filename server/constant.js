@@ -21,7 +21,7 @@ module.exports = {
     },
 
     DEVICE_TYPE_PANEL: 'PANEL',
-    DEVICE_TYPE_MUSIC: 'MUSIC',
+    DEVICE_TYPE_AUDIO: 'AUDIO',
     DEVICE_TYPE_POWER: 'POWER',
 
     DEVICE_PANEL: {

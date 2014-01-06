@@ -115,7 +115,7 @@
             deviceManager.prototype.execute = function(command, type, room) {
                 var device = this.deviceByType(type, room);
                 this.log('Exec', command, type, room, device);
-             }.bind(this)
+             }.bind(this);
 
             return new deviceManager();
 
