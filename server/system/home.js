@@ -3,7 +3,7 @@
     var log     = require('../log');
     var room    = require('./room');
     var util    = require('../util');
-    var music   = require('./audio');
+    var music   = require('./music');
     var config  = require('../config');
     var emitter = require('events').EventEmitter;
 
@@ -45,42 +45,8 @@
         },
 
         execute: function(which, action) {
-            var method = action.toLowerCase();
 
-        },
-
-        // Globally adjust music in all rooms
-        // and devices in the home
-
-        music: {
-
-            poweron: function() {
-                // turn all music players on
-            },
-
-            poweroff: function() {
-                // turn all music players off
-            },
-
-            powertoggle: function() {
-                // turn all music players on or off
-            },
-
-            volumeup: function() {
-                // turn all music players up
-            },
-
-            volumedown: function() {
-                // turn all music players down
-            },
-
-            playpause: function() {
-                music.playPause();
-            },
-
-            skipforward: function() {
-                music.skipForward();
-            }
+            log.server('HOME', which, action);
 
         }
 

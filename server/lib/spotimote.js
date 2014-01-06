@@ -64,6 +64,70 @@
             return defer.promise;
         },
 
+        skipBackward: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Skip Backward... (non functional)');
+                /*
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
+                var string = prefix + '\n' + 'actionNext"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('Skip Backward complete'); // @todo: doesn't make it this far
+                    defer.resolve(body);
+                });
+                */
+            }.bind(this));
+            return defer.promise;
+        },
+
+        volumeUp: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Volume Up... (non functional)');
+                /*
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
+                var string = prefix + '\n' + 'actionNext"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('Skip Backward complete'); // @todo: doesn't make it this far
+                    defer.resolve(body);
+                });
+                */
+            }.bind(this));
+            return defer.promise;
+        },
+
+        volumeDown: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Volume Down... (non functional)');
+                /*
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
+                var string = prefix + '\n' + 'actionNext"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('Skip Backward complete'); // @todo: doesn't make it this far
+                    defer.resolve(body);
+                });
+                */
+            }.bind(this));
+            return defer.promise;
+        },
+
+        randomRadio: function() {
+            var defer = q.defer();
+            this.connect().then(function() {
+                this.log('Random Radio... (non functional)');
+                /*
+                var prefix = hex.concat('BS', 'x80', 'ENQ', 'DLE', 'SOH', 'SUB');
+                var string = prefix + '\n' + 'actionNext"' + this.server.token;
+                this.send(string).then(function(body) {
+                    this.log('Skip Backward complete'); // @todo: doesn't make it this far
+                    defer.resolve(body);
+                });
+                */
+            }.bind(this));
+            return defer.promise;
+        },
+
         wait: function() {
             var defer = q.defer();
             this.connect().then(function() {
@@ -77,6 +141,8 @@
             }.bind(this));
             return defer.promise;
         },
+
+
 
         // ***********************************************
         // Private Utilities

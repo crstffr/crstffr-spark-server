@@ -7,7 +7,7 @@
     var sparky   = require('sparky');
 
     var panel   = require('./devices/panel');
-    var music   = require('./devices/music');
+    var audio   = require('./devices/audio');
     var power   = require('./devices/power');
     var emitter = require('events').EventEmitter;
 
@@ -68,8 +68,8 @@
                     panel.call(this);
                     util.inherits(this, panel);
                     break;
-                case constant.DEVICE_TYPE_MUSIC:
-                    music.call(this);
+                case constant.DEVICE_TYPE_AUDIO:
+                    audio.call(this);
                     util.inherits(this, music);
                     break;
                 case constant.DEVICE_TYPE_POWER:
@@ -142,7 +142,9 @@
 
         disconnect: function() {
             this.log('Disconnecting...');
+            this.core.run('disconnect');
             this.isConnected(false);
+            this.stopRetry();
             return this;
         },
 

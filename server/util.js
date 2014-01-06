@@ -21,6 +21,10 @@
             return !isNaN(parseFloat(n)) && isFinite(n);
         },
 
+        isFunction: function(func) {
+            return typeof func == 'function';
+        },
+
         debug: function(who) {
             var level = config.logLevel;
             var pos = level.indexOf(who);

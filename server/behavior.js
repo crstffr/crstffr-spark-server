@@ -4,6 +4,7 @@
     var util = require('./util');
     var config = require('./config');
     var constant = require('./constant');
+    var music = require('./system/music');
     var emitter = require('events').EventEmitter;
 
     var Behavior = function(string, user) {
@@ -88,11 +89,16 @@
                     where: parts[4],
                     string: string
                 };
+            } else if (parts[1] == 'MUSIC') {
+                return {
+                    is: 'music',
+                    command: parts[0]
+                };
             } else {
                 return {
                     is: 'physical',
-                    which: parts[0],
-                    action: parts[1],
+                    command: parts[0],
+                    which: parts[1],
                     where: parts[3],
                     string: string
                 };
@@ -186,7 +192,7 @@
         },
 
         // ***********************************************
-        // Test an activity against this behavior
+        // Execute behavior actions, with activity context
         // ***********************************************
 
         execute: function(activity) {
@@ -194,6 +200,11 @@
             this.actions.forEach(function(action) {
 
                 var where;
+
+                if (action.is == 'music') {
+                    music.execute(action.command);
+                    return;
+                }
 
                 switch (action.where) {
                     case 'HOME':
@@ -210,7 +221,7 @@
                 if (where) {
                     switch(action.is) {
                         case 'physical':
-                            where.execute(action.which, action.action);
+                            where.execute(action.which, action.command);
                             break;
                         case 'variable':
                             where.set(action.key, action.val);

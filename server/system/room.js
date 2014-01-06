@@ -37,6 +37,28 @@
             return this.state[key] == val;
         },
 
+        executeByType: function(type, command) {
+            command = command.toLowerCase();
+            this.getDevicesByType(type).forEach(function(dev){
+                if (util.isFunction(dev[command])) {
+                    dev[command]();
+                }
+            }.bind(this));
+        },
+
+        getDevicesByType: function(type) {
+            var dev, devices = [];
+            for (var id in this.devices) {
+                if (this.devices.hasOwnProperty(id)) {
+                    dev = this.devices[id];
+                    if (dev.type == type) {
+                        devices.push(dev);
+                    }
+                }
+            }
+            return devices;
+        },
+
         volumeUp: function() {
             // volume up on local music device
         },

@@ -12,26 +12,15 @@
 
         emitter.call(this);
 
-        if (!data.users[username]) {
-            throw "Invalid User: " + username;
-        }
-
         this.name = username;
         this.data = data.users[username];
-        this.home = {};
-        this.rooms = {};
-        this.devices = {};
+        this.home = new home(this.data.home, this.name);
+        this.rooms = this.home.rooms;
+        this.devices = this.getAllDevices();
 
-        this.initHome();
     }
 
     util.inherits(User, emitter, {
-
-        initHome: function() {
-            this.home = new home(this.data.home, this.name);
-            this.rooms = this.home.rooms;
-            this.devices = this.getAllDevices();
-        },
 
         getAllDevices: function() {
             var all = {};
@@ -88,34 +77,33 @@
 
             var deviceManager = function() {};
 
-            deviceManager.prototype.connectAll = function() {
-                for (var id in this.devices) {
-                    if (this.devices.hasOwnProperty(id)) {
-                        this.devices[id].connect();
+            deviceManager.prototype = {
+
+                get: function(id, ip) {
+                    return this.device(id) || this.deviceByIP(ip);
+                }.bind(this),
+
+                getByID: function(id) {
+                    return this.device(id);
+                }.bind(this),
+
+                getByIP: function(ip) {
+                    return this.deviceByIP(ip);
+                }.bind(this),
+
+                getByType: function(type, room) {
+                    return this.deviceByType(type, room);
+                }.bind(this),
+
+                connectAll: function() {
+                    for (var id in this.devices) {
+                        if (this.devices.hasOwnProperty(id)) {
+                            this.devices[id].connect();
+                        }
                     }
-                }
-            }.bind(this);
+                }.bind(this)
 
-            deviceManager.prototype.get = function(id, ip) {
-                return this.device(id) || this.deviceByIP(ip);
-            }.bind(this);
-
-            deviceManager.prototype.getByID = function(id) {
-                return this.device(id);
-            }.bind(this);
-
-            deviceManager.prototype.getByIP = function(ip) {
-                return this.deviceByIP(ip);
-            }.bind(this);
-
-            deviceManager.prototype.getByType = function(type, room) {
-                return this.deviceByType(type, room);
-            }.bind(this);
-
-            deviceManager.prototype.execute = function(command, type, room) {
-                var device = this.deviceByType(type, room);
-                this.log('Exec', command, type, room, device);
-             }.bind(this);
+            };
 
             return new deviceManager();
 
