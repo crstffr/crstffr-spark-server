@@ -41,8 +41,8 @@
             var strings = string.split(';');
             this.action = strings[1].trim();
             this.condition = strings[0].trim();
-            var actions = this.action.split('AND');
-            var conditions = this.condition.split('AND');
+            var actions = this.action.split(' AND ');
+            var conditions = this.condition.split(' AND ');
             this.actions = actions.map(this.parseAction.bind(this));
             this.conditions = conditions.map(this.parseCondition.bind(this));
         },
@@ -56,7 +56,7 @@
             var parts = string.trim().split(' ');
             if (parts[1] == 'IS') {
                 return {
-                    is: 'comparison',
+                    is: 'COMPARE',
                     who: parts[0],
                     what: parts[2],
                     where: parts[4],
@@ -64,7 +64,7 @@
                 };
             } else {
                 return {
-                    is: 'activity',
+                    is: 'ACTIVITY',
                     room: parts[0],
                     device: parts[1],
                     component: parts[2],
@@ -83,7 +83,7 @@
             var parts = string.trim().split(' ');
             if (parts[0] == 'SET') {
                 return {
-                    is: 'variable',
+                    is: 'VARIABLE',
                     key: parts[1],
                     val: parts[2],
                     where: parts[4],
@@ -91,12 +91,12 @@
                 };
             } else if (parts[1] == 'MUSIC') {
                 return {
-                    is: 'music',
+                    is: 'MUSIC',
                     command: parts[0]
                 };
             } else {
                 return {
-                    is: 'physical',
+                    is: 'PHYSICAL',
                     command: parts[0],
                     which: parts[1],
                     where: parts[3],
@@ -106,7 +106,7 @@
         },
 
         // ***********************************************
-        // Test an activity against this behavior
+        // Test an incoming activity against this behavior
         // ***********************************************
 
         /**
@@ -122,10 +122,10 @@
                 var result;
                 this.log('CONDITION:', condition.string.trim());
                 switch (condition.is) {
-                    case 'activity':
+                    case 'ACTIVITY':
                         result = this.testActivityCondition(condition, activity);
                         break;
-                    case 'comparison':
+                    case 'COMPARE':
                         result = this.testComparisionCondition(condition, activity);
                         break;
                 }
@@ -189,51 +189,7 @@
             }
             this.log('  ', check.toString().toUpperCase());
             return check;
-        },
-
-        // ***********************************************
-        // Execute behavior actions, with activity context
-        // ***********************************************
-
-        execute: function(activity) {
-
-            this.actions.forEach(function(action) {
-
-                var where;
-
-                if (action.is == 'music') {
-                    music.execute(action.command);
-                    return;
-                }
-
-                switch (action.where) {
-                    case 'HOME':
-                        where = this.user.home;
-                        break;
-                    case 'SAMEROOM':
-                        where = this.user.home.room(activity.room);
-                        break;
-                    default:
-                        where = this.user.home.room(action.where);
-                        break;
-                }
-
-                if (where) {
-                    switch(action.is) {
-                        case 'physical':
-                            where.execute(action.which, action.command);
-                            break;
-                        case 'variable':
-                            where.set(action.key, action.val);
-                            break;
-                    }
-                }
-
-            }.bind(this));
-
         }
-
-
 
     });
 

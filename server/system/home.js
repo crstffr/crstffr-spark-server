@@ -13,6 +13,7 @@
 
         this.user = user;
         this.name = home.name;
+        this.music = music;
         this.rooms = {};
         this.state = {};
 
@@ -32,6 +33,10 @@
             return this.rooms[id] || false;
         },
 
+        // ***********************************************
+        // Behavior variable setting/getting/checking
+        // ***********************************************
+
         set: function(key, val) {
             this.state[key] = val;
         },
@@ -44,10 +49,17 @@
             return this.state[key] == val;
         },
 
-        execute: function(which, action) {
+        // ***********************************************
+        // Execute commands on devices in all rooms of home
+        // ***********************************************
 
-            log.server('HOME', which, action);
-
+        execute: function(which, command) {
+            var id;
+            for (id in this.rooms) {
+                if (this.rooms.hasOwnProperty(id)) {
+                    this.rooms[id].execute(which, command);
+                }
+            }
         }
 
 

@@ -9,8 +9,16 @@
         this.is = 'PANEL';
         this.components = constant.DEVICE_PANEL;
 
-        this.test = function() {
-            this.log('Testing the Panel');
+        this.publicActions = function() {
+            var actions = function(){};
+            actions.prototype = {
+
+                test: function() {
+                    this.log('Testing...');
+                }.bind(this)
+
+            };
+            return new actions();
         };
 
     }

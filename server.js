@@ -21,18 +21,35 @@
     // ***********************************************
 
     [
-        'any panel btn2 press; playpause music',
-        'any panel btn1 press; skipforward music'
+        'any panel knob press; playpause music',
+        'any panel knob turncw; volumeup audio in sameroom',
+        'any panel knob turnccw; volumedown audio in sameroom',
+
+        'office panel btn1 press; skipforward music',
+        'kitchen panel btn1 press; randomradio music'
+
+        /* // Test action on device by it's NAME
+        'any panel btn1 press; test ctrl1 in sameroom',
+        'any panel btn1 press; test ctrl1 in office',
+        'any panel btn1 press; test ctrl1 in kitchen',
+        'any panel btn1 press; test ctrl1 in home',
+        */
+
+        /* // Test action on device by it's TYPE
+        'any panel btn1 press; test panel in sameroom',
+        'any panel btn1 press; test panel in office',
+        'any panel btn1 press; test panel in kitchen',
+        'any panel btn1 press; test panel in home',
+        */
 
         /*
-        'any panel btn2 press; powertoggle audio in sameroom',
-        'any panel btn2 presshold; poweroff audio in home and set motion disabled in home',
+        'any panel btn1 press; powertoggle audio in sameroom',
+        'any panel btn1 presshold; poweroff audio in home and set motion disabled in home',
 
         'any panel btn1 press; skipforward music',
         'any panel btn1 presshold; randomradio music',
 
-        'any panel knob turncw; volumeup audio in sameroom',
-        'any panel knob turnccw; volumedown audio in sameroom',
+
 
         'any panel btn2 press and motion is disabled in home; set motion enabled in home',
         'any panel btn2 press and motion is enabled in home; set motion disabled in home'

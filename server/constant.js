@@ -3,21 +3,16 @@ module.exports = {
     // These values need to match the values
     // defined in each of the core firmwares.
 
-    ACTION:         1,
-    ACTION_PRESS:   1,
-    ACTION_UP:      2,
-    ACTION_DOWN:    3,
-    ACTION_ON:      4,
-    ACTION_OFF:     5,
-    ACTION_HOLD:    6,
-
     ACTIONS: {
         PRESS:      1,
-        TURNCW:     2,
-        TURNCCW:    3,
-        ON:         4,
-        OFF:        5,
-        PRESSHOLD:  6
+        PRESSHOLD:  2,
+        TURNCW:     3,
+        TURNCCW:    4,
+        ON:         5,
+        OFF:        6,
+        UP:         7,
+        DOWN:       8,
+        MOTION:     9
     },
 
     DEVICE_TYPE_PANEL: 'PANEL',
@@ -35,7 +30,7 @@ module.exports = {
         SENSOR_MOTION:  8
     },
 
-    DEVICE_MUSIC: {
+    DEVICE_AUDIO: {
         POWER:  1,
         VOLUME: 2
     }

@@ -26,6 +26,7 @@
         this.conn   = false;
         this.retry  = false;
         this.retries= 0;
+
         this.core = new sparky({
             debug: config.spark.debug,
             token: config.spark.token,
@@ -33,6 +34,7 @@
         });
 
         this.inherit(device.type);
+        this.actions = this.publicActions();
 
     }
 
@@ -47,7 +49,7 @@
         },
 
         toString: function() {
-            return this.room + ' ' + this.type;
+            return this.room + ' ' + this.type + ' ' + this.name;
         },
 
         ipString: function() {

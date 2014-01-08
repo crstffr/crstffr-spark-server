@@ -12,7 +12,6 @@
         emitter.call(this);
 
         this.user = user;
-        this.devices = user.deviceManager();
         this.behaviors = [];
 
     }
@@ -42,12 +41,13 @@
                 return false;
             }
 
-            this.getRelevantBehaviors(activity).forEach(function(behavior){
+            this.getRelevantBehaviors(activity).forEach(function(behavior) {
 
                 log.server('');
                 log.server('Behavior:', behavior.condition);
-                log.server('Triggers:', behavior.action);
-                behavior.execute(activity);
+                log.server('Executes:', behavior.action);
+
+                this.user.execute(behavior.actions, activity);
 
             }.bind(this));
 

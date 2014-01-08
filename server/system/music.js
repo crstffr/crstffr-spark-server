@@ -25,6 +25,8 @@
             command = command.toLowerCase();
             if (util.isFunction(this.actions[command])) {
                 this.actions[command]();
+            } else {
+                this.log('Unknown command:', command);
             }
         },
 
@@ -55,7 +57,7 @@
                 }.bind(this),
 
                 randomradio: function() {
-                    this.spoty.randomRadio();
+                    this.spotify.randomRadio();
                 }.bind(this)
 
             };

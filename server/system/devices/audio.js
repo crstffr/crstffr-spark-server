@@ -5,34 +5,44 @@
     var config  = require('../../config');
     var constant = require('../../constant');
 
-    var emitter = require('events').EventEmitter;
-
     var Music = function() {
 
-        emitter.call(this);
-        this.is = "MUSIC";
+        this.is = 'AUDIO';
+        this.components = constant.DEVICE_AUDIO;
+
+        this.publicActions = function() {
+            var actions = function(){};
+            actions.prototype = {
+
+                test: function() {
+                    this.log('Testing...');
+                }.bind(this),
+
+                poweron: function() {
+                    this.log('Power on audio... (nonfunctional)');
+                },
+
+                poweroff: function() {
+                    this.log('Power off audio... (nonfunctional)');
+                },
+
+                powertoggle: function() {
+                    this.log('Power toggle audio... (nonfunctional)');
+                },
+
+                volumeup: function() {
+                    this.log('Volume up audio... (nonfunctional)');
+                },
+
+                volumedown: function() {
+                    this.log('Volume down audio... (nonfunctional)');
+                }
+
+            };
+            return new actions();
+        };
 
     }
-
-    util.inherits(Music, emitter, {
-
-        powerOn: function() {
-
-        },
-
-        powerOff: function() {
-
-        },
-
-        volumeUp: function() {
-
-        },
-
-        volumeDown: function() {
-
-        }
-
-    });
 
     module.exports = Music;
 

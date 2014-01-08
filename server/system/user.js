@@ -14,13 +14,52 @@
 
         this.name = username;
         this.data = data.users[username];
-        this.home = new home(this.data.home, this.name);
-        this.rooms = this.home.rooms;
+        this.home = new home(this.data.home, this);
         this.devices = this.getAllDevices();
 
     }
 
     util.inherits(User, emitter, {
+
+        execute: function(actions, activity) {
+
+            actions.forEach(function(action) {
+
+                var where;
+
+                if (action.is == 'MUSIC') {
+                    this.home.music.execute(action.command);
+                    return;
+                }
+
+                switch (action.where) {
+                    case 'HOME':
+                        where = this.home;
+                        break;
+                    case 'SAMEROOM':
+                        where = this.home.room(activity.room);
+                        break;
+                    default:
+                        where = this.home.room(action.where);
+                        break;
+                }
+
+                if (where) {
+                    switch(action.is) {
+                        case 'PHYSICAL':
+                            where.execute(action.which, action.command);
+                            break;
+                        case 'VARIABLE':
+                            where.set(action.key, action.val);
+                            break;
+                    }
+                } else {
+                    log.server('Unable to find:', action.where);
+                }
+
+            }.bind(this));
+
+        },
 
         getAllDevices: function() {
             var all = {};
@@ -38,15 +77,11 @@
             return all;
         },
 
-        room: function(id) {
-            return this.rooms[id];
-        },
-
-        device: function(id) {
+        getDevice: function(id) {
             return this.devices[id] || false;
         },
 
-        deviceByIP: function(ip) {
+        getDeviceByIP: function(ip) {
             for (var id in this.devices) {
                 if (this.devices.hasOwnProperty(id)) {
                     if(this.devices[id] == ip) {
@@ -57,22 +92,6 @@
             return false;
         },
 
-        deviceByType: function(type, room) {
-            var output, device;
-            room = room || false;
-            for (var id in this.devices) {
-                if (this.devices.hasOwnProperty(id)) {
-                    device = this.devices[id];
-                    if (device.type == type) {
-                        if (!room || (room && device.room)) {
-                            output[id] = device;
-                        }
-                    }
-                }
-            }
-            return output;
-        },
-
         deviceManager: function() {
 
             var deviceManager = function() {};
@@ -80,21 +99,21 @@
             deviceManager.prototype = {
 
                 get: function(id, ip) {
-                    return this.device(id) || this.deviceByIP(ip);
+                    return this.getDevice(id) || this.getDeviceByIP(ip);
                 }.bind(this),
 
                 getByID: function(id) {
-                    return this.device(id);
+                    return this.getDevice(id);
                 }.bind(this),
 
                 getByIP: function(ip) {
-                    return this.deviceByIP(ip);
+                    return this.getDeviceByIP(ip);
                 }.bind(this),
-
+/*
                 getByType: function(type, room) {
                     return this.deviceByType(type, room);
                 }.bind(this),
-
+*/
                 connectAll: function() {
                     for (var id in this.devices) {
                         if (this.devices.hasOwnProperty(id)) {

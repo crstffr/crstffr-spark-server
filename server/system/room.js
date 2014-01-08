@@ -25,6 +25,10 @@
 
     util.inherits(Room, emitter, {
 
+        // ***********************************************
+        // Behavior variable setting/getting/checking
+        // ***********************************************
+
         set: function(key, val) {
             this.state[key] = val;
         },
@@ -37,14 +41,47 @@
             return this.state[key] == val;
         },
 
+        // ***********************************************
+        // Executing commands against devices in the room
+        // ***********************************************
+
+        execute: function(which, command) {
+            if (this.executeByType(which, command)) { return true; }
+            if (this.executeByName(which, command)) { return true; }
+            return false;
+        },
+
         executeByType: function(type, command) {
+            var executed = 0;
             command = command.toLowerCase();
             this.getDevicesByType(type).forEach(function(dev){
-                if (util.isFunction(dev[command])) {
-                    dev[command]();
+                if (util.isFunction(dev.actions[command])) {
+                    dev.actions[command]();
+                    executed++;
+                } else {
+                    dev.log('Unknown command:', command);
                 }
             }.bind(this));
+            return (executed > 0);
         },
+
+        executeByName: function(name, command) {
+            var executed = 0;
+            command = command.toLowerCase();
+            this.getDevicesByName(name).forEach(function(dev){
+                if (util.isFunction(dev.actions[command])) {
+                    dev.actions[command]();
+                    executed++;
+                } else {
+                    dev.log('Unknown command:', command);
+                }
+            }.bind(this));
+            return (executed > 0);
+        },
+
+        // ***********************************************
+        // Get devices from the room based on type or name
+        // ***********************************************
 
         getDevicesByType: function(type) {
             var dev, devices = [];
@@ -56,23 +93,26 @@
                     }
                 }
             }
+            if (devices.length === 0) {
+                log.server('No devices of type:', type);
+            }
             return devices;
         },
 
-        volumeUp: function() {
-            // volume up on local music device
-        },
-
-        volumeDown: function() {
-            // volume down on local music device
-        },
-
-        mute: function() {
-            // mute on local music device
-        },
-
-        unmute: function() {
-            // unmute on local music device
+        getDevicesByName: function(name) {
+            var dev, devices = [];
+            for (var id in this.devices) {
+                if (this.devices.hasOwnProperty(id)) {
+                    dev = this.devices[id];
+                    if (dev.name == name) {
+                        devices.push(dev);
+                    }
+                }
+            }
+            if (devices.length === 0) {
+                log.server('No devices of name:', name);
+            }
+            return devices;
         }
 
     });
