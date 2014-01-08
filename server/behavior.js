@@ -94,6 +94,11 @@
                     is: 'MUSIC',
                     command: parts[0]
                 };
+            } else if (parts[1] == 'DEBUG') {
+                return {
+                    is: 'DEBUG',
+                    command: parts[0]
+                };
             } else {
                 return {
                     is: 'PHYSICAL',

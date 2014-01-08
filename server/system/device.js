@@ -23,8 +23,9 @@
         this.is     = false;
         this.ip     = false;
         this.port   = false;
-        this.conn   = false;
+        this.connected  = false;
         this.retry  = false;
+        this.socket = false;
         this.retries= 0;
 
         this.core = new sparky({
@@ -86,22 +87,13 @@
         // Public Setters
         // ***********************************************
 
-        setIP: function(ip) {
-            this.ip = ip;
-            return this;
-        },
-
-        setPort: function(port) {
-            this.port = port;
-            return this;
-        },
-
-        isConnected: function(bool) {
-            this.conn = bool;
-            if (bool === true) {
-                this.log('Connected');
-                this.stopRetry();
-            }
+        setConnection: function(connection) {
+            this.connection = connection;
+            this.port = connection.port;
+            this.ip = connection.ip;
+            this.connected = true;
+            this.log('Connected');
+            this.stopRetry();
             return this;
         },
 
@@ -145,7 +137,7 @@
         disconnect: function() {
             this.log('Disconnecting...');
             this.core.run('disconnect');
-            this.isConnected(false);
+            this.connected = false;
             this.stopRetry();
             return this;
         },
@@ -167,7 +159,7 @@
                     if (tooManyTries) {
                         this.log('Too many tries, giving up');
                     }
-                    if (tooManyTries || this.conn) {
+                    if (tooManyTries || this.connected) {
                         this.stopRetry();
                         return;
                     }

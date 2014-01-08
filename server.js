@@ -26,7 +26,9 @@
         'any panel knob turnccw; volumedown audio in sameroom',
 
         'office panel btn1 press; skipforward music',
-        'kitchen panel btn1 press; randomradio music'
+        'kitchen panel btn1 press; randomradio music',
+
+        'any panel debug debug; log debug'
 
         /* // Test action on device by it's NAME
         'any panel btn1 press; test ctrl1 in sameroom',
@@ -119,16 +121,12 @@
 
         conn.log('Connected');
 
-        conn.on('identifying', function(){
-            //conn.log('Identifying...');
-        });
-
-        conn.on('identified', function(data){
-            //conn.log('Is', data.id);
+        conn.on('identified', function(id){
+            //conn.log('Identified as', id);
         });
 
         conn.on('unidentified', function(error){
-            //conn.log('Not Identifed (',error,')');
+            // conn.log('Not Identifed (',error,')');
         });
 
         conn.on('signalReceived', function(message) {

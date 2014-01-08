@@ -32,6 +32,11 @@
                     return;
                 }
 
+                if (action.is == 'DEBUG' && action.command == 'LOG') {
+                    log.debug(activity);
+                    return;
+                }
+
                 switch (action.where) {
                     case 'HOME':
                         where = this.home;
@@ -77,14 +82,14 @@
             return all;
         },
 
-        getDevice: function(id) {
+        getDeviceByID: function(id) {
             return this.devices[id] || false;
         },
 
         getDeviceByIP: function(ip) {
             for (var id in this.devices) {
                 if (this.devices.hasOwnProperty(id)) {
-                    if(this.devices[id] == ip) {
+                    if(this.devices[id].ip == ip) {
                         return this.devices[id];
                     }
                 }
@@ -99,21 +104,17 @@
             deviceManager.prototype = {
 
                 get: function(id, ip) {
-                    return this.getDevice(id) || this.getDeviceByIP(ip);
+                    return this.getDeviceByID(id) || this.getDeviceByIP(ip);
                 }.bind(this),
 
                 getByID: function(id) {
-                    return this.getDevice(id);
+                    return this.getDeviceByID(id);
                 }.bind(this),
 
                 getByIP: function(ip) {
                     return this.getDeviceByIP(ip);
                 }.bind(this),
-/*
-                getByType: function(type, room) {
-                    return this.deviceByType(type, room);
-                }.bind(this),
-*/
+
                 connectAll: function() {
                     for (var id in this.devices) {
                         if (this.devices.hasOwnProperty(id)) {

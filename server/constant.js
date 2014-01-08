@@ -4,6 +4,7 @@ module.exports = {
     // defined in each of the core firmwares.
 
     ACTIONS: {
+        DEBUG:      0,
         PRESS:      1,
         PRESSHOLD:  2,
         TURNCW:     3,
@@ -20,6 +21,7 @@ module.exports = {
     DEVICE_TYPE_POWER: 'POWER',
 
     DEVICE_PANEL: {
+        DEBUG: 0,
         BTN1: 1,
         BTN2: 2,
         BTN3: 3,

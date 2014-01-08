@@ -44,8 +44,10 @@
 
             conn.on('signalReceived', function(signal) {
                 var device;
-                if (device = this.devices.getByID(conn.device.id)) {
+                if (device = this.devices.getByIP(conn.ip)) {
                     this.emit('signalReceived', device, signal);
+                } else {
+                    conn.log('Unable to find device that sent the signal');
                 }
             }.bind(this));
 
@@ -55,7 +57,7 @@
 
             conn.on('close', function() {
                 var device;
-                if (device = this.devices.get(conn.device.id, conn.ip)) {
+                if (device = this.devices.getByIP(conn.ip)) {
                     device.reconnect();
                 } else {
                     conn.log('Cannot reconnect unidentified device');
@@ -71,13 +73,8 @@
 
                 if (!this.devices.getByIP(conn.ip)) {
 
-                    conn.identify().then(function(data) {
-
-                        this.devices.getByID(data.id)
-                               .setIP(conn.ip)
-                               .setPort(conn.port)
-                               .isConnected(true);
-
+                    conn.identify().then(function(id) {
+                        this.devices.getByID(id).setConnection(conn);
                     }.bind(this));
 
                 } else {
@@ -88,12 +85,10 @@
                     // the device with the new port and tell
                     // it that it is officially connected.
 
-                    var dev = this.devices.getByIP(conn.ip)
-                                          .setPort(conn.port)
-                                          .isConnected(true);
+                    conn.identified = true;
+                    this.devices.getByIP(conn.ip).setConnection(conn);
+                    // conn.log('Trusted Connection Resumed');
 
-                    conn.log('Trusted Connection Resumed');
-                    conn.setIdentity(dev.id, dev.type);
                 }
 
             }

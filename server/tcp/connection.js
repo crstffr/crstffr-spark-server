@@ -17,6 +17,7 @@
         this.port = socket.remotePort;
         this.socket = socket;
         this.interval = false;
+        this.identified = false;
         this.messages = {};
 
         // this is populated with the device ID/type when
@@ -25,7 +26,7 @@
         // this stays false as the connection is pretty
         // much worthless.
 
-        this.device = {id: false, type: false};
+        // this.device = {id: false, type: false};
 
         // Setup our socket
 
@@ -39,8 +40,9 @@
         // hang there like some kind of idiot.
 
         socket.setTimeout(config.tcp.connTimeout, function(){
+            this.log('Socket timeout');
             socket.destroy();
-        });
+        }.bind(this));
 
         // Make sure the connection stays alive
         // by sending it data regularly.
@@ -72,13 +74,14 @@
             this.socket.write(hex.BEL);
             return this.waitForIt().then(function(msg) {
 
-                this.setIdentity(msg.who, msg.what);
-                this.emit('identified', this.device);
-                return this.device;
+                this.emit('identified', msg.who);
+                this.identified = true;
+                return msg.who;
 
             }.bind(this), function(error){
 
                 this.emit('unidentified', error);
+                this.identified = false;
                 this.socket.destroy();
 
             }.bind(this));
@@ -86,7 +89,7 @@
         },
 
         setIdentity: function(id, type) {
-            this.device = {id: id, type: type};
+//            this.device = {id: id, type: type};
         },
 
         // ***********************************************
@@ -136,7 +139,7 @@
 
         keepAliveExec: function() {
 
-            if (!this.device.id) { return; }
+            if (!this.identified) { return; }
             if (!this.socket || this.socket.destroyed) {
                 this.keepAliveStop();
                 return;
