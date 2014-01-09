@@ -8,7 +8,7 @@ class QuadEncoder
     QuadEncoder(int pin1, int pin2);
     char tick();
   private:
-        bool _moved;
+    bool _moved;
     int _inputPin1;
     int _inputPin2;
     int _val1;
@@ -93,8 +93,18 @@ char QuadEncoder::tick()
 // Definitions
 // ******************************
 
+String ACTION_PRESS = "1";
+String ACTION_HOLD  = "2";
+String ACTION_CW    = "3";
+String ACTION_CCW   = "4";
+String ACTION_ON    = "5";
+String ACTION_OFF   = "6";
+String ACTION_UP    = "7";
+String ACTION_DOWN  = "8";
+String ACTION_MOTION= "9";
+
 String DEVICE_TYPE_PANEL = "1";
-String DEVICE_TYPE_MUSIC = "2";
+String DEVICE_TYPE_AUDIO = "2";
 String DEVICE_TYPE_POWER = "3";
 
 String INPUT_BTN1 = "1";
@@ -106,96 +116,13 @@ String SENSOR_TEMP = "6";
 String SENSOR_LIGHT = "7";
 String SENSOR_MOTION = "8";
 
+char COMMAND_RED   = '1';
+char COMMAND_GREEN = '2';
+char COMMAND_BLUE  = '3';
+
 
 // ******************************
-// Core Setup
-// ******************************
-
-int btn1 = D7;
-int btn2 = D6;
-int btn3 = D2;
-
-int btn1Val = LOW;
-int btn2Val = LOW;
-int btn3Val = LOW;
-
-bool btn1Down = false;
-bool btn2Down = false;
-bool btn3Down = false;
-
-int encoderPin1 = D0;
-int encoderPin2 = D1;
-
-String encoderStr;
-int encoderVal = 0;
-QuadEncoder qe(D0,D1);
-
-void setup()
-{
-    Serial.begin(9600);
-    
-    pinMode(btn1, INPUT_PULLDOWN);
-    pinMode(btn2, INPUT_PULLDOWN);
-    pinMode(btn3, INPUT_PULLDOWN);
-    
-    pinMode(encoderPin1, INPUT_PULLUP); 
-    pinMode(encoderPin2, INPUT_PULLUP);
-
-    Spark.function("connect", tcpConnect);
-    Spark.function("disconnect", tcpDisconnect);
-}
-
-// ******************************
-// Main Loop
-// ******************************
-
-void loop()
-{
-
-    btn1Val = digitalRead(btn1);
-    btn2Val = digitalRead(btn2);
-    btn3Val = digitalRead(btn3);
-    
-    
-    encoderVal =qe.tick();
-    
-    if (encoderVal == '>') {
-        tcpAction(INPUT_KNOB,"U");
-    } else if (encoderVal == '<') {
-        tcpAction(INPUT_KNOB,"D");
-    }
-
-    if (!btn1Down && btn1Val == HIGH) {
-        btn1Down = true;
-        tcpAction(INPUT_BTN1, HIGH);
-    } else if (btn1Val == LOW) {
-        btn1Down = false;
-    }
-    
-    if (!btn2Down && btn2Val == HIGH) {
-        btn2Down = true;
-        tcpAction(INPUT_BTN1, HIGH);
-    } else if (btn2Val == LOW) {
-        btn2Down = false;
-    }
-    
-    if (!btn3Down && btn3Val == HIGH) {
-        btn3Down = true;
-        tcpAction(SENSOR_MOTION, HIGH);
-    } else if (btn3Val == LOW) {
-        btn3Down = false;
-    }
-    
-    tcpRead();
-
-}
-
-void updateEncoder() {
-    encoderStr = String(digitalRead(encoderPin1)) + " " + String(digitalRead(encoderPin2));
-}
-
-// ******************************
-// TCP Connection & Communication
+// TCP Setup
 // ******************************
 
 TCPClient tcp;
@@ -207,19 +134,178 @@ char ENQ = '\x05';
 char ACK = '\x06';
 char BEL = '\x07';
 int  tcpPort = 5000;
+bool tcpReady = false;
+long tcpTimeout = 5000;
+long tcpSendLimit = 100;
+byte tcpServer[4] = {0,0,0,0};
+unsigned long now = millis();
+unsigned long tcpTimer = millis();
+unsigned long tcpSendTimer = millis();
 
-int tcpConnect(String ip) {
-    byte address[4];
-    ipArrayFromString(address, ip);
-    if (tcp.connect(address, tcpPort)) {
+// ******************************
+// Core Setup
+// ******************************
+
+int led = A0;
+
+int ledR = A5;
+int ledG = A4;
+int ledB = A1;
+
+int btn1 = D7; // little switch
+int btn2 = D6; // knob button
+int btn3 = D2; // PIR motion
+
+int btn1Val = LOW;
+int btn2Val = LOW;
+int btn3Val = LOW;
+
+bool btn1Down = false;
+bool btn2Down = false;
+bool btn3Down = false;
+
+int encVal = 0;
+int encPin1 = D0;
+int encPin2 = D1;
+
+QuadEncoder qe(encPin1, encPin2);
+
+void setup()
+{
+    Serial.begin(9600);
+    
+    pinMode(led, OUTPUT);
+    pinMode(ledR, OUTPUT);
+    pinMode(ledG, OUTPUT);
+    pinMode(ledB, OUTPUT);
+    
+    pinMode(btn1, INPUT_PULLDOWN);
+    pinMode(btn2, INPUT_PULLDOWN);
+    pinMode(btn3, INPUT_PULLDOWN);
+    
+    pinMode(encPin1, INPUT_PULLUP);
+    pinMode(encPin2, INPUT_PULLUP);
+
+    Spark.function("connect", tcpSetIP);
+    Spark.function("disconnect", tcpDisconnect);
+}
+
+// ******************************
+// Main Loop
+// ******************************
+
+void loop()
+{
+
+    now = millis();
+    encVal  = qe.tick();
+    btn1Val = digitalRead(btn1);
+    btn2Val = digitalRead(btn2);
+    btn3Val = digitalRead(btn3);
+
+    if (encVal == '>') {
+        tcpAction(INPUT_KNOB, ACTION_CW);
+    } else if (encVal == '<') {
+        tcpAction(INPUT_KNOB, ACTION_CCW);
+    }
+    
+    if (!btn1Down && btn1Val == HIGH) {
+        btn1Down = true;
+        tcpAction(INPUT_BTN1, ACTION_PRESS);
+        ledGreen();
+    } else if (btn1Val == LOW) {
+        btn1Down = false;
+    }
+    
+    if (!btn2Down && btn2Val == HIGH) {
+        btn2Down = true;
+        tcpAction(INPUT_KNOB, ACTION_PRESS);
+    } else if (btn2Val == LOW) {
+        btn2Down = false;
+    }
+    
+    if (!btn3Down && btn3Val == HIGH) {
+        btn3Down = true;
+        tcpAction(SENSOR_MOTION, ACTION_MOTION);
+        ledRed();
+    } else if (btn3Val == LOW) {
+        btn3Down = false;
+    }
+    
+    
+    tcpStatus();
+    tcpRead();
+
+}
+
+
+void ledSetColor(int red, int green, int blue) {
+    analogWrite(ledR, red);
+    analogWrite(ledG, green);
+    analogWrite(ledB, blue);  
+}
+
+void ledRed() {
+    ledSetColor(255, 0, 0);
+}
+
+void ledGreen() {
+    ledSetColor(0, 255, 0);
+}
+
+void ledBlue() {
+    ledSetColor(0, 0, 255);
+}
+
+
+// ******************************
+// TCP Connection & Communication
+// ******************************
+
+int tcpStatus() {
+    
+    if (tcp.connected() && (now > tcpTimer)) {
+        tcpDisconnect("");
+    }
+
+    if (tcp.connected()) {
+        analogWrite(led, HIGH);
         return 1;
     } else {
+        analogWrite(led, LOW);
         return -1;
     }
 }
 
+void tcpResetTimer() {
+    tcpTimer = now + tcpTimeout;
+}
+
+int tcpSetIP(String ip) {
+    tcpReady = true;
+    ipArrayFromString(tcpServer, ip);
+    return tcpConnect();
+}
+
 int tcpIdentify() {
-    return tcpAction(Spark.deviceID(), "W");
+    return tcpAction(Spark.deviceID(), DEVICE_TYPE_PANEL);
+}
+
+int tcpConnect() {
+    if (tcp.connected()) {
+        tcp.flush();
+        tcp.stop();
+    }
+    if (tcpReady) {
+        if (tcp.connect(tcpServer, tcpPort)) {
+            tcpResetTimer();
+            return 1;
+        } else {
+            return -1;
+        }
+    } else {
+        return -1;
+    }
 }
 
 int tcpDisconnect(String param) {
@@ -230,7 +316,9 @@ int tcpDisconnect(String param) {
 
 int tcpAction(String who, String what) {
     if (tcp.connected()) {
+        tcpResetTimer();
         tcp.print(STX + who + ETX + what + EOT);
+        delay(10);
         return 1;
     } else {
         return -1;
@@ -239,14 +327,20 @@ int tcpAction(String who, String what) {
 
 void tcpRead() {
     if (tcp.available()) {
+        tcpResetTimer();
         char read = tcp.read();
         if (read == ENQ) {
             tcp.print(ACK);
         } else if (read == BEL) {
             tcpIdentify();
+        } else if (read == COMMAND_GREEN) {
+            ledGreen();
+        } else if (read == COMMAND_BLUE) {
+            ledBlue();
+        } else if (read == COMMAND_RED) {
+            ledRed();
         }
     }
-    
 }
 
 // ******************************

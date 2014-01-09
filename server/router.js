@@ -44,6 +44,7 @@
             this.getRelevantBehaviors(activity).forEach(function(behavior) {
 
                 log.server('');
+                log.server('Activity:', activity.string);
                 log.server('Behavior:', behavior.condition);
                 log.server('Executes:', behavior.action);
 

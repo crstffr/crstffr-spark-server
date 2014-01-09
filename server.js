@@ -21,14 +21,16 @@
     // ***********************************************
 
     [
-        'any panel knob press; playpause music',
-        'any panel knob turncw; volumeup audio in sameroom',
-        'any panel knob turnccw; volumedown audio in sameroom',
+        //'any panel knob press; playpause music',
+        //'any panel knob turncw; volumeup audio in sameroom',
+        //'any panel knob turnccw; volumedown audio in sameroom',
 
-        'office panel btn1 press; skipforward music',
-        'kitchen panel btn1 press; randomradio music',
+        'any panel knob press; green panel in kitchen',
+        'any panel knob turncw; blue panel in kitchen',
+        'any panel knob turnccw; red panel in kitchen'
 
-        'any panel debug debug; log debug'
+        //'office panel btn1 press; skipforward music',
+        //'kitchen panel btn1 press; randomradio music'
 
         /* // Test action on device by it's NAME
         'any panel btn1 press; test ctrl1 in sameroom',
@@ -119,8 +121,6 @@
 
     server.on('newConnection', function _newConnection(conn) {
 
-        conn.log('Connected');
-
         conn.on('identified', function(id){
             //conn.log('Identified as', id);
         });
@@ -130,11 +130,11 @@
         });
 
         conn.on('signalReceived', function(message) {
-            // user.deviceManager().getByIP(conn.ip).log(message);
+            // conn.log(message);
         });
 
         conn.on('close', function(){
-            conn.log('Closed');
+
         });
 
     });

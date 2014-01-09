@@ -15,6 +15,21 @@
 
                 test: function() {
                     this.log('Testing...');
+                }.bind(this),
+
+                red: function() {
+                    this.log('Turn it red');
+                    this.sendCommand(constant.COMMANDS.RED);
+                }.bind(this),
+
+                green: function() {
+                    this.log('Turn it green');
+                    this.sendCommand(constant.COMMANDS.GREEN);
+                }.bind(this),
+
+                blue: function() {
+                    this.log('Turn it blue');
+                    this.sendCommand(constant.COMMANDS.BLUE);
                 }.bind(this)
 
             };

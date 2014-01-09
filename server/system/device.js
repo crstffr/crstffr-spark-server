@@ -23,10 +23,10 @@
         this.is     = false;
         this.ip     = false;
         this.port   = false;
-        this.connected  = false;
         this.retry  = false;
         this.socket = false;
-        this.retries= 0;
+        this.connected = false;
+        this.retries = 0;
 
         this.core = new sparky({
             debug: config.spark.debug,
@@ -84,20 +84,6 @@
         },
 
         // ***********************************************
-        // Public Setters
-        // ***********************************************
-
-        setConnection: function(connection) {
-            this.connection = connection;
-            this.port = connection.port;
-            this.ip = connection.ip;
-            this.connected = true;
-            this.log('Connected');
-            this.stopRetry();
-            return this;
-        },
-
-        // ***********************************************
         // Public Getter
         // ***********************************************
 
@@ -134,18 +120,33 @@
             return this;
         },
 
+        setConnection: function(connection) {
+            this.connection = connection;
+            this.port = connection.port;
+            this.ip = connection.ip;
+            this.connected = true;
+            this.log('Connected');
+            this.stopRetry();
+            return this;
+        },
+
         disconnect: function() {
             this.log('Disconnecting...');
-            this.core.run('disconnect');
+            this.core.run('disconnect', util.getIP());
             this.connected = false;
             this.stopRetry();
             return this;
         },
 
-        reconnect: function() {
-            this.disconnect();
-            this.connect();
+        disconnected: function() {
+            this.log('Disconnected');
+            this.connected = false;
+            this.stopRetry();
             return this;
+        },
+
+        sendCommand: function(command) {
+            this.connection.socket.write(command);
         },
 
         // ***********************************************

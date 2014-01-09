@@ -16,6 +16,12 @@ module.exports = {
         MOTION:     9
     },
 
+    COMMANDS: {
+        RED:        '1',
+        GREEN:      '2',
+        BLUE:       '3'
+    },
+
     DEVICE_TYPE_PANEL: 'PANEL',
     DEVICE_TYPE_AUDIO: 'AUDIO',
     DEVICE_TYPE_POWER: 'POWER',

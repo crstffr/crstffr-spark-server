@@ -56,7 +56,9 @@
             command = command.toLowerCase();
             this.getDevicesByType(type).forEach(function(dev){
                 if (util.isFunction(dev.actions[command])) {
+                    dev.log('Found command:', command);
                     dev.actions[command]();
+                    //dev.log('Executed command', command);
                     executed++;
                 } else {
                     dev.log('Unknown command:', command);
@@ -70,7 +72,9 @@
             command = command.toLowerCase();
             this.getDevicesByName(name).forEach(function(dev){
                 if (util.isFunction(dev.actions[command])) {
+                    dev.log('Found command:', command);
                     dev.actions[command]();
+                    //dev.log('Executed command', command);
                     executed++;
                 } else {
                     dev.log('Unknown command:', command);
@@ -89,7 +93,11 @@
                 if (this.devices.hasOwnProperty(id)) {
                     dev = this.devices[id];
                     if (dev.type == type) {
-                        devices.push(dev);
+                        if (dev.connected) {
+                            devices.push(dev);
+                        } else {
+                            dev.log('is not connected');
+                        }
                     }
                 }
             }
@@ -105,7 +113,11 @@
                 if (this.devices.hasOwnProperty(id)) {
                     dev = this.devices[id];
                     if (dev.name == name) {
-                        devices.push(dev);
+                        if (dev.connected) {
+                            devices.push(dev);
+                        } else {
+                            dev.log('is not connected');
+                        }
                     }
                 }
             }

@@ -37,10 +37,12 @@
 
             var conn = new connection(socket);
 
-            // Setup a handler that captures signals received
-            // from the connection, looks up the device that
-            // the connection is associated with, and trigger
-            // a server event with the device/signal together.
+            conn.log('Connected');
+
+            // Setup a handler that captures signals received from the
+            // connection, looks up the device that the connection is
+            // associated with, and trigger a server event with the
+            // device/signal together.
 
             conn.on('signalReceived', function(signal) {
                 var device;
@@ -56,18 +58,19 @@
             // and reconnect it.
 
             conn.on('close', function() {
+                conn.log('Closed');
                 var device;
                 if (device = this.devices.getByIP(conn.ip)) {
-                    device.reconnect();
+                    device.disconnected();
+                    device.connect();
                 } else {
                     conn.log('Cannot reconnect unidentified device');
                 }
             }.bind(this));
 
-            // Do we already know who this IP belongs to?
-            // If not, then lets identify it, and once
-            // the connection has been identified, then
-            // associate it with the corresponding device.
+            // Do we already know who this IP belongs to? If not,
+            // then lets identify it, and once the connection has been
+            // identified, then associate it with the corresponding device.
 
             if (config.tcp.requireID) {
 
@@ -79,11 +82,10 @@
 
                 } else {
 
-                    // Connection is already identified and
-                    // associated with a device, so at this
-                    // point, the only thing to do is update
-                    // the device with the new port and tell
-                    // it that it is officially connected.
+                    // Connection is already identified and associated
+                    // with a device, so at this point, the only thing
+                    // to do is update the device with the new port and
+                    // tell it that it is officially connected.
 
                     conn.identified = true;
                     this.devices.getByIP(conn.ip).setConnection(conn);
@@ -93,8 +95,7 @@
 
             }
 
-            // Trigger event informing the listeners of
-            // the newly created connection.
+            // Event informing the listeners of new connection.
 
             this.emit('newConnection', conn);
 
