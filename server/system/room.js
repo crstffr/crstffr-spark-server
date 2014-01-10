@@ -15,9 +15,10 @@
         this.devices = {};
         this.state = {};
 
-        for(var _id in room.devices) {
-            if (room.devices.hasOwnProperty(_id)) {
-                this.devices[_id] = new device(_id, room.devices[_id], this.id);
+        for(var name in room.devices) {
+            if (room.devices.hasOwnProperty(name)) {
+                var id = room.devices[name].id;
+                this.devices[id] = new device(name, room.devices[name], this.id);
             }
         }
 

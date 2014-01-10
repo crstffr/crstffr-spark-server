@@ -17,18 +17,23 @@
                     this.log('Testing...');
                 }.bind(this),
 
-                red: function() {
-                    this.log('Turn it red');
+                ledoff: function() {
+                    this.log('Turn LED off');
+                    this.sendCommand(constant.COMMANDS.OFF);
+                }.bind(this),
+
+                ledred: function() {
+                    this.log('Turn LED red');
                     this.sendCommand(constant.COMMANDS.RED);
                 }.bind(this),
 
-                green: function() {
-                    this.log('Turn it green');
+                ledgreen: function() {
+                    this.log('Turn LED green');
                     this.sendCommand(constant.COMMANDS.GREEN);
                 }.bind(this),
 
-                blue: function() {
-                    this.log('Turn it blue');
+                ledblue: function() {
+                    this.log('Turn LED blue');
                     this.sendCommand(constant.COMMANDS.BLUE);
                 }.bind(this)
 

@@ -15,9 +15,14 @@
                             name: 'Office',
                             devices: {
 
-                                '48ff6b065067555039091087': {
-                                    name: 'ctrl1',
+                                'control1': {
+                                    id: '48ff6b065067555039091087',
                                     type: constant.DEVICE_TYPE_PANEL
+                                },
+
+                                'audio1': {
+                                    id: '48ff6b065067555017201587',
+                                    type: constant.DEVICE_TYPE_AUDIO
                                 }
 
                             }
@@ -26,11 +31,6 @@
                         'kitchen': {
                             name: 'Kitchen',
                             devices: {
-
-                                '48ff6b065067555017201587': {
-                                    name: 'ctrl2',
-                                    type: constant.DEVICE_TYPE_PANEL
-                                }
 
                             }
                         },

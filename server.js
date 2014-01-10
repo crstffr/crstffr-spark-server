@@ -25,9 +25,19 @@
         //'any panel knob turncw; volumeup audio in sameroom',
         //'any panel knob turnccw; volumedown audio in sameroom',
 
-        'any panel knob press; green panel in kitchen',
-        'any panel knob turncw; blue panel in kitchen',
-        'any panel knob turnccw; red panel in kitchen'
+        //'any panel btn1 press; ledoff audio in sameroom',
+        'any panel knob press; ledblue audio in sameroom',
+        'any panel knob turncw; ledgreen audio in sameroom',
+        'any panel knob turnccw; ledred audio in sameroom',
+
+        //'any panel pir motion and motion enabled in home; play audio in sameroom',
+
+        'any panel knob turncw; volumeup audio in sameroom',
+        'any panel knob turnccw; volumedown audio in sameroom',
+        'any panel knob press; togglemute audio in sameroom',
+        'any panel btn1 press; togglepower audio in sameroom',
+
+        'any audio btn1 press; ledoff audio in sameroom'
 
         //'office panel btn1 press; skipforward music',
         //'kitchen panel btn1 press; randomradio music'

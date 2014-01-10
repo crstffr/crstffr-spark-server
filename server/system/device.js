@@ -11,13 +11,13 @@
     var power   = require('./devices/power');
     var emitter = require('events').EventEmitter;
 
-    var Device = function(id, device, room) {
+    var Device = function(name, device, room) {
 
         emitter.call(this);
 
-        this.id     = id;
+        this.id     = device.id;
         this.room   = room;
-        this.name   = device.name.toUpperCase();
+        this.name   = name.toUpperCase();
         this.type   = device.type;
 
         this.is     = false;
@@ -73,7 +73,7 @@
                     break;
                 case constant.DEVICE_TYPE_AUDIO:
                     audio.call(this);
-                    util.inherits(this, music);
+                    util.inherits(this, audio);
                     break;
                 case constant.DEVICE_TYPE_POWER:
                     power.call(this);

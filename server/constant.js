@@ -17,9 +17,24 @@ module.exports = {
     },
 
     COMMANDS: {
-        RED:        '1',
-        GREEN:      '2',
-        BLUE:       '3'
+        LEDOFF:     'O',
+        LEDRED:     'R',
+        LEDGREEN:   'G',
+        LEDBLUE:    'B',
+        LEDCYAN:    'C',
+        LEDMAGENTA: 'N',
+        LEDYELLOW:  'Y',
+
+        POWEROFF:   '0',
+        POWERON:    '1',
+        MUTEOFF:    '2',
+        MUTEON:     '3',
+
+        VOLUMEUP:   'U',
+        VOLUMEDOWN: 'D',
+
+        TOGGLEMUTE: 'M',
+        TOGGLEPOWER:'P'
     },
 
     DEVICE_TYPE_PANEL: 'PANEL',
@@ -27,20 +42,19 @@ module.exports = {
     DEVICE_TYPE_POWER: 'POWER',
 
     DEVICE_PANEL: {
-        DEBUG: 0,
-        BTN1: 1,
-        BTN2: 2,
-        BTN3: 3,
-        BTN4: 4,
-        KNOB: 5,
-        SENSOR_TEMP:    6,
-        SENSOR_LIGHT:   7,
-        SENSOR_MOTION:  8
+        DEBUG:  0,
+        BTN1:   1,
+        BTN2:   2,
+        BTN3:   3,
+        BTN4:   4,
+        KNOB:   5,
+        TEMP:   6,
+        LIGHT:  7,
+        PIR:    8
     },
 
     DEVICE_AUDIO: {
-        POWER:  1,
-        VOLUME: 2
+        BTN1:  1
     }
 
 };
