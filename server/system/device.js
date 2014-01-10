@@ -7,43 +7,111 @@
     var sparky   = require('sparky');
 
     var panel   = require('./devices/panel');
-    var music   = require('./devices/music');
+    var audio   = require('./devices/audio');
     var power   = require('./devices/power');
     var emitter = require('events').EventEmitter;
 
-    var Device = function(id) {
+    var Device = function(name, device, room) {
 
         emitter.call(this);
 
-        this.id     = id;
+        this.id     = device.id;
+        this.room   = room;
+        this.name   = name.toUpperCase();
+        this.type   = device.type;
+
         this.is     = false;
         this.ip     = false;
         this.port   = false;
-        this.conn   = false;
         this.retry  = false;
-        this.retries= 0;
+        this.socket = false;
+        this.connected = false;
+        this.retries = 0;
+
         this.core = new sparky({
             debug: config.spark.debug,
             token: config.spark.token,
             deviceId: this.id
         });
 
+        this.inherit(device.type);
+        this.actions = this.publicActions();
+
     }
 
-
     util.inherits(Device, emitter, {
+
+        // ***********************************************
+        // Informational Methods
+        // ***********************************************
 
         log: function() {
             log.device.apply(log, util.prependArgs(this.toString(), arguments));
         },
 
         toString: function() {
-            return this.id.substr(this.id.length - 17);
+            return this.room + ' ' + this.type + ' ' + this.name;
         },
 
         ipString: function() {
             return this.ip + ':' + this.port;
         },
+
+        // ***********************************************
+        // Object Inherit from Device Type
+        // ***********************************************
+
+        inherit: function() {
+
+            // Depending on the device type, inherit
+            // some device specific methods
+
+            switch (this.type) {
+                case constant.DEVICE_TYPE_PANEL:
+                    panel.call(this);
+                    util.inherits(this, panel);
+                    break;
+                case constant.DEVICE_TYPE_AUDIO:
+                    audio.call(this);
+                    util.inherits(this, audio);
+                    break;
+                case constant.DEVICE_TYPE_POWER:
+                    power.call(this);
+                    util.inherits(this, power);
+                    break;
+            }
+
+        },
+
+        // ***********************************************
+        // Public Getter
+        // ***********************************************
+
+        getComponent: function(id) {
+            for(var comp in this.components) {
+                if (this.components.hasOwnProperty(comp)) {
+                    if (this.components[comp] == id) {
+                        return comp;
+                    }
+                }
+            }
+            return false;
+        },
+
+        getAction: function(id) {
+            for(var action in constant.ACTIONS) {
+                if (constant.ACTIONS.hasOwnProperty(action)) {
+                    if (constant.ACTIONS[action] == id) {
+                        return action;
+                    }
+                }
+            }
+            return false;
+        },
+
+        // ***********************************************
+        // Connection Handling
+        // ***********************************************
 
         connect: function() {
             this.log('Connecting...');
@@ -52,95 +120,52 @@
             return this;
         },
 
-        isConnected: function(bool) {
-            this.conn = bool;
-            if (bool === true) {
-                this.log('Connected on', this.ipString());
-                this.stopRetry();
-            }
+        setConnection: function(connection) {
+            this.connection = connection;
+            this.port = connection.port;
+            this.ip = connection.ip;
+            this.connected = true;
+            this.log('Connected');
+            this.stopRetry();
             return this;
         },
 
         disconnect: function() {
             this.log('Disconnecting...');
-            this.isConnected(false);
+            this.core.run('disconnect', util.getIP());
+            this.connected = false;
+            this.stopRetry();
             return this;
         },
 
-        reconnect: function() {
-            this.disconnect();
-            this.connect();
+        disconnected: function() {
+            this.log('Disconnected');
+            this.connected = false;
+            this.stopRetry();
             return this;
         },
 
-        set: function(data) {
-            for(var key in data) {
-                if (data.hasOwnProperty(key)) {
-                    this[key] = data[key];
-                }
-            }
-            return this;
+        sendCommand: function(command) {
+            this.connection.socket.write(command);
         },
 
-        setInfo: function(ip, port, type) {
-            this.setIP(ip, port);
-            this.setType(type);
-            return this;
-        },
-
-        setIP: function(ip, port) {
-            this.ip = ip;
-            this.port = port;
-            return this;
-        },
-
-        setType: function(type) {
-            this.type = type;
-
-            // Depending on the device type, inherit
-            // some device specific methods
-
-            switch (parseInt(this.type)) {
-                case constant.DEVICE_TYPE_PANEL:
-                    panel.call(this);
-                    util.inherits(this, panel);
-                    break;
-                case constant.DEVICE_TYPE_MUSIC:
-                    music.call(this);
-                    util.inherits(this, music);
-                    break;
-                case constant.DEVICE_TYPE_POWER:
-                    power.call(this);
-                    util.inherits(this, power);
-                    break;
-            }
-
-            this.log('Identified as', this.is);
-
-            return this;
-
-        },
+        // ***********************************************
+        // Connection Retry Handling
+        // ***********************************************
 
         startRetry: function() {
             if (!this.retry && config.tcp.connRetries > 0) {
                 this.retry = setInterval(function(){
-
                     var tooManyTries = this.retries >= config.tcp.connRetries;
-
                     if (tooManyTries) {
                         this.log('Too many tries, giving up');
-                        stop = true;
                     }
-
-                    if (tooManyTries || this.conn) {
+                    if (tooManyTries || this.connected) {
                         this.stopRetry();
                         return;
                     }
-
                     this.log('Attempt', ++this.retries, 'failed');
-
                     this.connect();
-
                 }.bind(this), config.tcp.connTimeout);
             }
         },

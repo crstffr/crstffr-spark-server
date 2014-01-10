@@ -1,26 +1,47 @@
 (function(undefined){
 
     var log     = require('../../log');
-    var util    = require('../../util');
     var config  = require('../../config');
     var constant = require('../../constant');
 
-    var emitter = require('events').EventEmitter;
-
     var Panel = function() {
 
-        emitter.call(this);
-        this.is = "PANEL";
+        this.is = 'PANEL';
+        this.components = constant.DEVICE_PANEL;
+
+        this.publicActions = function() {
+            var actions = function(){};
+            actions.prototype = {
+
+                test: function() {
+                    this.log('Testing...');
+                }.bind(this),
+
+                ledoff: function() {
+                    this.log('Turn LED off');
+                    this.sendCommand(constant.COMMANDS.OFF);
+                }.bind(this),
+
+                ledred: function() {
+                    this.log('Turn LED red');
+                    this.sendCommand(constant.COMMANDS.RED);
+                }.bind(this),
+
+                ledgreen: function() {
+                    this.log('Turn LED green');
+                    this.sendCommand(constant.COMMANDS.GREEN);
+                }.bind(this),
+
+                ledblue: function() {
+                    this.log('Turn LED blue');
+                    this.sendCommand(constant.COMMANDS.BLUE);
+                }.bind(this)
+
+            };
+            return new actions();
+        };
 
     }
-
-    util.inherits(Panel, emitter, {
-
-        writeInfo: function() {
-
-        }
-
-    });
 
     module.exports = Panel;
 

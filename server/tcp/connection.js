@@ -17,6 +17,7 @@
         this.port = socket.remotePort;
         this.socket = socket;
         this.interval = false;
+        this.identified = false;
         this.messages = {};
 
         // this is populated with the device ID/type when
@@ -25,18 +26,26 @@
         // this stays false as the connection is pretty
         // much worthless.
 
-        this.device = {id: false, type: false};
+        // this.device = {id: false, type: false};
+
+        // Setup our socket
 
         socket.setNoDelay(false);
         socket.setEncoding('utf8');
-        socket.on('data', this._onData.bind(this));
-        socket.on('close', this._onClose.bind(this));
+        socket.on('data', this.onData.bind(this));
+        socket.on('close', this.onClose.bind(this));
 
-        // this is the Node socket timeout function, hence
-        // the reversed timeout and function params.
+        // Set the socket timeout so that it closes
+        // the connection, otherwise it would just
+        // hang there like some kind of idiot.
+
         socket.setTimeout(config.tcp.connTimeout, function(){
+            this.log('Socket timeout');
             socket.destroy();
-        });
+        }.bind(this));
+
+        // Make sure the connection stays alive
+        // by sending it data regularly.
 
         this.keepAliveStart();
 
@@ -44,44 +53,76 @@
 
     util.inherits(TCPConnection, emitter, {
 
+        // ***********************************************
+        // Informational Utilities
+        // ***********************************************
+
         log: function() {
-            var str = this.toString();
-            log.tcp.apply(log, util.prependArgs(str, arguments));
+            log.tcp.apply(log, util.prependArgs(this.toString(), arguments));
         },
 
         toString: function() {
             return this.ip + ':' + this.port;
         },
 
-        setIdentity: function(id, type) {
-            this.device = {id: id, type: type};
-        },
-
-        destroy: function() {
-            if (this.socket) {
-                this.socket.destroy();
-                this.socket.removeAllListeners();
-                delete this.socket;
-            }
-        },
+        // ***********************************************
+        // Connection Identification
+        // ***********************************************
 
         identify: function() {
             this.emit('identifying');
             this.socket.write(hex.BEL);
             return this.waitForIt().then(function(msg) {
 
-                this.setIdentity(msg.who, msg.what);
-                this.emit('identified', this.device);
-                return this.device;
+                this.emit('identified', msg.who);
+                this.identified = true;
+                return msg.who;
 
             }.bind(this), function(error){
 
                 this.emit('unidentified', error);
+                this.identified = false;
                 this.socket.destroy();
 
             }.bind(this));
 
         },
+
+        setIdentity: function(id, type) {
+//            this.device = {id: id, type: type};
+        },
+
+        // ***********************************************
+        // Connection Socket Handling
+        // ***********************************************
+
+        onData: function(data) {
+
+            switch (data[0]) {
+
+                case hex.STX:
+                    if (!this.message || this.message.finished) {
+                        this.keepAliveStop();
+                        this.waitForIt().then(function(data) {
+                            this.emit('signalReceived', data);
+                            this.keepAliveStart();
+                        }.bind(this));
+                    }
+                    break;
+
+            }
+
+            this.message.append(data);
+
+        },
+
+        onClose: function() {
+            this.emit('close');
+        },
+
+        // ***********************************************
+        // KeepAlive Handling
+        // ***********************************************
 
         keepAliveStart: function() {
             if (config.tcp.keepAlive) {
@@ -98,7 +139,7 @@
 
         keepAliveExec: function() {
 
-            if (!this.device.id) { return; }
+            if (!this.identified) { return; }
             if (!this.socket || this.socket.destroyed) {
                 this.keepAliveStop();
                 return;
@@ -131,25 +172,6 @@
             this.socket.destroy();
         },
 
-        _onData: function(data) {
-
-            switch (data[0]) {
-
-                case hex.STX:
-                    if (!this.message || this.message.finished) {
-                        this.keepAliveStop();
-                        this.waitForIt().then(function(data) {
-                            this.emit('unclaimedMessage', data);
-                            this.keepAliveStart();
-                        }.bind(this));
-                    }
-                    break;
-
-            }
-
-            this.message.append(data);
-
-        },
 
 
         waitForIt: function() {
@@ -171,7 +193,7 @@
             // creation of our new message onto the completion
             // of the current message.
 
-            this.log('Must wait for current message');
+            this.log('Uncool state - Must wait for current message');
 
             this.message.whenComplete.then(function(){
                 this.message = new message();
@@ -186,8 +208,12 @@
 
         },
 
-        _onClose: function() {
-            this.emit('close');
+        destroy: function() {
+            if (this.socket) {
+                this.socket.destroy();
+                this.socket.removeAllListeners();
+                delete this.socket;
+            }
         }
 
     });

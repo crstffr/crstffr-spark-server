@@ -77,6 +77,9 @@
             var part1 = string.substr(0,ETX);
             var part2 = string.substr(ETX+1);
 
+            part1 = util.isNumber(part1) ? parseInt(part1) : part1;
+            part2 = util.isNumber(part2) ? parseInt(part2) : part2;
+
             var data  = {
                 who:  part1,
                 what: part2
