@@ -5,7 +5,7 @@
     var config  = require('../../config');
     var constant = require('../../constant');
 
-    var Music = function() {
+    var AudioDevice = function() {
 
         this.is = 'AUDIO';
         this.components = constant.DEVICE_AUDIO;
@@ -104,6 +104,6 @@
 
     }
 
-    module.exports = Music;
+    module.exports = AudioDevice;
 
 }).call(this);

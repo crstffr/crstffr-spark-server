@@ -54,32 +54,19 @@
 
         executeByType: function(type, command) {
             var executed = 0;
-            command = command.toLowerCase();
+            var result = false;
             this.getDevicesByType(type).forEach(function(dev){
-                if (util.isFunction(dev.actions[command])) {
-                    dev.log('Found command:', command);
-                    dev.actions[command]();
-                    //dev.log('Executed command', command);
-                    executed++;
-                } else {
-                    dev.log('Unknown command:', command);
-                }
+                result = dev.execute(command);
+                if (result) { executed++; }
             }.bind(this));
             return (executed > 0);
         },
 
         executeByName: function(name, command) {
             var executed = 0;
-            command = command.toLowerCase();
             this.getDevicesByName(name).forEach(function(dev){
-                if (util.isFunction(dev.actions[command])) {
-                    dev.log('Found command:', command);
-                    dev.actions[command]();
-                    //dev.log('Executed command', command);
-                    executed++;
-                } else {
-                    dev.log('Unknown command:', command);
-                }
+                result = dev.execute(command);
+                if (result) { executed++; }
             }.bind(this));
             return (executed > 0);
         },

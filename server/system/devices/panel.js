@@ -4,7 +4,7 @@
     var config  = require('../../config');
     var constant = require('../../constant');
 
-    var Panel = function() {
+    var PanelDevice = function() {
 
         this.is = 'PANEL';
         this.components = constant.DEVICE_PANEL;
@@ -43,6 +43,6 @@
 
     }
 
-    module.exports = Panel;
+    module.exports = PanelDevice;
 
 }).call(this);

@@ -41,8 +41,11 @@
                     case 'HOME':
                         where = this.home;
                         break;
-                    case 'SAMEROOM':
+                    case 'ROOM':
                         where = this.home.room(activity.room);
+                        break;
+                    case 'DEVICE':
+                        where = this.getDeviceByName(action.which);
                         break;
                     default:
                         where = this.home.room(action.where);
@@ -84,6 +87,17 @@
 
         getDeviceByID: function(id) {
             return this.devices[id] || false;
+        },
+
+        getDeviceByName: function(name) {
+            for (var id in this.devices) {
+                if (this.devices.hasOwnProperty(id)) {
+                    if(this.devices[id].name == name) {
+                        return this.devices[id];
+                    }
+                }
+            }
+            return false;
         },
 
         getDeviceByIP: function(ip) {

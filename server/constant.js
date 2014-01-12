@@ -54,7 +54,9 @@ module.exports = {
     },
 
     DEVICE_AUDIO: {
-        BTN1:  1
+        BTN1:  1,
+        MUTE:  2,
+        POWER: 3
     }
 
 };

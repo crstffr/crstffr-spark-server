@@ -27,12 +27,14 @@
 
             var activity = {
                 room: device.room,
-                device: device.type,
+                type: device.type,
+                device: device.name,
                 component: device.getComponent(signal.who),
                 action: device.getAction(signal.what)
             };
 
             activity.string = [activity.room,
+                               activity.type,
                                activity.device,
                                activity.component,
                                activity.action].join(' ');

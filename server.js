@@ -22,42 +22,50 @@
 
     [
         //'any panel knob press; playpause music',
-        //'any panel knob turncw; volumeup audio in sameroom',
-        //'any panel knob turnccw; volumedown audio in sameroom',
+        //'any panel knob turncw; volumeup audio in room',
+        //'any panel knob turnccw; volumedown audio in room',
 
-        //'any panel btn1 press; ledoff audio in sameroom',
-        'any panel knob press; ledblue audio in sameroom',
-        'any panel knob turncw; ledgreen audio in sameroom',
-        'any panel knob turnccw; ledred audio in sameroom',
+        //'any panel btn1 press; ledoff audio in room',
 
-        //'any panel pir motion and motion enabled in home; play audio in sameroom',
+//        'any panel knob press; ledblue audio in room',
+        'any panel knob turncw; ledmagenta audio in room',
+        'any panel knob turnccw; ledblue audio in room',
 
-        'any panel knob turncw; volumeup audio in sameroom',
-        'any panel knob turnccw; volumedown audio in sameroom',
-        'any panel knob press; togglemute audio in sameroom',
-        'any panel btn1 press; togglepower audio in sameroom',
+        'any panel knob turncw; muteoff audio in room',
+        'any panel knob turnccw; muteon audio in room',
+        'any panel btn1 press; togglepower audio in room',
 
-        'any audio btn1 press; ledoff audio in sameroom'
+        'any audio btn1 press; ledoff audio in room',
+        'any audio power off; ledoff audio in room',
+
+        'any audio power on; ledgreen audio in room',
+        'any audio power off; ledoff audio in room',
+        'any audio power off; muteoff audio in room'
+
+
+        //'device control1 knob press; test control1'
 
         //'office panel btn1 press; skipforward music',
         //'kitchen panel btn1 press; randomradio music'
+        //'any panel pir motion and motion enabled in home; play audio in room',
+
 
         /* // Test action on device by it's NAME
-        'any panel btn1 press; test ctrl1 in sameroom',
+        'any panel btn1 press; test ctrl1 in room',
         'any panel btn1 press; test ctrl1 in office',
         'any panel btn1 press; test ctrl1 in kitchen',
         'any panel btn1 press; test ctrl1 in home',
         */
 
         /* // Test action on device by it's TYPE
-        'any panel btn1 press; test panel in sameroom',
+        'any panel btn1 press; test panel in room',
         'any panel btn1 press; test panel in office',
         'any panel btn1 press; test panel in kitchen',
         'any panel btn1 press; test panel in home',
         */
 
         /*
-        'any panel btn1 press; powertoggle audio in sameroom',
+        'any panel btn1 press; powertoggle audio in room',
         'any panel btn1 presshold; poweroff audio in home and set motion disabled in home',
 
         'any panel btn1 press; skipforward music',
@@ -70,8 +78,8 @@
         */
 
         // Future behavior ideas
-        //'any panel pir motion and motion is enabled in home; poweron audio in sameroom',
-        //'any panel pir motion and light is dark in sameroom; poweron light in sameroom'
+        //'any panel pir motion and motion is enabled in home; poweron audio in room',
+        //'any panel pir motion and light is dark in room; poweron light in room'
 
     ].forEach(function(behavior){
         router.registerBehavior(behavior);

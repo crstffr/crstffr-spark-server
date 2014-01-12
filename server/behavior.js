@@ -62,6 +62,14 @@
                     where: parts[4],
                     string: string
                 };
+            } else if (parts[0] == 'DEVICE') {
+                return {
+                    is: 'DEVICE',
+                    device: parts[1],
+                    component: parts[2],
+                    action: parts[3],
+                    string: string
+                }
             } else {
                 return {
                     is: 'ACTIVITY',
@@ -86,7 +94,7 @@
                     is: 'VARIABLE',
                     key: parts[1],
                     val: parts[2],
-                    where: parts[4],
+                    where: parts[4] || 'DEVICE',
                     string: string
                 };
             } else if (parts[1] == 'MUSIC') {
@@ -103,8 +111,8 @@
                 return {
                     is: 'PHYSICAL',
                     command: parts[0],
-                    which: parts[1],
-                    where: parts[3],
+                    which: parts[1] || 'DEVICE',
+                    where: parts[3] || 'DEVICE',
                     string: string
                 };
             }
@@ -130,6 +138,9 @@
                     case 'ACTIVITY':
                         result = this.testActivityCondition(condition, activity);
                         break;
+                    case 'DEVICE':
+                        result = this.testDeviceCondition(condition, activity);
+                        break;
                     case 'COMPARE':
                         result = this.testComparisionCondition(condition, activity);
                         break;
@@ -137,6 +148,26 @@
                 this.log('RESULT:', result.toString().toLocaleUpperCase());
                 return result;
             }.bind(this));
+        },
+
+        testDeviceCondition: function(condition, activity) {
+            var check = true;
+            var a = activity;
+            var c = condition;
+            if (c.device != a.device) {
+                this.log('  FALSE: Device mismatch', a.device, '!=', c.device);
+                check = false;
+            } else if (c.component != a.component) {
+                this.log('  FALSE: Component mismatch', a.component, '!=', c.component);
+                check = false;
+            } else if (c.action != a.action) {
+                this.log('  FALSE: Action mismatch', a.action, '!=', c.action);
+                check = false;
+            }
+            if (check) {
+                this.log('  TRUE');
+            }
+            return check;
         },
 
         /**
@@ -152,8 +183,8 @@
             if (c.room != 'ANY' && c.room != a.room) {
                 this.log('  FALSE: Room mismatch', a.room, '!=', c.room);
                 check = false;
-            } else if (c.device != a.device) {
-                this.log('  FALSE: Device mismatch', a.device, '!=', c.device);
+            } else if (c.device != a.type) {
+                this.log('  FALSE: Device type mismatch', a.type, '!=', c.device);
                 check = false;
             } else if (c.component != a.component) {
                 this.log('  FALSE: Component mismatch', a.component, '!=', c.component);
@@ -183,7 +214,7 @@
                 case 'HOME':
                     check = this.user.home.check(c.who, c.what)
                     break;
-                case 'SAMEROOM':
+                case 'ROOM':
                     room = this.user.home.room(a.room);
                     check = room.check(c.who, c.what);
                     break;

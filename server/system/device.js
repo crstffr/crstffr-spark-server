@@ -27,6 +27,7 @@
         this.socket = false;
         this.connected = false;
         this.retries = 0;
+        this.state = {};
 
         this.core = new sparky({
             debug: config.spark.debug,
@@ -55,6 +56,38 @@
 
         ipString: function() {
             return this.ip + ':' + this.port;
+        },
+
+        // ***********************************************
+        // Behavior variable setting/getting/checking
+        // ***********************************************
+
+        set: function(key, val) {
+            this.state[key] = val;
+        },
+
+        get: function(key) {
+            return this.state[key];
+        },
+
+        check: function(key, val) {
+            return this.state[key] == val;
+        },
+
+        // ***********************************************
+        // Executing commands against this device
+        // ***********************************************
+
+        execute: function(command) {
+            command = command.toLowerCase();
+            if (util.isFunction(this.actions[command])) {
+                this.log('Found command:', command);
+                this.actions[command]();
+                return true;
+            } else {
+                this.log('Unknown command:', command);
+                return false;
+            }
         },
 
         // ***********************************************
