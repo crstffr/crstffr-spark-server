@@ -6,3 +6,4 @@ spark/core-firmware/build/obj
 spark/core-firmware/build/*.bin
 spark/core-firmware/build/*.elf
 spark/core-firmware/build/*.hex
+spark/core-firmware/build/*.map
