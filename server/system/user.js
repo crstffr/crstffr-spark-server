@@ -32,11 +32,6 @@
                     return;
                 }
 
-                if (action.is == 'DEBUG' && action.command == 'LOG') {
-                    log.debug(activity);
-                    return;
-                }
-
                 switch (action.where) {
                     case 'HOME':
                         where = this.home;
@@ -45,7 +40,7 @@
                         where = this.home.room(activity.room);
                         break;
                     case 'DEVICE':
-                        where = this.getDeviceByName(action.which);
+                        where = this.getDeviceByName(activity.device);
                         break;
                     default:
                         where = this.home.room(action.where);
@@ -54,8 +49,11 @@
 
                 if (where) {
                     switch(action.is) {
+                        case 'DEBUG':
+                            where.debug();
+                            break;
                         case 'PHYSICAL':
-                            where.execute(action.which, action.command);
+                            where.execute(action);
                             break;
                         case 'VARIABLE':
                             where.set(action.key, action.val);

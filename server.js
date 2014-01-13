@@ -21,33 +21,37 @@
     // ***********************************************
 
     [
-        //'any panel knob press; playpause music',
-        //'any panel knob turncw; volumeup audio in room',
-        //'any panel knob turnccw; volumedown audio in room',
-
-        //'any panel btn1 press; ledoff audio in room',
-
-//        'any panel knob press; ledblue audio in room',
+/*
         'any panel knob turncw; ledmagenta audio in room',
         'any panel knob turnccw; ledblue audio in room',
-
         'any panel knob turncw; muteoff audio in room',
         'any panel knob turnccw; muteon audio in room',
-        'any panel btn1 press; togglepower audio in room',
-
         'any audio btn1 press; ledoff audio in room',
         'any audio power off; ledoff audio in room',
+*/
 
-        'any audio power on; ledgreen audio in room',
-        'any audio power off; ledoff audio in room',
-        'any audio power off; muteoff audio in room'
+        'any panel btn1 press; playpause music',
+        'any panel btn2 press; skipforward music',
+        'any panel btn4 press; set held false in device and debug device',
+        'any panel btn4 presshold; set held true in device and debug device',
+
+        'any panel knob press; togglepower audio in room',
+        'any panel knob presshold; poweroff audio in home',
+        'any panel knob turncw; volumeup audio in room',
+        'any panel knob turnccw; volumedown audio in room',
+        'any panel knob turncw and audio is on in room; ledcycle audio in room',
+        'any panel knob turnccw and audio is on in room; ledcycle audio in room',
+
+        'any audio power on; muteoff and ledgreen and set audio on in room',
+        'any audio power off; muteoff and ledoff and set audio off in room'
+
 
 
         //'device control1 knob press; test control1'
 
         //'office panel btn1 press; skipforward music',
         //'kitchen panel btn1 press; randomradio music'
-        //'any panel pir motion and motion enabled in home; play audio in room',
+        //'any panel pir motion and motion is enabled in home; play audio in room',
 
 
         /* // Test action on device by it's NAME
@@ -113,15 +117,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
     // ***********************************************
     // Logging
     // ***********************************************
@@ -148,7 +143,7 @@
         });
 
         conn.on('signalReceived', function(message) {
-            // conn.log(message);
+            //conn.log(message);
         });
 
         conn.on('close', function(){

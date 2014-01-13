@@ -67,12 +67,15 @@
             // Messages are formatted as such
             //
             // [STX] <WHO> [ETX] <DID_WHAT> [EOT]
+            // or
+            // [STX] <WHO> [ETX] <WHAT> [DLE] <HAS_VALUE> [EOT]
             //
 
             string = this.trim(string);
 
             var STX = string.indexOf(hex.STX);
             var ETX = string.indexOf(hex.ETX);
+            var DLE = string.indexOf(hex.DLE);
 
             var part1 = string.substr(0,ETX);
             var part2 = string.substr(ETX+1);

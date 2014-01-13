@@ -74,12 +74,16 @@
             return this.state[key] == val;
         },
 
+        debug: function() {
+            log.debug('DEVICE', this.state);
+        },
+
         // ***********************************************
         // Executing commands against this device
         // ***********************************************
 
-        execute: function(command) {
-            command = command.toLowerCase();
+        execute: function(action) {
+            command = action.command.toLowerCase();
             if (util.isFunction(this.actions[command])) {
                 this.log('Found command:', command);
                 this.actions[command]();

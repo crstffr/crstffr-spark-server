@@ -42,30 +42,34 @@
             return this.state[key] == val;
         },
 
+        debug: function() {
+            log.debug('ROOM', this.state);
+        },
+
         // ***********************************************
         // Executing commands against devices in the room
         // ***********************************************
 
-        execute: function(which, command) {
-            if (this.executeByType(which, command)) { return true; }
-            if (this.executeByName(which, command)) { return true; }
+        execute: function(action) {
+            if (this.executeByType(action)) { return true; }
+            if (this.executeByName(action)) { return true; }
             return false;
         },
 
-        executeByType: function(type, command) {
+        executeByType: function(action) {
             var executed = 0;
             var result = false;
-            this.getDevicesByType(type).forEach(function(dev){
-                result = dev.execute(command);
+            this.getDevicesByType(action.which).forEach(function(dev){
+                result = dev.execute(action);
                 if (result) { executed++; }
             }.bind(this));
             return (executed > 0);
         },
 
-        executeByName: function(name, command) {
+        executeByName: function(action) {
             var executed = 0;
-            this.getDevicesByName(name).forEach(function(dev){
-                result = dev.execute(command);
+            this.getDevicesByName(action.which).forEach(function(dev){
+                result = dev.execute(action);
                 if (result) { executed++; }
             }.bind(this));
             return (executed > 0);

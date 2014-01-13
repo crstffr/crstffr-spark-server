@@ -1,4 +1,54 @@
 // ******************************
+// Button Pres & Hold Class
+// ******************************
+
+class Button
+{
+    public:
+        Button(int pin, PinMode mode);
+        char state();
+    private:
+        int _pin;
+        int _val;
+        bool _down;
+        long _hold;
+        bool _held;
+        unsigned long _now;
+        unsigned long _timer;
+};
+
+Button::Button(int pin, PinMode mode) {
+    pinMode(pin, mode);
+    _val = 0;
+    _pin = pin;
+    _hold = 2000;
+    _held = false;
+    _down = false;
+}
+
+char Button::state() {
+    char out = '-';
+    _now = millis();
+    _val = digitalRead(_pin);
+    if (!_down && !_held && _val == HIGH) {
+        _down = true;
+        _timer = millis();
+    } else if (_down && !_held && _val == HIGH) {
+        if (_now > _timer + _hold) {
+            out = 'H';
+            _held = true;
+        }
+    } else if (_val == LOW) {
+        if (_down && !_held) {
+            out = 'P';
+        }
+        _down = false;
+        _held = false;
+    }
+    return out;
+}
+
+// ******************************
 // Rotary Encoder Class
 // ******************************
 
@@ -116,11 +166,6 @@ String SENSOR_TEMP = "6";
 String SENSOR_LIGHT = "7";
 String SENSOR_MOTION = "8";
 
-char COMMAND_RED   = '1';
-char COMMAND_GREEN = '2';
-char COMMAND_BLUE  = '3';
-
-
 // ******************************
 // TCP Setup
 // ******************************
@@ -146,42 +191,44 @@ unsigned long tcpSendTimer = millis();
 // Core Setup
 // ******************************
 
-int led = A0;
+int btn0 = D2;
+int btn1 = D3;
+int btn2 = D4;
+int btn3 = D5;
+int btn4 = D6;
 
-int ledR = A5;
-int ledG = A4;
-int ledB = A1;
-
-int btn1 = D7; // little switch
-int btn2 = D6; // knob button
-int btn3 = D2; // PIR motion
-
+int btn0Val = LOW;
 int btn1Val = LOW;
 int btn2Val = LOW;
 int btn3Val = LOW;
+int btn4Val = LOW;
 
+bool btn0Down = false;
 bool btn1Down = false;
 bool btn2Down = false;
 bool btn3Down = false;
+bool btn4Down = false;
 
 int encVal = 0;
 int encPin1 = D0;
 int encPin2 = D1;
 
 QuadEncoder qe(encPin1, encPin2);
+Button button0(btn0, INPUT_PULLDOWN);
+Button button1(btn1, INPUT_PULLDOWN);
+Button button2(btn2, INPUT_PULLDOWN);
+Button button3(btn3, INPUT_PULLDOWN);
+Button button4(btn4, INPUT_PULLDOWN);
 
 void setup()
 {
     Serial.begin(9600);
     
-    pinMode(led, OUTPUT);
-    pinMode(ledR, OUTPUT);
-    pinMode(ledG, OUTPUT);
-    pinMode(ledB, OUTPUT);
-    
+    pinMode(btn0, INPUT_PULLDOWN);
     pinMode(btn1, INPUT_PULLDOWN);
     pinMode(btn2, INPUT_PULLDOWN);
     pinMode(btn3, INPUT_PULLDOWN);
+    pinMode(btn4, INPUT_PULLDOWN);
     
     pinMode(encPin1, INPUT_PULLUP);
     pinMode(encPin2, INPUT_PULLUP);
@@ -199,9 +246,11 @@ void loop()
 
     now = millis();
     encVal  = qe.tick();
+    btn0Val = digitalRead(btn0);
     btn1Val = digitalRead(btn1);
     btn2Val = digitalRead(btn2);
     btn3Val = digitalRead(btn3);
+    btn4Val = digitalRead(btn4);
 
     if (encVal == '>') {
         tcpAction(INPUT_KNOB, ACTION_CW);
@@ -209,52 +258,85 @@ void loop()
         tcpAction(INPUT_KNOB, ACTION_CCW);
     }
     
+    /*
+    if (!btn0Down && btn0Val == HIGH) {
+        btn0Down = true;
+        tcpAction(INPUT_KNOB, ACTION_PRESS);
+    } else if (btn0Val == LOW) {
+        btn0Down = false;
+    }
+    
     if (!btn1Down && btn1Val == HIGH) {
         btn1Down = true;
         tcpAction(INPUT_BTN1, ACTION_PRESS);
-        ledGreen();
     } else if (btn1Val == LOW) {
         btn1Down = false;
     }
     
     if (!btn2Down && btn2Val == HIGH) {
         btn2Down = true;
-        tcpAction(INPUT_KNOB, ACTION_PRESS);
+        tcpAction(INPUT_BTN2, ACTION_PRESS);
     } else if (btn2Val == LOW) {
         btn2Down = false;
     }
     
     if (!btn3Down && btn3Val == HIGH) {
         btn3Down = true;
-        tcpAction(SENSOR_MOTION, ACTION_MOTION);
-        ledRed();
+        tcpAction(INPUT_BTN3, ACTION_PRESS);
     } else if (btn3Val == LOW) {
         btn3Down = false;
+    }
+    
+    
+    if (!btn4Down && btn4Val == HIGH) {
+        btn4Down = true;
+        tcpAction(INPUT_BTN4, ACTION_PRESS);
+    } else if (btn4Val == LOW) {
+        btn4Down = false;
+    }
+    */
+    
+    char b0 = button0.state();
+    char b1 = button1.state();
+    char b2 = button2.state();
+    char b3 = button3.state();
+    char b4 = button4.state();
+    
+        
+    if (b0 == 'P') {
+        tcpAction(INPUT_KNOB, ACTION_PRESS);
+    } else if (b0 == 'H') {
+        tcpAction(INPUT_KNOB, ACTION_HOLD);
+    }
+        
+    if (b1 == 'P') {
+        tcpAction(INPUT_BTN1, ACTION_PRESS);
+    } else if (b1 == 'H') {
+        tcpAction(INPUT_BTN1, ACTION_HOLD);
+    }
+        
+    if (b2 == 'P') {
+        tcpAction(INPUT_BTN2, ACTION_PRESS);
+    } else if (b2 == 'H') {
+        tcpAction(INPUT_BTN2, ACTION_HOLD);
+    }
+    
+    if (b3 == 'P') {
+        tcpAction(INPUT_BTN3, ACTION_PRESS);
+    } else if (b3 == 'H') {
+        tcpAction(INPUT_BTN3, ACTION_HOLD);
+    }
+    
+    if (b4 == 'P') {
+        tcpAction(INPUT_BTN4, ACTION_PRESS);
+    } else if (b4 == 'H') {
+        tcpAction(INPUT_BTN4, ACTION_HOLD);
     }
     
     
     tcpStatus();
     tcpRead();
 
-}
-
-
-void ledSetColor(int red, int green, int blue) {
-    analogWrite(ledR, red);
-    analogWrite(ledG, green);
-    analogWrite(ledB, blue);  
-}
-
-void ledRed() {
-    ledSetColor(255, 0, 0);
-}
-
-void ledGreen() {
-    ledSetColor(0, 255, 0);
-}
-
-void ledBlue() {
-    ledSetColor(0, 0, 255);
 }
 
 
@@ -269,10 +351,10 @@ int tcpStatus() {
     }
 
     if (tcp.connected()) {
-        analogWrite(led, HIGH);
+        // analogWrite(led, HIGH);
         return 1;
     } else {
-        analogWrite(led, LOW);
+        // analogWrite(led, LOW);
         return -1;
     }
 }
@@ -333,12 +415,6 @@ void tcpRead() {
             tcp.print(ACK);
         } else if (read == BEL) {
             tcpIdentify();
-        } else if (read == COMMAND_GREEN) {
-            ledGreen();
-        } else if (read == COMMAND_BLUE) {
-            ledBlue();
-        } else if (read == COMMAND_RED) {
-            ledRed();
         }
     }
 }

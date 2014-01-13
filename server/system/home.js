@@ -49,15 +49,19 @@
             return this.state[key] == val;
         },
 
+        debug: function() {
+            log.debug('HOME', this.state);
+        },
+
         // ***********************************************
         // Execute commands on devices in all rooms of home
         // ***********************************************
 
-        execute: function(which, command) {
+        execute: function(action) {
             var id;
             for (id in this.rooms) {
                 if (this.rooms.hasOwnProperty(id)) {
-                    this.rooms[id].execute(which, command);
+                    this.rooms[id].execute(action.which, action.command);
                 }
             }
         }
