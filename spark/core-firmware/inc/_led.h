@@ -11,6 +11,7 @@ class LED
         void intensity(int value);
         void color(String name);
         void fade();
+        void blank();
         void blink();
         void calcFade();
         void calcBlink();

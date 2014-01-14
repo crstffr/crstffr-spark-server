@@ -22,12 +22,10 @@
             'poweron audio in home ' +
             'and mute audio in home ' +
             'and unmute audio in room ' +
-            'and set audio enabled in home ' +
-            'and debug room and debug home',
+            'and set audio enabled in home ',
 
         'any panel knob press and audio is enabled in room; ' +
-            'togglemute audio in room ' +
-            'and debug room and debug home',
+            'togglemute audio in room ',
 
         'any panel knob turncw and audio is enabled in room; ' +
             'volumeup audio in room ' +
@@ -43,8 +41,7 @@
 
         'any panel knob hold and audio is enabled in home; ' +
             'poweroff audio in home ' +
-            'and set audio disabled in home ' +
-            'and debug room and debug home',
+            'and set audio disabled in home ',
 
 
         // Audio Player Specific Actions

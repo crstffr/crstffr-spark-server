@@ -9,7 +9,7 @@ LED::LED(int pinR, int pinG, int pinB) {
     _g = 0;
     _b = 0;
     _blink = 0;
-    _blinkGap = 350;
+    _blinkGap = 500;
     pinMode(_pinR, OUTPUT);
     pinMode(_pinG, OUTPUT);
     pinMode(_pinB, OUTPUT);
@@ -26,6 +26,10 @@ void LED::tick() {
 }
 
 void LED::off() {
+    rgb(0,0,0);
+}
+
+void LED::blank() {
     analogWrite(_pinR, 0);
     analogWrite(_pinG, 0);
     analogWrite(_pinB, 0);
@@ -65,7 +69,7 @@ void LED::blink() {
 void LED::calcBlink() {
     if (_now > _blinkTimer) {
         if (_blink == 0) {
-            off();
+            blank();
         } else {
             rgb(_r,_g,_b);
         }
