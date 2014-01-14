@@ -53,6 +53,11 @@
                     this.set('LED', 'OFF');
                 }.bind(this),
 
+                ledblink: function() {
+                    this.log('Make LED blink...');
+                    this.sendCommand(this.commands.LEDBLINK);
+                }.bind(this),
+
                 ledcycle: function() {
                     switch(this.get('LED')) {
                         case 'RED':

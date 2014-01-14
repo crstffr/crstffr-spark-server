@@ -57,6 +57,8 @@ module.exports = {
             LEDCYAN:    'C',
             LEDMAGENTA: 'N',
             LEDYELLOW:  'Y',
+            LEDBLINK:   'L',
+            LEDFADE:    'F',
 
             POWEROFF:   '0',
             POWERON:    '1',

@@ -53,7 +53,7 @@
         'any audio power on; ledgreen',
         'any audio power off; ledoff',
 
-        'any audio mute on; ledred',
+        'any audio mute on; ledred and ledblink',
         'any audio mute off; ledblue'
 
 
