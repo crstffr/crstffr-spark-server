@@ -17,12 +17,12 @@
 
                                 'control1': {
                                     id: '48ff6b065067555039091087',
-                                    type: constant.DEVICE_TYPE_PANEL
+                                    type: constant.DEVICE_TYPE.PANEL
                                 },
 
                                 'audio1': {
                                     id: '48ff6b065067555017201587',
-                                    type: constant.DEVICE_TYPE_AUDIO
+                                    type: constant.DEVICE_TYPE.AUDIO
                                 }
 
                             }

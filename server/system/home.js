@@ -17,6 +17,10 @@
         this.rooms = {};
         this.state = {};
 
+        this.set('LIGHT',  'DARK');
+        this.set('AUDIO',  'DISABLED');
+        this.set('MOTION', 'DISABLED');
+
         for(var _id in home.rooms) {
             if (home.rooms.hasOwnProperty(_id)) {
                 var _uid = _id.toUpperCase();
@@ -38,7 +42,13 @@
         // ***********************************************
 
         set: function(key, val) {
+            var id;
             this.state[key] = val;
+            for (id in this.rooms) {
+                if (this.rooms.hasOwnProperty(id)) {
+                    this.rooms[id].set(key, val);
+                }
+            }
         },
 
         get: function(key) {
@@ -61,7 +71,7 @@
             var id;
             for (id in this.rooms) {
                 if (this.rooms.hasOwnProperty(id)) {
-                    this.rooms[id].execute(action.which, action.command);
+                    this.rooms[id].execute(action);
                 }
             }
         }

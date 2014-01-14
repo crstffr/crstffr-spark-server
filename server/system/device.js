@@ -36,6 +36,7 @@
         });
 
         this.inherit(device.type);
+
         this.actions = this.publicActions();
 
     }
@@ -85,7 +86,7 @@
         execute: function(action) {
             command = action.command.toLowerCase();
             if (util.isFunction(this.actions[command])) {
-                this.log('Found command:', command);
+                //this.log('Found command:', command);
                 this.actions[command]();
                 return true;
             } else {
@@ -104,15 +105,15 @@
             // some device specific methods
 
             switch (this.type) {
-                case constant.DEVICE_TYPE_PANEL:
+                case constant.DEVICE_TYPE.PANEL:
                     panel.call(this);
                     util.inherits(this, panel);
                     break;
-                case constant.DEVICE_TYPE_AUDIO:
+                case constant.DEVICE_TYPE.AUDIO:
                     audio.call(this);
                     util.inherits(this, audio);
                     break;
-                case constant.DEVICE_TYPE_POWER:
+                case constant.DEVICE_TYPE.POWER:
                     power.call(this);
                     util.inherits(this, power);
                     break;
@@ -135,10 +136,10 @@
             return false;
         },
 
-        getAction: function(id) {
-            for(var action in constant.ACTIONS) {
-                if (constant.ACTIONS.hasOwnProperty(action)) {
-                    if (constant.ACTIONS[action] == id) {
+        getActivity: function(id) {
+            for(var action in this.activities) {
+                if (this.activities.hasOwnProperty(action)) {
+                    if (this.activities[action] == id) {
                         return action;
                     }
                 }
@@ -151,10 +152,14 @@
         // ***********************************************
 
         connect: function() {
-            this.log('Connecting...');
-            this.core.run('connect', util.getIP());
-            this.startRetry();
-            return this;
+            if (!this.connected) {
+                this.log('Connecting...');
+                this.core.run('connect', util.getIP());
+                this.startRetry();
+                return this;
+            } else {
+                this.log('is already connected');
+            }
         },
 
         setConnection: function(connection) {

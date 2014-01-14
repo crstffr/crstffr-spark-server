@@ -15,6 +15,10 @@
         this.devices = {};
         this.state = {};
 
+        this.set('LIGHT',  'DARK');
+        this.set('AUDIO',  'DISABLED');
+        this.set('MOTION', 'DISABLED');
+
         for(var name in room.devices) {
             if (room.devices.hasOwnProperty(name)) {
                 var id = room.devices[name].id;
@@ -25,6 +29,14 @@
     }
 
     util.inherits(Room, emitter, {
+
+        log: function() {
+            log.server.apply(log, util.prependArgs(this.toString(), arguments));
+        },
+
+        toString: function() {
+            return 'ROOM ' + this.id;
+        },
 
         // ***********************************************
         // Behavior variable setting/getting/checking
@@ -43,7 +55,7 @@
         },
 
         debug: function() {
-            log.debug('ROOM', this.state);
+            this.log(this.state);
         },
 
         // ***********************************************
@@ -53,6 +65,7 @@
         execute: function(action) {
             if (this.executeByType(action)) { return true; }
             if (this.executeByName(action)) { return true; }
+            //this.log('Unable to execute action', action);
             return false;
         },
 
@@ -94,7 +107,7 @@
                 }
             }
             if (devices.length === 0) {
-                log.server('No devices of type:', type);
+                //this.log('No devices of type:', type);
             }
             return devices;
         },
@@ -114,7 +127,7 @@
                 }
             }
             if (devices.length === 0) {
-                log.server('No devices of name:', name);
+                //this.log('No devices of name:', name);
             }
             return devices;
         }

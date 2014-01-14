@@ -36,6 +36,12 @@
             _log('LOCAL    -', arguments);
         },
 
+        user: function() {
+            if (util.debug('user')) {
+                _log('USER     -', arguments);
+            }
+        },
+
         device: function() {
             if (util.debug('device')) {
                 _log('DEVICE   -', arguments);

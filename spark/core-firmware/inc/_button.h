@@ -15,3 +15,5 @@ class Button
         unsigned long _now;
         unsigned long _timer;
 };
+
+#endif

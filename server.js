@@ -1,4 +1,3 @@
-
 (function(undefined){
 
     var util    = require('./server/util');
@@ -6,6 +5,7 @@
     var user    = require('./server/system/user');
     var router  = require('./server/router');
     var config  = require('./server/config');
+    var behaviors = require('./behaviors');
 
     // ***********************************************
     // Let's start some shit!
@@ -17,87 +17,15 @@
     var router = new router(user);
 
     // ***********************************************
-    // Define our behaviors
+    // Register all behaviors with the router
     // ***********************************************
 
-    [
-/*
-        'any panel knob turncw; ledmagenta audio in room',
-        'any panel knob turnccw; ledblue audio in room',
-        'any panel knob turncw; muteoff audio in room',
-        'any panel knob turnccw; muteon audio in room',
-        'any audio btn1 press; ledoff audio in room',
-        'any audio power off; ledoff audio in room',
-*/
-
-        'any panel btn1 press; playpause music',
-        'any panel btn2 press; skipforward music',
-        'any panel btn4 press; set held false in device and debug device',
-        'any panel btn4 presshold; set held true in device and debug device',
-
-        'any panel knob press; togglepower audio in room',
-        'any panel knob presshold; poweroff audio in home',
-        'any panel knob turncw; volumeup audio in room',
-        'any panel knob turnccw; volumedown audio in room',
-        'any panel knob turncw and audio is on in room; ledcycle audio in room',
-        'any panel knob turnccw and audio is on in room; ledcycle audio in room',
-
-        'any audio power on; muteoff and ledgreen and set audio on in room',
-        'any audio power off; muteoff and ledoff and set audio off in room'
-
-
-
-        //'device control1 knob press; test control1'
-
-        //'office panel btn1 press; skipforward music',
-        //'kitchen panel btn1 press; randomradio music'
-        //'any panel pir motion and motion is enabled in home; play audio in room',
-
-
-        /* // Test action on device by it's NAME
-        'any panel btn1 press; test ctrl1 in room',
-        'any panel btn1 press; test ctrl1 in office',
-        'any panel btn1 press; test ctrl1 in kitchen',
-        'any panel btn1 press; test ctrl1 in home',
-        */
-
-        /* // Test action on device by it's TYPE
-        'any panel btn1 press; test panel in room',
-        'any panel btn1 press; test panel in office',
-        'any panel btn1 press; test panel in kitchen',
-        'any panel btn1 press; test panel in home',
-        */
-
-        /*
-        'any panel btn1 press; powertoggle audio in room',
-        'any panel btn1 presshold; poweroff audio in home and set motion disabled in home',
-
-        'any panel btn1 press; skipforward music',
-        'any panel btn1 presshold; randomradio music',
-
-
-
-        'any panel btn2 press and motion is disabled in home; set motion enabled in home',
-        'any panel btn2 press and motion is enabled in home; set motion disabled in home'
-        */
-
-        // Future behavior ideas
-        //'any panel pir motion and motion is enabled in home; poweron audio in room',
-        //'any panel pir motion and light is dark in room; poweron light in room'
-
-    ].forEach(function(behavior){
+    behaviors.forEach(function(behavior){
         router.registerBehavior(behavior);
     });
 
     // ***********************************************
-    // Setup some stateful defaults
-    // ***********************************************
-
-    user.home.set('LIGHT', 'DARK');
-    user.home.set('MOTION', 'DISABLED');
-
-    // ***********************************************
-    // In a moment, let's connect ALL the things!
+    // In just moment connect ALL the devices
     // ***********************************************
 
     setTimeout(function(){
@@ -105,17 +33,24 @@
     }.bind(this), 250);
 
     // ***********************************************
-    // I hear you man, and let me respond.
+    // Pass any incoming signals to the router
     // ***********************************************
 
     server.on('signalReceived', function(device, signal){
         router.parseSignal(device, signal);
     });
 
+    // ***********************************************
+    // Allow user to reconnect devices from stdin
+    // ***********************************************
 
-
-
-
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+    process.stdin.on('data', function(chunk) {
+        if (chunk.trim() == 'r') {
+            devices.connectAll();
+        }
+    }.bind(this));
 
     // ***********************************************
     // Logging
@@ -147,11 +82,9 @@
         });
 
         conn.on('close', function(){
-
+            //conn.log('Closed');
         });
 
     });
-
-
 
 }).call(this);

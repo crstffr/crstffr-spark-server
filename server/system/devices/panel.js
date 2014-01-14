@@ -7,7 +7,10 @@
     var PanelDevice = function() {
 
         this.is = 'PANEL';
-        this.components = constant.DEVICE_PANEL;
+
+        this.activities = constant.DEVICE_PANEL.ACTIVITIES;
+        this.components = constant.DEVICE_PANEL.COMPONENTS;
+        this.commands = constant.DEVICE_PANEL.COMMANDS;
 
         this.publicActions = function() {
             var actions = function(){};
@@ -15,26 +18,6 @@
 
                 test: function() {
                     this.log('Testing...');
-                }.bind(this),
-
-                ledoff: function() {
-                    this.log('Turn LED off');
-                    this.sendCommand(constant.COMMANDS.OFF);
-                }.bind(this),
-
-                ledred: function() {
-                    this.log('Turn LED red');
-                    this.sendCommand(constant.COMMANDS.RED);
-                }.bind(this),
-
-                ledgreen: function() {
-                    this.log('Turn LED green');
-                    this.sendCommand(constant.COMMANDS.GREEN);
-                }.bind(this),
-
-                ledblue: function() {
-                    this.log('Turn LED blue');
-                    this.sendCommand(constant.COMMANDS.BLUE);
                 }.bind(this)
 
             };

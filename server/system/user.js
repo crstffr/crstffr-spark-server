@@ -21,6 +21,10 @@
 
     util.inherits(User, emitter, {
 
+        log: function() {
+            log.user.apply(log, arguments);
+        },
+
         execute: function(actions, activity) {
 
             actions.forEach(function(action) {

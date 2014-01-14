@@ -29,8 +29,8 @@
                 room: device.room,
                 type: device.type,
                 device: device.name,
-                component: device.getComponent(signal.who),
-                action: device.getAction(signal.what)
+                action: device.getActivity(signal.what),
+                component: device.getComponent(signal.who)
             };
 
             activity.string = [activity.room,
@@ -48,7 +48,7 @@
                 log.server('');
                 log.server('Activity:', activity.string);
                 log.server('Behavior:', behavior.condition);
-                log.server('Executes:', behavior.action);
+                //log.server('Executes:', behavior.action);
 
                 this.user.execute(behavior.actions, activity);
 
