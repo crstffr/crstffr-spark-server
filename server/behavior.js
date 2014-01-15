@@ -77,6 +77,7 @@
                     device: parts[1],
                     component: parts[2],
                     action: parts[3],
+                    value: parts[4],
                     string: string
                 };
             }
@@ -191,6 +192,9 @@
                 check = false;
             } else if (c.action != a.action) {
                 this.log('  FALSE: Action mismatch', a.action, '!=', c.action);
+                check = false;
+            } else if (c.value && c.value != a.value) {
+                this.log('  FALSE: Value mismatch', a.value, '!=', c.value);
                 check = false;
             }
             if (check) {

@@ -12,7 +12,7 @@
         'any panel btn1 press; playpause music',
         'any panel btn2 press; skipforward music',
         'any panel btn3 press; debug room',
-        'any panel btn4 press; debug home',
+        'any panel btn4 press; status audio in room',
 
 
         // Panel Audio Controls in the Room
@@ -47,11 +47,17 @@
         // Audio Player Specific Actions
         // -----------------------------------------------
 
+        // 'any audio power value 1; set audio enabled in room',
+
+        'any audio btn1 press; togglepower',
+
         'any audio power on; ledgreen',
         'any audio power off; ledoff',
 
         'any audio mute on; ledred and ledblink',
         'any audio mute off; ledblue'
+
+
 
 
 

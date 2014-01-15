@@ -11,6 +11,7 @@ MyTCP::MyTCP() {
     ENQ = '\x05';
     ACK = '\x06';
     BEL = '\x07';
+    DLE = '\x10';
     port = 5000;
     ready = false;
     timeout = 5000;
@@ -57,7 +58,7 @@ int MyTCP::connect() {
 }
 
 int MyTCP::identify() {
-    return send(Spark.deviceID(), "0");
+    return sendAction(Spark.deviceID(), "0");
 }
 
 int MyTCP::disconnect() {
@@ -66,10 +67,21 @@ int MyTCP::disconnect() {
     return 1;
 }
 
-int MyTCP::send(String who, String what) {
+int MyTCP::sendAction(String who, String what) {
     if (tcp.connected()) {
         resetTimer();
-        tcp.print(STX + who + ETX + what + EOT);
+        tcp.print(STX + who + ETX + what + DLE + EOT);
+        delay(10);
+        return 1;
+    } else {
+        return -1;
+    }
+}
+
+int MyTCP::sendValue(String who, String value) {
+    if (tcp.connected()) {
+        resetTimer();
+        tcp.print(STX + who + ETX + "^" + DLE + value + EOT);
         delay(10);
         return 1;
     } else {

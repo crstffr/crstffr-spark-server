@@ -25,28 +25,7 @@
                 test: function() {
                     this.log('Testing...');
                 }.bind(this),
-/*
-                enable: function() {
-                    this.log('Enabling...');
-                    this.actions.poweron();
-                    this.actions.mute();
-                    this.set('ENABLED', 'TRUE');
-                }.bind(this),
 
-                disable: function() {
-                    this.log('Disabling...');
-                    this.actions.poweroff();
-                    this.set('ENABLED', 'FALSE');
-                }.bind(this),
-
-                toggle: function() {
-                    if (this.get('ENABLED') == 'TRUE') {
-                        this.actions.disable();
-                    } else {
-                        this.actions.enable();
-                    }
-                }.bind(this),
-*/
                 ledoff: function() {
                     this.log('Turn LED off...');
                     this.sendCommand(this.commands.LEDOFF);

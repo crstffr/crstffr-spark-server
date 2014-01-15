@@ -12,7 +12,8 @@ class MyTCP
         int identify();
         int disconnect();
         int setIP(String ip);
-        int send(String who, String what);
+        int sendAction(String who, String what);
+        int sendValue(String who, String value);
 
     private:
         TCPClient tcp;
@@ -22,6 +23,7 @@ class MyTCP
         char ENQ;
         char ACK;
         char BEL;
+        char DLE;
         int  port;
         bool ready;
         long timeout;

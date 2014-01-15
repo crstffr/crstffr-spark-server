@@ -9,7 +9,7 @@ LED::LED(int pinR, int pinG, int pinB) {
     _g = 0;
     _b = 0;
     _blink = 0;
-    _blinkGap = 500;
+    _blinkGap = 350;
     pinMode(_pinR, OUTPUT);
     pinMode(_pinG, OUTPUT);
     pinMode(_pinB, OUTPUT);

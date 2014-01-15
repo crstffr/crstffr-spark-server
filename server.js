@@ -40,6 +40,10 @@
         router.parseSignal(device, signal);
     });
 
+    server.on('deviceConnected', function(device){
+        // device.execute({command: 'status'});
+    });
+
     // ***********************************************
     // Allow user to reconnect devices from stdin
     // ***********************************************

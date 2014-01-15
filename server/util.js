@@ -21,6 +21,24 @@
             return !isNaN(parseFloat(n)) && isFinite(n);
         },
 
+        toNumber: function(n) {
+            if (this.isInt(n)) {
+                return parseInt(n);
+            } else if (this.isFloat(n)) {
+                return parseFloat(n).toPrecision(2);
+            } else {
+                return 0;
+            }
+        },
+
+        isInt: function(n) {
+            return (this.isNumber(n) && n.indexOf('.') < 0);
+        },
+
+        isFloat: function(n) {
+            return (this.isNumber(n) && n.indexOf('.') > 0);
+        },
+
         isFunction: function(func) {
             return typeof func == 'function';
         },

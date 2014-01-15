@@ -30,7 +30,8 @@
                 type: device.type,
                 device: device.name,
                 action: device.getActivity(signal.what),
-                component: device.getComponent(signal.who)
+                component: device.getComponent(signal.who),
+                value: signal.value
             };
 
             activity.string = [activity.room,
@@ -42,6 +43,12 @@
             if (!activity.component || !activity.action) {
                 return false;
             }
+
+            this.triggerBehaviors(activity);
+
+        },
+
+        triggerBehaviors: function(activity) {
 
             this.getRelevantBehaviors(activity).forEach(function(behavior) {
 

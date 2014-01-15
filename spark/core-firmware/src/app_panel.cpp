@@ -101,10 +101,10 @@ int disconnect(String params) {
 void checkKnob(char state, String component) {
     switch (state) {
         case '>':
-            mytcp.send(component, ACTIVITY_TURNCW);
+            mytcp.sendAction(component, ACTIVITY_TURNCW);
             break;
         case '<':
-            mytcp.send(component, ACTIVITY_TURNCCW);
+            mytcp.sendAction(component, ACTIVITY_TURNCCW);
             break;
     }
 }
@@ -112,10 +112,10 @@ void checkKnob(char state, String component) {
 void checkButton(char state, String component) {
     switch (state) {
         case 'P':
-            mytcp.send(component, ACTIVITY_PRESS);
+            mytcp.sendAction(component, ACTIVITY_PRESS);
             break;
         case 'H':
-            mytcp.send(component, ACTIVITY_HOLD);
+            mytcp.sendAction(component, ACTIVITY_HOLD);
             break;
     }
 }

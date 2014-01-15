@@ -39,6 +39,8 @@
 
         this.actions = this.publicActions();
 
+        this.setDefaultActions();
+
     }
 
     util.inherits(Device, emitter, {
@@ -96,6 +98,18 @@
         },
 
         // ***********************************************
+        // All devices have some common actions
+        // ***********************************************
+
+        setDefaultActions: function() {
+
+            this.actions.status = function() {
+                this.sendCommand(this.commands.STATUS);
+            }.bind(this);
+
+        },
+
+        // ***********************************************
         // Object Inherit from Device Type
         // ***********************************************
 
@@ -121,6 +135,8 @@
 
         },
 
+
+
         // ***********************************************
         // Public Getter
         // ***********************************************
@@ -137,6 +153,7 @@
         },
 
         getActivity: function(id) {
+            if (id == '^') { return 'VALUE'; }
             for(var action in this.activities) {
                 if (this.activities.hasOwnProperty(action)) {
                     if (this.activities[action] == id) {

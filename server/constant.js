@@ -19,7 +19,6 @@ module.exports = {
             MOTION:     5
         },
         COMPONENTS: {
-            DEBUG:  0,
             BTN1:   1,
             BTN2:   2,
             BTN3:   3,
@@ -30,7 +29,7 @@ module.exports = {
             PIR:    8
         },
         COMMANDS: {
-
+            STATUS: 'S'
         }
     },
 
@@ -50,6 +49,7 @@ module.exports = {
             POWER: 3
         },
         COMMANDS: {
+            STATUS:     'S',
             LEDOFF:     'O',
             LEDRED:     'R',
             LEDGREEN:   'G',

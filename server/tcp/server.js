@@ -77,7 +77,9 @@
                 if (!this.devices.getByIP(conn.ip)) {
 
                     conn.identify().then(function(id) {
-                        this.devices.getByID(id).setConnection(conn);
+                        var device = this.devices.getByID(id);
+                        device.setConnection(conn);
+                        this.emit('deviceConnected', device);
                     }.bind(this));
 
                 } else {
@@ -88,7 +90,9 @@
                     // tell it that it is officially connected.
 
                     conn.identified = true;
-                    this.devices.getByIP(conn.ip).setConnection(conn);
+                    var device = this.devices.getByIP(conn.ip)
+                    device.setConnection(conn);
+                    this.emit('deviceConnected', device);
                     // conn.log('Trusted Connection Resumed');
 
                 }
