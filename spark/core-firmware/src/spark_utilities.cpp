@@ -44,6 +44,7 @@ int total_bytes_received = 0;
 uint32_t chunkIndex;
 
 extern unsigned int millis();
+extern uint8_t LED_RGB_BRIGHTNESS;
 
 // LED_Signaling_Override
 __IO uint8_t LED_Spark_Signal;
@@ -125,9 +126,16 @@ void RGBClass::color(int red, int green, int blue)
 	if (true != _control)
 		return;
 
-	TIM1->CCR2 = (uint16_t)(red   * (TIM1->ARR + 1) / 255);	// Red LED
-	TIM1->CCR3 = (uint16_t)(green * (TIM1->ARR + 1) / 255);	// Green LED
-	TIM1->CCR1 = (uint16_t)(blue  * (TIM1->ARR + 1) / 255);	// Blue LED
+	TIM1->CCR2 = (uint16_t)((red   * LED_RGB_BRIGHTNESS * (TIM1->ARR + 1)) >> 16);	// Red LED
+	TIM1->CCR3 = (uint16_t)((green * LED_RGB_BRIGHTNESS * (TIM1->ARR + 1)) >> 16);	// Green LED
+	TIM1->CCR1 = (uint16_t)((blue  * LED_RGB_BRIGHTNESS * (TIM1->ARR + 1)) >> 16);	// Blue LED
+#endif
+}
+
+void RGBClass::brightness(uint8_t brightness)
+{
+#if !defined (RGB_NOTIFICATIONS_ON)
+  LED_SetBrightness(brightness);
 #endif
 }
 
@@ -244,6 +252,50 @@ bool SparkClass::connected(void)
 		return true;
 	else
 		return false;
+}
+
+int SparkClass::connect(void)
+{
+	//Schedule Spark's cloud connection and handshake
+	SPARK_SOCKET_HANDSHAKE = 1;
+	return 0;
+}
+
+int SparkClass::disconnect(void)
+{
+	//Schedule Spark's cloud disconnection
+	SPARK_SOCKET_HANDSHAKE = 0;
+	return 0;
+}
+
+String SparkClass::deviceID(void)
+{
+	String deviceID;
+	char hex_digit;
+	char id[12];
+	memcpy(id, (char *)ID1, 12);
+	//OR
+	//uint8_t id[12];
+	//Get_Unique_Device_ID(id);
+
+	for (int i = 0; i < 12; ++i)
+	{
+		hex_digit = 48 + (id[i] >> 4);
+		if (57 < hex_digit)
+		{
+			hex_digit += 39;
+		}
+		deviceID.concat(hex_digit);
+
+		hex_digit = 48 + (id[i] & 0xf);
+		if (57 < hex_digit)
+		{
+			hex_digit += 39;
+		}
+		deviceID.concat(hex_digit);
+	}
+
+	return deviceID;
 }
 
 // Returns number of bytes sent or -1 if an error occurred
@@ -469,49 +521,44 @@ void Spark_Signal(bool on)
   }
 }
 
-int SparkClass::connect(void)
+int Internet_Test(void)
 {
-	return Spark_Connect();
-}
+	long testSocket;
+	sockaddr testSocketAddr;
+	int testResult = 0;
 
-int SparkClass::disconnect(void)
-{
-	return Spark_Disconnect();
-}
+    testSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-String SparkClass::deviceID(void)
-{
-	String deviceID;
-	char hex_digit;
-	char id[12];
-	memcpy(id, (char *)ID1, 12);
-	//OR
-	//uint8_t id[12];
-	//Get_Unique_Device_ID(id);
+    if (testSocket < 0)
+    {
+        return -1;
+    }
 
-	for (int i = 0; i < 12; ++i)
-	{
-		hex_digit = 48 + (id[i] >> 4);
-		if (57 < hex_digit)
-		{
-			hex_digit += 39;
-		}
-		deviceID.concat(hex_digit);
+	// the family is always AF_INET
+    testSocketAddr.sa_family = AF_INET;
 
-		hex_digit = 48 + (id[i] & 0xf);
-		if (57 < hex_digit)
-		{
-			hex_digit += 39;
-		}
-		deviceID.concat(hex_digit);
-	}
+	// the destination port: 53
+    testSocketAddr.sa_data[0] = 0;
+    testSocketAddr.sa_data[1] = 53;
 
-	return deviceID;
+	// the destination IP address: 8.8.8.8
+	testSocketAddr.sa_data[2] = 8;
+	testSocketAddr.sa_data[3] = 8;
+	testSocketAddr.sa_data[4] = 8;
+	testSocketAddr.sa_data[5] = 8;
+
+	testResult = connect(testSocket, &testSocketAddr, sizeof(testSocketAddr));
+
+	closesocket(testSocket);
+
+	//if connection fails, testResult returns -1
+    return testResult;
 }
 
 int Spark_Connect(void)
 {
   Spark_Disconnect();
+
   sparkSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
   if (sparkSocket < 0)

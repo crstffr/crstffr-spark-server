@@ -9,6 +9,8 @@ class Button
     private:
         int _pin;
         int _val;
+        bool _on;
+        bool _off;
         bool _down;
         long _hold;
         bool _held;

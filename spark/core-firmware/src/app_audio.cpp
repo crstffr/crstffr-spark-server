@@ -7,12 +7,12 @@
 // Definitions
 // ******************************
 
-int RGB_LED[3] = {A5, A4, A1};
-int PIN_POWER = D3;
+int RGB_LED[3] = {A4, A7, A6};
+int PIN_POWER = D2;
+int PIN_MUTE  = D3;
 int PIN_VOLUP = D4;
 int PIN_VOLDN = D5;
-int PIN_MUTE  = D6;
-int PIN_BTN1  = D7;
+int PIN_BTN1  = D6;
 
 String STATE_ON  = "1";
 String STATE_OFF = "0";
@@ -75,7 +75,7 @@ void status();
 
 MyTCP mytcp;
 LED led(RGB_LED[0], RGB_LED[1], RGB_LED[2]);
-Button button1(PIN_BTN1, INPUT_PULLDOWN);
+Button button1(PIN_BTN1, INPUT_PULLUP);
 
 void setup()
 {
@@ -85,13 +85,13 @@ void setup()
     pinMode(PIN_VOLUP, OUTPUT);
     pinMode(PIN_VOLDN, OUTPUT);
     pinMode(PIN_MUTE,  OUTPUT);
-    pinMode(PIN_BTN1, INPUT_PULLDOWN);
+    pinMode(PIN_BTN1, INPUT_PULLUP);
 
     Spark.function("connect", connect);
     Spark.function("disconnect", disconnect);
 
-    audioMuteOff();
-    audioPowerOff();
+    audioMuteOn();
+    audioPowerOn();
 }
 
 // ******************************
@@ -245,13 +245,19 @@ void audioVolumeUp() {
     if (IS_AUDIO_MUTED) {
         audioMuteOff();
     } else {
-        digitalWrite(PIN_VOLUP, HIGH);
-        digitalWrite(PIN_VOLUP, LOW);
+        for (int i=1; i <= 3; i++){
+            digitalWrite(PIN_VOLUP, LOW);
+            delay(5);
+            digitalWrite(PIN_VOLUP, HIGH);
+        }
     }
 }
 
 void audioVolumeDown() {
-    digitalWrite(PIN_VOLDN, HIGH);
-    digitalWrite(PIN_VOLDN, LOW);
+    for (int i=1; i <= 3; i++){
+        digitalWrite(PIN_VOLDN, LOW);
+        delay(5);
+        digitalWrite(PIN_VOLDN, HIGH);
+    }
 }
 

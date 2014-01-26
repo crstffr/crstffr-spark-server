@@ -65,6 +65,7 @@ public:
 	static bool controlled(void);
 	static void control(bool);
 	static void color(int, int, int);
+  static void brightness(uint8_t);
 };
 
 class SparkClass {
@@ -88,6 +89,8 @@ extern __IO uint8_t LED_Spark_Signal;
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+int Internet_Test(void);
 
 int Spark_Connect(void);
 int Spark_Disconnect(void);

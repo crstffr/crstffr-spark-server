@@ -47,7 +47,7 @@
         // Audio Player Specific Actions
         // -----------------------------------------------
 
-        // 'any audio power value 1; set audio enabled in room',
+        // 'any audio power value 1; debug room',
 
         'any audio btn1 press; togglepower',
 
