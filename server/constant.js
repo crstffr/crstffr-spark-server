@@ -44,9 +44,10 @@ module.exports = {
             DOWN:   6
         },
         COMPONENTS: {
-            BTN1:  1,
-            MUTE:  2,
-            POWER: 3
+            BTN1:   1,
+            MUTE:   2,
+            POWER:  3,
+            VOLUME: 4
         },
         COMMANDS: {
             STATUS:     'S',
@@ -67,6 +68,7 @@ module.exports = {
 
             VOLUMEUP:   'U',
             VOLUMEDOWN: 'D',
+            VOLUMELOW:  'E',
 
             TOGGLEMUTE: 'M',
             TOGGLEPOWER:'P'

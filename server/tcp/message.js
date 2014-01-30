@@ -66,31 +66,41 @@
 
             // Messages are formatted as such
             //
-            // [STX] <WHO> [ETX] <WHAT> [DLE] <HAS_VALUE> [EOT]
+            // [STX] <WHO> [ETX] <WHAT> [ETB] <HAS_VALUE> [EOT]
             //
+            // IF <WHAT> is an activity, <HAS_VALUE> is null
+            // IF <WHAT> is "=", <HAS_VALUE> should be populated
 
-            // @TODO: maybe change DLE because it seems weird
 
             string = this.trim(string);
 
+            var part1, part2, data;
             var ETX = string.indexOf(hex.ETX);
-            var DLE = string.indexOf(hex.DLE);
+            var EQ  = string.indexOf('=');
 
-            var part1 = hex.strip(string.substr(0, ETX));
-            var part2 = hex.strip(string.substr(ETX+1, DLE));
-            var part3 = hex.strip(string.substr(DLE+1));
+            if (EQ >= 0) {
 
-            part1 = util.isNumber(part1) ? util.toNumber(part1) : part1;
-            part2 = util.isNumber(part2) ? util.toNumber(part2) : part2;
-            part3 = util.isNumber(part3) ? util.toNumber(part3) : part3;
+                part1 = hex.strip(string.substr(0, EQ));
+                part2 = hex.strip(string.substr(EQ+1));
 
-            var data  = {
-                who:   part1,
-                what:  part2,
-                value: part3
-            };
+                data = {
+                    who:   util.isNumber(part1) ? util.toNumber(part1) : part1,
+                    value: util.isNumber(part2) ? util.toNumber(part2) : part2
+                };
 
-            // console.log(string, data);
+            } else {
+
+                part1 = hex.strip(string.substr(0, ETX));
+                part2 = hex.strip(string.substr(ETX+1));
+
+                data = {
+                    who:  util.isNumber(part1) ? util.toNumber(part1) : part1,
+                    what: util.isNumber(part2) ? util.toNumber(part2) : part2
+                };
+
+            }
+
+            console.log(string, data);
 
             return data;
 

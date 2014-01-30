@@ -13,10 +13,10 @@
         this.components = constant.DEVICE_AUDIO.COMPONENTS;
         this.activities = constant.DEVICE_AUDIO.ACTIVITIES;
 
-        this.set('LED', 'OFF');
-        this.set('POWER', 'OFF');
-        this.set('MUTE', 'FALSE');
-        this.set('ENABLED', 'FALSE');
+        this.set('LED',     'OFF');
+        this.set('POWER',   'ON');
+        this.set('MUTE',    'FALSE');
+        this.set('ENABLED', 'TRUE');
 
         this.publicActions = function() {
             var actions = function(){};
@@ -128,6 +128,11 @@
                     this.log('Toggle power audio...');
                     this.sendCommand(this.commands.TOGGLEPOWER);
                 }.bind(this),
+
+                volumelow: function() {
+                    this.log('Volume low audio...');
+                    this.sendCommand(this.commands.VOLUMELOW);
+                },
 
                 volumeup: function() {
                     this.log('Volume up audio...');

@@ -14,24 +14,17 @@
         'any panel btn3 press; debug room',
         'any panel btn4 press; status audio in room',
 
-
         // Panel Audio Controls in the Room
         // -----------------------------------------------
 
-        'any panel knob press and audio is disabled in room; ' +
-            'poweron audio in home ' +
-            'and mute audio in home ' +
-            'and unmute audio in room ' +
-            'and set audio enabled in home ',
+        'any panel knob press; ' +
+            'togglepower audio in room',
 
-        'any panel knob press and audio is enabled in room; ' +
-            'togglemute audio in room ',
-
-        'any panel knob turncw and audio is enabled in room; ' +
+        'any panel knob turncw; ' +
             'volumeup audio in room ' +
             'and ledcycle audio in room',
 
-        'any panel knob turnccw and audio is enabled in room; ' +
+        'any panel knob turnccw; ' +
             'volumedown audio in room ' +
             'and ledcycle audio in room',
 
@@ -39,9 +32,8 @@
         // Panel Audio Controls in the Home
         // -----------------------------------------------
 
-        'any panel knob hold and audio is enabled in home; ' +
-            'poweroff audio in home ' +
-            'and set audio disabled in home ',
+        'any panel knob hold; ' +
+            'poweroff audio in home',
 
 
         // Audio Player Specific Actions

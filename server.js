@@ -41,6 +41,7 @@
     });
 
     server.on('deviceConnected', function(device){
+        router.parseSignal(device, {who: 'connected'});
         // device.execute({command: 'status'});
     });
 

@@ -16,7 +16,7 @@
         this.state = {};
 
         this.set('LIGHT',  'DARK');
-        this.set('AUDIO',  'DISABLED');
+        this.set('AUDIO',  'ENABLED');
         this.set('MOTION', 'DISABLED');
 
         for(var name in room.devices) {
