@@ -15,12 +15,13 @@
                             name: 'Office',
                             devices: {
 
+                                /*
                                 'control1': {
                                     id: '48ff6b065067555039091087',
                                     type: constant.DEVICE_TYPE.PANEL
-                                },
+                                },*/
 
-                                'audio1': {
+                                'audio': {
                                     id: '48ff6b065067555017201587',
                                     type: constant.DEVICE_TYPE.AUDIO
                                 }

@@ -46,10 +46,11 @@
                     // there is a bug in spotify that requires me to
                     // press the skip forward button twice before it
                     // will actually skip.  so hit it again in a bit.
-
+                    /*
                     setTimeout(function(){
                         this.spotify.skipForward();
                     }.bind(this), 500);
+                    */
 
                 }.bind(this),
 
