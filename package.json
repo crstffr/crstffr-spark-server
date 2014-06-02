@@ -3,7 +3,7 @@
   "preferGlobal": true,
   "version": "0.1.0",
   "author": "crstffr <crstffr@gmail.com>",
-  "description": "Music And Sensor Kit server",
+  "description": "Music and Sensor Kit server",
   "dependencies": {
     "moment": "~2.5.0",
     "sparky": "~0.1.0",
@@ -12,9 +12,6 @@
     "q": "~0.9.7",
     "xtend": "~2.1.1",
     "microtime": "~0.5.1",
-    "request": "~2.33.0",
-    "mqtt": "~0.3.8",
-    "spark-cli": "~0.3.0",
-    "ip": "~0.3.0"
+    "mongoose": "~3.8.9"
   }
 }

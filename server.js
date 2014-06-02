@@ -1,95 +1,24 @@
 (function(undefined){
 
-    var util    = require('./server/util');
-    var tcp     = require('./server/tcp/server');
-    var user    = require('./server/system/user');
-    var router  = require('./server/router');
-    var config  = require('./server/config');
-    var behaviors = require('./behaviors');
+    // Create an MQTT client
 
-    // ***********************************************
-    // Let's start some shit!
-    // ***********************************************
+    // Create a Device object definition
+        // spark device id
+        // mqtt subscription
 
-    var user = new user(config.thisUser);
-    var devices = user.deviceManager();
-    var server = new tcp(devices);
-    var router = new router(user);
+    // Loop over all devices in config
 
-    // ***********************************************
-    // Register all behaviors with the router
-    // ***********************************************
+    // Setup mongoDB Mongoose
 
-    behaviors.forEach(function(behavior){
-        router.registerBehavior(behavior);
-    });
+    var interface = require('./lib/interface').client;
+    var spotimote = require('./lib/services/spotimote');
+    var router = require('./lib/router');
 
-    // ***********************************************
-    // In just moment connect ALL the devices
-    // ***********************************************
+    interface.subscribe('dev/+/action/#');
+    interface.subscribe('dev/+/status/#');
 
-    setTimeout(function(){
-        devices.connectAll();
-    }.bind(this), 250);
+    interface.on('message', router.parseMessage.bind(router));
 
-    // ***********************************************
-    // Pass any incoming signals to the router
-    // ***********************************************
-
-    server.on('signalReceived', function(device, signal){
-        router.parseSignal(device, signal);
-    });
-
-    server.on('deviceConnected', function(device){
-        router.parseSignal(device, {who: 'connected'});
-        // device.execute({command: 'status'});
-    });
-
-    // ***********************************************
-    // Allow user to reconnect devices from stdin
-    // ***********************************************
-
-    process.stdin.resume();
-    process.stdin.setEncoding('utf8');
-    process.stdin.on('data', function(chunk) {
-        if (chunk.trim() == 'r') {
-            devices.connectAll();
-        }
-    }.bind(this));
-
-    // ***********************************************
-    // Logging
-    // ***********************************************
-
-    server.log('*****************************************************');
-    server.log('Ready and awaiting connections on', server.ip + ':' + server.port);
-    server.log('*****************************************************');
-    server.log('Log Level:', config.logLevel);
-    server.log('TCP Connection Retries:', config.tcp.connRetries);
-    server.log('TCP Connection Timeout:', util.msReadable(config.tcp.connTimeout));
-    server.log('TCP Message Timeout:', util.msReadable(config.tcp.msgTimeout));
-    server.log('TCP KeepAlive Every:', util.msReadable(config.tcp.heartbeat));
-    server.log('TCP KeepAlive Enabled:', config.tcp.keepAlive);
-    server.log('*****************************************************');
-
-    server.on('newConnection', function _newConnection(conn) {
-
-        conn.on('identified', function(id){
-            //conn.log('Identified as', id);
-        });
-
-        conn.on('unidentified', function(error){
-            // conn.log('Not Identifed (',error,')');
-        });
-
-        conn.on('signalReceived', function(message) {
-            //conn.log(message);
-        });
-
-        conn.on('close', function(){
-            //conn.log('Closed');
-        });
-
-    });
+    interface.publish('dev/all/connect', '1');
 
 }).call(this);

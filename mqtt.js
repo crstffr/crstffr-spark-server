@@ -16,19 +16,28 @@
 
         if (topic == prefix + 'action/configure') {
             if (message == 'true') {
-                client.publish(prefix + 'setup/debug', 'false');
-                client.publish(prefix + 'setup/default/radio/station', '879');
-                client.publish(prefix + 'control/radio/station', '879');
+                //client.publish(prefix + 'setup/debug', 'false');
+                //client.publish(prefix + 'setup/default/radio/station', '879');
+                //client.publish(prefix + 'control/radio/station', '879');
+                //client.publish(prefix + 'setup/led/max/intensity', '100');
+                //client.publish(prefix + 'control/led/color', 'orange');
                 client.publish(prefix + 'control/radio/volume', '15');
-                client.publish(prefix + 'setup/led/max/intensity', '100');
-                client.publish(prefix + 'control/led/intensity', '2');
-                client.publish(prefix + 'control/led/color', 'orange');
+                client.publish(prefix + 'control/led/intensity', '1');
+            }
+        }
+
+        if (topic == prefix + 'connection/server') {
+            if (message == 'SYN') {
+                client.publish(prefix + 'connection/device', 'SYNACK');
+            }
+            if (message == 'ACK') {
+                //
             }
         }
 
         if (topic == prefix + 'action/connected') {
             if (message == 'true') {
-                client.publish(prefix + 'control/power', 'on');
+                client.publish(prefix + 'control/led/color', 'green');
             }
         }
 
@@ -53,6 +62,7 @@
     });
 
     console.log("Server on: " + ip.address());
+    client.publish('dev/all/connect', '1');
 
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
@@ -62,7 +72,9 @@
         var parts = chunk.split(' ');
         var topics = parts[0].split('/');
 
-        if (topics[0] == 'setup') {
+        if (chunk == 'connect') {
+            client.publish('dev/all/connect', '1', {qos: 1});
+        } else if (topics[0] == 'setup') {
             client.publish(prefix + parts[0], parts[1], {qos: 1});
         } else {
             client.publish(prefix + 'control/' + parts[0], parts[1], {qos: 1});
@@ -75,10 +87,10 @@
         // led yellow
         // led green
 
-        // volume low
-        // volume med
-        // volume high
-        // volume 25
+        // volume/set low
+        // volume/set med
+        // volume/set high
+        // volume/set 25
 
         // radio/station 879
         // radio/station 893
