@@ -12,6 +12,9 @@
     "q": "~0.9.7",
     "xtend": "~2.1.1",
     "microtime": "~0.5.1",
-    "mongoose": "~3.8.9"
+    "mongoose": "~3.8.9",
+    "socket.io": "~1.0.3",
+    "express": "~4.4.0",
+    "socket.io-wildcard": "~0.1.1"
   }
 }

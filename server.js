@@ -1,17 +1,8 @@
 (function(undefined){
 
-    // Create an MQTT client
-
-    // Create a Device object definition
-        // spark device id
-        // mqtt subscription
-
-    // Loop over all devices in config
-
-    // Setup mongoDB Mongoose
-
     var interface = require('./lib/interface').client;
     var spotimote = require('./lib/services/spotimote');
+    var webserver = require('./lib/services/webserver');
     var router = require('./lib/router');
 
     interface.subscribe('dev/+/action/#');
