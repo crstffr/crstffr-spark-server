@@ -44,7 +44,7 @@
 
                     angular.forEach(devices, function initDevice(device, id) {
 
-                        var html = '<div lyre-' + device.type + ' device-id="' + id + '">Hi Mom</div>';
+                        var html = '<div lyre-' + device.type + ' device-id="' + id + '"></div>';
                         var $device = Dom.create(html);
                         Dom.append($element[0], $device);
 
@@ -91,7 +91,7 @@
                     $scope.power = (components.power.state === "on");
                     $scope.volume = components.volume.level;
 
-                    setTimeout(function(){ $scope.$apply(); });
+                    setTimeout(function(){ $scope.$apply(); }, 0);
 
                 });
 

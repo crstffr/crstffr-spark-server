@@ -7,9 +7,7 @@
 
     interface.subscribe('dev/+/action/#');
     interface.subscribe('dev/+/status/#');
-
     interface.on('message', router.parseMessage.bind(router));
-
     interface.publish('dev/all/connect', '1');
 
 }).call(this);
