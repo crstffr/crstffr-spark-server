@@ -14,65 +14,33 @@
     /**
      *
      */
-    Lyre.factory('User', function() {
-
-        var root = new Firebase(Config.fburl),
-
-            //root = $firebase(ref),
-
-            user = root.child(Config.user),
-            home = user.child(Config.home),
-            rooms = home.child('rooms'),
-            devices = home.child('devices');
-
-        return {
-            home: home,
-            rooms: rooms,
-            devices: devices
-        };
-
-    });
-
-    Lyre.directive('lyreLoader', ['$compile', 'User', function($compile, User){
-
-        return {
-            link: function($scope, $element, $attrs) {
-
-                User.devices.once('value', function(data){
-
-                    var devices = data.val();
-
-                    angular.forEach(devices, function initDevice(device, id) {
-
-                        var html = '<div lyre-' + device.type + ' device-id="' + id + '"></div>';
-                        var $device = Dom.create(html);
-                        Dom.append($element[0], $device);
-
-                        $compile($element.contents())($scope);
-
-                    });
-
-
-
-                });
-
-            }
-        }
-
-    }]);
 
 
     Lyre.directive('lyreAudio', ['User', function(User){
 
         return {
-            templateUrl: 'views/audio',
+            templateUrl: 'views/audio.html',
             link: function($scope, $element, $attrs) {
+
+                var $knob = $element.find(".volume");
+
+                $knob.knob({
+                    min: 0,
+                    max: 64,
+                    change: function(value){
+                        var val = parseInt(value);
+                        device.child('components/volume/level').set(val)
+                    }
+
+                });
 
                 $scope.id = $attrs.deviceId;
 
                 var device = User.devices.child($scope.id);
 
-
+                $scope.$watch('volume', function(value){
+                    $knob.trigger('change');
+                });
 
                 $scope.$watch('power', function(value, oldvalue) {
                     if (angular.isDefined(oldvalue)) {
@@ -80,9 +48,6 @@
                         device.child('components/power/state').set(val);
                     }
                 });
-
-
-
 
                 device.on('value', function(data){
 
@@ -99,7 +64,7 @@
 
         }
 
-    }])
+    }]);
 
 
 

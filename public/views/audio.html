@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+
+    <div class="panel-heading">
+        <h3 class="panel-title clearfix">
+            <span>Audio Device</span>
+            <small class="pull-right">{{id}}</small>
+        </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="onoffswitch">
+            <input type="checkbox" class="onoffswitch-checkbox" id="{{id}}-power" value="on" ng-model="power"
+                   ng-checked="power">
+            <label class="onoffswitch-label" for="{{id}}-power">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+
+        <div class="">
+            <input type="text" class="volume" ng-model="volume" disabled>
+        </div>
+
+        <!--
+        <div class="progress progress-striped active">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{volume}}" aria-valuemin="0"
+                 ng-class="{'progress-bar-success': volume <= 40 ,
+                            'progress-bar-warning': volume > 40,
+                            'progress-bar-danger': volume > 50}"
+                 aria-valuemax="64" style="width: {{volume*100/64}}%">
+                <span>{{volume}}</span>
+            </div>
+        </div>
+        -->
+
+    </div>
+
+</div>
