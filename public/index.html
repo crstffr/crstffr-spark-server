@@ -8,10 +8,15 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
     <script src="js/lib/jquery.knob.js"></script>
 
     <script src="js/app/app.js"></script>
+    <script src="js/app/config.js"></script>
+    <script src="js/app/services/user.js"></script>
+    <script src="js/app/directives/deviceLoader.js"></script>
+    <script src="js/app/directives/devices/audio.js"></script>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +77,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="container" lyre-loader></div>
+    <div class="container" device-loader></div>
 
 </body>
 </html>

@@ -18,7 +18,7 @@
             </label>
         </div>
 
-        <div class="">
+        <div class="volume-container" ng-show="power">
             <input type="text" class="volume" ng-model="volume" disabled>
         </div>
 
@@ -37,3 +37,19 @@
     </div>
 
 </div>
+
+<style type="text/css">
+
+
+
+    .onoffswitch, .volume-container {
+        margin: 20px auto;
+    }
+
+    .volume-container > div {
+        display: block !important;
+        position: relative;
+        margin: 20px auto;
+    }
+
+</style>

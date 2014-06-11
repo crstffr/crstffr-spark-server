@@ -1,0 +1,73 @@
+
+02:25:50AM SERVER   - ***************************************
+02:25:50AM SERVER   - Web UI started at: http://lillipu1:4000
+02:25:50AM SERVER   - ***************************************
+02:25:51AM ROUTER   - Unknown device 48ff6b065067555039091087
+02:25:51AM SPOTIFY  - Valid Token: $79f9b2e0-7e12-4f04-bc3a-440ded1b5ca5
+02:25:51AM ROUTER   - Device 48ff6b065067555039091087 identified as audio
+02:25:52AM CONNECT  - < connect SYNACK
+02:25:53AM ROUTER   - > connect ACK
+02:25:53AM DEVICE   - < radio/station 879
+02:25:53AM DEVICE   - < radio/volume 15
+02:25:53AM DEVICE   - < status/all 1
+02:25:54AM DEVICE   - > status power state on
+02:25:54AM DEVICE   - > status volume level 19
+02:25:54AM DEVICE   - > status enc adjusts-volume true
+02:25:54AM DEVICE   - > status led state on
+02:25:54AM DEVICE   - > status led intensity 1
+02:25:54AM DEVICE   - > status led color green
+02:25:54AM DEVICE   - > status radio volume 15
+02:25:54AM DEVICE   - > status radio station 879
+02:26:15AM DEVICE   - < volume set 24
+02:26:18AM DEVICE   - < volume set 26
+02:26:18AM DEVICE   - < volume set 27
+02:26:18AM DEVICE   - < volume set 28
+02:26:18AM DEVICE   - < volume set 29
+02:26:18AM DEVICE   - < volume set 30
+02:26:18AM DEVICE   - < volume set 31
+02:26:18AM DEVICE   - < volume set 32
+02:26:18AM DEVICE   - < volume set 33
+02:26:18AM DEVICE   - < volume set 34
+02:26:19AM DEVICE   - < volume set 35
+02:26:19AM DEVICE   - < volume set 36
+02:26:19AM DEVICE   - < volume set 37
+02:26:19AM DEVICE   - < volume set 38
+02:26:19AM DEVICE   - < volume set 39
+02:26:19AM DEVICE   - < volume set 40
+02:26:19AM DEVICE   - < volume set 39
+02:26:20AM DEVICE   - < volume set 38
+02:26:20AM DEVICE   - < volume set 37
+02:26:20AM DEVICE   - < volume set 36
+02:26:20AM DEVICE   - < volume set 35
+02:26:20AM DEVICE   - < volume set 34
+02:26:20AM DEVICE   - < volume set 33
+02:26:20AM DEVICE   - < volume set 32
+02:26:20AM DEVICE   - < volume set 31
+02:26:20AM DEVICE   - < volume set 30
+02:26:21AM DEVICE   - < volume set 29
+02:26:21AM DEVICE   - < volume set 28
+02:35:31AM DEVICE   - < volume set 34
+02:35:32AM DEVICE   - < volume set 27
+02:35:33AM DEVICE   - < volume set 20
+02:35:34AM DEVICE   - < volume set 23
+02:35:34AM DEVICE   - < volume set 26
+02:35:35AM DEVICE   - < volume set 29
+03:04:45AM SERVER   - ***************************************
+03:04:46AM SERVER   - Web UI started at: http://lillipu1:4000
+03:04:46AM SERVER   - ***************************************
+03:04:46AM ROUTER   - Unknown device 48ff6b065067555039091087
+03:04:46AM SPOTIFY  - Valid Token: $89d10b6e-12d1-42bf-8148-b1ea8aa8e863
+03:04:46AM ROUTER   - Device 48ff6b065067555039091087 identified as audio
+03:04:48AM CONNECT  - < connect SYNACK
+03:04:48AM ROUTER   - > connect ACK
+03:04:48AM DEVICE   - < radio/station 879
+03:04:48AM DEVICE   - < radio/volume 15
+03:04:48AM DEVICE   - < status/all 1
+03:04:49AM DEVICE   - > status power state on
+03:04:49AM DEVICE   - > status volume level 29
+03:04:49AM DEVICE   - > status enc adjusts-volume true
+03:04:49AM DEVICE   - > status led state on
+03:04:49AM DEVICE   - > status led intensity 1
+03:04:49AM DEVICE   - > status led color green
+03:04:49AM DEVICE   - > status radio volume 15
+03:04:49AM DEVICE   - > status radio station 879

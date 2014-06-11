@@ -1,4 +1,4 @@
-Lyre.factory('User', function() {
+Lyre.factory('User', ['Config', function(Config) {
 
     var root = new Firebase(Config.fburl),
         user = root.child(Config.user),
@@ -12,4 +12,4 @@ Lyre.factory('User', function() {
         devices: devices
     };
 
-});
+}]);
