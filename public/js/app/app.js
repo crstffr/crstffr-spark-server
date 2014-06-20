@@ -1,2 +1,2 @@
 
-var Lyre = angular.module('Lyre', ['ngAnimate']);
+var Lyre = angular.module('Lyre', []);

@@ -71,3 +71,4022 @@
 03:04:49AM DEVICE   - > status led color green
 03:04:49AM DEVICE   - > status radio volume 15
 03:04:49AM DEVICE   - > status radio station 879
+03:05:32AM DEVICE   - > status volume level 30
+03:05:32AM DEVICE   - enc action  up
+03:05:32AM DEVICE   - > status volume level 31
+03:05:32AM DEVICE   - enc action  up
+03:05:33AM DEVICE   - > status volume level 32
+03:05:33AM DEVICE   - enc action  up
+03:05:33AM DEVICE   - > status volume level 33
+03:05:33AM DEVICE   - enc action  up
+03:05:33AM DEVICE   - > status volume level 34
+03:05:33AM DEVICE   - enc action  up
+03:05:33AM DEVICE   - > status volume level 35
+03:05:33AM DEVICE   - enc action  up
+03:05:33AM DEVICE   - > status volume level 36
+03:05:33AM DEVICE   - enc action  up
+03:05:35AM DEVICE   - > status volume level 37
+03:05:35AM DEVICE   - enc action  up
+03:05:36AM DEVICE   - > status volume level 36
+03:05:36AM DEVICE   - enc action  down
+03:05:36AM DEVICE   - > status volume level 35
+03:05:36AM DEVICE   - enc action  down
+03:05:36AM DEVICE   - > status volume level 34
+03:05:36AM DEVICE   - enc action  down
+03:05:36AM DEVICE   - > status volume level 33
+03:05:36AM DEVICE   - enc action  down
+03:05:37AM DEVICE   - > status volume level 32
+03:05:37AM DEVICE   - enc action  down
+03:05:37AM DEVICE   - > status volume level 31
+03:05:37AM DEVICE   - enc action  down
+03:05:38AM DEVICE   - > status volume level 30
+03:05:44AM DEVICE   - enc action  down
+03:11:55AM DEVICE   - < volume set 15
+03:12:02AM DEVICE   - < volume set 40
+03:12:22AM DEVICE   - < volume set 30
+03:12:23AM DEVICE   - < volume set 29
+03:12:23AM DEVICE   - < volume set 28
+03:12:24AM DEVICE   - < volume set 29
+03:12:24AM DEVICE   - < volume set 30
+03:12:24AM DEVICE   - < volume set 31
+03:12:24AM DEVICE   - < volume set 32
+03:12:24AM DEVICE   - < volume set 33
+03:12:24AM DEVICE   - < volume set 34
+03:12:25AM DEVICE   - < volume set 35
+03:12:25AM DEVICE   - < volume set 36
+03:12:25AM DEVICE   - < volume set 37
+03:12:25AM DEVICE   - < volume set 38
+03:12:25AM DEVICE   - < volume set 37
+03:12:25AM DEVICE   - < volume set 36
+03:12:26AM DEVICE   - < volume set 35
+03:12:26AM DEVICE   - < volume set 34
+03:12:26AM DEVICE   - < volume set 33
+03:12:26AM DEVICE   - < volume set 32
+03:12:26AM DEVICE   - < volume set 31
+03:12:26AM DEVICE   - < volume set 30
+03:12:27AM DEVICE   - < volume set 29
+03:12:27AM DEVICE   - < volume set 28
+03:12:27AM DEVICE   - < volume set 27
+03:12:27AM DEVICE   - < volume set 26
+03:12:27AM DEVICE   - < volume set 25
+03:12:27AM DEVICE   - < volume set 24
+03:12:28AM DEVICE   - < volume set 23
+03:12:28AM DEVICE   - < volume set 22
+03:12:28AM DEVICE   - < volume set 21
+03:12:28AM DEVICE   - < volume set 22
+03:12:28AM DEVICE   - < volume set 23
+03:12:29AM DEVICE   - < volume set 24
+03:12:29AM DEVICE   - < volume set 25
+03:12:29AM DEVICE   - < volume set 26
+03:12:29AM DEVICE   - < volume set 27
+03:12:29AM DEVICE   - < volume set 28
+03:12:29AM DEVICE   - < volume set 29
+03:12:29AM DEVICE   - < volume set 30
+03:12:30AM DEVICE   - < volume set 31
+03:12:30AM DEVICE   - < volume set 32
+03:19:09AM DEVICE   - > status volume level 31
+03:19:09AM DEVICE   - enc action  down
+03:19:09AM DEVICE   - > status volume level 30
+03:19:09AM DEVICE   - enc action  down
+03:19:09AM DEVICE   - > status volume level 29
+03:19:09AM DEVICE   - enc action  down
+03:19:09AM DEVICE   - > status volume level 28
+03:19:09AM DEVICE   - enc action  down
+03:19:09AM DEVICE   - > status volume level 27
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 26
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 25
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 24
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 23
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 22
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 21
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 20
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 19
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 18
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 17
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 16
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 15
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 14
+03:19:10AM DEVICE   - enc action  down
+03:19:10AM DEVICE   - > status volume level 13
+03:19:10AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 12
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 11
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 10
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 9
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 8
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 7
+03:19:11AM DEVICE   - enc action  down
+03:19:11AM DEVICE   - > status volume level 6
+03:19:11AM DEVICE   - enc action  down
+03:24:32AM DEVICE   - > status volume level 7
+03:24:32AM DEVICE   - enc action  up
+03:24:32AM DEVICE   - > status volume level 8
+03:24:33AM DEVICE   - enc action  up
+03:24:33AM DEVICE   - > status volume level 9
+03:24:33AM DEVICE   - enc action  up
+03:24:34AM DEVICE   - > status volume level 10
+03:24:34AM DEVICE   - enc action  up
+03:24:34AM DEVICE   - > status volume level 11
+03:24:34AM DEVICE   - enc action  up
+03:24:34AM DEVICE   - > status volume level 12
+03:24:34AM DEVICE   - enc action  up
+03:24:34AM DEVICE   - > status volume level 13
+03:24:34AM DEVICE   - enc action  up
+03:24:35AM DEVICE   - > status volume level 12
+03:24:35AM DEVICE   - enc action  down
+03:24:35AM DEVICE   - > status volume level 11
+03:24:35AM DEVICE   - enc action  down
+03:24:38AM DEVICE   - < volume set 14
+03:24:47AM DEVICE   - < volume set 18
+03:24:47AM DEVICE   - < volume set 23
+03:24:48AM DEVICE   - < power state off
+03:24:49AM DEVICE   - > status power state off
+03:24:49AM DEVICE   - > status volume level 0
+03:24:49AM DEVICE   - > status enc adjusts-volume true
+03:24:49AM DEVICE   - > status led state off
+03:24:49AM DEVICE   - > status led intensity 1
+03:24:49AM DEVICE   - > status led color red
+03:24:51AM DEVICE   - < power state on
+03:24:51AM DEVICE   - > status power state on
+03:24:51AM DEVICE   - > status volume level 20
+03:24:51AM DEVICE   - > status enc adjusts-volume true
+03:24:51AM DEVICE   - > status led state on
+03:24:52AM DEVICE   - > status led intensity 1
+03:24:52AM DEVICE   - > status led color red
+03:24:56AM DEVICE   - < volume set 63
+03:24:57AM DEVICE   - < volume set 62
+03:24:57AM DEVICE   - < volume set 61
+03:24:57AM DEVICE   - < volume set 60
+03:24:57AM DEVICE   - < volume set 59
+03:24:57AM DEVICE   - < volume set 58
+03:24:57AM DEVICE   - < volume set 57
+03:24:57AM DEVICE   - < volume set 56
+03:24:57AM DEVICE   - < volume set 55
+03:24:57AM DEVICE   - < volume set 54
+03:24:57AM DEVICE   - < volume set 53
+03:24:57AM DEVICE   - < volume set 52
+03:24:57AM DEVICE   - < volume set 51
+03:24:57AM DEVICE   - < volume set 50
+03:24:57AM DEVICE   - < volume set 49
+03:24:57AM DEVICE   - < volume set 48
+03:24:57AM DEVICE   - < volume set 47
+03:24:57AM DEVICE   - < volume set 46
+03:24:57AM DEVICE   - < volume set 45
+03:24:58AM DEVICE   - < volume set 44
+03:24:58AM DEVICE   - < volume set 43
+03:24:58AM DEVICE   - < volume set 42
+03:24:58AM DEVICE   - < volume set 41
+03:24:58AM DEVICE   - < volume set 40
+03:24:58AM DEVICE   - < volume set 39
+03:24:58AM DEVICE   - < volume set 38
+03:24:58AM DEVICE   - < volume set 37
+03:24:58AM DEVICE   - < volume set 36
+03:24:58AM DEVICE   - < volume set 35
+03:24:58AM DEVICE   - < volume set 34
+03:24:58AM DEVICE   - < volume set 33
+03:24:58AM DEVICE   - < volume set 32
+03:24:58AM DEVICE   - < volume set 31
+03:24:58AM DEVICE   - < volume set 30
+03:24:58AM DEVICE   - < volume set 29
+03:24:58AM DEVICE   - < volume set 28
+03:24:58AM DEVICE   - < volume set 27
+03:24:58AM DEVICE   - < volume set 26
+03:24:58AM DEVICE   - < volume set 25
+03:24:58AM DEVICE   - < volume set 24
+03:24:58AM DEVICE   - < volume set 23
+03:24:58AM DEVICE   - < volume set 22
+03:24:58AM DEVICE   - < volume set 21
+03:24:59AM DEVICE   - < volume set 29
+03:24:59AM DEVICE   - < volume set 30
+03:24:59AM DEVICE   - < volume set 31
+03:24:59AM DEVICE   - < volume set 32
+03:24:59AM DEVICE   - < volume set 33
+03:24:59AM DEVICE   - < volume set 32
+03:25:01AM DEVICE   - < volume set 31
+03:25:01AM DEVICE   - < volume set 30
+03:25:01AM DEVICE   - < volume set 29
+03:25:01AM DEVICE   - < volume set 28
+03:25:02AM DEVICE   - < volume set 27
+03:25:02AM DEVICE   - < volume set 26
+03:25:02AM DEVICE   - < volume set 25
+03:25:02AM DEVICE   - < volume set 24
+03:25:02AM DEVICE   - < volume set 23
+03:25:02AM DEVICE   - < volume set 22
+03:25:02AM DEVICE   - < volume set 21
+03:25:02AM DEVICE   - < volume set 20
+03:25:02AM DEVICE   - < volume set 19
+03:25:02AM DEVICE   - < volume set 18
+03:25:03AM DEVICE   - < volume set 17
+03:25:03AM DEVICE   - < volume set 16
+03:25:03AM DEVICE   - < volume set 15
+03:25:03AM DEVICE   - < volume set 14
+03:25:03AM DEVICE   - < volume set 13
+03:25:03AM DEVICE   - < volume set 12
+03:25:03AM DEVICE   - < volume set 11
+03:25:03AM DEVICE   - < volume set 10
+03:25:03AM DEVICE   - < volume set 9
+03:25:03AM DEVICE   - < volume set 8
+03:25:03AM DEVICE   - < volume set 7
+03:25:03AM DEVICE   - < volume set 6
+03:25:20AM DEVICE   - < volume set 7
+03:25:20AM DEVICE   - < volume set 8
+03:25:20AM DEVICE   - < volume set 9
+03:25:21AM DEVICE   - < volume set 10
+03:25:21AM DEVICE   - < volume set 11
+03:25:21AM DEVICE   - < volume set 12
+03:25:21AM DEVICE   - < volume set 13
+03:25:21AM DEVICE   - < volume set 14
+03:25:21AM DEVICE   - < volume set 15
+03:25:21AM DEVICE   - < volume set 16
+03:25:21AM DEVICE   - < volume set 17
+03:25:21AM DEVICE   - < volume set 18
+03:25:21AM DEVICE   - < volume set 19
+03:25:21AM DEVICE   - < volume set 20
+03:25:21AM DEVICE   - < volume set 21
+03:25:21AM DEVICE   - < volume set 22
+03:25:21AM DEVICE   - < volume set 23
+03:25:22AM DEVICE   - < volume set 24
+03:25:22AM DEVICE   - < volume set 25
+03:25:22AM DEVICE   - < volume set 26
+03:25:22AM DEVICE   - < volume set 27
+03:25:22AM DEVICE   - < volume set 28
+03:25:23AM DEVICE   - < volume set 29
+03:25:23AM DEVICE   - < volume set 30
+03:25:23AM DEVICE   - < volume set 31
+03:25:23AM DEVICE   - < volume set 30
+03:25:23AM DEVICE   - < volume set 29
+03:25:23AM DEVICE   - < volume set 28
+03:25:23AM DEVICE   - < volume set 27
+03:25:24AM DEVICE   - < volume set 26
+03:25:24AM DEVICE   - < volume set 25
+03:25:24AM DEVICE   - < volume set 24
+03:25:24AM DEVICE   - < volume set 23
+03:25:24AM DEVICE   - < volume set 22
+03:25:24AM DEVICE   - < volume set 21
+03:25:24AM DEVICE   - < volume set 20
+03:25:24AM DEVICE   - < volume set 19
+03:25:24AM DEVICE   - < volume set 18
+03:25:25AM DEVICE   - < volume set 17
+03:25:25AM DEVICE   - < volume set 16
+03:25:25AM DEVICE   - < volume set 15
+03:25:25AM DEVICE   - < volume set 14
+03:25:25AM DEVICE   - < volume set 13
+03:25:25AM DEVICE   - < volume set 12
+03:25:25AM DEVICE   - < volume set 11
+03:25:25AM DEVICE   - < volume set 10
+03:25:25AM DEVICE   - < volume set 9
+03:25:25AM DEVICE   - < volume set 8
+03:25:25AM DEVICE   - < volume set 7
+03:25:25AM DEVICE   - < volume set 6
+03:25:26AM DEVICE   - < volume set 5
+03:25:27AM DEVICE   - < volume set 4
+03:25:28AM DEVICE   - < volume set 5
+03:25:28AM DEVICE   - < volume set 6
+03:25:28AM DEVICE   - < volume set 7
+03:25:28AM DEVICE   - < volume set 8
+03:25:28AM DEVICE   - < volume set 9
+03:25:28AM DEVICE   - < volume set 10
+03:25:28AM DEVICE   - < volume set 11
+03:25:28AM DEVICE   - < volume set 12
+03:25:28AM DEVICE   - < volume set 13
+03:25:29AM DEVICE   - < volume set 14
+03:25:29AM DEVICE   - < volume set 15
+03:25:29AM DEVICE   - < volume set 16
+03:25:55AM DEVICE   - < volume set 32
+03:25:59AM DEVICE   - < volume set 21
+03:26:00AM DEVICE   - < volume set 20
+03:28:26AM ROUTER   - > connect SYN
+03:28:26AM CONNECT  - < connect SYNACK
+03:28:26AM ROUTER   - > connect ACK
+03:28:26AM DEVICE   - < status/all 1
+03:28:27AM DEVICE   - > status power state off
+03:28:27AM DEVICE   - > status volume level 0
+03:28:27AM DEVICE   - > status enc adjusts-volume true
+03:28:27AM DEVICE   - > status led state off
+03:28:27AM DEVICE   - > status led intensity 1
+03:28:27AM DEVICE   - > status led color green
+03:28:27AM DEVICE   - > status radio volume 15
+03:28:27AM DEVICE   - > status radio station 879
+03:30:35AM DEVICE   - enc-button action  press
+03:30:35AM DEVICE   - < power state toggle
+03:30:36AM DEVICE   - > status power state on
+03:30:36AM DEVICE   - > status volume level 20
+03:30:36AM DEVICE   - > status enc adjusts-volume true
+03:30:36AM DEVICE   - > status led state on
+03:30:36AM DEVICE   - > status led intensity 1
+03:30:36AM DEVICE   - > status led color green
+03:30:43AM DEVICE   - enc-button action  press
+03:30:43AM DEVICE   - < power state toggle
+03:30:43AM DEVICE   - > status power state off
+03:30:43AM DEVICE   - > status volume level 0
+03:30:44AM DEVICE   - > status enc adjusts-volume true
+03:30:44AM DEVICE   - > status led state off
+03:30:44AM DEVICE   - > status led intensity 1
+03:30:44AM DEVICE   - > status led color green
+03:31:04AM DEVICE   - enc-button action  press
+03:31:04AM DEVICE   - < power state toggle
+03:31:05AM DEVICE   - > status power state on
+03:31:05AM DEVICE   - > status volume level 20
+03:31:05AM DEVICE   - > status enc adjusts-volume true
+03:31:05AM DEVICE   - > status led state on
+03:31:05AM DEVICE   - > status led intensity 1
+03:31:05AM DEVICE   - > status led color green
+03:32:44AM DEVICE   - > status volume level 19
+03:32:44AM DEVICE   - enc action  down
+03:32:44AM DEVICE   - > status volume level 18
+03:32:44AM DEVICE   - enc action  down
+03:32:45AM DEVICE   - > status volume level 19
+03:32:45AM DEVICE   - enc action  up
+03:32:46AM DEVICE   - > status volume level 20
+03:32:46AM DEVICE   - enc action  up
+03:32:46AM DEVICE   - > status volume level 21
+03:32:46AM DEVICE   - enc action  up
+03:32:46AM DEVICE   - > status volume level 22
+03:32:47AM DEVICE   - enc action  up
+03:32:47AM DEVICE   - > status volume level 23
+03:32:47AM DEVICE   - enc action  up
+03:32:48AM DEVICE   - > status volume level 22
+03:32:48AM DEVICE   - enc action  down
+03:37:57AM DEVICE   - misc-button action  press
+03:37:57AM SPOTIFY  - Skip Forward...
+03:37:57AM SPOTIFY  - Skip Foward complete
+03:38:01AM DEVICE   - misc-button action  press
+03:38:01AM SPOTIFY  - Skip Forward...
+03:38:01AM SPOTIFY  - Skip Foward complete
+03:39:06AM DEVICE   - > status volume level 23
+03:39:06AM DEVICE   - enc action  up
+03:39:08AM DEVICE   - > status volume level 24
+03:39:08AM DEVICE   - enc action  up
+03:39:11AM DEVICE   - > status volume level 25
+03:39:11AM DEVICE   - enc action  up
+03:39:12AM DEVICE   - led-button action  press
+03:39:12AM DEVICE   - < status/all 1
+03:39:12AM DEVICE   - > status power state on
+03:39:12AM DEVICE   - > status volume level 25
+03:39:12AM DEVICE   - > status enc adjusts-volume true
+03:39:12AM DEVICE   - > status led state on
+03:39:12AM DEVICE   - > status led intensity 1
+03:39:12AM DEVICE   - > status led color green
+03:39:12AM DEVICE   - > status radio volume 15
+03:39:12AM DEVICE   - > status radio station 879
+03:39:13AM DEVICE   - led-button action  press
+03:39:13AM DEVICE   - < status/all 1
+03:39:14AM DEVICE   - > status power state on
+03:39:14AM DEVICE   - > status volume level 25
+03:39:14AM DEVICE   - > status enc adjusts-volume true
+03:39:14AM DEVICE   - > status led state on
+03:39:14AM DEVICE   - > status led intensity 1
+03:39:14AM DEVICE   - > status led color green
+03:39:14AM DEVICE   - > status radio volume 15
+03:39:14AM DEVICE   - > status radio station 879
+03:44:22AM DEVICE   - > status volume level 24
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 23
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 22
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 21
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 20
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 19
+03:44:22AM DEVICE   - enc action  down
+03:44:22AM DEVICE   - > status volume level 18
+03:44:23AM DEVICE   - enc action  down
+03:44:36AM DEVICE   - misc-button action  press
+03:44:36AM SPOTIFY  - Skip Forward...
+03:44:36AM SPOTIFY  - Skip Foward complete
+03:45:58AM DEVICE   - < volume set 20
+03:45:59AM DEVICE   - < volume set 22
+03:46:00AM DEVICE   - < volume set 23
+03:46:00AM DEVICE   - < volume set 24
+03:46:00AM DEVICE   - < volume set 25
+03:46:01AM DEVICE   - < volume set 26
+03:46:01AM DEVICE   - < volume set 27
+03:46:01AM DEVICE   - < volume set 28
+03:46:01AM DEVICE   - < volume set 29
+03:46:01AM DEVICE   - < volume set 30
+03:46:01AM DEVICE   - < volume set 31
+03:46:02AM DEVICE   - < volume set 32
+03:46:02AM DEVICE   - < volume set 31
+03:46:02AM DEVICE   - < volume set 30
+03:46:02AM DEVICE   - < volume set 29
+03:46:02AM DEVICE   - < volume set 28
+03:46:02AM DEVICE   - < volume set 27
+03:46:02AM DEVICE   - < volume set 26
+03:46:02AM DEVICE   - < volume set 25
+03:46:02AM DEVICE   - < volume set 24
+03:46:03AM DEVICE   - < volume set 23
+03:46:03AM DEVICE   - < volume set 22
+03:46:03AM DEVICE   - < volume set 21
+03:46:03AM DEVICE   - < volume set 20
+03:46:03AM DEVICE   - < volume set 19
+03:46:03AM DEVICE   - < volume set 18
+03:46:03AM DEVICE   - < volume set 17
+03:46:04AM DEVICE   - < volume set 16
+03:46:04AM DEVICE   - < volume set 15
+03:46:04AM DEVICE   - < volume set 16
+03:46:05AM DEVICE   - < volume set 17
+03:46:05AM DEVICE   - < volume set 18
+03:46:05AM DEVICE   - < volume set 19
+03:46:05AM DEVICE   - < volume set 20
+03:46:05AM DEVICE   - < volume set 21
+03:46:06AM DEVICE   - < volume set 22
+03:46:06AM DEVICE   - < volume set 23
+03:46:07AM DEVICE   - < volume set 22
+03:46:07AM DEVICE   - < volume set 21
+03:46:07AM DEVICE   - < volume set 20
+03:48:38AM DEVICE   - < volume set 21
+03:48:38AM DEVICE   - < volume set 22
+03:48:38AM DEVICE   - < volume set 23
+03:48:38AM DEVICE   - < volume set 24
+03:48:38AM DEVICE   - < volume set 25
+03:48:38AM DEVICE   - < volume set 26
+03:48:38AM DEVICE   - < volume set 27
+03:48:38AM DEVICE   - < volume set 28
+03:48:38AM DEVICE   - < volume set 29
+03:48:39AM DEVICE   - < volume set 30
+03:48:39AM DEVICE   - < volume set 31
+03:48:40AM DEVICE   - < volume set 30
+03:48:40AM DEVICE   - < volume set 29
+03:48:40AM DEVICE   - < volume set 28
+03:48:40AM DEVICE   - < volume set 27
+03:48:40AM DEVICE   - < volume set 26
+03:48:40AM DEVICE   - < volume set 25
+03:48:41AM DEVICE   - < volume set 24
+03:48:41AM DEVICE   - < volume set 23
+03:48:41AM DEVICE   - < volume set 22
+03:48:47AM DEVICE   - < power state off
+03:48:47AM DEVICE   - > status power state off
+03:48:47AM DEVICE   - > status volume level 0
+03:48:47AM DEVICE   - > status enc adjusts-volume true
+03:48:47AM DEVICE   - > status led state off
+03:48:47AM DEVICE   - > status led intensity 1
+03:48:47AM DEVICE   - > status led color green
+03:48:49AM DEVICE   - < power state on
+03:48:50AM DEVICE   - > status power state on
+03:48:50AM DEVICE   - > status volume level 20
+03:48:50AM DEVICE   - > status enc adjusts-volume true
+03:48:50AM DEVICE   - > status led state on
+03:48:50AM DEVICE   - > status led intensity 1
+03:48:50AM DEVICE   - > status led color green
+03:49:02AM DEVICE   - < volume set 21
+03:49:02AM DEVICE   - < volume set 22
+03:49:02AM DEVICE   - < volume set 23
+03:49:02AM DEVICE   - < volume set 24
+03:49:02AM DEVICE   - < volume set 25
+03:49:03AM DEVICE   - < volume set 26
+03:49:03AM DEVICE   - < volume set 27
+03:49:03AM DEVICE   - < volume set 28
+03:49:03AM DEVICE   - < volume set 29
+03:49:04AM DEVICE   - < volume set 28
+03:49:04AM DEVICE   - < volume set 27
+03:49:04AM DEVICE   - < volume set 26
+03:49:04AM DEVICE   - < volume set 25
+03:49:05AM DEVICE   - < volume set 24
+03:49:05AM DEVICE   - < volume set 23
+03:49:05AM DEVICE   - < volume set 22
+03:49:05AM DEVICE   - < volume set 21
+03:49:05AM DEVICE   - < volume set 20
+03:49:05AM DEVICE   - < volume set 19
+03:49:05AM DEVICE   - < volume set 18
+03:49:05AM DEVICE   - < volume set 17
+03:49:05AM DEVICE   - < volume set 16
+03:49:05AM DEVICE   - < volume set 15
+03:49:06AM DEVICE   - < volume set 14
+03:49:06AM DEVICE   - < volume set 13
+03:49:06AM DEVICE   - < volume set 14
+03:49:06AM DEVICE   - < volume set 15
+03:49:06AM DEVICE   - < volume set 16
+03:49:06AM DEVICE   - < volume set 17
+03:49:06AM DEVICE   - < volume set 18
+03:49:07AM DEVICE   - < volume set 19
+03:49:07AM DEVICE   - < volume set 20
+03:49:07AM DEVICE   - < volume set 21
+03:49:07AM DEVICE   - < volume set 22
+03:49:07AM DEVICE   - < volume set 23
+03:49:07AM DEVICE   - < volume set 24
+03:49:07AM DEVICE   - < volume set 25
+03:49:09AM DEVICE   - < volume set 31
+03:49:11AM DEVICE   - < volume set 23
+03:52:33AM DEVICE   - > status volume level 22
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 21
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 20
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 19
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 18
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 17
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 16
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 15
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 14
+03:52:33AM DEVICE   - enc action  down
+03:52:33AM DEVICE   - > status volume level 13
+03:52:34AM DEVICE   - enc action  down
+03:52:34AM DEVICE   - > status volume level 12
+03:52:34AM DEVICE   - enc action  down
+03:52:34AM DEVICE   - > status volume level 13
+03:52:34AM DEVICE   - enc action  up
+03:52:34AM DEVICE   - > status volume level 14
+03:52:34AM DEVICE   - enc action  up
+03:52:34AM DEVICE   - > status volume level 15
+03:52:34AM DEVICE   - enc action  up
+03:52:34AM DEVICE   - > status volume level 16
+03:52:34AM DEVICE   - enc action  up
+03:52:34AM DEVICE   - > status volume level 17
+03:52:34AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 18
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 19
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 20
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 21
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 22
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 23
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 24
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 25
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 26
+03:52:35AM DEVICE   - enc action  up
+03:52:35AM DEVICE   - > status volume level 27
+03:52:36AM DEVICE   - enc action  up
+03:52:36AM DEVICE   - > status volume level 28
+03:52:36AM DEVICE   - enc action  up
+03:52:36AM DEVICE   - > status volume level 29
+03:52:36AM DEVICE   - enc action  up
+03:52:36AM DEVICE   - > status volume level 30
+03:52:36AM DEVICE   - enc action  up
+03:52:36AM DEVICE   - > status volume level 31
+03:52:36AM DEVICE   - enc action  up
+03:52:37AM DEVICE   - > status volume level 30
+03:52:37AM DEVICE   - enc action  down
+03:52:37AM DEVICE   - > status volume level 29
+03:52:37AM DEVICE   - enc action  down
+03:52:37AM DEVICE   - > status volume level 28
+03:52:37AM DEVICE   - enc action  down
+03:52:47AM DEVICE   - < volume set 22
+03:52:48AM DEVICE   - < volume set 14
+03:52:50AM DEVICE   - < volume set 8
+03:52:51AM DEVICE   - < volume set 7
+03:52:52AM DEVICE   - < volume set 8
+03:52:52AM DEVICE   - < volume set 9
+03:52:52AM DEVICE   - < volume set 10
+03:52:52AM DEVICE   - < volume set 11
+03:52:52AM DEVICE   - < volume set 12
+03:52:52AM DEVICE   - < volume set 14
+03:52:52AM DEVICE   - < volume set 15
+03:52:52AM DEVICE   - < volume set 16
+03:52:52AM DEVICE   - < volume set 17
+03:52:52AM DEVICE   - < volume set 18
+03:52:52AM DEVICE   - < volume set 19
+03:52:52AM DEVICE   - < volume set 20
+03:52:52AM DEVICE   - < volume set 21
+03:52:52AM DEVICE   - < volume set 22
+03:52:52AM DEVICE   - < volume set 23
+03:52:52AM DEVICE   - < volume set 24
+03:52:52AM DEVICE   - < volume set 25
+03:52:53AM DEVICE   - < volume set 26
+03:52:53AM DEVICE   - < volume set 27
+03:52:53AM DEVICE   - < volume set 28
+03:52:53AM DEVICE   - < volume set 29
+03:52:53AM DEVICE   - < volume set 30
+03:52:54AM DEVICE   - < volume set 31
+03:52:54AM DEVICE   - < volume set 32
+03:53:03AM DEVICE   - < volume set 31
+03:53:03AM DEVICE   - < volume set 30
+03:53:03AM DEVICE   - < volume set 27
+03:53:03AM DEVICE   - < volume set 26
+03:53:03AM DEVICE   - < volume set 25
+03:53:03AM DEVICE   - < volume set 24
+03:53:03AM DEVICE   - < volume set 23
+03:53:03AM DEVICE   - < volume set 22
+03:53:03AM DEVICE   - < volume set 21
+03:53:03AM DEVICE   - < volume set 20
+03:53:03AM DEVICE   - < volume set 19
+03:53:03AM DEVICE   - < volume set 18
+03:53:03AM DEVICE   - < volume set 17
+03:53:03AM DEVICE   - < volume set 16
+03:53:04AM DEVICE   - < volume set 15
+03:53:04AM DEVICE   - < volume set 14
+03:53:04AM DEVICE   - < volume set 13
+03:53:04AM DEVICE   - < volume set 12
+03:53:04AM DEVICE   - < volume set 11
+03:53:09AM DEVICE   - < volume set 7
+03:53:09AM DEVICE   - < volume set 8
+03:53:09AM DEVICE   - < volume set 9
+03:53:09AM DEVICE   - < volume set 10
+03:53:09AM DEVICE   - < volume set 11
+03:53:09AM DEVICE   - < volume set 12
+03:53:09AM DEVICE   - < volume set 13
+03:53:09AM DEVICE   - < volume set 14
+03:53:09AM DEVICE   - < volume set 15
+03:53:09AM DEVICE   - < volume set 16
+03:53:09AM DEVICE   - < volume set 17
+03:53:10AM DEVICE   - < volume set 18
+03:53:10AM DEVICE   - < volume set 19
+03:53:10AM DEVICE   - < volume set 20
+03:53:10AM DEVICE   - < volume set 21
+03:53:10AM DEVICE   - < volume set 22
+03:53:10AM DEVICE   - < volume set 23
+03:53:10AM DEVICE   - < volume set 24
+03:53:10AM DEVICE   - < volume set 25
+03:53:11AM DEVICE   - < volume set 26
+03:53:11AM DEVICE   - < volume set 27
+03:53:11AM DEVICE   - < volume set 28
+03:53:11AM DEVICE   - < volume set 27
+03:53:12AM DEVICE   - < volume set 26
+03:53:12AM DEVICE   - < volume set 25
+03:53:12AM DEVICE   - < volume set 24
+03:53:12AM DEVICE   - < volume set 23
+03:53:12AM DEVICE   - < volume set 22
+03:53:12AM DEVICE   - < volume set 21
+03:53:12AM DEVICE   - < volume set 20
+03:53:12AM DEVICE   - < volume set 19
+03:53:12AM DEVICE   - < volume set 18
+03:53:13AM DEVICE   - < volume set 17
+03:53:13AM DEVICE   - < volume set 16
+03:53:13AM DEVICE   - < volume set 15
+03:53:13AM DEVICE   - < volume set 14
+03:53:19AM DEVICE   - < volume set 16
+03:53:19AM DEVICE   - < volume set 17
+03:53:19AM DEVICE   - < volume set 18
+03:53:19AM DEVICE   - < volume set 19
+03:53:19AM DEVICE   - < volume set 20
+03:53:19AM DEVICE   - < volume set 21
+03:53:20AM DEVICE   - < volume set 22
+03:53:20AM DEVICE   - < volume set 23
+03:53:21AM DEVICE   - < volume set 24
+03:53:24AM DEVICE   - < volume set 26
+03:53:24AM DEVICE   - < volume set 25
+03:53:24AM DEVICE   - < volume set 24
+03:53:24AM DEVICE   - < volume set 23
+03:53:24AM DEVICE   - < volume set 22
+03:53:24AM DEVICE   - < volume set 21
+03:53:24AM DEVICE   - < volume set 20
+03:53:24AM DEVICE   - < volume set 19
+03:53:24AM DEVICE   - < volume set 18
+03:53:24AM DEVICE   - < volume set 17
+03:53:25AM DEVICE   - < volume set 16
+03:53:25AM DEVICE   - < volume set 15
+03:53:25AM DEVICE   - < volume set 14
+03:53:27AM DEVICE   - < volume set 15
+03:53:27AM DEVICE   - < volume set 16
+03:53:27AM DEVICE   - < volume set 17
+03:53:27AM DEVICE   - < volume set 18
+03:53:27AM DEVICE   - < volume set 19
+03:53:27AM DEVICE   - < volume set 20
+03:53:27AM DEVICE   - < volume set 21
+03:53:27AM DEVICE   - < volume set 22
+03:53:27AM DEVICE   - < volume set 23
+03:53:28AM DEVICE   - < volume set 24
+03:53:28AM DEVICE   - < volume set 25
+03:53:29AM DEVICE   - < volume set 27
+03:53:29AM DEVICE   - < volume set 26
+03:53:29AM DEVICE   - < volume set 25
+03:53:29AM DEVICE   - < volume set 24
+03:53:29AM DEVICE   - < volume set 23
+03:53:29AM DEVICE   - < volume set 22
+03:53:30AM DEVICE   - < volume set 21
+03:53:30AM DEVICE   - < volume set 20
+03:53:30AM DEVICE   - < volume set 19
+03:53:30AM DEVICE   - < volume set 18
+03:53:30AM DEVICE   - < volume set 17
+03:53:30AM DEVICE   - < volume set 16
+03:54:08AM DEVICE   - < volume set 19
+03:54:08AM DEVICE   - < volume set 20
+03:54:08AM DEVICE   - < volume set 21
+03:54:08AM DEVICE   - < volume set 22
+03:54:08AM DEVICE   - < volume set 23
+03:54:08AM DEVICE   - < volume set 24
+03:54:09AM DEVICE   - < volume set 25
+03:54:09AM DEVICE   - < volume set 26
+03:54:09AM DEVICE   - < volume set 27
+03:54:09AM DEVICE   - < volume set 28
+03:54:09AM DEVICE   - < volume set 29
+03:54:10AM DEVICE   - < volume set 30
+03:54:10AM DEVICE   - < volume set 31
+03:54:10AM DEVICE   - < volume set 30
+03:54:11AM DEVICE   - < volume set 29
+03:54:11AM DEVICE   - < volume set 27
+03:54:11AM DEVICE   - < volume set 26
+03:54:11AM DEVICE   - < volume set 25
+03:54:11AM DEVICE   - < volume set 24
+03:54:11AM DEVICE   - < volume set 23
+03:54:11AM DEVICE   - < volume set 22
+03:54:11AM DEVICE   - < volume set 21
+03:54:11AM DEVICE   - < volume set 20
+04:01:00AM DEVICE   - < volume set 23
+04:01:01AM DEVICE   - < volume set 19
+04:01:02AM DEVICE   - < volume set 16
+04:01:03AM DEVICE   - < volume set 14
+04:01:04AM DEVICE   - < volume set 11
+04:01:05AM DEVICE   - < volume set 8
+04:01:05AM DEVICE   - < volume set 5
+04:01:06AM DEVICE   - < volume set 3
+04:01:08AM DEVICE   - < volume set 6
+04:01:08AM DEVICE   - < volume set 7
+04:01:08AM DEVICE   - < volume set 8
+04:01:08AM DEVICE   - < volume set 9
+04:01:08AM DEVICE   - < volume set 10
+04:01:08AM DEVICE   - < volume set 11
+04:01:08AM DEVICE   - < volume set 12
+04:01:08AM DEVICE   - < volume set 13
+04:01:08AM DEVICE   - < volume set 14
+04:01:09AM DEVICE   - < volume set 15
+04:01:09AM DEVICE   - < volume set 16
+04:01:09AM DEVICE   - < volume set 15
+04:01:09AM DEVICE   - < volume set 14
+04:01:09AM DEVICE   - < volume set 13
+04:01:09AM DEVICE   - < volume set 12
+04:01:09AM DEVICE   - < volume set 11
+04:01:09AM DEVICE   - < volume set 10
+04:01:09AM DEVICE   - < volume set 9
+04:01:10AM DEVICE   - < volume set 8
+04:01:10AM DEVICE   - < volume set 7
+04:01:10AM DEVICE   - < volume set 6
+04:01:10AM DEVICE   - < volume set 5
+04:01:10AM DEVICE   - < volume set 4
+04:01:11AM DEVICE   - < volume set 3
+04:01:13AM DEVICE   - < volume set 2
+04:01:14AM DEVICE   - < volume set 0
+04:01:27AM DEVICE   - < volume set 3
+04:01:28AM DEVICE   - < volume set 8
+04:01:29AM DEVICE   - < volume set 13
+04:01:30AM DEVICE   - < volume set 16
+04:01:33AM DEVICE   - < volume set 9
+04:01:33AM DEVICE   - < volume set 4
+04:01:34AM DEVICE   - < volume set 3
+04:01:37AM DEVICE   - < volume set 7
+04:01:38AM DEVICE   - < volume set 11
+04:01:39AM DEVICE   - < volume set 14
+04:01:40AM DEVICE   - < volume set 17
+04:01:41AM DEVICE   - < volume set 19
+04:01:43AM DEVICE   - < volume set 21
+04:01:43AM DEVICE   - < volume set 22
+04:01:44AM DEVICE   - < volume set 23
+04:01:44AM DEVICE   - < volume set 24
+04:01:44AM DEVICE   - < volume set 25
+04:01:45AM DEVICE   - < volume set 26
+04:01:45AM DEVICE   - < volume set 25
+04:01:46AM DEVICE   - < volume set 24
+04:01:46AM DEVICE   - < volume set 23
+04:01:46AM DEVICE   - < volume set 22
+04:01:46AM DEVICE   - < volume set 21
+04:01:46AM DEVICE   - < volume set 20
+04:01:46AM DEVICE   - < volume set 19
+04:01:46AM DEVICE   - < volume set 18
+04:01:47AM DEVICE   - < volume set 17
+04:01:47AM DEVICE   - < volume set 16
+04:01:47AM DEVICE   - < volume set 15
+04:01:47AM DEVICE   - < volume set 14
+04:01:47AM DEVICE   - < volume set 13
+04:01:48AM DEVICE   - < volume set 12
+04:01:48AM DEVICE   - < volume set 11
+04:01:49AM DEVICE   - < volume set 10
+04:01:49AM DEVICE   - < volume set 9
+04:01:50AM DEVICE   - < volume set 5
+04:01:51AM DEVICE   - < volume set 8
+04:01:51AM DEVICE   - < volume set 9
+04:01:51AM DEVICE   - < volume set 10
+04:01:51AM DEVICE   - < volume set 11
+04:01:51AM DEVICE   - < volume set 12
+04:01:51AM DEVICE   - < volume set 13
+04:01:51AM DEVICE   - < volume set 14
+04:01:51AM DEVICE   - < volume set 15
+04:01:51AM DEVICE   - < volume set 16
+04:01:51AM DEVICE   - < volume set 17
+04:01:51AM DEVICE   - < volume set 18
+04:01:52AM DEVICE   - < volume set 19
+04:02:06AM DEVICE   - < volume set 6
+04:02:07AM DEVICE   - < volume set 11
+04:02:07AM DEVICE   - < volume set 12
+04:02:07AM DEVICE   - < volume set 13
+04:02:08AM DEVICE   - < volume set 14
+04:02:08AM DEVICE   - < volume set 15
+04:02:08AM DEVICE   - < volume set 16
+04:02:08AM DEVICE   - < volume set 17
+04:02:08AM DEVICE   - < volume set 18
+04:02:08AM DEVICE   - < volume set 19
+04:02:08AM DEVICE   - < volume set 20
+04:02:08AM DEVICE   - < volume set 21
+04:02:08AM DEVICE   - < volume set 22
+04:02:09AM DEVICE   - < volume set 23
+04:02:10AM DEVICE   - < volume set 25
+04:02:10AM DEVICE   - < volume set 22
+04:02:11AM DEVICE   - < volume set 18
+04:02:11AM DEVICE   - < volume set 15
+04:02:11AM DEVICE   - < volume set 14
+04:02:12AM DEVICE   - < volume set 10
+04:02:12AM DEVICE   - < volume set 8
+04:02:13AM DEVICE   - < volume set 12
+04:02:14AM DEVICE   - < volume set 16
+04:02:15AM DEVICE   - < volume set 20
+04:02:15AM DEVICE   - < volume set 16
+04:02:15AM DEVICE   - < volume set 11
+04:02:16AM DEVICE   - < volume set 8
+04:02:16AM DEVICE   - < volume set 5
+04:02:17AM DEVICE   - < volume set 10
+04:02:18AM DEVICE   - < volume set 14
+04:02:18AM DEVICE   - < volume set 16
+04:02:19AM DEVICE   - < volume set 17
+04:02:19AM DEVICE   - < volume set 18
+04:02:19AM DEVICE   - < volume set 17
+04:02:20AM DEVICE   - < volume set 14
+04:02:20AM DEVICE   - < volume set 11
+04:02:20AM DEVICE   - < volume set 9
+04:02:21AM DEVICE   - < volume set 6
+04:02:21AM DEVICE   - < volume set 4
+04:02:22AM DEVICE   - < volume set 6
+04:02:22AM DEVICE   - < volume set 7
+04:02:22AM DEVICE   - < volume set 8
+04:02:22AM DEVICE   - < volume set 9
+04:02:22AM DEVICE   - < volume set 10
+04:02:23AM DEVICE   - < volume set 11
+04:02:23AM DEVICE   - < volume set 12
+04:02:24AM DEVICE   - < volume set 15
+04:02:24AM DEVICE   - < volume set 18
+04:02:25AM DEVICE   - < volume set 21
+04:02:25AM DEVICE   - < volume set 23
+04:02:26AM DEVICE   - < volume set 19
+04:02:26AM DEVICE   - < volume set 15
+04:02:26AM DEVICE   - < volume set 11
+04:02:27AM DEVICE   - < volume set 9
+04:02:27AM DEVICE   - < volume set 7
+04:02:28AM DEVICE   - < volume set 10
+04:02:29AM DEVICE   - < volume set 13
+04:02:30AM DEVICE   - < volume set 16
+04:02:30AM DEVICE   - < volume set 18
+04:02:31AM DEVICE   - < volume set 20
+04:02:31AM DEVICE   - < volume set 19
+04:02:31AM DEVICE   - < volume set 18
+04:02:31AM DEVICE   - < volume set 17
+04:02:31AM DEVICE   - < volume set 16
+04:02:31AM DEVICE   - < volume set 15
+04:02:32AM DEVICE   - < volume set 14
+04:02:32AM DEVICE   - < volume set 13
+04:02:32AM DEVICE   - < volume set 12
+04:02:32AM DEVICE   - < volume set 11
+04:02:32AM DEVICE   - < volume set 10
+04:02:32AM DEVICE   - < volume set 9
+04:02:32AM DEVICE   - < volume set 8
+04:02:33AM DEVICE   - < volume set 10
+04:02:33AM DEVICE   - < volume set 11
+04:02:33AM DEVICE   - < volume set 12
+04:02:33AM DEVICE   - < volume set 13
+04:02:33AM DEVICE   - < volume set 14
+04:02:34AM DEVICE   - < volume set 12
+04:02:34AM DEVICE   - < volume set 10
+04:02:35AM DEVICE   - < volume set 8
+04:02:35AM DEVICE   - < volume set 6
+04:02:37AM DEVICE   - < volume set 10
+04:02:37AM DEVICE   - < volume set 11
+04:02:37AM DEVICE   - < volume set 12
+04:02:37AM DEVICE   - < volume set 13
+04:02:38AM DEVICE   - < volume set 15
+04:02:39AM DEVICE   - < volume set 18
+04:02:39AM DEVICE   - < volume set 19
+04:02:40AM DEVICE   - < volume set 17
+04:02:40AM DEVICE   - < volume set 15
+04:02:41AM DEVICE   - < volume set 13
+04:02:42AM DEVICE   - < volume set 11
+04:02:42AM DEVICE   - < volume set 9
+04:02:43AM DEVICE   - < volume set 8
+04:02:43AM DEVICE   - < volume set 6
+04:02:44AM DEVICE   - < volume set 8
+04:02:44AM DEVICE   - < volume set 9
+04:02:44AM DEVICE   - < volume set 10
+04:02:44AM DEVICE   - < volume set 11
+04:02:44AM DEVICE   - < volume set 12
+04:02:44AM DEVICE   - < volume set 13
+04:02:44AM DEVICE   - < volume set 14
+04:02:45AM DEVICE   - < volume set 15
+04:02:46AM DEVICE   - < volume set 17
+04:02:46AM DEVICE   - < volume set 16
+04:02:48AM DEVICE   - < power state off
+04:02:49AM DEVICE   - > status power state off
+04:02:49AM DEVICE   - > status volume level 0
+04:02:49AM DEVICE   - > status enc adjusts-volume true
+04:02:49AM DEVICE   - > status led state off
+04:02:49AM DEVICE   - > status led intensity 1
+04:02:49AM DEVICE   - > status led color green
+04:02:51AM DEVICE   - < power state on
+04:02:51AM DEVICE   - > status power state on
+04:02:51AM DEVICE   - > status volume level 20
+04:02:51AM DEVICE   - > status enc adjusts-volume true
+04:02:51AM DEVICE   - > status led state on
+04:02:51AM DEVICE   - > status led intensity 1
+04:02:51AM DEVICE   - > status led color green
+04:03:16AM DEVICE   - < volume set 17
+04:03:16AM DEVICE   - < volume set 14
+04:03:17AM DEVICE   - < volume set 11
+04:03:18AM DEVICE   - < volume set 9
+04:03:19AM DEVICE   - < volume set 8
+04:03:19AM DEVICE   - < volume set 9
+04:03:20AM DEVICE   - < volume set 10
+04:03:20AM DEVICE   - < volume set 11
+04:03:20AM DEVICE   - < volume set 12
+04:03:20AM DEVICE   - < volume set 13
+04:03:20AM DEVICE   - < volume set 14
+04:03:20AM DEVICE   - < volume set 15
+04:03:20AM DEVICE   - < volume set 16
+04:03:20AM DEVICE   - < volume set 17
+04:03:20AM DEVICE   - < volume set 18
+04:03:20AM DEVICE   - < volume set 19
+04:03:21AM DEVICE   - < volume set 20
+04:03:21AM DEVICE   - < volume set 21
+04:03:21AM DEVICE   - < volume set 22
+04:03:21AM DEVICE   - < volume set 23
+04:03:22AM DEVICE   - < volume set 24
+04:03:22AM DEVICE   - < volume set 25
+04:03:22AM DEVICE   - < volume set 26
+04:03:22AM DEVICE   - < volume set 27
+04:03:23AM DEVICE   - < volume set 28
+04:03:23AM DEVICE   - < volume set 29
+04:03:24AM DEVICE   - < volume set 30
+04:03:24AM DEVICE   - < volume set 31
+04:03:25AM DEVICE   - < volume set 32
+04:03:26AM DEVICE   - < volume set 28
+04:03:26AM DEVICE   - < volume set 27
+04:03:26AM DEVICE   - < volume set 26
+04:03:26AM DEVICE   - < volume set 25
+04:03:26AM DEVICE   - < volume set 24
+04:03:26AM DEVICE   - < volume set 23
+04:03:27AM DEVICE   - < volume set 22
+04:03:27AM DEVICE   - < volume set 21
+04:03:28AM DEVICE   - < power state off
+04:03:29AM DEVICE   - > status power state off
+04:03:29AM DEVICE   - > status volume level 0
+04:03:29AM DEVICE   - > status enc adjusts-volume true
+04:03:29AM DEVICE   - > status led state off
+04:03:29AM DEVICE   - > status led intensity 1
+04:03:29AM DEVICE   - > status led color green
+05:45:13AM SPOTIFY  - Valid Token: $ad7f675a-8a7f-4724-9b05-12b834a8a61b
+01:54:55PM SPOTIFY  - Valid Token: $e3ab4b73-c8ae-4a6f-88c6-d945b634ee53
+01:54:56PM SPOTIFY  - Valid Token: $5ff788b5-97c1-4c2b-9502-2cfcf4172335
+01:54:56PM SPOTIFY  - Valid Token: $9469e050-c1b8-471b-9291-b629185f3409
+01:54:56PM SPOTIFY  - Valid Token: $887fa853-1317-42d3-9a4c-cef09ce9be35
+01:54:57PM SPOTIFY  - Valid Token: $4c122696-f272-4c75-848f-778374ef40ad
+01:54:57PM SPOTIFY  - Valid Token: $2e7af981-3826-405c-8648-9adf4e4c864a
+01:54:57PM SPOTIFY  - Valid Token: $cf6ebdb7-ddd0-4432-bbd4-e201cae23cf9
+01:54:57PM SPOTIFY  - Valid Token: $6614560d-b7a1-454f-98ad-d3c4ffaad2da
+01:54:58PM SPOTIFY  - Valid Token: $6b7fadfe-7225-49dd-bb0f-2a054f464576
+01:54:58PM SPOTIFY  - Valid Token: $2d829118-20f6-4d8b-b99c-aea3890057de
+01:54:58PM SPOTIFY  - Valid Token: $341f6565-f91b-420c-9dd8-f960d988aebf
+01:54:59PM SPOTIFY  - Valid Token: $0f89a834-c185-4804-ab2f-d7784eea5643
+01:54:59PM SPOTIFY  - Valid Token: $c774b8ff-f816-481f-b5e6-5039afe5e129
+01:54:59PM SPOTIFY  - Valid Token: $d58078cf-4290-4242-adae-79e9204f9d2d
+01:54:59PM SPOTIFY  - Valid Token: $09b4829c-314f-4018-acfe-91e5aa6a29d8
+01:55:00PM SPOTIFY  - Valid Token: $404bb569-d04b-463a-b396-08afb56b96ee
+01:55:00PM SPOTIFY  - Valid Token: $2fd3cedf-8314-43d8-af33-b88683131095
+01:55:00PM SPOTIFY  - Valid Token: $55a3f613-4927-4434-9f0e-a47c66177233
+01:55:01PM SPOTIFY  - Valid Token: $6bf5c7e9-b42c-4661-b96e-6806004468d6
+01:55:01PM SPOTIFY  - Valid Token: $78c41dc6-503d-4ea7-9873-826c81fb28bc
+01:55:01PM SPOTIFY  - Valid Token: $328b501d-06df-4416-9fc0-934b43b32675
+01:55:01PM SPOTIFY  - Valid Token: $b84b3661-c34b-4d61-90b9-d2c391671834
+01:55:02PM SPOTIFY  - Valid Token: $2a893a93-4ba7-4f6b-8a44-f8285388b80c
+01:55:02PM SPOTIFY  - Valid Token: $434e4a02-e774-4941-954e-580b34ed27cc
+01:55:02PM SPOTIFY  - Valid Token: $4f836c30-0453-426a-8107-f28c8bf1b4b3
+01:55:02PM SPOTIFY  - Valid Token: $9803087f-961a-4e8c-9425-dcf086105ebb
+01:55:03PM SPOTIFY  - Valid Token: $8c1f9acc-7407-4830-b565-bbe39a0899ec
+01:55:03PM SPOTIFY  - Valid Token: $28eac508-0909-4349-9411-9ecb6d273b3e
+01:55:03PM SPOTIFY  - Valid Token: $c93a93b4-2b25-4c04-b83b-5c819f19c870
+01:55:04PM SPOTIFY  - Valid Token: $d1e6fdec-3ac4-44c6-bb53-c8c25618012b
+01:55:04PM SPOTIFY  - Valid Token: $4cfaa622-9206-432e-ac85-a9a763edca85
+01:55:04PM SPOTIFY  - Valid Token: $826b3d53-c311-402c-a39f-f5c9ae82b40b
+01:55:04PM SPOTIFY  - Valid Token: $5acb715b-bc37-44bc-acf7-cc723d40dc24
+01:55:05PM SPOTIFY  - Valid Token: $a2da4031-980d-4b06-9173-be308056d1df
+01:55:05PM SPOTIFY  - Valid Token: $e69f2a42-34cf-4965-bcd0-a5a9b1e9080a
+01:55:05PM SPOTIFY  - Valid Token: $decf93bb-01dd-4f6a-8fe7-f92beaca53cc
+01:55:05PM SPOTIFY  - Valid Token: $9c4043f2-70cb-404f-b1a6-a0fbcc5ef607
+01:55:06PM SPOTIFY  - Valid Token: $0e2469e7-140f-4022-b48f-e6d154fb8e44
+01:55:06PM SPOTIFY  - Valid Token: $a4618235-c2a1-4b8c-a612-c7ce63c81f87
+01:55:06PM SPOTIFY  - Valid Token: $0e66afc4-f8ad-4eaa-af38-5f5f159f2a7e
+01:55:06PM SPOTIFY  - Valid Token: $dfbac5a6-8913-454e-8dcf-d576a86f1484
+01:55:07PM SPOTIFY  - Valid Token: $f3d9c676-6c21-4705-b50d-e3e0f51a0b86
+01:55:07PM SPOTIFY  - Valid Token: $ca57b5ea-c45f-46c6-8f03-c563df8c59fe
+01:55:07PM SPOTIFY  - Valid Token: $f37daaa2-65f2-47e4-8343-faf582dd8c2a
+01:55:08PM SPOTIFY  - Valid Token: $f4a3b071-5b2a-475f-8e32-367065ed2567
+01:55:08PM SPOTIFY  - Valid Token: $ede52324-75f9-49cf-8210-e240fd443824
+01:55:08PM SPOTIFY  - Valid Token: $aca9779f-9b0a-46f1-89b4-ad797eb02e51
+01:55:08PM SPOTIFY  - Valid Token: $5a38972d-ff4e-4e7c-86cd-be9810f1c1bf
+01:55:09PM SPOTIFY  - Valid Token: $ab24c210-4e92-4a11-8916-203f51660751
+01:55:09PM SPOTIFY  - Valid Token: $d40c6e04-1c4f-4e8f-89d0-e68d896d6323
+01:55:09PM SPOTIFY  - Valid Token: $c509ca33-3c5d-4bdd-9c7c-27f429f44c84
+01:55:09PM SPOTIFY  - Valid Token: $3c8ebff0-b7e0-4550-8602-bbefc3b89465
+01:55:10PM SPOTIFY  - Valid Token: $b33ad1c8-c259-4b7e-bf63-d99f5b3bd51f
+01:55:10PM SPOTIFY  - Valid Token: $37c597cd-8293-49e8-8ef2-745ccc2696da
+01:55:10PM SPOTIFY  - Valid Token: $b39d1bde-94ff-4d92-8afc-2106a61012e2
+01:55:11PM SPOTIFY  - Valid Token: $e4b9a3ee-1f7a-44ab-bbe4-7395b6d12128
+01:55:11PM SPOTIFY  - Valid Token: $87623f15-4820-4fd3-b6ff-dffed1815001
+01:55:11PM SPOTIFY  - Valid Token: $6ac6b097-adb8-4853-aaa0-f5666cca880e
+01:55:11PM SPOTIFY  - Valid Token: $5db44661-2ce6-4781-a0dc-e5626bcf25f3
+01:55:12PM SPOTIFY  - Valid Token: $ded61546-64e1-4a22-8ddc-3063a23908f9
+01:55:12PM SPOTIFY  - Valid Token: $c0d4df15-b924-4068-858d-167ab01d3d25
+01:55:12PM SPOTIFY  - Valid Token: $3cb50a28-42b5-4785-a5c7-4b6acb579780
+01:55:12PM SPOTIFY  - Valid Token: $de14e961-f5aa-4b82-8979-a2fd4529c61d
+01:55:13PM SPOTIFY  - Valid Token: $ea6bac8a-320b-44a5-b086-d6e845690d19
+01:55:13PM SPOTIFY  - Valid Token: $0973ee98-2ed4-4bb0-b867-25ced5da12d8
+01:55:13PM SPOTIFY  - Valid Token: $027fbf59-febe-46dc-9b37-e689c7cb8ad2
+01:55:13PM SPOTIFY  - Valid Token: $b10efe4f-487b-4585-90ec-ecbb620605f2
+01:55:14PM SPOTIFY  - Valid Token: $5b04097d-ea63-4a04-99d1-01b507304260
+01:55:14PM SPOTIFY  - Valid Token: $cdbfbe1a-391a-4787-94f5-f26213c7504d
+01:55:14PM SPOTIFY  - Valid Token: $5cbc4321-3dc0-4c08-8621-027117c601cf
+01:55:15PM SPOTIFY  - Valid Token: $aa0213ba-ee91-45f0-812f-f09602b1ffd1
+01:55:15PM SPOTIFY  - Valid Token: $b8866b28-a105-48f6-9906-648f85750899
+01:55:15PM SPOTIFY  - Valid Token: $4764d26c-38e9-474c-9b32-2937adfe9e86
+01:55:15PM SPOTIFY  - Valid Token: $8edfc616-f432-484b-a1ff-ac44ace4fb45
+01:55:16PM SPOTIFY  - Valid Token: $ac88b792-b5ef-4144-ae2d-eeec2b3169ae
+01:55:16PM SPOTIFY  - Valid Token: $7d9e914e-3b58-440f-a838-98995cac3e51
+01:55:16PM SPOTIFY  - Valid Token: $6e9bf93a-9749-4ba3-983a-fdb2de7bf170
+01:55:16PM SPOTIFY  - Valid Token: $fd72df8c-8038-4675-857c-a6913ecc3603
+01:55:17PM SPOTIFY  - Valid Token: $8bb1cb71-bb36-44b7-b7ab-b6f90f2c1d5a
+01:55:17PM SPOTIFY  - Valid Token: $1495cd1e-35df-42ce-b583-0c96b52da536
+01:55:17PM SPOTIFY  - Valid Token: $7382579d-b157-4e84-89ac-e9901fb40b94
+01:55:17PM SPOTIFY  - Valid Token: $7af20116-0510-4922-8704-aa48b641e91b
+01:55:18PM SPOTIFY  - Valid Token: $b66f32ed-7275-4648-9d4c-15f5106d85f1
+01:55:18PM SPOTIFY  - Valid Token: $5b4b5452-54bd-4bad-9ab7-b8c022ea0ed3
+01:55:18PM SPOTIFY  - Valid Token: $20c67e68-34d8-4aaf-a658-2a5d57d7b65f
+01:55:19PM SPOTIFY  - Valid Token: $dfbe4304-e071-42a1-bfd5-1dc2d83f30c0
+01:55:19PM SPOTIFY  - Valid Token: $a3ee3b9d-0339-4a9d-86e3-c81dfe0099ca
+01:55:19PM SPOTIFY  - Valid Token: $294800c6-5bb7-4d97-801c-0af539be9fdf
+01:55:19PM SPOTIFY  - Valid Token: $357f8ea2-e706-4b55-9a8b-0eb882c02d8d
+01:55:20PM SPOTIFY  - Valid Token: $3a65e317-ccd5-41fe-8926-4c03c03dfd1d
+01:55:20PM SPOTIFY  - Valid Token: $5766ea59-7a83-42c8-bc18-f822d459adab
+01:55:20PM SPOTIFY  - Valid Token: $bd8b92db-c00b-4cd3-bf60-6cb6d9e7d1d8
+01:55:20PM SPOTIFY  - Valid Token: $5b12a8d4-aa25-49eb-b109-2269c5feb3f5
+01:55:21PM SPOTIFY  - Valid Token: $e59c3191-0814-4b5a-bf15-e01e9c68e111
+01:55:21PM SPOTIFY  - Valid Token: $2bdded2c-ee4f-468e-93fe-462b2b725f0f
+01:55:21PM SPOTIFY  - Valid Token: $79510085-5f66-4337-bafd-1a904ae6a1d4
+01:55:21PM SPOTIFY  - Valid Token: $c84c6c58-75a2-42ad-981b-6a9eb34205bf
+01:55:22PM SPOTIFY  - Valid Token: $450aecae-a75a-4a07-a885-b5af385ba046
+01:55:22PM SPOTIFY  - Valid Token: $663f702f-0d07-492a-97ca-f4546542693e
+01:55:22PM SPOTIFY  - Valid Token: $c980c256-966f-49ca-b7f7-e031364dd823
+01:55:23PM SPOTIFY  - No token overload" 
+01:55:23PM SPOTIFY  - No token overload" 
+01:55:23PM SPOTIFY  - No token overload" 
+01:55:23PM SPOTIFY  - No token overload" 
+01:55:24PM SPOTIFY  - No token overload" 
+01:55:24PM SPOTIFY  - No token overload" 
+01:55:24PM SPOTIFY  - No token overload" 
+01:55:24PM SPOTIFY  - No token overload" 
+01:55:25PM SPOTIFY  - No token overload" 
+01:55:25PM SPOTIFY  - No token overload" 
+01:55:25PM SPOTIFY  - No token overload" 
+01:55:25PM SPOTIFY  - No token overload" 
+01:55:26PM SPOTIFY  - No token overload" 
+01:55:26PM SPOTIFY  - No token overload" 
+01:55:26PM SPOTIFY  - No token overload" 
+01:55:26PM SPOTIFY  - No token overload" 
+01:55:27PM SPOTIFY  - No token overload" 
+01:55:27PM SPOTIFY  - No token overload" 
+01:55:27PM SPOTIFY  - No token overload" 
+01:55:27PM SPOTIFY  - No token overload" 
+01:55:28PM SPOTIFY  - No token overload" 
+01:55:28PM SPOTIFY  - No token overload" 
+01:55:28PM SPOTIFY  - No token overload" 
+01:55:28PM SPOTIFY  - No token overload" 
+01:55:29PM SPOTIFY  - No token overload" 
+01:55:29PM SPOTIFY  - No token overload" 
+01:55:29PM SPOTIFY  - No token overload" 
+01:55:29PM SPOTIFY  - No token overload" 
+01:55:30PM SPOTIFY  - No token overload" 
+01:55:30PM SPOTIFY  - No token overload" 
+01:55:30PM SPOTIFY  - No token overload" 
+01:55:30PM SPOTIFY  - No token overload" 
+01:55:31PM SPOTIFY  - No token overload" 
+01:55:31PM SPOTIFY  - Valid Token: $142ce692-97dd-4556-b25c-ae144280bf4d
+01:55:31PM SPOTIFY  - No token overload" 
+01:55:31PM SPOTIFY  - No token overload" 
+01:55:32PM SPOTIFY  - No token overload" 
+01:55:32PM SPOTIFY  - No token overload" 
+01:55:32PM SPOTIFY  - No token overload" 
+01:55:32PM SPOTIFY  - No token overload" 
+01:55:33PM SPOTIFY  - No token overload" 
+01:55:33PM SPOTIFY  - No token overload" 
+01:55:33PM SPOTIFY  - No token overload" 
+01:55:34PM SPOTIFY  - No token overload" 
+01:55:34PM SPOTIFY  - No token overload" 
+01:55:34PM SPOTIFY  - No token overload" 
+01:55:34PM SPOTIFY  - No token overload" 
+01:55:35PM SPOTIFY  - No token overload" 
+01:55:35PM SPOTIFY  - No token overload" 
+01:55:35PM SPOTIFY  - No token overload" 
+01:55:35PM SPOTIFY  - No token overload" 
+01:55:36PM SPOTIFY  - No token overload" 
+01:55:36PM SPOTIFY  - No token overload" 
+01:55:36PM SPOTIFY  - No token overload" 
+01:55:36PM SPOTIFY  - No token overload" 
+01:55:37PM SPOTIFY  - No token overload" 
+01:55:37PM SPOTIFY  - No token overload" 
+01:55:37PM SPOTIFY  - No token overload" 
+01:55:37PM SPOTIFY  - No token overload" 
+01:55:38PM SPOTIFY  - No token overload" 
+01:55:38PM SPOTIFY  - No token overload" 
+01:55:38PM SPOTIFY  - No token overload" 
+01:55:38PM SPOTIFY  - No token overload" 
+01:55:39PM SPOTIFY  - No token overload" 
+01:55:39PM SPOTIFY  - No token overload" 
+01:55:39PM SPOTIFY  - No token overload" 
+01:55:39PM SPOTIFY  - No token overload" 
+01:55:40PM SPOTIFY  - No token overload" 
+01:55:40PM SPOTIFY  - No token overload" 
+01:55:40PM SPOTIFY  - No token overload" 
+01:55:40PM SPOTIFY  - No token overload" 
+01:55:41PM SPOTIFY  - No token overload" 
+01:55:41PM SPOTIFY  - No token overload" 
+01:55:41PM SPOTIFY  - No token overload" 
+01:55:41PM SPOTIFY  - No token overload" 
+01:55:42PM SPOTIFY  - No token overload" 
+01:55:42PM SPOTIFY  - No token overload" 
+01:55:42PM SPOTIFY  - No token overload" 
+01:55:42PM SPOTIFY  - No token overload" 
+01:55:43PM SPOTIFY  - No token overload" 
+01:55:43PM SPOTIFY  - No token overload" 
+01:55:43PM SPOTIFY  - No token overload" 
+01:55:43PM SPOTIFY  - No token overload" 
+01:55:44PM SPOTIFY  - No token overload" 
+01:55:44PM SPOTIFY  - No token overload" 
+01:55:44PM SPOTIFY  - No token overload" 
+01:55:44PM SPOTIFY  - No token overload" 
+01:55:45PM SPOTIFY  - No token overload" 
+01:55:45PM SPOTIFY  - No token overload" 
+01:55:45PM SPOTIFY  - No token overload" 
+01:55:45PM SPOTIFY  - No token overload" 
+01:55:46PM SPOTIFY  - No token overload" 
+01:55:46PM SPOTIFY  - No token overload" 
+01:55:46PM SPOTIFY  - No token overload" 
+01:55:46PM SPOTIFY  - No token overload" 
+01:55:47PM SPOTIFY  - No token overload" 
+01:55:47PM SPOTIFY  - No token overload" 
+01:55:47PM SPOTIFY  - No token overload" 
+01:55:48PM SPOTIFY  - No token overload" 
+01:55:48PM SPOTIFY  - No token overload" 
+01:55:48PM SPOTIFY  - No token overload" 
+01:55:48PM SPOTIFY  - No token overload" 
+01:55:49PM SPOTIFY  - No token overload" 
+01:55:49PM SPOTIFY  - No token overload" 
+01:55:49PM SPOTIFY  - No token overload" 
+01:55:49PM SPOTIFY  - No token overload" 
+01:55:50PM SPOTIFY  - No token overload" 
+01:55:50PM SPOTIFY  - No token overload" 
+01:55:50PM SPOTIFY  - No token overload" 
+01:55:50PM SPOTIFY  - No token overload" 
+01:55:51PM SPOTIFY  - No token overload" 
+01:55:51PM SPOTIFY  - No token overload" 
+01:55:51PM SPOTIFY  - No token overload" 
+01:55:51PM SPOTIFY  - No token overload" 
+01:55:52PM SPOTIFY  - No token overload" 
+01:55:52PM SPOTIFY  - No token overload" 
+01:55:52PM SPOTIFY  - No token overload" 
+01:55:52PM SPOTIFY  - No token overload" 
+01:55:53PM SPOTIFY  - No token overload" 
+01:55:53PM SPOTIFY  - No token overload" 
+01:55:53PM SPOTIFY  - No token overload" 
+01:55:53PM SPOTIFY  - No token overload" 
+01:55:54PM SPOTIFY  - No token overload" 
+01:55:54PM SPOTIFY  - No token overload" 
+01:55:54PM SPOTIFY  - No token overload" 
+01:55:54PM SPOTIFY  - No token overload" 
+01:55:55PM SPOTIFY  - No token overload" 
+01:55:55PM SPOTIFY  - No token overload" 
+01:55:55PM SPOTIFY  - No token overload" 
+01:55:56PM SPOTIFY  - No token overload" 
+01:55:56PM SPOTIFY  - No token overload" 
+01:55:56PM SPOTIFY  - No token overload" 
+01:55:56PM SPOTIFY  - No token overload" 
+01:55:57PM SPOTIFY  - No token overload" 
+01:55:57PM SPOTIFY  - No token overload" 
+01:55:57PM SPOTIFY  - No token overload" 
+01:55:57PM SPOTIFY  - No token overload" 
+01:55:58PM SPOTIFY  - No token overload" 
+01:55:58PM SPOTIFY  - No token overload" 
+01:55:58PM SPOTIFY  - No token overload" 
+01:55:58PM SPOTIFY  - No token overload" 
+01:55:59PM SPOTIFY  - No token overload" 
+01:55:59PM SPOTIFY  - No token overload" 
+01:55:59PM SPOTIFY  - No token overload" 
+01:55:59PM SPOTIFY  - No token overload" 
+01:56:00PM SPOTIFY  - No token overload" 
+01:56:00PM SPOTIFY  - No token overload" 
+01:56:00PM SPOTIFY  - No token overload" 
+01:56:00PM SPOTIFY  - No token overload" 
+01:56:01PM SPOTIFY  - No token overload" 
+01:56:01PM SPOTIFY  - No token overload" 
+01:56:01PM SPOTIFY  - No token overload" 
+01:56:01PM SPOTIFY  - No token overload" 
+01:56:02PM SPOTIFY  - No token overload" 
+01:56:02PM SPOTIFY  - No token overload" 
+01:56:02PM SPOTIFY  - No token overload" 
+01:56:03PM SPOTIFY  - No token overload" 
+01:56:03PM SPOTIFY  - No token overload" 
+01:56:03PM SPOTIFY  - No token overload" 
+01:56:03PM SPOTIFY  - No token overload" 
+01:56:04PM SPOTIFY  - No token overload" 
+01:56:04PM SPOTIFY  - No token overload" 
+01:56:04PM SPOTIFY  - No token overload" 
+01:56:04PM SPOTIFY  - No token overload" 
+01:56:05PM SPOTIFY  - No token overload" 
+01:56:05PM SPOTIFY  - No token overload" 
+01:56:05PM SPOTIFY  - No token overload" 
+01:56:05PM SPOTIFY  - No token overload" 
+01:56:06PM SPOTIFY  - No token overload" 
+01:56:07PM SPOTIFY  - No token overload" 
+01:56:07PM SPOTIFY  - No token overload" 
+01:56:07PM SPOTIFY  - No token overload" 
+01:56:07PM SPOTIFY  - No token overload" 
+01:56:08PM SPOTIFY  - No token overload" 
+01:56:08PM SPOTIFY  - No token overload" 
+01:56:08PM SPOTIFY  - No token overload" 
+01:56:08PM SPOTIFY  - No token overload" 
+01:56:09PM SPOTIFY  - No token overload" 
+01:56:09PM SPOTIFY  - No token overload" 
+01:56:09PM SPOTIFY  - No token overload" 
+01:56:09PM SPOTIFY  - No token overload" 
+01:56:10PM SPOTIFY  - No token overload" 
+01:56:10PM SPOTIFY  - No token overload" 
+01:56:10PM SPOTIFY  - No token overload" 
+01:56:10PM SPOTIFY  - No token overload" 
+01:56:11PM SPOTIFY  - No token overload" 
+01:56:11PM SPOTIFY  - No token overload" 
+01:56:11PM SPOTIFY  - No token overload" 
+01:56:11PM SPOTIFY  - No token overload" 
+01:56:12PM SPOTIFY  - No token overload" 
+01:56:12PM SPOTIFY  - No token overload" 
+01:56:12PM SPOTIFY  - No token overload" 
+01:56:12PM SPOTIFY  - No token overload" 
+01:56:13PM SPOTIFY  - No token overload" 
+01:56:13PM SPOTIFY  - No token overload" 
+01:56:13PM SPOTIFY  - No token overload" 
+01:56:13PM SPOTIFY  - No token overload" 
+01:56:14PM SPOTIFY  - No token overload" 
+01:56:14PM SPOTIFY  - No token overload" 
+01:56:14PM SPOTIFY  - No token overload" 
+01:56:14PM SPOTIFY  - No token overload" 
+01:56:15PM SPOTIFY  - No token overload" 
+01:56:15PM SPOTIFY  - No token overload" 
+01:56:15PM SPOTIFY  - No token overload" 
+01:56:15PM SPOTIFY  - No token overload" 
+01:56:16PM SPOTIFY  - No token overload" 
+01:56:16PM SPOTIFY  - No token overload" 
+01:56:16PM SPOTIFY  - No token overload" 
+01:56:16PM SPOTIFY  - No token overload" 
+01:56:17PM SPOTIFY  - No token overload" 
+01:56:17PM SPOTIFY  - No token overload" 
+01:56:17PM SPOTIFY  - No token overload" 
+01:56:17PM SPOTIFY  - No token overload" 
+01:56:18PM SPOTIFY  - No token overload" 
+01:56:18PM SPOTIFY  - No token overload" 
+01:56:18PM SPOTIFY  - No token overload" 
+01:56:18PM SPOTIFY  - No token overload" 
+01:56:19PM SPOTIFY  - No token overload" 
+01:56:19PM SPOTIFY  - No token overload" 
+01:56:19PM SPOTIFY  - No token overload" 
+01:56:19PM SPOTIFY  - No token overload" 
+01:56:20PM SPOTIFY  - No token overload" 
+01:56:20PM SPOTIFY  - No token overload" 
+01:56:20PM SPOTIFY  - No token overload" 
+01:56:20PM SPOTIFY  - No token overload" 
+01:56:21PM SPOTIFY  - No token overload" 
+01:56:21PM SPOTIFY  - No token overload" 
+01:56:21PM SPOTIFY  - No token overload" 
+01:56:21PM SPOTIFY  - No token overload" 
+01:56:22PM SPOTIFY  - No token overload" 
+01:56:22PM SPOTIFY  - No token overload" 
+01:56:22PM SPOTIFY  - No token overload" 
+01:56:22PM SPOTIFY  - No token overload" 
+01:56:23PM SPOTIFY  - No token overload" 
+01:56:23PM SPOTIFY  - No token overload" 
+01:56:23PM SPOTIFY  - No token overload" 
+01:56:24PM SPOTIFY  - No token overload" 
+01:56:24PM SPOTIFY  - No token overload" 
+01:56:24PM SPOTIFY  - No token overload" 
+01:56:24PM SPOTIFY  - No token overload" 
+01:56:25PM SPOTIFY  - No token overload" 
+01:56:25PM SPOTIFY  - No token overload" 
+01:56:25PM SPOTIFY  - No token overload" 
+01:56:25PM SPOTIFY  - No token overload" 
+01:56:26PM SPOTIFY  - No token overload" 
+01:56:26PM SPOTIFY  - No token overload" 
+01:56:26PM SPOTIFY  - Valid Token: $3f70bf72-3d27-483c-8366-8f07ae6bef65
+01:56:26PM SPOTIFY  - Valid Token: $6aff64b1-791c-448f-b149-3acbe003f5e8
+01:56:27PM SPOTIFY  - No token overload" 
+01:56:27PM SPOTIFY  - No token overload" 
+01:56:27PM SPOTIFY  - Valid Token: $1e7b0abe-6a58-41cd-9977-72b711f516a2
+01:56:27PM SPOTIFY  - Valid Token: $ecb61bc7-150c-449d-b203-eb6140091069
+01:56:28PM SPOTIFY  - Valid Token: $9a496c7b-c7cc-45d4-aa68-8cb99f6671e5
+01:56:28PM SPOTIFY  - Valid Token: $71f4c2df-698f-4401-9964-0e0c66b82e98
+01:56:28PM SPOTIFY  - Valid Token: $49f94386-cd7f-4700-8205-b0b43eca89aa
+01:56:28PM SPOTIFY  - Valid Token: $48f9111f-a6c0-4b96-85ab-c13e453b0b53
+01:56:29PM SPOTIFY  - Valid Token: $ca346ec6-540b-4e44-b6aa-0170f56322f6
+01:56:29PM SPOTIFY  - Valid Token: $b5407cce-d48b-4566-95b7-0f44c17821c1
+01:56:29PM SPOTIFY  - Valid Token: $6edaebd1-bcd6-4fc1-8a16-cc85e280c2d8
+01:56:29PM SPOTIFY  - Valid Token: $ec674d4c-0b8f-4612-8e85-9e40fe93ca90
+01:56:30PM SPOTIFY  - No token overload" 
+01:56:30PM SPOTIFY  - Valid Token: $c2280dc7-f937-46db-a75d-31b3c886f860
+01:56:30PM SPOTIFY  - Valid Token: $ca2c6f7f-467d-4169-bfad-eaf087eb6459
+01:56:30PM SPOTIFY  - Valid Token: $d0720be4-2fba-4ac6-94a8-ca8e57e18b37
+01:56:31PM SPOTIFY  - Valid Token: $8fa11f7e-35c1-4972-837a-c663711e2653
+01:56:31PM SPOTIFY  - Valid Token: $edf41b0f-f1c1-428b-b3f9-b928178e2f47
+01:56:31PM SPOTIFY  - Valid Token: $14f3e901-a816-47c5-9339-5b877d954147
+01:56:32PM SPOTIFY  - Valid Token: $eb942575-9a1d-4582-996e-98468202099e
+01:56:32PM SPOTIFY  - Valid Token: $544a6d0f-602d-4148-8056-6462e59e99ee
+01:56:32PM SPOTIFY  - Valid Token: $065d31ae-5640-403f-9d8e-ab3c50093f09
+01:56:32PM SPOTIFY  - Valid Token: $ca0cd10e-acf1-490e-a069-598910c9a0a8
+01:56:33PM SPOTIFY  - Valid Token: $65cf20a2-17eb-406a-88f4-35b6c01463db
+01:56:33PM SPOTIFY  - No token overload" 
+01:56:33PM SPOTIFY  - Valid Token: $df090cc0-082f-4b01-82c5-b2e159f0f228
+01:56:33PM SPOTIFY  - Valid Token: $ec50f5ca-5fe6-401e-aebf-a0efcbf9af4a
+01:56:34PM SPOTIFY  - Valid Token: $bc28caaa-603b-48e0-98d1-f6c5ead5af46
+01:56:34PM SPOTIFY  - Valid Token: $6f462340-202f-4c76-b4dc-05e61d7bdb60
+01:56:34PM SPOTIFY  - Valid Token: $75e556db-58ff-426c-82fa-d4d06a5b43f8
+01:56:34PM SPOTIFY  - Valid Token: $f09de6c1-803a-4e0e-847b-a1c31ceee319
+01:56:35PM SPOTIFY  - Valid Token: $90d1644c-1483-4028-b725-7bf6bbaef9e9
+01:56:35PM SPOTIFY  - Valid Token: $df1f388b-28dd-46da-9392-302f7478c343
+01:56:35PM SPOTIFY  - Valid Token: $da498140-3da2-4dbd-8c38-e7f1ed1fceba
+01:56:36PM SPOTIFY  - Valid Token: $25d19531-5d02-4a1c-8b91-9db5a8449df7
+01:56:36PM SPOTIFY  - Valid Token: $79038b93-7e8c-45f2-a7e5-dc5c2b520424
+01:56:36PM SPOTIFY  - Valid Token: $26875210-5a78-424d-8ad5-2aad91bb6690
+01:56:36PM SPOTIFY  - Valid Token: $07a6de92-caf6-4605-bdab-b84bf5d0e2b0
+01:56:37PM SPOTIFY  - Valid Token: $15f3f8b4-479a-422c-bbdf-fe56c6a7e0c9
+01:56:37PM SPOTIFY  - Valid Token: $6f7fdd86-8c5f-41e0-8a17-ee500bf38802
+01:56:37PM SPOTIFY  - Valid Token: $b4f5b24a-2e11-40e6-9fee-0714894a89a1
+01:56:37PM SPOTIFY  - Valid Token: $1a9f542e-bedb-4604-918a-3d99fadce61d
+01:56:38PM SPOTIFY  - Valid Token: $9804aa90-84bb-4a45-a1d5-19704d715fd3
+01:56:38PM SPOTIFY  - Valid Token: $b4a120af-9651-49fe-9edd-6b45b49f1ac8
+01:56:38PM SPOTIFY  - Valid Token: $cfbd3b13-bceb-4012-b864-4d140d67437f
+01:56:38PM SPOTIFY  - Valid Token: $de63bdd6-72c7-4a85-a2cb-1923a3421ddc
+01:56:39PM SPOTIFY  - Valid Token: $38e6b1fe-63b9-4dc7-a86e-8cb1664418f3
+01:56:39PM SPOTIFY  - Valid Token: $a3f19459-d153-4c0c-be67-c3e5287dcbf3
+01:56:39PM SPOTIFY  - Valid Token: $715ee844-d39a-45ac-842e-b5cfe4e5b492
+01:56:40PM SPOTIFY  - Valid Token: $79693db4-7630-4adb-aed1-52f6b1f92e73
+01:56:40PM SPOTIFY  - Valid Token: $6ae31dc6-210a-4df7-b500-816001a0ae94
+01:56:40PM SPOTIFY  - Valid Token: $e7763bbc-e56c-466c-9af9-4bd3598685b2
+01:56:40PM SPOTIFY  - Valid Token: $b48b7c9a-6a6c-46b7-a2a4-deaaaa3203b1
+01:56:41PM SPOTIFY  - Valid Token: $a7216bc5-7099-4e9e-ac87-4e5e4c32b2bf
+01:56:41PM SPOTIFY  - Valid Token: $872d06f6-7564-4722-9134-836e472bb742
+01:56:41PM SPOTIFY  - Valid Token: $6852faf3-751f-442a-acd5-dec42ac33446
+01:56:41PM SPOTIFY  - Valid Token: $d139cadb-669b-4269-8321-7437a40719c6
+01:56:42PM SPOTIFY  - Valid Token: $3f29e70f-8e59-4419-958f-e627a973a426
+01:56:42PM SPOTIFY  - Valid Token: $6d13a015-09b6-4721-a95d-b19915307779
+01:56:42PM SPOTIFY  - Valid Token: $983228c3-01ec-4bd7-8958-690ad9c786dd
+01:56:42PM SPOTIFY  - Valid Token: $d0565d92-5f4a-4aa0-aa62-19c416348bd9
+01:56:43PM SPOTIFY  - Valid Token: $7bea3714-561a-4142-80cc-2ee21fc1008b
+01:56:43PM SPOTIFY  - Valid Token: $3d5f97da-1571-4011-bcad-a28610e29590
+01:56:43PM SPOTIFY  - Valid Token: $5709028f-5e3e-419c-b7b5-4f977688ee1e
+01:56:43PM SPOTIFY  - Valid Token: $dc9aca78-24fe-4f07-a1f2-47d8beb28825
+01:56:44PM SPOTIFY  - Valid Token: $ab6b46c8-b1ec-4eae-a964-f97b90438128
+01:56:44PM SPOTIFY  - Valid Token: $ef5b2934-2bfb-4146-9ad1-fcf95f164513
+01:56:44PM SPOTIFY  - Valid Token: $ea68ba52-7126-4d47-8da6-a6a428a6fcd3
+01:56:45PM SPOTIFY  - Valid Token: $14b1aff8-6ccd-4124-9992-560e70235786
+01:56:45PM SPOTIFY  - Valid Token: $2a409024-cbeb-45a2-92c6-305ca4245586
+01:56:45PM SPOTIFY  - Valid Token: $e4c3bc94-a527-4978-b139-2afecef55730
+01:56:45PM SPOTIFY  - Valid Token: $ea97db14-97dd-4309-b514-6aafc8e009be
+01:56:46PM SPOTIFY  - Valid Token: $58133f9b-6e25-4a49-ba77-4989ca416b5d
+01:56:46PM SPOTIFY  - Valid Token: $d8d638a2-8fe4-44c2-8f19-52d6614b3da3
+01:56:46PM SPOTIFY  - Valid Token: $f612b11a-9888-438e-8c5c-f8e9f50f2de3
+01:56:46PM SPOTIFY  - Valid Token: $cb2d2200-d377-44c1-a685-adf44e3adfdf
+01:56:47PM SPOTIFY  - Valid Token: $1d9432fd-8b1d-4d54-9862-5a068d4538fa
+01:56:47PM SPOTIFY  - Valid Token: $7d94c9fd-652f-4512-8a7b-b68589666d92
+01:56:47PM SPOTIFY  - Valid Token: $cd8f66a0-3331-4ab9-9d57-fe91360b8281
+01:56:47PM SPOTIFY  - Valid Token: $23f9e14d-55a0-440f-a851-f769c2dc525e
+01:56:48PM SPOTIFY  - Valid Token: $90401514-62c1-466b-858e-baccb19fed93
+01:56:48PM SPOTIFY  - Valid Token: $5cfe28ef-9444-4ddb-a120-8759bf22d498
+01:56:48PM SPOTIFY  - Valid Token: $cfb43f24-0712-42f0-a2ad-f6e9b109fc9e
+01:56:49PM SPOTIFY  - Valid Token: $8a881476-ba65-4733-9964-fecb591ea6c9
+01:56:49PM SPOTIFY  - Valid Token: $cf92bac2-99ff-48db-99e9-fdf23553cfd4
+01:56:49PM SPOTIFY  - Valid Token: $7a5049ef-da2d-483e-966c-83cb48a35c86
+01:56:49PM SPOTIFY  - Valid Token: $c53aa823-d8e5-4989-9631-19338ea843c4
+01:56:50PM SPOTIFY  - Valid Token: $8e95ba0d-feb1-4ef0-8116-ea1c66f3cf55
+01:56:50PM SPOTIFY  - Valid Token: $294c6c27-6f0a-4f52-936d-4176dadf16b3
+01:56:50PM SPOTIFY  - Valid Token: $827e5fc2-0040-4ae1-8fd9-0dfe178e4449
+01:56:50PM SPOTIFY  - Valid Token: $74b2cdf6-b7c4-4d8f-930f-a98f41b1b6fd
+01:56:51PM SPOTIFY  - Valid Token: $a8ab79b3-9e8b-4ba6-8f5e-43ff7f1250b9
+01:56:51PM SPOTIFY  - Valid Token: $e66c04c0-31d5-4c0e-ae6c-2bf660295243
+01:56:51PM SPOTIFY  - Valid Token: $b9d74402-fb11-41e1-9e14-b119d7939841
+01:56:51PM SPOTIFY  - Valid Token: $31e43710-fa7a-4432-b94e-e3159e084095
+01:56:52PM SPOTIFY  - Valid Token: $d5afcf42-91ea-4b5f-b795-331a0a4263fa
+01:56:52PM SPOTIFY  - Valid Token: $b63a9292-7560-4d98-8290-b5030df5ecc1
+01:56:52PM SPOTIFY  - Valid Token: $577b5a00-4451-434e-a1bb-3d35a6cfa020
+01:56:53PM SPOTIFY  - Valid Token: $f3588770-aabc-4644-a3f4-478397daaec9
+01:56:53PM SPOTIFY  - Valid Token: $3f7cb01e-c4df-4e6d-9fdb-37890d30ac65
+01:56:53PM SPOTIFY  - Valid Token: $85c8c4bf-fcc0-40c2-a9a6-d0fcd6b83abd
+01:56:53PM SPOTIFY  - Valid Token: $ac2e2c73-05bb-407a-a973-4788d446b3e6
+01:56:54PM SPOTIFY  - No token overload" 
+01:56:54PM SPOTIFY  - No token overload" 
+01:56:54PM SPOTIFY  - No token overload" 
+01:56:54PM SPOTIFY  - No token overload" 
+01:56:55PM SPOTIFY  - No token overload" 
+01:56:55PM SPOTIFY  - No token overload" 
+01:56:55PM SPOTIFY  - No token overload" 
+01:56:55PM SPOTIFY  - No token overload" 
+01:56:56PM SPOTIFY  - No token overload" 
+01:56:56PM SPOTIFY  - No token overload" 
+01:56:56PM SPOTIFY  - No token overload" 
+01:56:56PM SPOTIFY  - No token overload" 
+01:56:57PM SPOTIFY  - No token overload" 
+01:56:57PM SPOTIFY  - No token overload" 
+01:56:57PM SPOTIFY  - No token overload" 
+01:56:57PM SPOTIFY  - No token overload" 
+01:56:58PM SPOTIFY  - No token overload" 
+01:56:58PM SPOTIFY  - No token overload" 
+01:56:58PM SPOTIFY  - No token overload" 
+01:56:58PM SPOTIFY  - No token overload" 
+01:56:59PM SPOTIFY  - No token overload" 
+01:56:59PM SPOTIFY  - No token overload" 
+01:56:59PM SPOTIFY  - No token overload" 
+01:57:00PM SPOTIFY  - No token overload" 
+01:57:00PM SPOTIFY  - No token overload" 
+01:57:00PM SPOTIFY  - No token overload" 
+01:57:00PM SPOTIFY  - No token overload" 
+01:57:01PM SPOTIFY  - No token overload" 
+01:57:01PM SPOTIFY  - No token overload" 
+01:57:01PM SPOTIFY  - No token overload" 
+01:57:02PM SPOTIFY  - No token overload" 
+01:57:02PM SPOTIFY  - No token overload" 
+01:57:02PM SPOTIFY  - Valid Token: $66e968f3-8be0-460d-a2e4-5f41a6864e31
+01:57:02PM SPOTIFY  - No token overload" 
+01:57:03PM SPOTIFY  - No token overload" 
+01:57:03PM SPOTIFY  - No token overload" 
+01:57:03PM SPOTIFY  - No token overload" 
+01:57:04PM SPOTIFY  - No token overload" 
+01:57:04PM SPOTIFY  - No token overload" 
+01:57:04PM SPOTIFY  - No token overload" 
+01:57:04PM SPOTIFY  - No token overload" 
+01:57:05PM SPOTIFY  - No token overload" 
+01:57:05PM SPOTIFY  - No token overload" 
+01:57:05PM SPOTIFY  - No token overload" 
+01:57:05PM SPOTIFY  - No token overload" 
+01:57:06PM SPOTIFY  - No token overload" 
+01:57:06PM SPOTIFY  - No token overload" 
+01:57:06PM SPOTIFY  - No token overload" 
+01:57:06PM SPOTIFY  - No token overload" 
+01:57:07PM SPOTIFY  - No token overload" 
+01:57:07PM SPOTIFY  - No token overload" 
+01:57:07PM SPOTIFY  - No token overload" 
+01:57:07PM SPOTIFY  - No token overload" 
+01:57:08PM SPOTIFY  - No token overload" 
+01:57:08PM SPOTIFY  - No token overload" 
+01:57:08PM SPOTIFY  - No token overload" 
+01:57:09PM SPOTIFY  - No token overload" 
+01:57:09PM SPOTIFY  - No token overload" 
+01:57:09PM SPOTIFY  - No token overload" 
+01:57:09PM SPOTIFY  - No token overload" 
+01:57:10PM SPOTIFY  - No token overload" 
+01:57:10PM SPOTIFY  - No token overload" 
+01:57:10PM SPOTIFY  - No token overload" 
+01:57:10PM SPOTIFY  - No token overload" 
+01:57:11PM SPOTIFY  - No token overload" 
+01:57:11PM SPOTIFY  - No token overload" 
+01:57:11PM SPOTIFY  - No token overload" 
+01:57:11PM SPOTIFY  - No token overload" 
+01:57:12PM SPOTIFY  - No token overload" 
+01:57:12PM SPOTIFY  - No token overload" 
+01:57:12PM SPOTIFY  - No token overload" 
+01:57:13PM SPOTIFY  - No token overload" 
+01:57:13PM SPOTIFY  - No token overload" 
+01:57:13PM SPOTIFY  - No token overload" 
+01:57:13PM SPOTIFY  - No token overload" 
+01:57:14PM SPOTIFY  - No token overload" 
+01:57:14PM SPOTIFY  - No token overload" 
+01:57:14PM SPOTIFY  - No token overload" 
+01:57:14PM SPOTIFY  - No token overload" 
+01:57:15PM SPOTIFY  - No token overload" 
+01:57:15PM SPOTIFY  - No token overload" 
+01:57:15PM SPOTIFY  - No token overload" 
+01:57:15PM SPOTIFY  - No token overload" 
+01:57:16PM SPOTIFY  - No token overload" 
+01:57:16PM SPOTIFY  - No token overload" 
+01:57:16PM SPOTIFY  - No token overload" 
+01:57:16PM SPOTIFY  - No token overload" 
+01:57:17PM SPOTIFY  - No token overload" 
+01:57:17PM SPOTIFY  - No token overload" 
+01:57:17PM SPOTIFY  - No token overload" 
+01:57:17PM SPOTIFY  - No token overload" 
+01:57:18PM SPOTIFY  - No token overload" 
+01:57:18PM SPOTIFY  - No token overload" 
+01:57:18PM SPOTIFY  - No token overload" 
+01:57:19PM SPOTIFY  - No token overload" 
+01:57:19PM SPOTIFY  - No token overload" 
+01:57:19PM SPOTIFY  - No token overload" 
+01:57:19PM SPOTIFY  - No token overload" 
+01:57:20PM SPOTIFY  - No token overload" 
+01:57:20PM SPOTIFY  - No token overload" 
+01:57:20PM SPOTIFY  - No token overload" 
+01:57:20PM SPOTIFY  - No token overload" 
+01:57:21PM SPOTIFY  - No token overload" 
+01:57:21PM SPOTIFY  - No token overload" 
+01:57:21PM SPOTIFY  - No token overload" 
+01:57:21PM SPOTIFY  - No token overload" 
+01:57:22PM SPOTIFY  - No token overload" 
+01:57:22PM SPOTIFY  - No token overload" 
+01:57:22PM SPOTIFY  - No token overload" 
+01:57:22PM SPOTIFY  - No token overload" 
+01:57:23PM SPOTIFY  - No token overload" 
+01:57:23PM SPOTIFY  - No token overload" 
+01:57:23PM SPOTIFY  - No token overload" 
+01:57:23PM SPOTIFY  - No token overload" 
+01:57:24PM SPOTIFY  - No token overload" 
+01:57:24PM SPOTIFY  - No token overload" 
+01:57:24PM SPOTIFY  - No token overload" 
+01:57:24PM SPOTIFY  - No token overload" 
+01:57:25PM SPOTIFY  - No token overload" 
+01:57:25PM SPOTIFY  - No token overload" 
+01:57:25PM SPOTIFY  - No token overload" 
+01:57:26PM SPOTIFY  - No token overload" 
+01:57:26PM SPOTIFY  - No token overload" 
+01:57:26PM SPOTIFY  - No token overload" 
+01:57:26PM SPOTIFY  - No token overload" 
+01:57:27PM SPOTIFY  - No token overload" 
+01:57:27PM SPOTIFY  - No token overload" 
+01:57:27PM SPOTIFY  - No token overload" 
+01:57:27PM SPOTIFY  - No token overload" 
+01:57:28PM SPOTIFY  - No token overload" 
+01:57:28PM SPOTIFY  - No token overload" 
+01:57:28PM SPOTIFY  - No token overload" 
+01:57:28PM SPOTIFY  - No token overload" 
+01:57:29PM SPOTIFY  - No token overload" 
+01:57:29PM SPOTIFY  - No token overload" 
+01:57:29PM SPOTIFY  - No token overload" 
+01:57:29PM SPOTIFY  - No token overload" 
+01:57:30PM SPOTIFY  - No token overload" 
+01:57:30PM SPOTIFY  - No token overload" 
+01:57:30PM SPOTIFY  - No token overload" 
+01:57:30PM SPOTIFY  - No token overload" 
+01:57:31PM SPOTIFY  - No token overload" 
+01:57:31PM SPOTIFY  - No token overload" 
+01:57:31PM SPOTIFY  - No token overload" 
+01:57:32PM SPOTIFY  - No token overload" 
+01:57:32PM SPOTIFY  - No token overload" 
+01:57:32PM SPOTIFY  - No token overload" 
+01:57:32PM SPOTIFY  - No token overload" 
+01:57:33PM SPOTIFY  - No token overload" 
+01:57:33PM SPOTIFY  - No token overload" 
+01:57:33PM SPOTIFY  - No token overload" 
+01:57:33PM SPOTIFY  - No token overload" 
+01:57:34PM SPOTIFY  - No token overload" 
+01:57:34PM SPOTIFY  - No token overload" 
+01:57:34PM SPOTIFY  - No token overload" 
+01:57:34PM SPOTIFY  - No token overload" 
+01:57:35PM SPOTIFY  - No token overload" 
+01:57:35PM SPOTIFY  - No token overload" 
+01:57:35PM SPOTIFY  - No token overload" 
+01:57:35PM SPOTIFY  - No token overload" 
+01:57:36PM SPOTIFY  - No token overload" 
+01:57:36PM SPOTIFY  - No token overload" 
+01:57:36PM SPOTIFY  - No token overload" 
+01:57:36PM SPOTIFY  - No token overload" 
+01:57:37PM SPOTIFY  - No token overload" 
+01:57:37PM SPOTIFY  - No token overload" 
+01:57:37PM SPOTIFY  - No token overload" 
+01:57:37PM SPOTIFY  - No token overload" 
+01:57:38PM SPOTIFY  - No token overload" 
+01:57:38PM SPOTIFY  - No token overload" 
+01:57:38PM SPOTIFY  - No token overload" 
+01:57:39PM SPOTIFY  - No token overload" 
+01:57:39PM SPOTIFY  - No token overload" 
+01:57:39PM SPOTIFY  - No token overload" 
+01:57:39PM SPOTIFY  - No token overload" 
+01:57:40PM SPOTIFY  - No token overload" 
+01:57:40PM SPOTIFY  - No token overload" 
+01:57:40PM SPOTIFY  - No token overload" 
+01:57:40PM SPOTIFY  - No token overload" 
+01:57:41PM SPOTIFY  - No token overload" 
+01:57:41PM SPOTIFY  - No token overload" 
+01:57:41PM SPOTIFY  - No token overload" 
+01:57:41PM SPOTIFY  - No token overload" 
+01:57:42PM SPOTIFY  - No token overload" 
+01:57:42PM SPOTIFY  - No token overload" 
+01:57:42PM SPOTIFY  - No token overload" 
+01:57:42PM SPOTIFY  - No token overload" 
+01:57:43PM SPOTIFY  - No token overload" 
+01:57:43PM SPOTIFY  - No token overload" 
+01:57:43PM SPOTIFY  - No token overload" 
+01:57:43PM SPOTIFY  - No token overload" 
+01:57:44PM SPOTIFY  - No token overload" 
+01:57:44PM SPOTIFY  - No token overload" 
+01:57:44PM SPOTIFY  - No token overload" 
+01:57:45PM SPOTIFY  - No token overload" 
+01:57:45PM SPOTIFY  - No token overload" 
+01:57:45PM SPOTIFY  - No token overload" 
+01:57:45PM SPOTIFY  - No token overload" 
+01:57:46PM SPOTIFY  - No token overload" 
+01:57:46PM SPOTIFY  - No token overload" 
+01:57:46PM SPOTIFY  - No token overload" 
+01:57:46PM SPOTIFY  - No token overload" 
+01:57:47PM SPOTIFY  - No token overload" 
+01:57:47PM SPOTIFY  - No token overload" 
+01:57:47PM SPOTIFY  - No token overload" 
+01:57:47PM SPOTIFY  - No token overload" 
+01:57:48PM SPOTIFY  - No token overload" 
+01:57:48PM SPOTIFY  - No token overload" 
+01:57:48PM SPOTIFY  - No token overload" 
+01:57:48PM SPOTIFY  - No token overload" 
+01:57:49PM SPOTIFY  - No token overload" 
+01:57:49PM SPOTIFY  - No token overload" 
+01:57:49PM SPOTIFY  - No token overload" 
+01:57:49PM SPOTIFY  - No token overload" 
+01:57:50PM SPOTIFY  - No token overload" 
+01:57:50PM SPOTIFY  - No token overload" 
+01:57:50PM SPOTIFY  - No token overload" 
+01:57:50PM SPOTIFY  - No token overload" 
+01:57:51PM SPOTIFY  - No token overload" 
+01:57:51PM SPOTIFY  - No token overload" 
+01:57:51PM SPOTIFY  - No token overload" 
+01:57:52PM SPOTIFY  - No token overload" 
+01:57:52PM SPOTIFY  - No token overload" 
+01:57:52PM SPOTIFY  - No token overload" 
+01:57:52PM SPOTIFY  - No token overload" 
+01:57:53PM SPOTIFY  - No token overload" 
+01:57:53PM SPOTIFY  - No token overload" 
+01:57:53PM SPOTIFY  - No token overload" 
+01:57:53PM SPOTIFY  - No token overload" 
+01:57:54PM SPOTIFY  - No token overload" 
+01:57:54PM SPOTIFY  - No token overload" 
+01:57:54PM SPOTIFY  - No token overload" 
+01:57:54PM SPOTIFY  - No token overload" 
+01:57:55PM SPOTIFY  - No token overload" 
+01:57:55PM SPOTIFY  - No token overload" 
+01:57:55PM SPOTIFY  - No token overload" 
+01:57:55PM SPOTIFY  - No token overload" 
+01:57:56PM SPOTIFY  - No token overload" 
+01:57:56PM SPOTIFY  - No token overload" 
+01:57:56PM SPOTIFY  - No token overload" 
+01:57:56PM SPOTIFY  - No token overload" 
+01:57:57PM SPOTIFY  - No token overload" 
+01:57:57PM SPOTIFY  - Valid Token: $c5a69d96-2cd7-41eb-ac7d-021d06aa323a
+01:57:57PM SPOTIFY  - Valid Token: $d4469438-491a-4b3c-9900-d44bc0592a8e
+01:57:58PM SPOTIFY  - No token overload" 
+01:57:58PM SPOTIFY  - No token overload" 
+01:57:58PM SPOTIFY  - Valid Token: $aece8803-0b02-4e5f-9ff5-8744c73fecd3
+01:57:58PM SPOTIFY  - Valid Token: $583fc1eb-bd14-493b-8035-a976a9d76772
+01:57:59PM SPOTIFY  - Valid Token: $f3b57ac2-99f0-4800-803f-ba1f2d9946fd
+01:57:59PM SPOTIFY  - Valid Token: $ffe4e278-c394-4716-80cc-eedf778d637f
+01:57:59PM SPOTIFY  - Valid Token: $22c90d85-da91-4344-8b79-695a5f54df5b
+01:57:59PM SPOTIFY  - Valid Token: $fae6e6e9-c2a2-450f-9b67-9d9abe4929fb
+01:58:00PM SPOTIFY  - Valid Token: $28ed1959-3a6d-4874-93a4-bdeb7479d04d
+01:58:00PM SPOTIFY  - No token overload" 
+01:58:00PM SPOTIFY  - Valid Token: $5d40519a-c594-47a6-87b6-2adaf77fd726
+01:58:00PM SPOTIFY  - Valid Token: $116202da-1c12-4e43-bd50-134f174422c3
+01:58:01PM SPOTIFY  - Valid Token: $22af36fe-fb24-47ac-bffd-f94688520b5d
+01:58:01PM SPOTIFY  - Valid Token: $9b5626ac-fa64-4a75-b159-ec3947b759e6
+01:58:01PM SPOTIFY  - Valid Token: $0beea951-e68f-4a0f-8cd3-6643284a01c8
+01:58:02PM SPOTIFY  - Valid Token: $4b745dff-aa8a-4217-9507-311214ca60d6
+01:58:02PM SPOTIFY  - Valid Token: $7c47c328-3078-4178-b246-316e5feca8c1
+01:58:02PM SPOTIFY  - Valid Token: $370e56a7-cf8f-49fd-8171-02dc21c3853f
+01:58:02PM SPOTIFY  - Valid Token: $90bff865-623b-42e3-942c-0eabce3135c4
+01:58:03PM SPOTIFY  - Valid Token: $1512a998-cae2-405f-b17e-fcf0ec40033f
+01:58:03PM SPOTIFY  - Valid Token: $bf54827a-774d-4c70-addf-fb4e49e164b6
+01:58:03PM SPOTIFY  - Valid Token: $74f58cf9-0ad3-487a-a9b9-0a1c8e3f2bd6
+01:58:03PM SPOTIFY  - Valid Token: $0135f695-44cd-4c2f-babf-2a111efe8f1d
+01:58:04PM SPOTIFY  - Valid Token: $75cb0fff-0bca-4397-941d-c104b0018ebc
+01:58:04PM SPOTIFY  - Valid Token: $5852d77e-86b0-4ef6-9038-38d547e6a4a7
+01:58:04PM SPOTIFY  - Valid Token: $38c225ff-e863-4282-a3e0-f751ebd0b5f1
+01:58:04PM SPOTIFY  - Valid Token: $3f255d59-067f-4a39-9af2-5a9114e53304
+01:58:05PM SPOTIFY  - No token overload" 
+01:58:05PM SPOTIFY  - Valid Token: $d99f9ca2-53c5-485b-b0f2-b1613cdcc606
+01:58:05PM SPOTIFY  - Valid Token: $dfa26261-ad26-4819-a104-720513c10b95
+01:58:06PM SPOTIFY  - Valid Token: $887563ec-4707-4678-aa0e-e0146b190d2b
+01:58:06PM SPOTIFY  - Valid Token: $7757828d-2651-460d-8de8-780e014bb091
+01:58:06PM SPOTIFY  - Valid Token: $0b581ba2-dde6-47c0-a540-bc62752f0a9c
+01:58:06PM SPOTIFY  - Valid Token: $bd23bc73-748b-44e3-9533-fafcc12dcdd3
+01:58:07PM SPOTIFY  - Valid Token: $b55efaac-1a67-4f89-8729-6d60766ece85
+01:58:07PM SPOTIFY  - Valid Token: $7eeabb9e-785d-4754-8700-79cccf2876cf
+01:58:07PM SPOTIFY  - Valid Token: $4818d0fe-898e-440d-a185-fd653d21bc52
+01:58:07PM SPOTIFY  - Valid Token: $ef15d2bb-f760-4258-a018-e6fb62fcca07
+01:58:08PM SPOTIFY  - Valid Token: $27cb1e63-72a2-40cc-b90b-26e2e9e4c5b8
+01:58:08PM SPOTIFY  - Valid Token: $e42736ff-3e33-4757-8be8-cbe61dbce415
+01:58:08PM SPOTIFY  - Valid Token: $ef66f43c-96f2-4f38-a901-86e92c3892a9
+01:58:08PM SPOTIFY  - Valid Token: $1b7b7564-1784-43d8-9e13-673f2ec83d44
+01:58:09PM SPOTIFY  - Valid Token: $a5f0f0c7-76ac-4933-9fe5-e5d8ea618347
+01:58:09PM SPOTIFY  - Valid Token: $cc23b6b6-e04e-43b1-95b3-c1ddc527c242
+01:58:09PM SPOTIFY  - Valid Token: $82a8d76e-1d3b-4102-8e8e-986bba433950
+01:58:10PM SPOTIFY  - Valid Token: $05f8d189-9f09-432d-9937-b3f4e751ec86
+01:58:10PM SPOTIFY  - Valid Token: $e8f39018-0a54-4f3e-9f41-663576dd63f7
+01:58:10PM SPOTIFY  - Valid Token: $4f0a9e68-aa37-4e1a-b64e-223d8f4cdfa9
+01:58:10PM SPOTIFY  - Valid Token: $6375738f-d8b6-4176-a476-2aa88ca278f3
+01:58:11PM SPOTIFY  - Valid Token: $0aeb00f2-9ab8-48b8-8841-b4523817bbc1
+01:58:11PM SPOTIFY  - Valid Token: $10ac0db9-ea43-46f5-8d0c-a83e7c27c997
+01:58:11PM SPOTIFY  - Valid Token: $e39aa6da-05cf-49d6-9a28-ef77b121243e
+01:58:12PM SPOTIFY  - Valid Token: $2acdb41c-0ae2-4722-aba5-840f7b21b126
+01:58:12PM SPOTIFY  - Valid Token: $0db8b2ec-0184-4ead-a8d1-cd7316335bf9
+01:58:12PM SPOTIFY  - Valid Token: $e1cc4155-27c8-484a-aae3-b741292ae1b0
+01:58:12PM SPOTIFY  - Valid Token: $ec991715-e913-402a-ad3f-2ea8cdd1743b
+01:58:13PM SPOTIFY  - Valid Token: $cdecf28f-1e86-496c-ba4f-321088021270
+01:58:13PM SPOTIFY  - Valid Token: $f8dc8507-26e4-4a91-ae2d-84ffbcb85c17
+01:58:13PM SPOTIFY  - Valid Token: $24a4afc4-d9ac-4a0d-8f09-78c0b9fec68e
+01:58:13PM SPOTIFY  - Valid Token: $d4a5e6d7-fe9b-48e5-8237-85f6e1184655
+01:58:14PM SPOTIFY  - Valid Token: $9aedc360-7408-42ed-8e06-01be28b37a74
+01:58:14PM SPOTIFY  - Valid Token: $8745c3f0-7a7b-4da8-b8c9-7ca55f7bf420
+01:58:14PM SPOTIFY  - Valid Token: $a3d9e4f4-eeaf-4e16-83ba-e44a09812310
+01:58:14PM SPOTIFY  - Valid Token: $d8d0b9bf-02c5-4160-b443-a70975f27a37
+01:58:15PM SPOTIFY  - Valid Token: $9dc7e364-efbf-477c-9bae-29ae385d1997
+01:58:15PM SPOTIFY  - Valid Token: $e90e1d15-b94e-45ce-b7ee-706058717f08
+01:58:15PM SPOTIFY  - Valid Token: $f6a438c4-950c-40d2-ad0f-579468a30ced
+01:58:15PM SPOTIFY  - Valid Token: $78a79902-7aaa-4336-aa68-2e5693886ada
+01:58:16PM SPOTIFY  - Valid Token: $db25e143-fe4d-4535-a093-f340cff59f39
+01:58:16PM SPOTIFY  - Valid Token: $b16e7fa3-90a8-4fc1-831c-4e5e0741b50f
+01:58:16PM SPOTIFY  - Valid Token: $41159c02-69f6-4eb5-b79f-e317dd505bc5
+01:58:17PM SPOTIFY  - Valid Token: $ac696881-f893-4df3-8a78-5c534c77a14a
+01:58:17PM SPOTIFY  - Valid Token: $06e02ce3-4f60-467d-a86b-baaad5013a28
+01:58:17PM SPOTIFY  - Valid Token: $fc84a86f-3a43-4a49-940d-2582d8f8ed8e
+01:58:17PM SPOTIFY  - Valid Token: $7ab33863-6f4f-47e9-adc9-e88842eaf57d
+01:58:18PM SPOTIFY  - Valid Token: $aeeb8bcb-bdc0-419c-aae1-77458658db7f
+01:58:18PM SPOTIFY  - Valid Token: $3ec5308c-d71e-4160-bb96-8f254f929fc9
+01:58:18PM SPOTIFY  - Valid Token: $bf970929-cb4b-43c8-8a69-83f3f6d61d46
+01:58:18PM SPOTIFY  - Valid Token: $7cc931fb-cedc-43d4-9086-fb3cf996cbcf
+01:58:19PM SPOTIFY  - Valid Token: $f8712d99-ed0c-4344-a104-ae88fbd81a3a
+01:58:19PM SPOTIFY  - Valid Token: $789189d1-c62b-4a3a-95bd-8a027e12d7a6
+01:58:19PM SPOTIFY  - Valid Token: $1da3ece2-07f7-4e75-af35-6c9febc32219
+01:58:20PM SPOTIFY  - Valid Token: $9405fff9-385e-4161-9f6e-b6d8c8b2513c
+01:58:20PM SPOTIFY  - Valid Token: $30df8e47-599f-4060-848c-b8c5fc4e547f
+01:58:20PM SPOTIFY  - Valid Token: $13aaa707-7da1-4eef-9790-afc8852e11df
+01:58:20PM SPOTIFY  - Valid Token: $226423e6-c28d-4b21-99e7-801ad9510071
+01:58:21PM SPOTIFY  - Valid Token: $987781d4-2513-45e7-9362-6ed1616c8f1e
+01:58:21PM SPOTIFY  - Valid Token: $c140746f-5fc6-4d61-86cd-d2562ce173d5
+01:58:21PM SPOTIFY  - Valid Token: $c0957d01-8e48-49b5-9d71-a13798f71299
+01:58:21PM SPOTIFY  - Valid Token: $bc30752c-fa40-4126-93c7-e94ddae1ac05
+01:58:22PM SPOTIFY  - Valid Token: $9bbdbb03-ff16-467d-99f1-a3f1a30bb6a2
+01:58:22PM SPOTIFY  - Valid Token: $2a7af367-ad64-4462-b54d-104f07b2ce67
+01:58:22PM SPOTIFY  - Valid Token: $ed2efdd9-693c-463a-9e91-43a8c730b5cb
+01:58:22PM SPOTIFY  - Valid Token: $c9101ae7-df81-4179-a415-f2936ff0d510
+01:58:23PM SPOTIFY  - Valid Token: $980d4747-7981-42b1-aa92-24938281964b
+01:58:23PM SPOTIFY  - Valid Token: $507c6cff-c6d3-4447-aecf-565402ac1107
+01:58:23PM SPOTIFY  - Valid Token: $1bf73a3b-2223-4a86-971d-6a1fea98267a
+01:58:24PM SPOTIFY  - Valid Token: $8022e8c6-f1a9-479b-ac05-cf6e02f52d1e
+01:58:24PM SPOTIFY  - Valid Token: $940bf053-0812-4d41-bb67-7891f39de035
+01:58:24PM SPOTIFY  - Valid Token: $e43bf4ab-3227-4122-83d5-10faf6e58a41
+01:58:24PM SPOTIFY  - Valid Token: $ad970c24-0831-4b11-b3da-ee5cf7d5a190
+01:58:25PM SPOTIFY  - Valid Token: $59c0b482-75e9-4a9a-8af7-bb3a0bc25cde
+01:58:25PM SPOTIFY  - No token overload" 
+01:58:25PM SPOTIFY  - No token overload" 
+01:58:25PM SPOTIFY  - No token overload" 
+01:58:26PM SPOTIFY  - No token overload" 
+01:58:26PM SPOTIFY  - No token overload" 
+01:58:26PM SPOTIFY  - No token overload" 
+01:58:26PM SPOTIFY  - No token overload" 
+01:58:27PM SPOTIFY  - No token overload" 
+01:58:27PM SPOTIFY  - No token overload" 
+01:58:27PM SPOTIFY  - No token overload" 
+01:58:27PM SPOTIFY  - No token overload" 
+01:58:28PM SPOTIFY  - No token overload" 
+01:58:28PM SPOTIFY  - No token overload" 
+01:58:28PM SPOTIFY  - No token overload" 
+01:58:29PM SPOTIFY  - No token overload" 
+01:58:29PM SPOTIFY  - No token overload" 
+01:58:29PM SPOTIFY  - No token overload" 
+01:58:29PM SPOTIFY  - No token overload" 
+01:58:30PM SPOTIFY  - No token overload" 
+01:58:30PM SPOTIFY  - No token overload" 
+01:58:30PM SPOTIFY  - No token overload" 
+01:58:30PM SPOTIFY  - No token overload" 
+01:58:31PM SPOTIFY  - No token overload" 
+01:58:31PM SPOTIFY  - No token overload" 
+01:58:31PM SPOTIFY  - No token overload" 
+01:58:31PM SPOTIFY  - No token overload" 
+01:58:32PM SPOTIFY  - No token overload" 
+01:58:32PM SPOTIFY  - No token overload" 
+01:58:32PM SPOTIFY  - No token overload" 
+01:58:32PM SPOTIFY  - No token overload" 
+01:58:33PM SPOTIFY  - No token overload" 
+01:58:33PM SPOTIFY  - Valid Token: $7938c300-f653-444e-afa5-53f6cc07de27
+01:58:33PM SPOTIFY  - No token overload" 
+01:58:34PM SPOTIFY  - No token overload" 
+01:58:34PM SPOTIFY  - No token overload" 
+01:58:34PM SPOTIFY  - No token overload" 
+01:58:34PM SPOTIFY  - No token overload" 
+01:58:35PM SPOTIFY  - No token overload" 
+01:58:35PM SPOTIFY  - No token overload" 
+01:58:35PM SPOTIFY  - No token overload" 
+01:58:35PM SPOTIFY  - No token overload" 
+01:58:36PM SPOTIFY  - No token overload" 
+01:58:36PM SPOTIFY  - No token overload" 
+01:58:36PM SPOTIFY  - No token overload" 
+01:58:36PM SPOTIFY  - No token overload" 
+01:58:37PM SPOTIFY  - No token overload" 
+01:58:37PM SPOTIFY  - No token overload" 
+01:58:37PM SPOTIFY  - No token overload" 
+01:58:37PM SPOTIFY  - No token overload" 
+01:58:38PM SPOTIFY  - No token overload" 
+01:58:38PM SPOTIFY  - No token overload" 
+01:58:38PM SPOTIFY  - No token overload" 
+01:58:38PM SPOTIFY  - No token overload" 
+01:58:39PM SPOTIFY  - No token overload" 
+01:58:39PM SPOTIFY  - No token overload" 
+01:58:39PM SPOTIFY  - No token overload" 
+01:58:39PM SPOTIFY  - No token overload" 
+01:58:40PM SPOTIFY  - No token overload" 
+01:58:40PM SPOTIFY  - No token overload" 
+01:58:40PM SPOTIFY  - No token overload" 
+01:58:41PM SPOTIFY  - No token overload" 
+01:58:41PM SPOTIFY  - No token overload" 
+01:58:41PM SPOTIFY  - No token overload" 
+01:58:41PM SPOTIFY  - No token overload" 
+01:58:42PM SPOTIFY  - No token overload" 
+01:58:42PM SPOTIFY  - No token overload" 
+01:58:42PM SPOTIFY  - No token overload" 
+01:58:42PM SPOTIFY  - No token overload" 
+01:58:43PM SPOTIFY  - No token overload" 
+01:58:43PM SPOTIFY  - No token overload" 
+01:58:43PM SPOTIFY  - No token overload" 
+01:58:43PM SPOTIFY  - No token overload" 
+01:58:44PM SPOTIFY  - No token overload" 
+01:58:44PM SPOTIFY  - No token overload" 
+01:58:44PM SPOTIFY  - No token overload" 
+01:58:44PM SPOTIFY  - No token overload" 
+01:58:45PM SPOTIFY  - No token overload" 
+01:58:45PM SPOTIFY  - No token overload" 
+01:58:45PM SPOTIFY  - No token overload" 
+01:58:45PM SPOTIFY  - No token overload" 
+01:58:46PM SPOTIFY  - No token overload" 
+01:58:46PM SPOTIFY  - No token overload" 
+01:58:46PM SPOTIFY  - No token overload" 
+01:58:47PM SPOTIFY  - No token overload" 
+01:58:47PM SPOTIFY  - No token overload" 
+01:58:47PM SPOTIFY  - No token overload" 
+01:58:47PM SPOTIFY  - No token overload" 
+01:58:48PM SPOTIFY  - No token overload" 
+01:58:48PM SPOTIFY  - No token overload" 
+01:58:48PM SPOTIFY  - No token overload" 
+01:58:48PM SPOTIFY  - No token overload" 
+01:58:49PM SPOTIFY  - No token overload" 
+01:58:49PM SPOTIFY  - No token overload" 
+01:58:49PM SPOTIFY  - No token overload" 
+01:58:49PM SPOTIFY  - No token overload" 
+01:58:50PM SPOTIFY  - No token overload" 
+01:58:50PM SPOTIFY  - No token overload" 
+01:58:50PM SPOTIFY  - No token overload" 
+01:58:50PM SPOTIFY  - No token overload" 
+01:58:51PM SPOTIFY  - No token overload" 
+01:58:51PM SPOTIFY  - No token overload" 
+01:58:51PM SPOTIFY  - No token overload" 
+01:58:51PM SPOTIFY  - No token overload" 
+01:58:52PM SPOTIFY  - No token overload" 
+01:58:52PM SPOTIFY  - No token overload" 
+01:58:52PM SPOTIFY  - No token overload" 
+01:58:52PM SPOTIFY  - No token overload" 
+01:58:53PM SPOTIFY  - No token overload" 
+01:58:53PM SPOTIFY  - No token overload" 
+01:58:53PM SPOTIFY  - No token overload" 
+01:58:54PM SPOTIFY  - No token overload" 
+01:58:54PM SPOTIFY  - No token overload" 
+01:58:54PM SPOTIFY  - No token overload" 
+01:58:54PM SPOTIFY  - No token overload" 
+01:58:55PM SPOTIFY  - No token overload" 
+01:58:55PM SPOTIFY  - No token overload" 
+01:58:55PM SPOTIFY  - No token overload" 
+01:58:55PM SPOTIFY  - No token overload" 
+01:58:56PM SPOTIFY  - No token overload" 
+01:58:56PM SPOTIFY  - No token overload" 
+01:58:56PM SPOTIFY  - No token overload" 
+01:58:56PM SPOTIFY  - No token overload" 
+01:58:57PM SPOTIFY  - No token overload" 
+01:58:57PM SPOTIFY  - No token overload" 
+01:58:57PM SPOTIFY  - No token overload" 
+01:58:57PM SPOTIFY  - No token overload" 
+01:58:58PM SPOTIFY  - No token overload" 
+01:58:58PM SPOTIFY  - No token overload" 
+01:58:58PM SPOTIFY  - No token overload" 
+01:58:58PM SPOTIFY  - No token overload" 
+01:58:59PM SPOTIFY  - No token overload" 
+01:58:59PM SPOTIFY  - No token overload" 
+01:58:59PM SPOTIFY  - No token overload" 
+01:59:00PM SPOTIFY  - No token overload" 
+01:59:00PM SPOTIFY  - No token overload" 
+01:59:00PM SPOTIFY  - No token overload" 
+01:59:00PM SPOTIFY  - No token overload" 
+01:59:01PM SPOTIFY  - No token overload" 
+01:59:01PM SPOTIFY  - No token overload" 
+01:59:01PM SPOTIFY  - No token overload" 
+01:59:01PM SPOTIFY  - No token overload" 
+01:59:02PM SPOTIFY  - No token overload" 
+01:59:02PM SPOTIFY  - No token overload" 
+01:59:02PM SPOTIFY  - No token overload" 
+01:59:02PM SPOTIFY  - No token overload" 
+01:59:03PM SPOTIFY  - No token overload" 
+01:59:03PM SPOTIFY  - No token overload" 
+01:59:03PM SPOTIFY  - No token overload" 
+01:59:03PM SPOTIFY  - No token overload" 
+01:59:04PM SPOTIFY  - No token overload" 
+01:59:04PM SPOTIFY  - No token overload" 
+01:59:04PM SPOTIFY  - No token overload" 
+01:59:04PM SPOTIFY  - No token overload" 
+01:59:05PM SPOTIFY  - No token overload" 
+01:59:05PM SPOTIFY  - No token overload" 
+01:59:05PM SPOTIFY  - No token overload" 
+01:59:05PM SPOTIFY  - No token overload" 
+01:59:06PM SPOTIFY  - No token overload" 
+01:59:06PM SPOTIFY  - No token overload" 
+01:59:06PM SPOTIFY  - No token overload" 
+01:59:07PM SPOTIFY  - No token overload" 
+01:59:07PM SPOTIFY  - No token overload" 
+01:59:07PM SPOTIFY  - No token overload" 
+01:59:07PM SPOTIFY  - No token overload" 
+01:59:08PM SPOTIFY  - No token overload" 
+01:59:08PM SPOTIFY  - No token overload" 
+01:59:08PM SPOTIFY  - No token overload" 
+01:59:08PM SPOTIFY  - No token overload" 
+01:59:09PM SPOTIFY  - No token overload" 
+01:59:09PM SPOTIFY  - No token overload" 
+01:59:09PM SPOTIFY  - No token overload" 
+01:59:09PM SPOTIFY  - No token overload" 
+01:59:10PM SPOTIFY  - No token overload" 
+01:59:10PM SPOTIFY  - No token overload" 
+01:59:10PM SPOTIFY  - No token overload" 
+01:59:10PM SPOTIFY  - No token overload" 
+02:00:29PM SPOTIFY  - Valid Token: $bd613aac-f593-4961-8ec8-d174ea8686ee
+02:00:29PM SPOTIFY  - Valid Token: $55a15c97-4b2e-401b-a94a-e49f74efe23e
+10:27:57PM ROUTER   - > connect SYN
+10:27:57PM CONNECT  - < connect SYNACK
+10:27:58PM ROUTER   - > connect ACK
+10:27:58PM DEVICE   - < status/all 1
+10:27:58PM DEVICE   - > status power state off
+10:27:58PM DEVICE   - > status volume level 0
+10:27:58PM DEVICE   - > status enc adjusts-volume true
+10:27:58PM DEVICE   - > status led state off
+10:27:58PM DEVICE   - > status led intensity 1
+10:27:58PM DEVICE   - > status led color green
+10:27:58PM DEVICE   - > status radio volume 15
+10:27:58PM DEVICE   - > status radio station 879
+10:28:25PM DEVICE   - enc-button action  press
+10:28:25PM DEVICE   - < power state toggle
+10:28:26PM DEVICE   - > status power state on
+10:28:26PM DEVICE   - > status volume level 20
+10:28:26PM DEVICE   - > status enc adjusts-volume true
+10:28:26PM DEVICE   - > status led state on
+10:28:26PM DEVICE   - > status led intensity 1
+10:28:26PM DEVICE   - > status led color green
+10:28:27PM DEVICE   - > status volume level 21
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 22
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 23
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 24
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 25
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 26
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 27
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 28
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 29
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 30
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 31
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 32
+10:28:27PM DEVICE   - enc action  up
+10:28:27PM DEVICE   - > status volume level 33
+10:28:27PM DEVICE   - enc action  up
+10:28:28PM DEVICE   - > status volume level 34
+10:28:28PM DEVICE   - enc action  up
+10:28:56PM DEVICE   - < power state off
+10:28:57PM DEVICE   - > status power state off
+10:28:57PM DEVICE   - > status volume level 0
+10:28:57PM DEVICE   - > status enc adjusts-volume true
+10:28:57PM DEVICE   - > status led state off
+10:28:57PM DEVICE   - > status led intensity 1
+10:28:57PM DEVICE   - > status led color green
+10:28:58PM DEVICE   - < power state on
+10:28:58PM DEVICE   - > status power state on
+10:28:58PM DEVICE   - > status volume level 20
+10:28:58PM DEVICE   - > status enc adjusts-volume true
+10:28:58PM DEVICE   - > status led state on
+10:28:58PM DEVICE   - > status led intensity 1
+10:28:58PM DEVICE   - > status led color green
+10:29:00PM DEVICE   - < volume set 23
+10:29:00PM DEVICE   - < volume set 24
+10:29:00PM DEVICE   - < volume set 25
+10:29:00PM DEVICE   - < volume set 26
+10:29:00PM DEVICE   - < volume set 27
+10:29:00PM DEVICE   - < volume set 28
+10:29:00PM DEVICE   - < volume set 29
+10:29:00PM DEVICE   - < volume set 30
+10:29:00PM DEVICE   - < volume set 31
+10:29:00PM DEVICE   - < volume set 32
+10:29:00PM DEVICE   - < volume set 33
+10:29:00PM DEVICE   - < volume set 34
+10:29:00PM DEVICE   - < volume set 35
+10:29:01PM DEVICE   - < volume set 36
+10:29:01PM DEVICE   - < volume set 37
+10:29:01PM DEVICE   - < volume set 38
+10:29:01PM DEVICE   - < volume set 39
+10:29:01PM DEVICE   - < volume set 40
+10:29:01PM DEVICE   - < volume set 41
+10:29:02PM DEVICE   - < volume set 42
+10:29:02PM DEVICE   - < volume set 43
+10:29:02PM DEVICE   - < volume set 44
+10:29:02PM DEVICE   - < volume set 45
+10:29:02PM DEVICE   - < volume set 46
+10:29:02PM DEVICE   - < volume set 47
+10:29:02PM DEVICE   - < volume set 48
+10:29:02PM DEVICE   - < volume set 49
+10:29:03PM DEVICE   - < volume set 50
+10:29:03PM DEVICE   - < volume set 49
+10:29:03PM DEVICE   - < volume set 48
+10:29:03PM DEVICE   - < volume set 47
+10:29:03PM DEVICE   - < volume set 46
+10:29:03PM DEVICE   - < volume set 45
+10:29:03PM DEVICE   - < volume set 44
+10:29:03PM DEVICE   - < volume set 43
+10:29:04PM DEVICE   - < volume set 42
+10:29:04PM DEVICE   - < volume set 41
+10:29:04PM DEVICE   - < volume set 40
+10:29:04PM DEVICE   - < volume set 39
+10:29:04PM DEVICE   - < volume set 38
+10:29:04PM DEVICE   - < volume set 37
+10:29:04PM DEVICE   - < volume set 36
+10:29:04PM DEVICE   - < volume set 35
+10:29:04PM DEVICE   - < volume set 34
+10:29:04PM DEVICE   - < volume set 33
+10:29:04PM DEVICE   - < volume set 32
+10:29:04PM DEVICE   - < volume set 31
+10:29:04PM DEVICE   - < volume set 30
+10:29:04PM DEVICE   - < volume set 29
+10:29:04PM DEVICE   - < volume set 28
+10:29:05PM DEVICE   - < volume set 27
+10:29:05PM DEVICE   - < volume set 26
+10:29:05PM DEVICE   - < volume set 25
+10:29:05PM DEVICE   - < volume set 24
+10:29:05PM DEVICE   - < volume set 23
+10:29:05PM DEVICE   - < volume set 22
+10:29:05PM DEVICE   - < volume set 21
+10:29:05PM DEVICE   - < volume set 22
+10:29:05PM DEVICE   - < volume set 23
+10:29:05PM DEVICE   - < volume set 24
+10:29:05PM DEVICE   - < volume set 25
+10:29:05PM DEVICE   - < volume set 26
+10:29:05PM DEVICE   - < volume set 27
+10:29:05PM DEVICE   - < volume set 28
+10:29:05PM DEVICE   - < volume set 29
+10:29:05PM DEVICE   - < volume set 30
+10:29:05PM DEVICE   - < volume set 31
+10:29:06PM DEVICE   - < volume set 32
+10:29:06PM DEVICE   - < volume set 33
+10:29:06PM DEVICE   - < volume set 34
+10:29:06PM DEVICE   - < volume set 35
+10:29:06PM DEVICE   - < volume set 36
+10:29:06PM DEVICE   - < volume set 37
+10:29:06PM DEVICE   - < volume set 38
+10:29:06PM DEVICE   - < volume set 39
+10:29:06PM DEVICE   - < volume set 40
+10:29:06PM DEVICE   - < volume set 41
+10:29:07PM DEVICE   - < volume set 42
+10:29:07PM DEVICE   - < volume set 43
+10:29:07PM DEVICE   - < volume set 44
+10:29:07PM DEVICE   - < volume set 43
+10:29:07PM DEVICE   - < volume set 42
+10:29:07PM DEVICE   - < volume set 41
+10:29:07PM DEVICE   - < volume set 40
+10:29:07PM DEVICE   - < volume set 39
+10:29:07PM DEVICE   - < volume set 38
+10:29:07PM DEVICE   - < volume set 37
+10:29:07PM DEVICE   - < volume set 36
+10:29:07PM DEVICE   - < volume set 35
+10:29:07PM DEVICE   - < volume set 34
+10:29:07PM DEVICE   - < volume set 33
+10:29:08PM DEVICE   - < volume set 32
+10:30:29PM DEVICE   - > status volume level 31
+10:30:29PM DEVICE   - enc action  down
+10:30:29PM DEVICE   - > status volume level 32
+10:30:29PM DEVICE   - enc action  up
+10:30:29PM DEVICE   - > status volume level 33
+10:30:29PM DEVICE   - enc action  up
+10:30:29PM DEVICE   - > status volume level 34
+10:30:29PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 35
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 36
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 37
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 38
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 39
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 40
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 41
+10:30:30PM DEVICE   - enc action  up
+10:30:30PM DEVICE   - > status volume level 40
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 39
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 38
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 37
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 36
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 35
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 34
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 33
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 32
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 31
+10:30:31PM DEVICE   - enc action  down
+10:30:31PM DEVICE   - > status volume level 30
+10:30:32PM DEVICE   - enc action  down
+10:30:32PM DEVICE   - > status volume level 29
+10:30:32PM DEVICE   - enc action  down
+10:30:32PM DEVICE   - > status volume level 30
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 31
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 32
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 33
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 34
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 35
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 36
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 37
+10:30:32PM DEVICE   - enc action  up
+10:30:32PM DEVICE   - > status volume level 38
+10:30:33PM DEVICE   - enc action  up
+10:30:33PM DEVICE   - > status volume level 39
+10:30:33PM DEVICE   - enc action  up
+10:30:33PM DEVICE   - > status volume level 40
+10:30:33PM DEVICE   - enc action  up
+10:30:33PM DEVICE   - > status volume level 41
+10:30:33PM DEVICE   - enc action  up
+10:30:33PM DEVICE   - > status volume level 42
+10:30:33PM DEVICE   - enc action  up
+10:30:33PM DEVICE   - > status volume level 43
+10:30:33PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 44
+10:30:34PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 45
+10:30:34PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 46
+10:30:34PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 47
+10:30:34PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 48
+10:30:34PM DEVICE   - enc action  up
+10:30:34PM DEVICE   - > status volume level 49
+10:30:34PM DEVICE   - enc action  up
+10:30:35PM DEVICE   - > status volume level 50
+10:30:35PM DEVICE   - enc action  up
+10:30:35PM DEVICE   - > status volume level 51
+10:30:35PM DEVICE   - enc action  up
+10:30:35PM DEVICE   - > status volume level 52
+10:30:35PM DEVICE   - enc action  up
+10:30:36PM DEVICE   - > status volume level 53
+10:30:36PM DEVICE   - enc action  up
+10:30:36PM DEVICE   - > status volume level 54
+10:30:36PM DEVICE   - enc action  up
+10:30:36PM DEVICE   - > status volume level 55
+10:30:36PM DEVICE   - enc action  up
+10:30:37PM DEVICE   - > status volume level 56
+10:30:37PM DEVICE   - enc action  up
+10:30:37PM DEVICE   - > status volume level 57
+10:30:37PM DEVICE   - enc action  up
+10:30:38PM DEVICE   - > status volume level 58
+10:30:38PM DEVICE   - enc action  up
+10:30:39PM DEVICE   - > status volume level 57
+10:30:39PM DEVICE   - enc action  down
+10:30:39PM DEVICE   - > status volume level 56
+10:30:39PM DEVICE   - enc action  down
+10:30:39PM DEVICE   - > status volume level 55
+10:30:39PM DEVICE   - enc action  down
+10:30:39PM DEVICE   - > status volume level 54
+10:30:39PM DEVICE   - enc action  down
+10:30:40PM DEVICE   - > status volume level 53
+10:30:40PM DEVICE   - enc action  down
+10:30:40PM DEVICE   - > status volume level 52
+10:30:40PM DEVICE   - enc action  down
+10:30:41PM DEVICE   - > status volume level 51
+10:30:41PM DEVICE   - enc action  down
+10:30:41PM DEVICE   - > status volume level 50
+10:30:41PM DEVICE   - enc action  down
+10:30:41PM DEVICE   - > status volume level 49
+10:30:41PM DEVICE   - enc action  down
+10:30:41PM DEVICE   - > status volume level 48
+10:30:41PM DEVICE   - enc action  down
+10:30:41PM DEVICE   - > status volume level 47
+10:30:41PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 46
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 45
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 44
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 43
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 42
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 41
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 40
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 39
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 38
+10:30:42PM DEVICE   - enc action  down
+10:30:42PM DEVICE   - > status volume level 37
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 36
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 35
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 34
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 33
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 32
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 31
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 30
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 29
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 28
+10:30:43PM DEVICE   - enc action  down
+10:30:43PM DEVICE   - > status volume level 27
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 26
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 25
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 24
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 23
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 22
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 21
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 20
+10:30:44PM DEVICE   - enc action  down
+10:30:44PM DEVICE   - > status volume level 19
+10:30:44PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 18
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 17
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 16
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 15
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 14
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 13
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 12
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 11
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 10
+10:30:45PM DEVICE   - enc action  down
+10:30:45PM DEVICE   - > status volume level 11
+10:30:45PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 12
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 13
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 14
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 15
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 16
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 17
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 18
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 19
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 20
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 21
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 22
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 23
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 24
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 25
+10:30:46PM DEVICE   - enc action  up
+10:30:46PM DEVICE   - > status volume level 26
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 27
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 28
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 29
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 30
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 31
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 32
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 33
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 34
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 35
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 36
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 37
+10:30:47PM DEVICE   - enc action  up
+10:30:47PM DEVICE   - > status volume level 38
+10:30:47PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 39
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 40
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 41
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 42
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 43
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 44
+10:30:48PM DEVICE   - enc action  up
+10:30:48PM DEVICE   - > status volume level 45
+10:30:48PM DEVICE   - enc action  up
+10:30:49PM DEVICE   - > status volume level 46
+10:30:49PM DEVICE   - enc action  up
+10:30:49PM DEVICE   - > status volume level 45
+10:30:49PM DEVICE   - enc action  down
+10:30:49PM DEVICE   - > status volume level 44
+10:30:49PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 43
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 42
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 41
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 40
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 39
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 38
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 37
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 36
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 35
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 34
+10:30:50PM DEVICE   - enc action  down
+10:30:50PM DEVICE   - > status volume level 33
+10:30:50PM DEVICE   - enc action  down
+10:30:51PM DEVICE   - > status volume level 34
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 35
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 36
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 37
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 38
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 39
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 40
+10:30:51PM DEVICE   - enc action  up
+10:30:51PM DEVICE   - > status volume level 41
+10:30:51PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 42
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 43
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 44
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 45
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 46
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 47
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 48
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 49
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 50
+10:30:52PM DEVICE   - enc action  up
+10:30:52PM DEVICE   - > status volume level 51
+10:30:52PM DEVICE   - enc action  up
+10:30:53PM DEVICE   - > status volume level 50
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 49
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 48
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 47
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 46
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 45
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 44
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 43
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 42
+10:30:53PM DEVICE   - enc action  down
+10:30:53PM DEVICE   - > status volume level 41
+10:30:53PM DEVICE   - enc action  down
+10:30:54PM DEVICE   - > status volume level 40
+10:30:54PM DEVICE   - enc action  down
+10:30:54PM DEVICE   - > status volume level 39
+10:30:54PM DEVICE   - enc action  down
+10:30:54PM DEVICE   - > status volume level 38
+10:30:54PM DEVICE   - enc action  down
+10:30:54PM DEVICE   - > status volume level 37
+10:30:54PM DEVICE   - enc action  down
+10:30:55PM DEVICE   - > status volume level 38
+10:30:55PM DEVICE   - enc action  up
+10:30:55PM DEVICE   - > status volume level 39
+10:30:55PM DEVICE   - enc action  up
+10:30:55PM DEVICE   - > status volume level 40
+10:30:55PM DEVICE   - enc action  up
+10:30:55PM DEVICE   - > status volume level 41
+10:30:55PM DEVICE   - enc action  up
+10:31:32PM DEVICE   - < power state off
+10:31:33PM DEVICE   - > status power state off
+10:31:33PM DEVICE   - > status volume level 0
+10:31:33PM DEVICE   - > status enc adjusts-volume true
+10:31:33PM DEVICE   - > status led state off
+10:31:33PM DEVICE   - > status led intensity 1
+10:31:33PM DEVICE   - > status led color green
+10:31:34PM DEVICE   - < power state on
+10:31:35PM DEVICE   - > status power state on
+10:31:35PM DEVICE   - > status volume level 20
+10:31:35PM DEVICE   - > status enc adjusts-volume true
+10:31:35PM DEVICE   - > status led state on
+10:31:35PM DEVICE   - > status led intensity 1
+10:31:35PM DEVICE   - > status led color green
+10:31:36PM DEVICE   - < volume set 19
+10:31:36PM DEVICE   - < volume set 20
+10:31:36PM DEVICE   - < volume set 21
+10:31:36PM DEVICE   - < volume set 22
+10:31:36PM DEVICE   - < volume set 23
+10:31:36PM DEVICE   - < volume set 25
+10:31:36PM DEVICE   - < volume set 27
+10:31:36PM DEVICE   - < volume set 28
+10:31:36PM DEVICE   - < volume set 29
+10:31:36PM DEVICE   - < volume set 30
+10:31:36PM DEVICE   - < volume set 31
+10:31:37PM DEVICE   - < volume set 32
+10:31:37PM DEVICE   - < volume set 33
+10:31:37PM DEVICE   - < volume set 34
+10:31:37PM DEVICE   - < volume set 35
+10:31:37PM DEVICE   - < volume set 36
+10:31:37PM DEVICE   - < volume set 37
+10:31:37PM DEVICE   - < volume set 38
+10:31:37PM DEVICE   - < volume set 39
+10:31:37PM DEVICE   - < volume set 40
+10:31:37PM DEVICE   - < volume set 41
+10:31:37PM DEVICE   - < volume set 42
+10:31:37PM DEVICE   - < volume set 43
+10:31:37PM DEVICE   - < volume set 44
+10:31:38PM DEVICE   - < volume set 45
+10:31:38PM DEVICE   - < volume set 46
+10:31:38PM DEVICE   - < volume set 47
+10:31:38PM DEVICE   - < volume set 46
+10:31:42PM DEVICE   - < volume set 51
+10:31:44PM DEVICE   - < volume set 42
+10:31:44PM DEVICE   - < volume set 41
+10:31:44PM DEVICE   - < volume set 40
+10:31:44PM DEVICE   - < volume set 39
+10:31:44PM DEVICE   - < volume set 38
+10:31:44PM DEVICE   - < volume set 37
+10:31:46PM DEVICE   - < volume set 28
+10:31:47PM DEVICE   - < volume set 19
+10:31:48PM DEVICE   - < volume set 13
+10:31:49PM DEVICE   - < volume set 20
+10:31:49PM DEVICE   - < volume set 29
+10:31:50PM DEVICE   - < volume set 35
+10:31:50PM DEVICE   - < volume set 34
+10:31:50PM DEVICE   - < volume set 39
+10:31:51PM DEVICE   - < volume set 42
+10:31:51PM DEVICE   - < volume set 41
+10:31:52PM DEVICE   - < volume set 38
+10:31:52PM DEVICE   - < volume set 37
+10:31:52PM DEVICE   - < volume set 36
+10:31:53PM DEVICE   - < volume set 35
+10:31:53PM DEVICE   - < volume set 34
+10:31:53PM DEVICE   - < volume set 33
+10:31:55PM DEVICE   - < volume set 31
+10:31:55PM DEVICE   - < volume set 32
+10:31:55PM DEVICE   - < volume set 33
+10:31:55PM DEVICE   - < volume set 34
+10:31:55PM DEVICE   - < volume set 35
+10:31:56PM DEVICE   - < volume set 36
+10:31:56PM DEVICE   - < volume set 37
+10:31:56PM DEVICE   - < volume set 38
+10:31:56PM DEVICE   - < volume set 39
+10:31:56PM DEVICE   - < volume set 40
+10:31:56PM DEVICE   - < volume set 41
+10:31:57PM DEVICE   - < volume set 42
+10:31:57PM DEVICE   - < volume set 43
+10:31:58PM DEVICE   - < volume set 42
+10:31:58PM DEVICE   - < volume set 41
+10:31:58PM DEVICE   - < volume set 40
+10:31:58PM DEVICE   - < volume set 39
+10:31:58PM DEVICE   - < volume set 38
+10:31:58PM DEVICE   - < volume set 37
+10:31:58PM DEVICE   - < volume set 36
+10:31:58PM DEVICE   - < volume set 35
+10:31:58PM DEVICE   - < volume set 34
+10:31:59PM DEVICE   - < volume set 33
+10:31:59PM DEVICE   - < volume set 32
+10:31:59PM DEVICE   - < volume set 31
+10:31:59PM DEVICE   - < volume set 30
+10:31:59PM DEVICE   - < volume set 29
+10:31:59PM DEVICE   - < volume set 28
+10:31:59PM DEVICE   - < volume set 27
+10:31:59PM DEVICE   - < volume set 26
+10:31:59PM DEVICE   - < volume set 25
+10:31:59PM DEVICE   - < volume set 24
+10:31:59PM DEVICE   - < volume set 23
+10:32:00PM DEVICE   - < volume set 22
+10:32:00PM DEVICE   - < volume set 21
+10:32:00PM DEVICE   - < volume set 20
+10:32:00PM DEVICE   - < volume set 19
+10:32:00PM DEVICE   - < volume set 18
+10:32:01PM DEVICE   - < volume set 17
+10:32:01PM DEVICE   - < volume set 16
+10:32:01PM DEVICE   - < volume set 15
+10:32:01PM DEVICE   - < volume set 14
+10:32:01PM DEVICE   - < volume set 13
+10:32:01PM DEVICE   - < volume set 12
+10:32:02PM DEVICE   - < volume set 13
+10:32:02PM DEVICE   - < volume set 14
+10:32:02PM DEVICE   - < volume set 17
+10:32:02PM DEVICE   - < volume set 18
+10:32:02PM DEVICE   - < volume set 19
+10:32:02PM DEVICE   - < volume set 20
+10:32:02PM DEVICE   - < volume set 21
+10:32:02PM DEVICE   - < volume set 22
+10:32:03PM DEVICE   - < volume set 23
+10:32:03PM DEVICE   - < volume set 24
+10:32:03PM DEVICE   - < volume set 25
+10:32:03PM DEVICE   - < volume set 26
+10:32:03PM DEVICE   - < volume set 27
+10:32:03PM DEVICE   - < volume set 28
+10:32:03PM DEVICE   - < volume set 29
+10:32:03PM DEVICE   - < volume set 30
+10:32:03PM DEVICE   - < volume set 31
+10:32:03PM DEVICE   - < volume set 32
+10:32:03PM DEVICE   - < volume set 33
+10:32:03PM DEVICE   - < volume set 34
+10:32:03PM DEVICE   - < volume set 35
+10:32:03PM DEVICE   - < volume set 36
+10:32:04PM DEVICE   - < volume set 37
+10:32:04PM DEVICE   - < volume set 38
+10:32:04PM DEVICE   - < volume set 39
+10:32:04PM DEVICE   - < volume set 40
+10:32:05PM DEVICE   - < volume set 41
+10:32:05PM DEVICE   - < volume set 42
+10:32:05PM DEVICE   - < volume set 43
+10:32:05PM DEVICE   - < volume set 44
+10:32:05PM DEVICE   - < volume set 45
+10:32:05PM DEVICE   - < volume set 46
+10:32:05PM DEVICE   - < volume set 47
+10:32:05PM DEVICE   - < volume set 48
+10:32:06PM DEVICE   - < volume set 47
+10:32:06PM DEVICE   - < volume set 46
+10:32:06PM DEVICE   - < volume set 45
+10:32:06PM DEVICE   - < volume set 44
+10:32:06PM DEVICE   - < volume set 43
+10:32:06PM DEVICE   - < volume set 42
+10:32:07PM DEVICE   - < volume set 41
+10:32:07PM DEVICE   - < volume set 40
+10:32:07PM DEVICE   - < volume set 39
+10:32:07PM DEVICE   - < volume set 38
+10:32:07PM DEVICE   - < volume set 37
+10:32:13PM DEVICE   - > status volume level 38
+10:32:13PM DEVICE   - enc action  up
+10:32:13PM DEVICE   - > status volume level 39
+10:32:13PM DEVICE   - enc action  up
+10:32:13PM DEVICE   - > status volume level 40
+10:32:13PM DEVICE   - enc action  up
+10:32:14PM DEVICE   - > status volume level 41
+10:32:14PM DEVICE   - enc action  up
+10:32:14PM DEVICE   - > status volume level 42
+10:32:14PM DEVICE   - enc action  up
+10:32:14PM DEVICE   - > status volume level 43
+10:32:14PM DEVICE   - enc action  up
+10:32:15PM DEVICE   - > status volume level 42
+10:32:15PM DEVICE   - enc action  down
+10:32:15PM DEVICE   - > status volume level 41
+10:32:15PM DEVICE   - enc action  down
+10:32:15PM DEVICE   - > status volume level 40
+10:32:15PM DEVICE   - enc action  down
+10:32:15PM DEVICE   - > status volume level 39
+10:32:15PM DEVICE   - enc action  down
+10:32:15PM DEVICE   - > status volume level 38
+10:32:15PM DEVICE   - enc action  down
+10:32:15PM DEVICE   - > status volume level 37
+10:32:15PM DEVICE   - enc action  down
+10:32:16PM DEVICE   - > status volume level 36
+10:32:16PM DEVICE   - enc action  down
+10:32:16PM DEVICE   - > status volume level 35
+10:32:16PM DEVICE   - enc action  down
+10:32:16PM DEVICE   - > status volume level 34
+10:32:16PM DEVICE   - enc action  down
+10:32:16PM DEVICE   - > status volume level 33
+10:32:16PM DEVICE   - enc action  down
+10:32:16PM DEVICE   - > status volume level 32
+10:32:16PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 31
+10:32:17PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 30
+10:32:17PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 29
+10:32:17PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 28
+10:32:17PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 27
+10:32:17PM DEVICE   - enc action  down
+10:32:17PM DEVICE   - > status volume level 26
+10:32:17PM DEVICE   - enc action  down
+10:32:18PM DEVICE   - > status volume level 25
+10:32:18PM DEVICE   - enc action  down
+10:32:18PM DEVICE   - > status volume level 24
+10:32:18PM DEVICE   - enc action  down
+10:32:18PM DEVICE   - > status volume level 23
+10:32:18PM DEVICE   - enc action  down
+10:32:18PM DEVICE   - > status volume level 24
+10:32:18PM DEVICE   - enc action  up
+10:32:18PM DEVICE   - > status volume level 25
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 26
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 27
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 28
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 29
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 30
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 31
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 32
+10:32:19PM DEVICE   - enc action  up
+10:32:19PM DEVICE   - > status volume level 33
+10:32:20PM DEVICE   - enc action  up
+10:32:20PM DEVICE   - > status volume level 34
+10:32:20PM DEVICE   - enc action  up
+10:32:20PM DEVICE   - > status volume level 35
+10:32:20PM DEVICE   - enc action  up
+10:32:20PM DEVICE   - > status volume level 36
+10:32:20PM DEVICE   - enc action  up
+10:32:20PM DEVICE   - > status volume level 37
+10:32:20PM DEVICE   - enc action  up
+10:32:20PM DEVICE   - > status volume level 38
+10:32:20PM DEVICE   - enc action  up
+10:32:22PM DEVICE   - > status volume level 39
+10:32:22PM DEVICE   - enc action  up
+10:32:22PM DEVICE   - > status volume level 40
+10:32:22PM DEVICE   - enc action  up
+10:32:22PM DEVICE   - > status volume level 41
+10:32:22PM DEVICE   - enc action  up
+11:35:03PM DEVICE   - > status volume level 40
+11:35:03PM DEVICE   - enc action  down
+11:35:03PM DEVICE   - > status volume level 39
+11:35:03PM DEVICE   - enc action  down
+11:35:03PM DEVICE   - > status volume level 38
+11:35:03PM DEVICE   - enc action  down
+11:35:03PM DEVICE   - > status volume level 37
+11:35:03PM DEVICE   - enc action  down
+11:35:04PM DEVICE   - > status volume level 36
+11:35:04PM DEVICE   - enc action  down
+11:35:04PM DEVICE   - > status volume level 35
+11:35:04PM DEVICE   - enc action  down
+11:35:04PM DEVICE   - > status volume level 34
+11:35:04PM DEVICE   - enc action  down
+11:35:04PM DEVICE   - > status volume level 33
+11:35:04PM DEVICE   - enc action  down
+11:35:04PM DEVICE   - > status volume level 32
+11:35:04PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 31
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 30
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 29
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 28
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 27
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 26
+11:35:05PM DEVICE   - enc action  down
+11:35:05PM DEVICE   - > status volume level 25
+11:35:05PM DEVICE   - enc action  down
+11:35:06PM DEVICE   - > status volume level 26
+11:35:06PM DEVICE   - enc action  up
+11:35:06PM DEVICE   - > status volume level 27
+11:35:06PM DEVICE   - enc action  up
+11:35:06PM DEVICE   - > status volume level 28
+11:35:06PM DEVICE   - enc action  up
+11:35:19PM DEVICE   - > status volume level 27
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 26
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 25
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 24
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 23
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 22
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 21
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 20
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 19
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 18
+11:35:19PM DEVICE   - enc action  down
+11:35:19PM DEVICE   - > status volume level 17
+11:35:20PM DEVICE   - enc action  down
+11:35:20PM DEVICE   - > status volume level 18
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 19
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 20
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 21
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 22
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 23
+11:35:20PM DEVICE   - enc action  up
+11:35:20PM DEVICE   - > status volume level 24
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 25
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 26
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 27
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 28
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 29
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 30
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 31
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 32
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 33
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 34
+11:35:21PM DEVICE   - enc action  up
+11:35:21PM DEVICE   - > status volume level 35
+11:35:21PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 36
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 37
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 38
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 39
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 40
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 41
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 42
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 43
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 44
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 45
+11:35:22PM DEVICE   - enc action  up
+11:35:22PM DEVICE   - > status volume level 46
+11:35:22PM DEVICE   - enc action  up
+11:35:23PM DEVICE   - > status volume level 45
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 44
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 43
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 42
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 41
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 40
+11:35:23PM DEVICE   - enc action  down
+11:35:23PM DEVICE   - > status volume level 39
+11:35:23PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 38
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 37
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 36
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 35
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 34
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 33
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 32
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 31
+11:35:24PM DEVICE   - enc action  down
+11:35:24PM DEVICE   - > status volume level 30
+11:35:24PM DEVICE   - enc action  down
+11:35:28PM DEVICE   - > status volume level 31
+11:35:28PM DEVICE   - enc action  up
+11:35:28PM DEVICE   - > status volume level 32
+11:35:28PM DEVICE   - enc action  up
+11:35:28PM DEVICE   - > status volume level 33
+11:35:28PM DEVICE   - enc action  up
+11:35:28PM DEVICE   - > status volume level 34
+11:35:28PM DEVICE   - enc action  up
+11:35:28PM DEVICE   - > status volume level 33
+11:35:28PM DEVICE   - enc action  down
+11:35:36PM DEVICE   - > status volume level 34
+11:35:36PM DEVICE   - enc action  up
+11:35:36PM DEVICE   - > status volume level 35
+11:35:36PM DEVICE   - enc action  up
+11:35:36PM DEVICE   - > status volume level 36
+11:35:36PM DEVICE   - enc action  up
+11:35:36PM DEVICE   - > status volume level 37
+11:35:36PM DEVICE   - enc action  up
+11:35:36PM DEVICE   - > status volume level 38
+11:35:36PM DEVICE   - enc action  up
+11:35:37PM DEVICE   - > status volume level 39
+11:35:38PM DEVICE   - enc action  up
+11:35:38PM DEVICE   - > status volume level 40
+11:35:38PM DEVICE   - enc action  up
+11:35:38PM DEVICE   - > status volume level 41
+11:35:38PM DEVICE   - enc action  up
+11:35:38PM DEVICE   - > status volume level 42
+11:35:38PM DEVICE   - enc action  up
+11:35:38PM DEVICE   - > status volume level 43
+11:35:38PM DEVICE   - enc action  up
+11:35:39PM DEVICE   - > status volume level 42
+11:35:39PM DEVICE   - enc action  down
+11:35:39PM DEVICE   - > status volume level 41
+11:35:39PM DEVICE   - enc action  down
+11:35:39PM DEVICE   - > status volume level 40
+11:35:39PM DEVICE   - enc action  down
+11:35:39PM DEVICE   - > status volume level 39
+11:35:39PM DEVICE   - enc action  down
+11:35:39PM DEVICE   - > status volume level 38
+11:35:39PM DEVICE   - enc action  down
+11:35:40PM DEVICE   - < power state off
+11:35:41PM DEVICE   - > status power state off
+11:35:41PM DEVICE   - > status volume level 0
+11:35:41PM DEVICE   - > status enc adjusts-volume true
+11:35:41PM DEVICE   - > status led state off
+11:35:41PM DEVICE   - > status led intensity 1
+11:35:41PM DEVICE   - > status led color green
+11:35:42PM DEVICE   - < power state on
+11:35:43PM DEVICE   - > status power state on
+11:35:43PM DEVICE   - > status volume level 20
+11:35:43PM DEVICE   - > status enc adjusts-volume true
+11:35:43PM DEVICE   - > status led state on
+11:35:43PM DEVICE   - > status led intensity 1
+11:35:43PM DEVICE   - > status led color green
+11:35:44PM DEVICE   - < volume set 29
+11:35:47PM DEVICE   - < volume set 41
+11:35:47PM DEVICE   - < volume set 50
+11:35:48PM DEVICE   - < volume set 45
+11:35:48PM DEVICE   - < volume set 44
+11:35:48PM DEVICE   - < volume set 43
+11:35:48PM DEVICE   - < volume set 42
+11:35:48PM DEVICE   - < volume set 41
+11:35:48PM DEVICE   - < volume set 40
+11:35:48PM DEVICE   - < volume set 39
+11:35:49PM DEVICE   - < volume set 38
+11:35:49PM DEVICE   - < volume set 37
+11:35:49PM DEVICE   - < volume set 36
+11:35:49PM DEVICE   - < volume set 35
+11:35:49PM DEVICE   - < volume set 34
+11:35:49PM DEVICE   - < volume set 33
+11:35:49PM DEVICE   - < volume set 32
+11:35:49PM DEVICE   - < volume set 31
+11:35:49PM DEVICE   - < volume set 30
+11:35:49PM DEVICE   - < volume set 29
+11:35:49PM DEVICE   - < volume set 28
+11:35:49PM DEVICE   - < volume set 27
+11:35:49PM DEVICE   - < volume set 26
+11:35:49PM DEVICE   - < volume set 25
+11:35:49PM DEVICE   - < volume set 24
+11:35:49PM DEVICE   - < volume set 23
+11:35:49PM DEVICE   - < volume set 22
+11:35:50PM DEVICE   - < volume set 21
+11:35:50PM DEVICE   - < volume set 20
+11:35:50PM DEVICE   - < volume set 19
+11:35:50PM DEVICE   - < volume set 18
+11:35:50PM DEVICE   - < volume set 17
+11:35:50PM DEVICE   - < volume set 16
+11:35:50PM DEVICE   - < volume set 17
+11:35:50PM DEVICE   - < volume set 19
+11:35:50PM DEVICE   - < volume set 23
+11:35:50PM DEVICE   - < volume set 25
+11:35:50PM DEVICE   - < volume set 26
+11:35:51PM DEVICE   - < volume set 27
+11:35:51PM DEVICE   - < volume set 28
+11:35:51PM DEVICE   - < volume set 29
+11:35:51PM DEVICE   - < volume set 30
+11:35:51PM DEVICE   - < volume set 31
+11:35:51PM DEVICE   - < volume set 32
+11:35:51PM DEVICE   - < volume set 33
+11:35:51PM DEVICE   - < volume set 34
+11:35:51PM DEVICE   - < volume set 35
+11:35:51PM DEVICE   - < volume set 36
+11:35:51PM DEVICE   - < volume set 37
+11:35:51PM DEVICE   - < volume set 38
+11:35:51PM DEVICE   - < volume set 39
+11:35:51PM DEVICE   - < volume set 40
+11:35:51PM DEVICE   - < volume set 41
+11:35:51PM DEVICE   - < volume set 42
+11:35:51PM DEVICE   - < volume set 43
+11:35:52PM DEVICE   - < volume set 44
+11:35:52PM DEVICE   - < volume set 45
+11:35:52PM DEVICE   - < volume set 46
+11:35:52PM DEVICE   - < volume set 47
+11:35:52PM DEVICE   - < volume set 48
+11:35:52PM DEVICE   - < volume set 49
+11:35:53PM DEVICE   - < power state off
+11:35:54PM DEVICE   - > status power state off
+11:35:54PM DEVICE   - > status volume level 0
+11:35:54PM DEVICE   - > status enc adjusts-volume true
+11:35:54PM DEVICE   - > status led state off
+11:35:54PM DEVICE   - > status led intensity 1
+11:35:54PM DEVICE   - > status led color green
+11:35:54PM DEVICE   - < power state on
+11:35:55PM DEVICE   - > status power state on
+11:35:55PM DEVICE   - > status volume level 20
+11:35:55PM DEVICE   - > status enc adjusts-volume true
+11:35:55PM DEVICE   - > status led state on
+11:35:55PM DEVICE   - > status led intensity 1
+11:35:55PM DEVICE   - > status led color green
+11:35:56PM DEVICE   - < volume set 34
+11:35:56PM DEVICE   - < volume set 35
+11:36:12PM DEVICE   - misc-button action  press
+11:36:12PM SPOTIFY  - Skip Forward...
+11:36:14PM DEVICE   - misc-button action  press
+11:36:14PM SPOTIFY  - Skip Forward...
+11:36:16PM DEVICE   - misc-button action  press
+11:36:16PM SPOTIFY  - Skip Forward...
+11:36:17PM DEVICE   - misc-button action  press
+11:36:17PM SPOTIFY  - Skip Forward...
+11:36:18PM DEVICE   - misc-button action  press
+11:36:18PM SPOTIFY  - Skip Forward...
+11:36:18PM DEVICE   - misc-button action  press
+11:36:18PM SPOTIFY  - Skip Forward...
+11:36:18PM DEVICE   - misc-button action  press
+11:36:18PM SPOTIFY  - Skip Forward...
+11:36:19PM DEVICE   - misc-button action  press
+11:36:19PM SPOTIFY  - Skip Forward...
+11:36:19PM DEVICE   - misc-button action  press
+11:36:19PM SPOTIFY  - Skip Forward...
+11:36:19PM DEVICE   - misc-button action  press
+11:36:19PM SPOTIFY  - Skip Forward...
+11:36:20PM DEVICE   - misc-button action  press
+11:36:20PM SPOTIFY  - Skip Forward...
+11:36:40PM DEVICE   - misc-button action  press
+11:36:40PM SPOTIFY  - Skip Forward...
+11:36:41PM SPOTIFY  - Skip Foward complete
+11:36:41PM SPOTIFY  - Skip Foward complete
+11:36:41PM SPOTIFY  - Skip Foward complete
+11:36:41PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:42PM DEVICE   - misc-button action  press
+11:36:42PM SPOTIFY  - Skip Forward...
+11:36:42PM SPOTIFY  - Skip Foward complete
+11:36:43PM DEVICE   - misc-button action  press
+11:36:43PM SPOTIFY  - Skip Forward...
+11:36:44PM SPOTIFY  - Skip Foward complete
+11:36:44PM DEVICE   - misc-button action  press
+11:36:44PM SPOTIFY  - Skip Forward...
+11:36:44PM SPOTIFY  - Skip Foward complete
+11:36:44PM DEVICE   - misc-button action  press
+11:36:44PM SPOTIFY  - Skip Forward...
+11:36:45PM DEVICE   - misc-button action  press
+11:36:45PM SPOTIFY  - Skip Forward...
+11:36:45PM SPOTIFY  - Skip Foward complete
+11:36:45PM DEVICE   - misc-button action  press
+11:36:45PM SPOTIFY  - Skip Forward...
+11:36:45PM SPOTIFY  - Skip Foward complete
+11:36:45PM SPOTIFY  - Skip Foward complete
+11:36:45PM DEVICE   - misc-button action  press
+11:36:46PM SPOTIFY  - Skip Forward...
+11:36:46PM DEVICE   - misc-button action  press
+11:36:46PM DEVICE   - misc-button action  press
+11:36:46PM DEVICE   - misc-button action  press
+11:36:46PM SPOTIFY  - Skip Forward...
+11:36:46PM SPOTIFY  - Skip Forward...
+11:36:46PM SPOTIFY  - Skip Forward...
+11:36:46PM DEVICE   - misc-button action  press
+11:36:46PM SPOTIFY  - Skip Forward...
+11:36:46PM SPOTIFY  - Skip Foward complete
+11:36:47PM SPOTIFY  - Skip Foward complete
+11:36:47PM SPOTIFY  - Skip Foward complete
+11:36:47PM SPOTIFY  - Skip Foward complete
+11:36:47PM SPOTIFY  - Skip Foward complete
+11:37:16PM DEVICE   - < volume set 41
+11:37:17PM DEVICE   - < volume set 47
+11:37:18PM DEVICE   - < volume set 51
+11:37:19PM DEVICE   - < volume set 41
+11:37:20PM DEVICE   - < volume set 40
+11:37:20PM DEVICE   - < volume set 39
+11:37:20PM DEVICE   - < volume set 38
+11:37:20PM DEVICE   - < volume set 37
+11:37:20PM DEVICE   - < volume set 36
+11:37:20PM DEVICE   - < volume set 35
+11:37:20PM DEVICE   - < volume set 34
+11:37:20PM DEVICE   - < volume set 33
+11:37:20PM DEVICE   - < volume set 32
+11:37:20PM DEVICE   - < volume set 31
+11:37:20PM DEVICE   - < volume set 30
+11:37:20PM DEVICE   - < volume set 29
+11:37:20PM DEVICE   - < volume set 28
+11:37:20PM DEVICE   - < volume set 27
+11:37:20PM DEVICE   - < volume set 26
+11:37:20PM DEVICE   - < volume set 25
+11:37:20PM DEVICE   - < volume set 24
+11:37:20PM DEVICE   - < volume set 23
+11:37:20PM DEVICE   - < volume set 22
+11:37:20PM DEVICE   - < volume set 23
+11:37:21PM DEVICE   - < volume set 18
+11:37:21PM DEVICE   - < volume set 19
+11:37:21PM DEVICE   - < volume set 20
+11:37:21PM DEVICE   - < volume set 21
+11:37:21PM DEVICE   - < volume set 24
+11:37:21PM DEVICE   - < volume set 25
+11:37:21PM DEVICE   - < volume set 26
+11:37:21PM DEVICE   - < volume set 27
+11:37:22PM DEVICE   - < volume set 28
+11:37:22PM DEVICE   - < volume set 29
+11:37:22PM DEVICE   - < volume set 30
+11:37:22PM DEVICE   - < volume set 31
+11:37:22PM DEVICE   - < volume set 32
+11:37:22PM DEVICE   - < volume set 33
+11:37:22PM DEVICE   - < volume set 34
+11:37:22PM DEVICE   - < volume set 35
+11:40:29PM DEVICE   - enc-button action  press
+11:40:29PM DEVICE   - < power state toggle
+11:40:30PM DEVICE   - > status power state off
+11:40:30PM DEVICE   - > status volume level 0
+11:40:30PM DEVICE   - > status enc adjusts-volume true
+11:40:30PM DEVICE   - > status led state off
+11:40:30PM DEVICE   - > status led intensity 1
+11:40:30PM DEVICE   - > status led color green
+11:40:31PM DEVICE   - enc-button action  press
+11:40:31PM DEVICE   - < power state toggle
+11:40:32PM DEVICE   - > status power state on
+11:40:32PM DEVICE   - > status volume level 20
+11:40:32PM DEVICE   - > status enc adjusts-volume true
+11:40:32PM DEVICE   - > status led state on
+11:40:32PM DEVICE   - > status led intensity 1
+11:40:32PM DEVICE   - > status led color green
+11:40:33PM DEVICE   - > status volume level 21
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 22
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 23
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 24
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 25
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 26
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 27
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 28
+11:40:33PM DEVICE   - enc action  up
+11:40:33PM DEVICE   - > status volume level 29
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 30
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 31
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 32
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 33
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 34
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 35
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 36
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 37
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 38
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 39
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 40
+11:40:34PM DEVICE   - enc action  up
+11:40:34PM DEVICE   - > status volume level 41
+11:40:34PM DEVICE   - enc action  up
+11:40:35PM DEVICE   - > status volume level 42
+11:40:35PM DEVICE   - enc action  up
+11:40:35PM DEVICE   - > status volume level 41
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 40
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 39
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 38
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 37
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 36
+11:40:35PM DEVICE   - enc action  down
+11:40:35PM DEVICE   - > status volume level 35
+11:40:35PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 34
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 33
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 32
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 31
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 30
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 29
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 28
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 27
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 26
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 25
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 24
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 23
+11:40:36PM DEVICE   - enc action  down
+11:40:36PM DEVICE   - > status volume level 22
+11:40:36PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 21
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 20
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 19
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 18
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 17
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 16
+11:40:37PM DEVICE   - enc action  down
+11:40:37PM DEVICE   - > status volume level 15
+11:40:37PM DEVICE   - enc action  down
+11:40:38PM DEVICE   - > status volume level 14
+11:40:38PM DEVICE   - enc action  down
+11:40:38PM DEVICE   - > status volume level 13
+11:40:38PM DEVICE   - enc action  down
+11:40:38PM DEVICE   - > status volume level 12
+11:40:38PM DEVICE   - enc action  down
+11:40:38PM DEVICE   - > status volume level 13
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 14
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 15
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 16
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 17
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 18
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 19
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 20
+11:40:38PM DEVICE   - enc action  up
+11:40:38PM DEVICE   - > status volume level 21
+11:40:38PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 22
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 23
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 24
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 25
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 26
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 27
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 28
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 29
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 30
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 31
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 32
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 33
+11:40:39PM DEVICE   - enc action  up
+11:40:39PM DEVICE   - > status volume level 34
+11:40:40PM DEVICE   - enc action  up
+11:40:40PM DEVICE   - > status volume level 35
+11:40:40PM DEVICE   - enc action  up
+11:40:40PM DEVICE   - > status volume level 36
+11:40:40PM DEVICE   - enc action  up
+11:40:40PM DEVICE   - > status volume level 37
+11:40:40PM DEVICE   - enc action  up
+11:40:40PM DEVICE   - > status volume level 36
+11:40:40PM DEVICE   - enc action  down
+11:40:40PM DEVICE   - > status volume level 35
+11:40:40PM DEVICE   - enc action  down
+11:40:40PM DEVICE   - > status volume level 34
+11:40:41PM DEVICE   - enc action  down
+11:41:43PM DEVICE   - enc-button action  press
+11:41:43PM DEVICE   - < power state toggle
+11:41:44PM DEVICE   - > status power state off
+11:41:44PM DEVICE   - > status volume level 0
+11:41:44PM DEVICE   - > status enc adjusts-volume true
+11:41:44PM DEVICE   - > status led state off
+11:41:44PM DEVICE   - > status led intensity 1
+11:41:44PM DEVICE   - > status led color green
+01:20:59PM DEVICE   - enc-button action  press
+01:20:59PM DEVICE   - < power state toggle
+01:20:59PM DEVICE   - > status power state on
+01:20:59PM DEVICE   - > status volume level 20
+01:20:59PM DEVICE   - > status enc adjusts-volume true
+01:20:59PM DEVICE   - > status led state on
+01:20:59PM DEVICE   - > status led intensity 1
+01:20:59PM DEVICE   - > status led color green
+01:21:00PM DEVICE   - > status volume level 21
+01:21:00PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 22
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 23
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 24
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 25
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 26
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 27
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 28
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 29
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 30
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 31
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 32
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 33
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 34
+01:21:01PM DEVICE   - enc action  up
+01:21:01PM DEVICE   - > status volume level 35
+01:21:01PM DEVICE   - enc action  up
+01:21:02PM DEVICE   - > status volume level 36
+01:21:02PM DEVICE   - enc action  up
+01:21:02PM DEVICE   - > status volume level 37
+01:21:02PM DEVICE   - enc action  up
+01:21:02PM DEVICE   - > status volume level 38
+01:21:02PM DEVICE   - enc action  up
+01:21:02PM DEVICE   - > status volume level 39
+01:21:02PM DEVICE   - enc action  up
+01:21:02PM DEVICE   - > status volume level 40
+01:21:02PM DEVICE   - enc action  up
+01:21:03PM DEVICE   - > status volume level 39
+01:21:03PM DEVICE   - enc action  down
+01:21:03PM DEVICE   - > status volume level 38
+01:21:03PM DEVICE   - enc action  down
+01:21:03PM DEVICE   - > status volume level 37
+01:21:03PM DEVICE   - enc action  down
+01:21:03PM DEVICE   - > status volume level 36
+01:21:03PM DEVICE   - enc action  down
+01:21:03PM DEVICE   - > status volume level 35
+01:21:03PM DEVICE   - enc action  down
+01:21:03PM DEVICE   - > status volume level 34
+01:21:03PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 33
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 32
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 31
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 30
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 29
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 28
+01:21:04PM DEVICE   - enc action  down
+01:21:04PM DEVICE   - > status volume level 27
+01:21:04PM DEVICE   - enc action  down
+01:22:27PM DEVICE   - misc-button action  press
+01:22:27PM SPOTIFY  - Skip Forward...
+01:22:27PM SPOTIFY  - Skip Foward complete
+01:22:30PM DEVICE   - misc-button action  press
+01:22:30PM SPOTIFY  - Skip Forward...
+01:22:30PM DEVICE   - misc-button action  press
+01:22:30PM SPOTIFY  - Skip Forward...
+01:22:30PM SPOTIFY  - Skip Foward complete
+01:22:30PM SPOTIFY  - Skip Foward complete
+01:22:32PM DEVICE   - misc-button action  press
+01:22:32PM SPOTIFY  - Skip Forward...
+01:22:33PM SPOTIFY  - Skip Foward complete
+01:22:33PM DEVICE   - misc-button action  press
+01:22:33PM SPOTIFY  - Skip Forward...
+01:22:33PM SPOTIFY  - Skip Foward complete
+01:22:34PM DEVICE   - misc-button action  press
+01:22:34PM SPOTIFY  - Skip Forward...
+01:22:34PM SPOTIFY  - Skip Foward complete
+01:22:34PM DEVICE   - misc-button action  press
+01:22:34PM SPOTIFY  - Skip Forward...
+01:22:34PM SPOTIFY  - Skip Foward complete
+01:22:34PM DEVICE   - misc-button action  press
+01:22:34PM SPOTIFY  - Skip Forward...
+01:22:34PM DEVICE   - misc-button action  press
+01:22:34PM SPOTIFY  - Skip Forward...
+01:22:34PM SPOTIFY  - Skip Foward complete
+01:22:35PM DEVICE   - misc-button action  press
+01:22:35PM SPOTIFY  - Skip Forward...
+01:22:35PM SPOTIFY  - Skip Foward complete
+01:22:35PM DEVICE   - misc-button action  press
+01:22:35PM SPOTIFY  - Skip Forward...
+01:22:35PM SPOTIFY  - Skip Foward complete
+01:22:35PM SPOTIFY  - Skip Foward complete
+01:22:36PM DEVICE   - enc-button action  press
+01:22:36PM DEVICE   - < power state toggle
+01:22:36PM DEVICE   - > status power state off
+01:22:36PM DEVICE   - > status volume level 0
+01:22:36PM DEVICE   - > status enc adjusts-volume true
+01:22:36PM DEVICE   - > status led state off
+01:22:36PM DEVICE   - > status led intensity 1
+01:22:36PM DEVICE   - > status led color green
+04:14:07AM ROUTER   - > connect SYN
+04:14:07AM CONNECT  - < connect SYNACK
+04:14:07AM ROUTER   - > connect ACK
+04:14:07AM DEVICE   - < status/all 1
+04:14:08AM DEVICE   - > status power state off
+04:14:08AM DEVICE   - > status volume level 0
+04:14:08AM DEVICE   - > status enc adjusts-volume true
+04:14:08AM DEVICE   - > status led state off
+04:14:08AM DEVICE   - > status led intensity 1
+04:14:08AM DEVICE   - > status led color green
+04:14:08AM DEVICE   - > status radio volume 15
+04:14:08AM DEVICE   - > status radio station 879
+04:14:19AM DEVICE   - enc-button action  press
+04:14:19AM DEVICE   - < power state toggle
+04:14:20AM DEVICE   - > status power state on
+04:14:20AM DEVICE   - > status volume level 20
+04:14:20AM DEVICE   - > status enc adjusts-volume true
+04:14:20AM DEVICE   - > status led state on
+04:14:20AM DEVICE   - > status led intensity 1
+04:14:20AM DEVICE   - > status led color green
+04:14:21AM DEVICE   - > status volume level 19
+04:14:21AM DEVICE   - enc action  down
+04:14:22AM DEVICE   - > status volume level 20
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 21
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 22
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 23
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 24
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 25
+04:14:22AM DEVICE   - enc action  up
+04:14:22AM DEVICE   - > status volume level 26
+04:14:22AM DEVICE   - enc action  up
+04:14:23AM DEVICE   - > status volume level 27
+04:14:23AM DEVICE   - enc action  up
+04:14:23AM DEVICE   - > status volume level 28
+04:14:23AM DEVICE   - enc action  up
+04:14:23AM DEVICE   - > status volume level 29
+04:14:23AM DEVICE   - enc action  up
+04:14:24AM DEVICE   - > status volume level 30
+04:14:24AM DEVICE   - enc action  up
+04:14:24AM DEVICE   - > status volume level 31
+04:14:24AM DEVICE   - enc action  up
+04:14:25AM DEVICE   - > status volume level 30
+04:14:25AM DEVICE   - enc action  down
+04:14:25AM DEVICE   - > status volume level 29
+04:14:25AM DEVICE   - enc action  down
+04:14:25AM DEVICE   - > status volume level 28
+04:14:25AM DEVICE   - enc action  down
+04:14:25AM DEVICE   - > status volume level 27
+04:14:25AM DEVICE   - enc action  down
+04:14:25AM DEVICE   - > status volume level 26
+04:14:25AM DEVICE   - enc action  down
+04:14:26AM DEVICE   - > status volume level 25
+04:14:26AM DEVICE   - enc action  down
+04:14:26AM DEVICE   - > status volume level 24
+04:14:26AM DEVICE   - enc action  down
+04:14:26AM DEVICE   - > status volume level 23
+04:14:26AM DEVICE   - enc action  down
+04:14:26AM DEVICE   - > status volume level 24
+04:14:26AM DEVICE   - enc action  up
+04:14:26AM DEVICE   - > status volume level 25
+04:14:26AM DEVICE   - enc action  up
+04:14:26AM DEVICE   - > status volume level 26
+04:14:26AM DEVICE   - enc action  up
+04:14:26AM DEVICE   - > status volume level 27
+04:14:26AM DEVICE   - enc action  up
+04:14:27AM DEVICE   - > status volume level 28
+04:14:27AM DEVICE   - enc action  up
+04:14:27AM DEVICE   - > status volume level 29
+04:14:27AM DEVICE   - enc action  up
+04:14:27AM DEVICE   - > status volume level 30
+04:14:27AM DEVICE   - enc action  up
+04:14:27AM DEVICE   - > status volume level 31
+04:14:27AM DEVICE   - enc action  up
+04:14:27AM DEVICE   - > status volume level 32
+04:14:27AM DEVICE   - enc action  up
+04:14:28AM DEVICE   - > status volume level 33
+04:14:28AM DEVICE   - enc action  up
+04:14:28AM DEVICE   - > status volume level 34
+04:14:28AM DEVICE   - enc action  up
+04:14:29AM DEVICE   - > status volume level 33
+04:14:29AM DEVICE   - enc action  down
+04:14:30AM DEVICE   - > status volume level 32
+04:14:30AM DEVICE   - enc action  down
+04:54:17AM DEVICE   - < volume set 39
+05:57:01AM DEVICE   - < power state off
+05:57:01AM DEVICE   - > status power state off
+05:57:01AM DEVICE   - > status volume level 0
+05:57:01AM DEVICE   - > status enc adjusts-volume true
+05:57:01AM DEVICE   - > status led state off
+05:57:01AM DEVICE   - > status led intensity 1
+05:57:01AM DEVICE   - > status led color green
+03:13:10PM DEVICE   - enc-button action  press
+03:13:10PM DEVICE   - < power state toggle
+03:13:11PM DEVICE   - > status power state on
+03:13:11PM DEVICE   - > status volume level 20
+03:13:11PM DEVICE   - > status enc adjusts-volume true
+03:13:11PM DEVICE   - > status led state on
+03:13:11PM DEVICE   - > status led intensity 1
+03:13:11PM DEVICE   - > status led color green
+03:13:12PM DEVICE   - > status volume level 21
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 22
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 23
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 24
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 25
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 26
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 27
+03:13:12PM DEVICE   - enc action  up
+03:13:12PM DEVICE   - > status volume level 28
+03:13:12PM DEVICE   - enc action  up
+03:39:03PM DEVICE   - < volume set 33
+03:39:11PM DEVICE   - < volume set 30
+03:39:11PM DEVICE   - < volume set 29
+03:39:11PM DEVICE   - < volume set 28
+03:39:11PM DEVICE   - < volume set 27
+03:39:11PM DEVICE   - < volume set 26
+03:39:11PM DEVICE   - < volume set 25
+03:39:12PM DEVICE   - < volume set 24
+03:39:12PM DEVICE   - < volume set 23
+03:39:12PM DEVICE   - < volume set 22
+03:39:13PM DEVICE   - < power state off
+03:39:13PM DEVICE   - > status power state off
+03:39:13PM DEVICE   - > status volume level 0
+03:39:13PM DEVICE   - > status enc adjusts-volume true
+03:39:13PM DEVICE   - > status led state off
+03:39:13PM DEVICE   - > status led intensity 1
+03:39:13PM DEVICE   - > status led color green
+03:39:15PM DEVICE   - < power state on
+03:39:15PM DEVICE   - > status power state on
+03:39:15PM DEVICE   - > status volume level 20
+03:39:15PM DEVICE   - > status enc adjusts-volume true
+03:39:15PM DEVICE   - > status led state on
+03:39:15PM DEVICE   - > status led intensity 1
+03:39:15PM DEVICE   - > status led color green
+03:39:17PM DEVICE   - < volume set 22
+03:39:17PM DEVICE   - < volume set 23
+03:39:17PM DEVICE   - < volume set 24
+03:39:17PM DEVICE   - < volume set 25
+03:39:17PM DEVICE   - < volume set 26
+03:39:18PM DEVICE   - < volume set 27
+03:39:18PM DEVICE   - < volume set 28
+03:39:18PM DEVICE   - < volume set 29
+03:39:19PM DEVICE   - < volume set 30
+08:04:10PM DEVICE   - enc-button action  press
+08:04:10PM DEVICE   - < power state toggle
+08:04:10PM DEVICE   - > status power state off
+08:04:10PM DEVICE   - > status volume level 0
+08:04:10PM DEVICE   - > status enc adjusts-volume true
+08:04:10PM DEVICE   - > status led state off
+08:04:10PM DEVICE   - > status led intensity 1
+08:04:10PM DEVICE   - > status led color green
+03:37:59AM DEVICE   - < power state on
+03:38:04AM DEVICE   - < power state off
+03:38:06AM DEVICE   - < power state on
+03:38:08AM DEVICE   - < volume set 7
+03:38:08AM DEVICE   - < volume set 8
+03:38:08AM DEVICE   - < volume set 9
+03:38:08AM DEVICE   - < volume set 10
+03:38:08AM DEVICE   - < volume set 11
+03:38:08AM DEVICE   - < volume set 12
+03:38:09AM DEVICE   - < volume set 13
+03:38:09AM DEVICE   - < volume set 14
+03:38:09AM DEVICE   - < volume set 13
+03:38:09AM DEVICE   - < volume set 11
+03:38:09AM DEVICE   - < volume set 10
+03:38:09AM DEVICE   - < volume set 9
+03:38:09AM DEVICE   - < volume set 7
+03:38:09AM DEVICE   - < volume set 5
+03:38:10AM DEVICE   - < power state off
+05:31:06PM ROUTER   - > connect SYN
+05:31:06PM CONNECT  - < connect SYNACK
+05:31:06PM ROUTER   - > connect ACK
+05:31:06PM DEVICE   - < status/all 1
+05:31:06PM DEVICE   - > status power state off
+05:31:06PM DEVICE   - > status volume level 0
+05:31:07PM DEVICE   - > status enc adjusts-volume true
+05:31:07PM DEVICE   - > status led state off
+05:31:07PM DEVICE   - > status led intensity 1
+05:31:07PM DEVICE   - > status led color green
+05:31:07PM DEVICE   - > status radio volume 15
+05:31:07PM DEVICE   - > status radio station 879
+05:31:21PM DEVICE   - enc-button action  press
+05:31:21PM DEVICE   - < power state toggle
+05:31:22PM DEVICE   - > status power state on
+05:31:22PM DEVICE   - > status volume level 20
+05:31:22PM DEVICE   - > status enc adjusts-volume true
+05:31:22PM DEVICE   - > status led state on
+05:31:22PM DEVICE   - > status led intensity 1
+05:31:22PM DEVICE   - > status led color green
+05:31:25PM DEVICE   - led-button action  press
+05:31:25PM DEVICE   - < status/all 1
+05:31:25PM DEVICE   - > status power state on
+05:31:25PM DEVICE   - > status volume level 20
+05:31:25PM DEVICE   - > status enc adjusts-volume true
+05:31:25PM DEVICE   - > status led state on
+05:31:25PM DEVICE   - > status led intensity 1
+05:31:25PM DEVICE   - > status led color green
+05:31:25PM DEVICE   - > status radio volume 15
+05:31:25PM DEVICE   - > status radio station 879
+05:31:26PM DEVICE   - led-button action  press
+05:31:26PM DEVICE   - < status/all 1
+05:31:26PM DEVICE   - > status power state on
+05:31:26PM DEVICE   - > status volume level 20
+05:31:26PM DEVICE   - > status enc adjusts-volume true
+05:31:26PM DEVICE   - > status led state on
+05:31:26PM DEVICE   - > status led intensity 1
+05:31:26PM DEVICE   - > status led color green
+05:31:26PM DEVICE   - > status radio volume 15
+05:31:26PM DEVICE   - > status radio station 879
+05:37:40PM DEVICE   - < volume set 22
+05:37:41PM DEVICE   - < volume set 23
+05:37:41PM DEVICE   - < volume set 24
+05:37:41PM DEVICE   - < volume set 25
+05:37:41PM DEVICE   - < volume set 26
+05:37:41PM DEVICE   - < volume set 27
+05:37:41PM DEVICE   - < volume set 28
+05:37:42PM DEVICE   - < volume set 29
+05:37:42PM DEVICE   - < volume set 30
+05:37:42PM DEVICE   - < volume set 31
+05:37:42PM DEVICE   - < volume set 32
+05:37:43PM DEVICE   - < volume set 33
+05:37:43PM DEVICE   - < volume set 34
+05:37:43PM DEVICE   - < volume set 35
+05:37:44PM DEVICE   - < volume set 36
+05:37:45PM DEVICE   - < volume set 35
+05:37:45PM DEVICE   - < volume set 34
+05:37:48PM DEVICE   - < volume set 33
+05:37:48PM DEVICE   - < volume set 32
+05:37:48PM DEVICE   - < volume set 31
+05:37:48PM DEVICE   - < volume set 30
+05:37:48PM DEVICE   - < volume set 29
+05:37:48PM DEVICE   - < volume set 28
+05:37:48PM DEVICE   - < volume set 27
+05:37:48PM DEVICE   - < volume set 26
+05:37:48PM DEVICE   - < volume set 25
+05:37:48PM DEVICE   - < volume set 24
+05:37:48PM DEVICE   - < volume set 23
+05:37:49PM DEVICE   - < volume set 24
+05:37:49PM DEVICE   - < volume set 25
+05:37:49PM DEVICE   - < volume set 26
+05:37:49PM DEVICE   - < volume set 27
+05:37:49PM DEVICE   - < volume set 28
+05:37:49PM DEVICE   - < volume set 29
+05:37:50PM DEVICE   - < volume set 30
+05:37:50PM DEVICE   - < volume set 31
+05:37:50PM DEVICE   - < volume set 32
+05:37:50PM DEVICE   - < volume set 33
+05:37:50PM DEVICE   - < volume set 34
+05:37:50PM DEVICE   - < volume set 35
+05:37:51PM DEVICE   - < volume set 34
+05:37:51PM DEVICE   - < volume set 33
+05:37:51PM DEVICE   - < volume set 32
+05:37:52PM DEVICE   - < volume set 31
+05:37:52PM DEVICE   - < volume set 30
+05:37:52PM DEVICE   - < volume set 29
+05:37:52PM DEVICE   - < volume set 28
+05:37:52PM DEVICE   - < volume set 27
+05:37:52PM DEVICE   - < volume set 26
+05:37:52PM DEVICE   - < volume set 25
+05:37:52PM DEVICE   - < volume set 24
+05:37:52PM DEVICE   - < volume set 23
+05:37:53PM DEVICE   - < volume set 22
+05:37:53PM DEVICE   - < volume set 21
+05:37:53PM DEVICE   - < volume set 20
+05:37:53PM DEVICE   - < volume set 19
+05:37:53PM DEVICE   - < volume set 20
+05:37:53PM DEVICE   - < volume set 21
+05:37:53PM DEVICE   - < volume set 22
+05:37:53PM DEVICE   - < volume set 23
+05:37:53PM DEVICE   - < volume set 24
+05:37:53PM DEVICE   - < volume set 25
+05:37:53PM DEVICE   - < volume set 26
+05:37:53PM DEVICE   - < volume set 27
+05:37:54PM DEVICE   - < volume set 28
+05:37:54PM DEVICE   - < volume set 29
+05:37:54PM DEVICE   - < volume set 30
+05:37:54PM DEVICE   - < volume set 31
+05:37:54PM DEVICE   - < volume set 32
+05:37:54PM DEVICE   - < volume set 33
+05:37:54PM DEVICE   - < volume set 34
+05:37:55PM DEVICE   - < volume set 35
+05:37:55PM DEVICE   - < volume set 34
+05:37:55PM DEVICE   - < volume set 33
+05:37:55PM DEVICE   - < volume set 32
+05:37:55PM DEVICE   - < volume set 31
+05:37:55PM DEVICE   - < volume set 30
+05:37:55PM DEVICE   - < volume set 29
+05:37:56PM DEVICE   - < volume set 28
+05:37:56PM DEVICE   - < volume set 27
+05:37:56PM DEVICE   - < volume set 26
+05:41:03PM DEVICE   - < volume set 27
+05:41:03PM DEVICE   - < volume set 28
+05:41:03PM DEVICE   - < volume set 29
+05:41:03PM DEVICE   - < volume set 30
+05:41:03PM DEVICE   - < volume set 31
+05:41:03PM DEVICE   - < volume set 32
+05:41:03PM DEVICE   - < volume set 33
+05:41:03PM DEVICE   - < volume set 34
+05:41:03PM DEVICE   - < volume set 35
+05:41:03PM DEVICE   - < volume set 36
+05:41:03PM DEVICE   - < volume set 37
+05:41:03PM DEVICE   - < volume set 38
+05:41:04PM DEVICE   - < volume set 39
+05:41:04PM DEVICE   - < volume set 40
+05:41:04PM DEVICE   - < volume set 41
+05:41:04PM DEVICE   - < volume set 42
+05:41:04PM DEVICE   - < volume set 43
+05:41:05PM DEVICE   - < volume set 42
+05:41:05PM DEVICE   - < volume set 41
+05:41:05PM DEVICE   - < volume set 40
+05:41:05PM DEVICE   - < volume set 39
+05:41:05PM DEVICE   - < volume set 38
+05:41:05PM DEVICE   - < volume set 37
+05:41:05PM DEVICE   - < volume set 36
+05:41:06PM DEVICE   - < volume set 35
+05:41:06PM DEVICE   - < volume set 34
+05:41:06PM DEVICE   - < volume set 33
+05:41:06PM DEVICE   - < volume set 32
+05:41:06PM DEVICE   - < volume set 31
+05:41:06PM DEVICE   - < volume set 30
+05:41:06PM DEVICE   - < volume set 29
+05:41:07PM DEVICE   - < volume set 28
+05:41:07PM DEVICE   - < volume set 27
+05:41:08PM DEVICE   - < volume set 26
+05:41:08PM DEVICE   - < volume set 25
+05:41:08PM DEVICE   - < power state off
+05:41:11PM DEVICE   - < power state on
+05:41:13PM DEVICE   - < volume set 26
+05:41:13PM DEVICE   - < volume set 27
+05:41:13PM DEVICE   - < volume set 28
+05:41:13PM DEVICE   - < volume set 29
+05:41:13PM DEVICE   - < volume set 30
+05:41:13PM DEVICE   - < volume set 31
+05:41:13PM DEVICE   - < volume set 32
+06:01:14PM DEVICE   - < volume set 34
+06:01:14PM DEVICE   - < volume set 35
+06:01:14PM DEVICE   - < volume set 36
+06:01:15PM DEVICE   - < volume set 37
+06:01:15PM DEVICE   - < volume set 38
+06:01:15PM DEVICE   - < volume set 39
+06:01:15PM DEVICE   - < volume set 40
+06:01:15PM DEVICE   - < volume set 39
+06:01:15PM DEVICE   - < volume set 38
+06:01:15PM DEVICE   - < volume set 37
+06:01:15PM DEVICE   - < volume set 36
+06:01:15PM DEVICE   - < volume set 35
+06:01:15PM DEVICE   - < volume set 34
+06:01:15PM DEVICE   - < volume set 33
+06:01:16PM DEVICE   - < volume set 32
+06:01:16PM DEVICE   - < volume set 31
+06:01:16PM DEVICE   - < volume set 30
+06:01:16PM DEVICE   - < volume set 29
+06:01:16PM DEVICE   - < volume set 28
+06:01:16PM DEVICE   - < volume set 27
+06:01:16PM DEVICE   - < volume set 26
+06:01:16PM DEVICE   - < volume set 25
+06:01:17PM DEVICE   - < volume set 26
+06:01:17PM DEVICE   - < volume set 27
+06:01:17PM DEVICE   - < volume set 28
+06:01:17PM DEVICE   - < volume set 29
+06:01:17PM DEVICE   - < volume set 30
+06:01:17PM DEVICE   - < volume set 31
+06:01:17PM DEVICE   - < volume set 32
+06:01:18PM DEVICE   - < volume set 33
+06:01:18PM DEVICE   - < volume set 32
+01:02:52PM SERVER   - ***************************************
+01:02:52PM SERVER   - Web UI started at: http://lillipu1:4000
+01:02:52PM SERVER   - ***************************************
+01:02:52PM ROUTER   - Unknown device 48ff6b065067555039091087
+01:02:52PM SPOTIFY  - Valid Token: $954c3f8b-90b7-4c77-b274-6495a8943318
+01:02:52PM ROUTER   - Device 48ff6b065067555039091087 identified as audio
+01:02:54PM CONNECT  - < connect SYNACK
+01:02:54PM ROUTER   - > connect ACK
+01:02:54PM DEVICE   - < radio/station 879
+01:02:54PM DEVICE   - < radio/volume 15
+01:02:54PM DEVICE   - < status/all 1
+01:02:55PM DEVICE   - > status power state on
+01:02:55PM DEVICE   - > status volume level 32
+01:02:55PM DEVICE   - > status enc adjusts-volume true
+01:02:55PM DEVICE   - > status led state on
+01:02:55PM DEVICE   - > status led intensity 1
+01:02:55PM DEVICE   - > status led color green
+01:02:55PM DEVICE   - > status radio volume 15
+01:02:55PM DEVICE   - > status radio station 879
+01:03:52PM DEVICE   - < volume set 34
+01:03:52PM DEVICE   - < volume set 35
+01:03:52PM DEVICE   - < volume set 36
+01:03:52PM DEVICE   - < volume set 37
+01:03:53PM DEVICE   - < volume set 38
+01:03:53PM DEVICE   - < volume set 39
+01:03:53PM DEVICE   - < volume set 38
+01:03:53PM DEVICE   - < volume set 37
+01:03:53PM DEVICE   - < volume set 36
+01:03:53PM DEVICE   - < volume set 35
+01:03:53PM DEVICE   - < volume set 34
+01:03:53PM DEVICE   - < volume set 33
+01:03:53PM DEVICE   - < volume set 32
+01:03:54PM DEVICE   - < volume set 31
+01:03:54PM DEVICE   - < volume set 30
+01:03:54PM DEVICE   - < volume set 29
+01:03:54PM DEVICE   - < volume set 28
+01:03:54PM DEVICE   - < volume set 27
+01:03:54PM DEVICE   - < volume set 26
+01:03:54PM DEVICE   - < volume set 25
+01:03:54PM DEVICE   - < volume set 24
+01:03:55PM DEVICE   - < volume set 23
+01:03:55PM DEVICE   - < volume set 22
+01:03:56PM DEVICE   - < volume set 21
+01:03:56PM DEVICE   - < volume set 20
+01:03:56PM DEVICE   - < volume set 19
+01:03:56PM DEVICE   - < volume set 20
+01:03:56PM DEVICE   - < volume set 21
+01:03:56PM DEVICE   - < volume set 22
+01:03:57PM DEVICE   - < volume set 23
+01:03:57PM DEVICE   - < volume set 24
+01:03:57PM DEVICE   - < volume set 25
+01:03:57PM DEVICE   - < volume set 26
+01:03:57PM DEVICE   - < volume set 27
+01:03:57PM DEVICE   - < volume set 28
+01:03:57PM DEVICE   - < volume set 29
+01:03:58PM DEVICE   - < volume set 30
+01:03:58PM DEVICE   - < volume set 31
+01:03:58PM DEVICE   - < volume set 32
+01:03:58PM DEVICE   - < volume set 33
+01:03:58PM DEVICE   - < volume set 34
+01:03:58PM DEVICE   - < volume set 35
+01:03:58PM DEVICE   - < volume set 36
+01:03:58PM DEVICE   - < volume set 37
+01:03:59PM DEVICE   - < volume set 38
+01:03:59PM DEVICE   - < volume set 39
+01:03:59PM DEVICE   - < volume set 40
+01:03:59PM DEVICE   - < volume set 41
+01:03:59PM DEVICE   - < volume set 42
+01:03:59PM DEVICE   - < volume set 43
+01:03:59PM DEVICE   - < volume set 44
+01:03:59PM DEVICE   - < volume set 45
+01:03:59PM DEVICE   - < volume set 46
+01:04:00PM DEVICE   - < volume set 47
+01:04:00PM DEVICE   - < volume set 48
+01:04:00PM DEVICE   - < volume set 49
+01:04:00PM DEVICE   - < volume set 50
+01:04:00PM DEVICE   - < volume set 51
+01:04:00PM DEVICE   - < volume set 52
+01:04:01PM DEVICE   - < volume set 53
+01:04:01PM DEVICE   - < volume set 54
+01:04:02PM DEVICE   - < volume set 53
+01:04:02PM DEVICE   - < volume set 52
+01:04:02PM DEVICE   - < volume set 51
+01:04:02PM DEVICE   - < volume set 50
+01:04:02PM DEVICE   - < volume set 49
+01:04:02PM DEVICE   - < volume set 48
+01:04:02PM DEVICE   - < volume set 47
+01:04:02PM DEVICE   - < volume set 46
+01:04:02PM DEVICE   - < volume set 45
+01:04:02PM DEVICE   - < volume set 44
+01:04:02PM DEVICE   - < volume set 43
+01:04:02PM DEVICE   - < volume set 42
+01:04:02PM DEVICE   - < volume set 41
+01:04:02PM DEVICE   - < volume set 40
+01:04:03PM DEVICE   - < volume set 39
+01:04:03PM DEVICE   - < volume set 38
+01:04:03PM DEVICE   - < volume set 37
+01:04:03PM DEVICE   - < volume set 36
+01:04:03PM DEVICE   - < volume set 35
+01:04:03PM DEVICE   - < volume set 34
+01:04:03PM DEVICE   - < volume set 33
+01:04:03PM DEVICE   - < volume set 32
+01:04:03PM DEVICE   - < volume set 31
+01:04:04PM DEVICE   - < volume set 30
+01:04:04PM DEVICE   - < volume set 29
+01:04:04PM DEVICE   - < volume set 28
+01:04:04PM DEVICE   - < volume set 27
+01:04:04PM DEVICE   - < volume set 26
+01:04:05PM DEVICE   - < volume set 27
+01:04:05PM DEVICE   - < volume set 28
+01:04:05PM DEVICE   - < volume set 29
+01:04:05PM DEVICE   - < volume set 30
+01:04:06PM DEVICE   - < volume set 31
+01:04:06PM DEVICE   - < volume set 32
+01:04:38PM DEVICE   - < power state off
+01:04:38PM DEVICE   - > status power state off
+01:04:38PM DEVICE   - > status volume level 0
+01:04:38PM DEVICE   - > status enc adjusts-volume true
+01:04:38PM DEVICE   - > status led state off
+01:04:38PM DEVICE   - > status led intensity 1
+01:04:38PM DEVICE   - > status led color green
+01:04:41PM DEVICE   - < power state on
+01:04:42PM DEVICE   - > status power state on
+01:04:42PM DEVICE   - > status volume level 20
+01:04:42PM DEVICE   - > status enc adjusts-volume true
+01:04:42PM DEVICE   - > status led state on
+01:04:42PM DEVICE   - > status led intensity 1
+01:04:42PM DEVICE   - > status led color green
+01:05:20PM DEVICE   - > status volume level 21
+01:05:21PM DEVICE   - enc action  up
+01:05:21PM DEVICE   - > status volume level 22
+01:05:21PM DEVICE   - enc action  up
+01:05:22PM DEVICE   - > status volume level 23
+01:05:22PM DEVICE   - enc action  up
+01:05:22PM DEVICE   - > status volume level 24
+01:05:22PM DEVICE   - enc action  up
+01:05:23PM DEVICE   - > status volume level 23
+01:05:23PM DEVICE   - enc action  down
+01:05:23PM DEVICE   - > status volume level 22
+01:05:23PM DEVICE   - enc action  down
+01:05:23PM DEVICE   - > status volume level 21
+01:05:23PM DEVICE   - enc action  down
+01:05:23PM DEVICE   - > status volume level 20
+01:05:23PM DEVICE   - enc action  down
+01:08:43PM DEVICE   - < volume set 21
+01:08:43PM DEVICE   - < volume set 22
+01:08:43PM DEVICE   - < volume set 23
+01:08:43PM DEVICE   - < volume set 24
+01:08:43PM DEVICE   - < volume set 25
+01:08:44PM DEVICE   - < volume set 26
+01:08:44PM DEVICE   - < volume set 27
+01:08:44PM DEVICE   - < volume set 28
+01:08:44PM DEVICE   - < volume set 29
+01:08:44PM DEVICE   - < volume set 30
+01:08:45PM DEVICE   - < volume set 31
+01:08:45PM DEVICE   - < volume set 32
+01:08:45PM DEVICE   - < volume set 31
+01:08:45PM DEVICE   - < volume set 30
+01:08:46PM DEVICE   - < volume set 29
+01:08:46PM DEVICE   - < volume set 28
+01:08:46PM DEVICE   - < volume set 27
+01:08:46PM DEVICE   - < volume set 26
+01:08:46PM DEVICE   - < volume set 25
+01:08:46PM DEVICE   - < volume set 24
+01:08:46PM DEVICE   - < volume set 23
+01:08:46PM DEVICE   - < volume set 22
+01:08:46PM DEVICE   - < volume set 21
+01:08:47PM DEVICE   - < volume set 20
+01:08:47PM DEVICE   - < volume set 19
+01:08:47PM DEVICE   - < volume set 18
+01:08:47PM DEVICE   - < volume set 17
+01:08:47PM DEVICE   - < volume set 16
+01:08:48PM DEVICE   - < volume set 17
+01:08:48PM DEVICE   - < volume set 18
+01:08:48PM DEVICE   - < volume set 19
+01:08:48PM DEVICE   - < volume set 20
+01:08:48PM DEVICE   - < volume set 21
+01:08:48PM DEVICE   - < volume set 22
+01:08:48PM DEVICE   - < volume set 23
+01:08:48PM DEVICE   - < volume set 24
+01:08:48PM DEVICE   - < volume set 25
+01:08:48PM DEVICE   - < volume set 26
+01:08:48PM DEVICE   - < volume set 28
+01:08:48PM DEVICE   - < volume set 29
+01:08:48PM DEVICE   - < volume set 30
+01:08:49PM DEVICE   - < volume set 31
+01:08:49PM DEVICE   - < volume set 30
+01:08:49PM DEVICE   - < volume set 29
+01:08:49PM DEVICE   - < volume set 28
+01:08:49PM DEVICE   - < volume set 27
+01:08:49PM DEVICE   - < volume set 26
+01:08:49PM DEVICE   - < volume set 25
+01:08:49PM DEVICE   - < volume set 24
+01:08:49PM DEVICE   - < volume set 23
+01:08:50PM DEVICE   - < volume set 22
+01:08:50PM DEVICE   - < volume set 21
+01:08:50PM DEVICE   - < volume set 20
+01:08:50PM DEVICE   - < volume set 19
+01:08:50PM DEVICE   - < volume set 18
+01:16:01PM DEVICE   - < volume set 19
+01:16:01PM DEVICE   - < volume set 20
+01:16:01PM DEVICE   - < volume set 21
+01:16:01PM DEVICE   - < volume set 22
+01:16:01PM DEVICE   - < volume set 23
+01:16:01PM DEVICE   - < volume set 24
+01:16:02PM DEVICE   - < volume set 25
+01:16:02PM DEVICE   - < volume set 26
+01:16:02PM DEVICE   - < volume set 27
+01:16:02PM DEVICE   - < volume set 28
+01:16:02PM DEVICE   - < volume set 29
+01:16:03PM DEVICE   - < volume set 30
+01:16:03PM DEVICE   - < volume set 29
+01:16:03PM DEVICE   - < volume set 28
+01:16:03PM DEVICE   - < volume set 27
+01:16:03PM DEVICE   - < volume set 26
+01:16:04PM DEVICE   - < volume set 25
+01:16:04PM DEVICE   - < volume set 24
+01:16:04PM DEVICE   - < volume set 23
+01:16:04PM DEVICE   - < volume set 22
+01:16:04PM DEVICE   - < volume set 21
+01:16:04PM DEVICE   - < volume set 20
+01:16:04PM DEVICE   - < volume set 19
+01:16:04PM DEVICE   - < volume set 18
+01:16:05PM DEVICE   - < volume set 17
+01:16:05PM DEVICE   - < volume set 16
+01:16:05PM DEVICE   - < volume set 17
+01:16:05PM DEVICE   - < volume set 18
+01:16:05PM DEVICE   - < volume set 19
+01:16:05PM DEVICE   - < volume set 20
+01:16:05PM DEVICE   - < volume set 21
+01:16:05PM DEVICE   - < volume set 22
+01:16:05PM DEVICE   - < volume set 23
+01:16:05PM DEVICE   - < volume set 24
+01:16:06PM DEVICE   - < volume set 25
+01:16:06PM DEVICE   - < volume set 26
+01:16:06PM DEVICE   - < volume set 27

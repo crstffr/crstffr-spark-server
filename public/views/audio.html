@@ -1,13 +1,18 @@
 <div class="panel panel-primary">
 
     <div class="panel-heading">
-        <h3 class="panel-title clearfix">
-            <span>Audio Device</span>
-            <small class="pull-right">{{id}}</small>
-        </h3>
+        <div class="panel-title clearfix">
+            <h3>Audio Device</h3>
+            <!--<small class="pull-right">{{id}}</small>-->
+            <div class="pull-right">
+                <span class="label label-success" ng-show="connected">Connected</span>
+                <span class="label label-danger" ng-show="!connected">Not Connected</span>
+            </div>
+
+        </div>
     </div>
 
-    <div class="panel-body">
+    <div class="panel-body" ng-show="connected">
 
         <div class="onoffswitch">
             <input type="checkbox" class="onoffswitch-checkbox" id="{{id}}-power" value="on" ng-model="power"
@@ -33,6 +38,12 @@
             </div>
         </div>
         -->
+
+    </div>
+
+    <div class="panel-body" ng-show="!connected">
+
+        <button type="button" class="btn btn-default btn-lg btn-block">CONNECT</button>
 
     </div>
 

@@ -4,7 +4,6 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
         templateUrl: 'views/audio.html',
         link: function($scope, $element, $attrs) {
 
-
             var id = $attrs.deviceId;
             var $knob = $element.find(".volume");
             var device = User.devices.child(id);
@@ -20,6 +19,7 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
             });
 
             $scope.id = id;
+            $scope.connected = true;
 
             $scope.$watch('volume', function(value) {
                 $knob.trigger('change');
@@ -32,12 +32,18 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
                 }
             });
 
+            $scope.connect = function() {
+                device.child('components/network/connected').set('retry');
+            }
+
             device.on('value', function(data) {
 
-                var components = data.val().components;
+                data = data.val();
+                var components = data.components;
 
-                $scope.power = (components.power.state === "on");
                 $scope.volume = components.volume.level;
+                $scope.power = (components.power.state === 'on');
+                $scope.connected = (components.network.connected === 'true');
 
                 setTimeout(function() {
                     $scope.$apply();

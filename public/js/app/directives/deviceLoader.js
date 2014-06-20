@@ -4,8 +4,6 @@ Lyre.directive('deviceLoader', ['$compile', 'User', function($compile, User) {
 
         link: function($scope, $element, $attrs) {
 
-            console.log("LOAD DEVICES ASSHOLES");
-
             User.devices.once('value', function(data) {
 
                 var devices = data.val();
