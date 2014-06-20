@@ -12,14 +12,14 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
                 min: 0,
                 max: 64,
                 change: function(value) {
-                    var val = parseInt(value);
+                    var val = parseInt(value) + '';
                     device.child('components/volume/level').set(val)
                 }
 
             });
 
             $scope.id = id;
-            $scope.connected = true;
+            $scope.connected = false;
 
             $scope.$watch('volume', function(value) {
                 $knob.trigger('change');

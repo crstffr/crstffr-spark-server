@@ -7,12 +7,14 @@
     var devices = require('./lib/factories/deviceFactory');
     var router = require('./lib/router');
     var util = require('./lib/utils/util');
+    var log = require('./lib/utils/log');
 
 
     function Server() {
 
-        process.on('exit', _exitHandler.bind(this));
+        //process.on('exit', _exitHandler.bind(this));
         process.on('SIGINT', _exitHandler.bind(this));
+        process.on('SIGTERM', _exitHandler.bind(this));
         process.on('uncaughtException', _exitHandler.bind(this));
 
         interface.on('connect', function() {
@@ -27,16 +29,22 @@
     }
 
     function _exitHandler(options, err) {
+
+        log.server("SERVER SHUTTING DOWN");
+
         if (err) {
             console.log(err.stack);
             process.exit();
         }
-        devices.disconnect();
+
         database.server.update({
             online: 'false',
             lastOnline: util.now()
         });
-        setTimeout(process.exit, 100);
+
+        devices.reset();
+
+        setTimeout(process.exit, 500);
     }
 
     module.exports = new Server();
