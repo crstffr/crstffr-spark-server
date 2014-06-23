@@ -1,6 +1,7 @@
 Lyre.directive('lyreDeviceAudio', ['User', function(User) {
 
     return {
+        scope: {},
         templateUrl: 'views/audio.html',
         link: function($scope, $element, $attrs) {
 

@@ -12,7 +12,6 @@
 
     function Server() {
 
-        //process.on('exit', _exitHandler.bind(this));
         process.on('SIGINT', _exitHandler.bind(this));
         process.on('SIGTERM', _exitHandler.bind(this));
         process.on('uncaughtException', _exitHandler.bind(this));
@@ -26,6 +25,7 @@
         interface.on('message', router.parseMessage.bind(router));
 
         database.server.update({online: 'true'});
+
     }
 
     function _exitHandler(options, err) {
