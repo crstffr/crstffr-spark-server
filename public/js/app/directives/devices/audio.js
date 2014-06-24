@@ -14,7 +14,7 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
                 max: 64,
                 change: function(value) {
                     var val = parseInt(value) + '';
-                    device.child('components/volume/level').set(val)
+                    device.child('components/amp/volume').set(val)
                 }
 
             });
@@ -29,7 +29,7 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
             $scope.$watch('power', function(value, oldvalue) {
                 if (angular.isDefined(oldvalue)) {
                     var val = (value) ? "on" : "off";
-                    device.child('components/power/state').set(val);
+                    device.child('components/amp/power').set(val);
                 }
             });
 
@@ -42,8 +42,8 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
                 data = data.val();
                 var components = data.components;
 
-                $scope.volume = components.volume.level;
-                $scope.power = (components.power.state === 'on');
+                $scope.volume = components.amp.volume;
+                $scope.power = (components.amp.power === 'on');
                 $scope.connected = (components.network.connected === 'true');
 
                 setTimeout(function() {

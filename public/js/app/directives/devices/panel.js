@@ -18,6 +18,7 @@ Lyre.directive('lyreDevicePanel', ['User', function(User) {
                 data = data.val();
 
                 $scope.connected = (data.components.network.connected === 'true');
+                $scope.lastmotion = data.components.pir.motion;
 
                 setTimeout(function() {
                     $scope.$apply();

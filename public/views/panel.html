@@ -12,6 +12,11 @@
         </div>
     </div>
 
+    <div class="panel-body" ng-show="connected">
+        <h4>Motion Last Recorded</h4>
+        <p>{{lastmotion | date : 'medium' }}</p>
+    </div>
+
 </div>
 
 <style type="text/css">
