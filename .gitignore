@@ -1,5 +1,6 @@
 .git
 .idea
+nohup.out
 node_modules
 config.js
 spark/core-firmware/build/obj

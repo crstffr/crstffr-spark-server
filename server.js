@@ -17,9 +17,14 @@
         process.on('uncaughtException', _exitHandler.bind(this));
 
         interface.on('connect', function() {
+            log.server('Interface connected');
             interface.subscribe('dev/+/action/#');
             interface.subscribe('dev/+/status/#');
             devices.connect();
+        });
+
+        interface.on('error', function(err) {
+            log.server('MQTT Error:', err);
         });
 
         interface.on('message', router.parseMessage.bind(router));
