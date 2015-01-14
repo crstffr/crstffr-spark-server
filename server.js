@@ -14,7 +14,7 @@
 
         process.on('SIGINT', _exitHandler.bind(this));
         process.on('SIGTERM', _exitHandler.bind(this));
-        process.on('uncaughtException', _exitHandler.bind(this));
+        process.on('uncaughtException', _errHandler.bind(this));
 
         interface.on('connect', function() {
             log.server('Interface connected');
@@ -31,6 +31,10 @@
 
         database.server.update({online: 'true'});
 
+    }
+
+    function _errHandler(err) {
+        _exitHandler({}, err);
     }
 
     function _exitHandler(options, err) {

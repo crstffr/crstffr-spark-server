@@ -8,8 +8,6 @@ Lyre.directive('lyreDevicePanel', ['User', function(User) {
             var id = $attrs.deviceId;
             var device = User.devices.child(id);
 
-            console.log("PANEL SCOPE", $scope);
-
             $scope.id = id;
             $scope.connected = false;
 
