@@ -18,6 +18,7 @@
 
         interface.on('connect', function() {
             log.server('Interface connected');
+            interface.subscribe('dev/+/log/#');
             interface.subscribe('dev/+/action/#');
             interface.subscribe('dev/+/status/#');
             devices.connect();

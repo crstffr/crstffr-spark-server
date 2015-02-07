@@ -35,7 +35,7 @@ Lyre.directive('lyreDeviceAudio', ['User', function(User) {
 
             $scope.connect = function() {
                 device.child('components/network/connected').set('retry');
-            }
+            };
 
             device.on('value', function(data) {
 
