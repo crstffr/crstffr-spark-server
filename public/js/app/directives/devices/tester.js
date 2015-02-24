@@ -1,4 +1,6 @@
-Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'User', function ($interval, $timeout, User) {
+
+Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'Socket', 'User',
+    function ($interval, $timeout, Socket, User) {
 
     var vRef = 3.3;
     var dRes = 4095;
@@ -35,10 +37,10 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'User', function ($
 
                 data = data.val();
 
-                var adc = data.adc.value.split(":");
+                var adc = data.adc1.compare.split(":");
 
                 $scope.connected = (data.network.connected === 'true');
-                $scope.dac = data.dac.value;
+                $scope.dac = data.dac1.value;
                 $scope.adc = adc[1];
 
                 adc = adc.map(Number);
@@ -110,7 +112,7 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'User', function ($
 
             function reset() {
                 $scope.recording = false;
-                device.child('components/dac/value').set(0);
+                device.child('components/dac1/value').set(0);
                 adcseries.setData([], true, false, true);
                 $scope.loadresults = "";
                 $scope.testname = "";
@@ -122,7 +124,7 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'User', function ($
                 interval = $interval(function() {
                     var newVal = parseInt($scope.dac, 10);
                     newVal += parseInt($scope.increment, 10);
-                    components.child("dac/value").set(newVal.toString());
+                    components.child("dac1/value").set(newVal.toString());
                     if (newVal > dRes) { stop(); }
                 }, 500);
             }
@@ -138,11 +140,16 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'User', function ($
 
             function setval() {
                 var val = parseInt($scope.dac, 10).toString();
-                device.child('components/dac/value').set(val);
+                device.child('components/dac1/value').set(val);
+            }
+
+            function calibrate() {
+                Socket.emit("calibrate");
             }
 
             return {
                 addseries: addseries,
+                calibrate: calibrate,
                 setval: setval,
                 record: record,
                 reset: reset,

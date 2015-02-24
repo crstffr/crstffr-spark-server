@@ -13,11 +13,15 @@
 
     <div class="panel-body">
 
-        <button ng-click="cntrlr.record()"
+        <button ng-hide="loadresults"
+                ng-click="cntrlr.record()"
                 ng-class="{'btn-danger': recording, 'btn-default': !recording}">Record</button>
 
         <button ng-click="cntrlr.reset()"
                 class="btn-default">Reset</button>
+
+        <button ng-click="cntrlr.calibrate()"
+                class="btn-default">Calibrate</button>
 
         <select ng-model="loadresults"
                 ng-change="cntrlr.load()"
