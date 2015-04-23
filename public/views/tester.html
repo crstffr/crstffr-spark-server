@@ -20,8 +20,11 @@
         <button ng-click="cntrlr.reset()"
                 class="btn-default">Reset</button>
 
-        <button ng-click="cntrlr.calibrate()"
-                class="btn-default">Calibrate</button>
+        <button ng-click="cntrlr.calibrate(1)"
+                class="btn-default">C1</button>
+
+        <button ng-click="cntrlr.calibrate(2)"
+                class="btn-default">C2</button>
 
         <select ng-model="loadresults"
                 ng-change="cntrlr.load()"
@@ -37,7 +40,12 @@
 
             <form ng-submit="cntrlr.setval()">
                 <label>DAC</label><input type="text" class="" ng-model="dac">
-                <label>ADC</label><input type="text" class="" ng-model="adc" disabled>
+                <!-- <label>ADC</label><input type="text" class="" ng-model="adc" disabled> -->
+                <button ng-hide="true"></button>
+            </form>
+
+            <form ng-submit="cntrlr.setlevel()">
+                <label>LEVEL</label><input type="text" class="" ng-model="level">
                 <button ng-hide="true"></button>
             </form>
 

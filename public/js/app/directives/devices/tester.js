@@ -33,33 +33,52 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'Socket', 'User',
                 $scope.tests.push({name: test.key()});
             });
 
-            components.on('value', function (data) {
+            components.child('network').on('value', function (data) {
+                $scope.connected = (data.val().connected === 'true');
+                $timeout(function(){$scope.$apply();},0);
+            });
 
-                data = data.val();
+            components.child('vol').on('value', function (data) {
+                $scope.level = data.val().level;
+                $timeout(function(){$scope.$apply();},0);
+            });
 
-                var adc = data.adc1.compare.split(":");
+            components.child('dac1').on('value', function (data) {
+                $scope.dac = data.val().value;
+                $timeout(function(){$scope.$apply();},0);
+            });
 
-                $scope.connected = (data.network.connected === 'true');
-                $scope.dac = data.dac1.value;
-                $scope.adc = adc[1];
+            components.child('adc1').on('value', function (data) {
+                plotPoint(data.val().compare);
+            });
 
-                adc = adc.map(Number);
+            components.child('adc2').on('value', function (data) {
+                plotPoint(data.val().compare);
+            });
 
-                var dacVal = adc[0];
-                var adcVal = calcVoltage(adc[1]);
-                var point = [dacVal, adcVal];
+            components.child('ldr1').on('value', function (data) {
+                plotPoint(data.val().compare);
+            });
 
-                adcseries.addPoint(point, true, false, false);
+            components.child('ldr2').on('value', function (data) {
+                plotPoint(data.val().compare);
+            });
+
+            function plotPoint(point) {
+
+                point = point.split(":").map(Number);
+
+                var dacVal = point[0];
+                var adcVal = calcVoltage(point[1]);
+                var xy = [dacVal, adcVal];
+
+                adcseries.addPoint(xy, true, false, false);
 
                 if ($scope.recording && $scope.testname) {
                     device.child('tests/' + $scope.testname + '/' + dacVal).set(adcVal);
                 }
 
-                $timeout(function () {
-                    $scope.$apply();
-                }, 0);
-
-            });
+            }
 
             function load() {
 
@@ -111,11 +130,12 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'Socket', 'User',
             }
 
             function reset() {
-                $scope.recording = false;
-                device.child('components/dac1/value').set(0);
-                adcseries.setData([], true, false, true);
-                $scope.loadresults = "";
+                Socket.emit("resetall");
+                $scope.level = "0";
                 $scope.testname = "";
+                $scope.loadresults = "";
+                $scope.recording = false;
+                adcseries.setData([], true, false, true);
             }
 
             function sweep() {
@@ -143,13 +163,19 @@ Lyre.directive('lyreDeviceTester', ['$interval', '$timeout', 'Socket', 'User',
                 device.child('components/dac1/value').set(val);
             }
 
-            function calibrate() {
-                Socket.emit("calibrate");
+            function setlevel() {
+                var val = parseInt($scope.level, 10).toString();
+                device.child('components/vol/level').set(val);
+            }
+
+            function calibrate(which) {
+                Socket.emit("calibrate" + which);
             }
 
             return {
                 addseries: addseries,
                 calibrate: calibrate,
+                setlevel: setlevel,
                 setval: setval,
                 record: record,
                 reset: reset,
